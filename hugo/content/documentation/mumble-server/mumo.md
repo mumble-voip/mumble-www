@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-05-31T16:52:49"
+date = "2013-06-01T01:19:37"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -30,10 +30,6 @@ not require cooperation by the game server.
 Plugin for moving players that have been idle for
 a configurable amount of time into a idle channel. Optionally
 the players can be muted/deafened on move.
-
-### onjoin
-Moves players into a specific channel on connect regardless
-of which channel they were in when they left last time.
 
 ### seen
 Makes the server listen for a configurable keyword to ask for
