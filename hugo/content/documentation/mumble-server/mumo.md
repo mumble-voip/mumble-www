@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-05-31T16:51:07"
+date = "2013-05-31T16:52:49"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -39,14 +39,16 @@ of which channel they were in when they left last time.
 Makes the server listen for a configurable keyword to ask for
 the last time a specific nick was seen on the server.
 
-### source
+### [source](https://wiki.mumble.info/wiki/mumo_source)
 Source game management plugin that can dynamically move
 players into on-the-fly created channel structures representing
 in-game team setup. This is achieved by using data gathered from
-Mumble's positional uadio system and does not require cooperation
+Mumble's positional audio system and does not require cooperation
 by the game server. Currently the following source engine based
 games are supported: Team Fortress 2, Day of Defeat: Source,
 CounterStrike: Source, Half Life 2: Death Match.
+
+For more information on how to configure and use the source plugin see [here](https://wiki.mumble.info/wiki/mumo_source).
 
 ### test
 A debugging plugin that registers for all possible events and
