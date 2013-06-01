@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-06-01T01:19:37"
+date = "2013-06-01T18:47:21"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -70,3 +70,40 @@ mumo requires:
     - murmur >=1.2.3*
 
 * Not tested with lower versions yet
+
+# Installing mumo
+The newest version of mumo is always available from our mumble-scripts repository at http://gitorious.org/mumble-scripts .
+## Ubuntu 12.04
+*Note:* This guide only shows the basic steps for trying out mumo. For a more permanent setup you'll want to run mumo with its own user and a startup script.
+
+* Make sure you are running a recent Murmur release (1.2.4 or later). Ice should be enabled and a writesecret must be set (see configuration file).
+* Install dependencies
+
+    sudo apt-get install python-zeroc-ice python-daemon git
+
+* Clone repository
+
+    cd ~/
+    git clone git://gitorious.org/mumble-scripts/mumo.git
+
+* Adjust configuration
+
+    cd mumo
+    nano mumo.ini
+
+In the editor set your server's Ice writesecret as the secret variable so mumo can control your server.
+
+    secret = mysecretwritesecret
+
+Close and save by pressing Ctrl + X followed by Y and Enter.
+* Configure the modules you want to use by editing their ini file in the modules-available folder
+* Enable modules by linking their config file into the modules-enabled folder
+
+    cd modules-enabled
+    ln -s ../modules-available/moduleyouwanttouse.ini
+
+* Run mumo
+
+    ./mumo.py
+
+Mumo should now be working with your mumble server. If it doesn't work check the *mumo.log* file for more information.
