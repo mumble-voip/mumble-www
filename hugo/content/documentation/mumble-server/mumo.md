@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-06-01T18:47:21"
+date = "2013-06-01T21:09:11"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -42,7 +42,7 @@ in-game team setup. This is achieved by using data gathered from
 Mumble's positional audio system and does not require cooperation
 by the game server. Currently the following source engine based
 games are supported: Team Fortress 2, Day of Defeat: Source,
-CounterStrike: Source, Half Life 2: Death Match.
+Counter-Strike: Source, Half-Life 2: Deathmatch.
 
 For more information on how to configure and use the source plugin see [here](https://wiki.mumble.info/wiki/mumo_source).
 
