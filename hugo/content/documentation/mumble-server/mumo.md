@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-06-01T21:09:11"
+date = "2013-06-18T20:28:16"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -49,6 +49,32 @@ For more information on how to configure and use the source plugin see [here](ht
 ### test
 A debugging plugin that registers for all possible events and
 outputs every call with parameters into the debug log.
+
+## 3rd Party Modules
+### URL to image
+[urltoimg on GitHub](https://github.com/aciid/urltoimg-for-mumo)
+
+If you send an image URL to the channel, the server fetches it and sends it to the current channel.
+
+### Wrong Version
+[wrongversion on GitHub](https://github.com/Natenom/wrongversion)
+
+Users with older Mumble versions will get a message.
+
+### Set Status
+[setstatus on GitHub](https://github.com/Natenom/setstatus-for-mumo)
+
+You can add a temporary status to your username.
+
+### Deaf to AFK
+[deaftoafk on GitHub](https://github.com/Natenom/deaftoafk-for-mumo)
+
+Moves deafened users into an AFK channel.
+
+### Anti recording
+[antirec on GitHub](https://github.com/Natenom/antirec-for-mumo/)
+
+If a user starts to record in Mumble he will be deafened or kicked from the server.
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
