@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-06-18T20:28:16"
+date = "2013-06-18T20:31:48"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -54,17 +54,17 @@ outputs every call with parameters into the debug log.
 ### URL to image
 [urltoimg on GitHub](https://github.com/aciid/urltoimg-for-mumo)
 
-If you send an image URL to the channel, the server fetches it and sends it to the current channel.
+If you send an image URL to the channel, the server fetches it and sends the image instead of the image link to the current channel.
 
 ### Wrong Version
 [wrongversion on GitHub](https://github.com/Natenom/wrongversion)
 
-Users with older Mumble versions will get a message.
+Users with older Mumble versions will get a message (triggering version is configurable).
 
 ### Set Status
 [setstatus on GitHub](https://github.com/Natenom/setstatus-for-mumo)
 
-You can add a temporary status to your username.
+Users can add a temporary status to your username via chat command.
 
 ### Deaf to AFK
 [deaftoafk on GitHub](https://github.com/Natenom/deaftoafk-for-mumo)
