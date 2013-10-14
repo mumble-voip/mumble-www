@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-06-18T20:31:48"
+date = "2013-10-14T17:42:25"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -75,6 +75,11 @@ Moves deafened users into an AFK channel.
 [antirec on GitHub](https://github.com/Natenom/antirec-for-mumo/)
 
 If a user starts to record in Mumble he will be deafened or kicked from the server.
+
+### Max users
+[mumo-maxusers on GitHub](https://github.com/ExplodingFist/mumo-maxusers/)
+
+This is a MuMo module to provide an administrator the capability of enforcing granular user limits by channel in mumble.
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
