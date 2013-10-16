@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-10-14T17:42:25"
+date = "2013-10-16T07:26:36"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -80,6 +80,11 @@ If a user starts to record in Mumble he will be deafened or kicked from the serv
 [mumo-maxusers on GitHub](https://github.com/ExplodingFist/mumo-maxusers/)
 
 This is a MuMo module to provide an administrator the capability of enforcing granular user limits by channel in mumble.
+
+### Opcommand
+[mumo-opcommand on GitHub](https://github.com/ExplodingFist/mumo-opcommand)
+
+Temporarily add user or remove user to/from a group via GUI command line.
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
