@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-10-16T07:26:36"
+date = "2013-10-17T16:04:19"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -85,6 +85,11 @@ This is a MuMo module to provide an administrator the capability of enforcing gr
 [mumo-opcommand on GitHub](https://github.com/ExplodingFist/mumo-opcommand)
 
 Temporarily add user or remove user to/from a group via GUI command line.
+
+### Sticky
+[mumo-sticky on GitHub](https://github.com/Natenom/mumo-sticky)
+
+A user who gets the sticky status can't do more than sitting in one special channel. Even admins will loose their permissions while sticked.
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
