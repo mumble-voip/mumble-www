@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2013-10-17T16:04:19"
+date = "2014-03-16T09:43:18"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -90,6 +90,11 @@ Temporarily add user or remove user to/from a group via GUI command line.
 [mumo-sticky on GitHub](https://github.com/Natenom/mumo-sticky)
 
 A user who gets the sticky status can't do more than sitting in one special channel. Even admins will loose their permissions while sticked.
+
+### AntiFlood
+[antiflood-for-mumo on GitHub](https://github.com/Natenom/antiflood-for-mumo)
+
+If a user exceeds a limit of actions within a timeframe (both can be changed) he will be kicked from the server.
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
