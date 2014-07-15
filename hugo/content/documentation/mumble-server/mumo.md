@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2014-03-16T09:43:18"
+date = "2014-07-15T11:37:55"
 license = "CC by-sa 2.5"
 categories = []
 +++
@@ -118,7 +118,7 @@ mumo requires:
 * Not tested with lower versions yet
 
 # Installing mumo
-The newest version of mumo is always available from our mumble-scripts repository at http://gitorious.org/mumble-scripts .
+The newest version of mumo is always available from our mumble-scripts repository at https://github.com/mumble-voip/mumo .
 ## Ubuntu 12.04
 *Note:* This guide only shows the basic steps for trying out mumo. For a more permanent setup you'll want to run mumo with its own user and a startup script.
 
@@ -130,7 +130,7 @@ The newest version of mumo is always available from our mumble-scripts repositor
 * Clone repository
 
     cd ~/
-    git clone git://gitorious.org/mumble-scripts/mumo.git
+    git clone https://github.com/mumble-voip/mumo.git
 
 * Adjust configuration
 
