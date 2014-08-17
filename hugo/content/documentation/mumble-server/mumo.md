@@ -1,25 +1,21 @@
 +++
 title = "Mumo"
-date = "2014-07-15T11:37:55"
+date = "2014-08-17T11:22:02"
 license = "CC by-sa 2.5"
 categories = []
 +++
 # mumo - The Mumble moderator
 
-Mumo is meant to provide a platform on which python based Mumble server
+Mumo is meant to provide a platform on which Python based Mumble server
 plugins can be built upon. The goal is to reduce the boilerplate needed
 to interact with the Mumble server to a minimum.
 
-To achieve this goal tasks like Ice interface setup, basic error
+To achieve this goal tasks like [Ice](https://wiki.mumble.info/wiki/Ice) interface setup, basic error
 handling, configuration management, logging and more are provided
 by mumo. Developers can focus on their specific functionality instead.
 
 ## Currently mumo comes with the following modules
-
 ### bf2
-
-    
-
 Battlefield 2 game management plugin that can dynamically
 move players into appropriate channels and groups to fit
 the in-game command structure. This is achieved by using
@@ -114,6 +110,7 @@ mumo requires:
     - python 2.7*
     - python-zeroc-ice
     - murmur >=1.2.3*
+    - murmur >=1.2.4 if you want to use a module which needs user interaction via text commands
 
 * Not tested with lower versions yet
 
