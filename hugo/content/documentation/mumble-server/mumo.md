@@ -1,8 +1,8 @@
 +++
 title = "Mumo"
-date = "2014-08-17T11:22:02"
+date = "2014-10-23T21:00:37"
 license = "CC by-sa 2.5"
-categories = []
+categories = ["3rd Party"]
 +++
 # mumo - The Mumble moderator
 
@@ -150,3 +150,4 @@ Close and save by pressing Ctrl + X followed by Y and Enter.
     ./mumo.py
 
 Mumo should now be working with your mumble server. If it doesn't work check the *mumo.log* file for more information.
+
