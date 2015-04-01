@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2014-10-23T21:00:37"
+date = "2015-04-02T01:39:06"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -96,7 +96,7 @@ If a user exceeds a limit of actions within a timeframe (both can be changed) he
 If you have a module that you would like to see shipped with mumo or
 have any improvements or suggestions please contact us. Whether you
 prefer a pull request, visiting us in IRC in #mumble on Freenode or
-starting a thread in our forums at http://sourceforge.net/apps/phpbb/mumble/ is up to you.
+starting a thread in our forums at http://forums.mumble.info is up to you.
 
 ## Configuration
 To configure and run mumo take a look at the mumo.ini and the module
