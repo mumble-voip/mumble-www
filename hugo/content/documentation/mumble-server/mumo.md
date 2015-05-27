@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2015-04-02T01:39:06"
+date = "2015-05-28T01:41:52"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -47,10 +47,16 @@ A debugging plugin that registers for all possible events and
 outputs every call with parameters into the debug log.
 
 ## 3rd Party Modules
-### URL to image
+### Image Injection Modules
+#### URL to image
 [urltoimg on GitHub](https://github.com/aciid/urltoimg-for-mumo)
 
 If you send an image URL to the channel, the server fetches it and sends the image instead of the image link to the current channel.
+
+#### Chat Img
+[chatimg on GitHub](https://github.com/aselus-hub/chatimg-mumo)
+
+A more full featured implementation of the same functionality as Url to Image. Allows injection of photos into chat, re-sizing them if they are larger then the size accepted by the mumble protocol and allowing the server admin to set a max width/height for the image so that it is scaled through html or thumbnailing to never be larger then prescribed. Allows the conversion of images within regular chat messages w/o bang commands as an option. Finally the injection of any number of images present after the bang or within a message.
 
 ### Wrong Version
 [wrongversion on GitHub](https://github.com/Natenom/wrongversion)
