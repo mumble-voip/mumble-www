@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2015-05-28T01:41:52"
+date = "2015-05-30T18:04:24"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -74,7 +74,8 @@ Users can add a temporary status to your username via chat command.
 Moves deafened users into an AFK channel.
 
 ### Anti recording
-[antirec on GitHub](https://github.com/Natenom/antirec-for-mumo/)
+* [antirec on GitHub](https://github.com/Natenom/antirec-for-mumo/)
+* [antirec with contextmenus on GitHub](https://github.com/Natenom/antirec-for-mumo-contextmenu)
 
 If a user starts to record in Mumble he will be deafened or kicked from the server.
 
@@ -89,7 +90,8 @@ This is a MuMo module to provide an administrator the capability of enforcing gr
 Temporarily add user or remove user to/from a group via GUI command line.
 
 ### Sticky
-[mumo-sticky on GitHub](https://github.com/Natenom/mumo-sticky)
+* [mumo-sticky on GitHub](https://github.com/Natenom/mumo-sticky)
+* [mumo-sticky with contextmenus on GitHub](https://github.com/Natenom/mumo-sticky-contextmenu)
 
 A user who gets the sticky status can't do more than sitting in one special channel. Even admins will loose their permissions while sticked.
 
