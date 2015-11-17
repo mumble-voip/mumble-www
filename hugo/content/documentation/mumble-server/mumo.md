@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2015-05-30T18:04:24"
+date = "2015-11-17T01:31:56"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -99,6 +99,16 @@ A user who gets the sticky status can't do more than sitting in one special chan
 [antiflood-for-mumo on GitHub](https://github.com/Natenom/antiflood-for-mumo)
 
 If a user exceeds a limit of actions within a timeframe (both can be changed) he will be kicked from the server.
+
+### GetSupport
+[mumo-getsupport on GitHub](https://github.com/Natenom/mumo-getsupport)
+
+A user can write for example "!helpme support message up to 160 characters..." to a channel/user/himself and everyone on the server who is member of a special group gets a notification.
+
+### OS-Suffixes
+[mumo-os-suffixes on GitHub](https://github.com/Natenom/mumo-os-suffixes)
+
+Adds suffixes to user names based on operating system.
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
