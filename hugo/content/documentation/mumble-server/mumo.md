@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2015-11-17T01:31:56"
+date = "2016-03-05T00:57:53"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -62,6 +62,16 @@ A more full featured implementation of the same functionality as Url to Image. A
 [wrongversion on GitHub](https://github.com/Natenom/wrongversion)
 
 Users with older Mumble versions will get a message (triggering version is configurable).
+
+### Lowbw
+[mumo-lowbw on GitHub](https://github.com/Natenom/mumo-lowbw)
+
+Creates a Low bw channel whenever a member of group "bots" enters a room and removes it later if empty...
+
+### Videoinfo
+[mumo-videoinfo on GitHub](https://github.com/while-loop/mumo-videoinfo)
+
+Mumo plugin to provide YouTube video information to Mumble.
 
 ### Set Status
 [setstatus on GitHub](https://github.com/Natenom/setstatus-for-mumo)
