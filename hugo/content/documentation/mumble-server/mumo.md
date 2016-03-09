@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2016-03-05T00:57:53"
+date = "2016-03-09T16:43:11"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -57,6 +57,11 @@ If you send an image URL to the channel, the server fetches it and sends the ima
 [chatimg on GitHub](https://github.com/aselus-hub/chatimg-mumo)
 
 A more full featured implementation of the same functionality as Url to Image. Allows injection of photos into chat, re-sizing them if they are larger then the size accepted by the mumble protocol and allowing the server admin to set a max width/height for the image so that it is scaled through html or thumbnailing to never be larger then prescribed. Allows the conversion of images within regular chat messages w/o bang commands as an option. Finally the injection of any number of images present after the bang or within a message.
+
+### Message forwarder
+[forwarder-for-mumo on GitHub](https://github.com/Natenom/forwarder-for-mumo)
+
+Forwards messages to all linked channels.
 
 ### Wrong Version
 [wrongversion on GitHub](https://github.com/Natenom/wrongversion)
