@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2016-03-09T16:43:11"
+date = "2016-04-12T20:28:38"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -148,7 +148,8 @@ mumo requires:
 * Not tested with lower versions yet
 
 # Installing mumo
-The newest version of mumo is always available from our mumble-scripts repository at https://github.com/mumble-voip/mumo .
+The newest version of mumo is always available from our mumo repository at https://github.com/mumble-voip/mumo .
+
 ## Ubuntu 12.04
 *Note:* This guide only shows the basic steps for trying out mumo. For a more permanent setup you'll want to run mumo with its own user and a startup script.
 
