@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2016-04-12T20:28:38"
+date = "2016-07-20T13:17:11"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -124,6 +124,11 @@ A user can write for example "!helpme support message up to 160 characters..." t
 [mumo-os-suffixes on GitHub](https://github.com/Natenom/mumo-os-suffixes)
 
 Adds suffixes to user names based on operating system.
+
+### mumo-password
+[mumo-password on GitHub](https://github.com/Betriebsrat/mumo-password)
+
+"Generates a random password for mumble which expires in 30 minutes."
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
