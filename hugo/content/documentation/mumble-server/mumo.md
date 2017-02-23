@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2017-02-23T20:29:04"
+date = "2017-02-23T20:30:06"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -130,7 +130,7 @@ Adds suffixes to user names based on operating system.
 
 "Generates a random password for mumble which expires in 30 minutes."
 
-#### mumo-registerusers-contextmenu
+### mumo-registerusers-contextmenu
 [mumo-registerusers-contextmenu on GitHub](https://github.com/Natenom/mumo-registerusers-contextmenu)
 
 "Ability to define one or more groups whose users are able to register new users on a server by right clicking them."
