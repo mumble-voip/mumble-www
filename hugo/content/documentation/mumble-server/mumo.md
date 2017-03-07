@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2017-02-23T20:30:06"
+date = "2017-03-07T19:33:03"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -134,6 +134,11 @@ Adds suffixes to user names based on operating system.
 [mumo-registerusers-contextmenu on GitHub](https://github.com/Natenom/mumo-registerusers-contextmenu)
 
 "Ability to define one or more groups whose users are able to register new users on a server by right clicking them."
+
+### mumo-welcomemessage
+[mumo-welcomemessage on GitHub](https://github.com/MumbleExpanda/mumo-welcomemessage)
+
+"Displays a welcome message depending on registration, new user ..."
 
 ## Contributions
 If you have a module that you would like to see shipped with mumo or
