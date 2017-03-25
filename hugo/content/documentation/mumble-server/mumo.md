@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2017-03-07T19:33:03"
+date = "2017-03-25T02:05:32"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -59,17 +59,17 @@ If you send an image URL to the channel, the server fetches it and sends the ima
 A more full featured implementation of the same functionality as Url to Image. Allows injection of photos into chat, re-sizing them if they are larger then the size accepted by the mumble protocol and allowing the server admin to set a max width/height for the image so that it is scaled through html or thumbnailing to never be larger then prescribed. Allows the conversion of images within regular chat messages w/o bang commands as an option. Finally the injection of any number of images present after the bang or within a message.
 
 ### Message forwarder
-[forwarder-for-mumo on GitHub](https://github.com/Natenom/forwarder-for-mumo)
+[messageforwarder on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/messageforwarder)
 
 Forwards messages to all linked channels.
 
 ### Wrong Version
-[wrongversion on GitHub](https://github.com/Natenom/wrongversion)
+[wrongversion on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/wrongversion)
 
 Users with older Mumble versions will get a message (triggering version is configurable).
 
 ### Lowbw
-[mumo-lowbw on GitHub](https://github.com/Natenom/mumo-lowbw)
+[lowbandwidth-channel on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/lowbandwidth-channel)
 
 Creates a Low bw channel whenever a member of group "bots" enters a room and removes it later if empty...
 
@@ -79,18 +79,17 @@ Creates a Low bw channel whenever a member of group "bots" enters a room and rem
 Mumo plugin to provide YouTube video information to Mumble.
 
 ### Set Status
-[setstatus on GitHub](https://github.com/Natenom/setstatus-for-mumo)
+[setstatus on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/setstatus)
 
 Users can add a temporary status to your username via chat command.
 
 ### Deaf to AFK
-[deaftoafk on GitHub](https://github.com/Natenom/deaftoafk-for-mumo)
+[deaftoafk on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/deaftoafk)
 
 Moves deafened users into an AFK channel.
 
 ### Anti recording
-* [antirec on GitHub](https://github.com/Natenom/antirec-for-mumo/)
-* [antirec with contextmenus on GitHub](https://github.com/Natenom/antirec-for-mumo-contextmenu)
+* [antirec with contextmenus on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/antirec-contextmenu)
 
 If a user starts to record in Mumble he will be deafened or kicked from the server.
 
@@ -105,23 +104,22 @@ This is a MuMo module to provide an administrator the capability of enforcing gr
 Temporarily add user or remove user to/from a group via GUI command line.
 
 ### Sticky
-* [mumo-sticky on GitHub](https://github.com/Natenom/mumo-sticky)
-* [mumo-sticky with contextmenus on GitHub](https://github.com/Natenom/mumo-sticky-contextmenu)
+* [sticky with contextmenus on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/sticky-contextmenu)
 
 A user who gets the sticky status can't do more than sitting in one special channel. Even admins will loose their permissions while sticked.
 
 ### AntiFlood
-[antiflood-for-mumo on GitHub](https://github.com/Natenom/antiflood-for-mumo)
+[antiflood on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/antiflood)
 
 If a user exceeds a limit of actions within a timeframe (both can be changed) he will be kicked from the server.
 
 ### GetSupport
-[mumo-getsupport on GitHub](https://github.com/Natenom/mumo-getsupport)
+[getsupport on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/getsupport)
 
 A user can write for example "!helpme support message up to 160 characters..." to a channel/user/himself and everyone on the server who is member of a special group gets a notification.
 
 ### OS-Suffixes
-[mumo-os-suffixes on GitHub](https://github.com/Natenom/mumo-os-suffixes)
+[os-suffixes on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/os-suffixes)
 
 Adds suffixes to user names based on operating system.
 
@@ -131,12 +129,12 @@ Adds suffixes to user names based on operating system.
 "Generates a random password for mumble which expires in 30 minutes."
 
 ### mumo-registerusers-contextmenu
-[mumo-registerusers-contextmenu on GitHub](https://github.com/Natenom/mumo-registerusers-contextmenu)
+[registerusers-contextmenu on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/registerusers-contextmenu)
 
 "Ability to define one or more groups whose users are able to register new users on a server by right clicking them."
 
 ### mumo-welcomemessage
-[mumo-welcomemessage on GitHub](https://github.com/MumbleExpanda/mumo-welcomemessage)
+[welcomemessage on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/welcomemessage)
 
 "Displays a welcome message depending on registration, new user ..."
 
