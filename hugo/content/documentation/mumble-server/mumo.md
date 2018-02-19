@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2017-03-25T02:05:32"
+date = "2018-02-19T09:30:41"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -125,6 +125,10 @@ Adds suffixes to user names based on operating system.
 
 ### mumo-password
 [mumo-password on GitHub](https://github.com/Betriebsrat/mumo-password)
+
+
+### mumo-chatlogger
+[mumo-chatlogger on GitHub](https://github.com/braandl/chatlogger-for-mumo)
 
 "Generates a random password for mumble which expires in 30 minutes."
 
