@@ -1,0 +1,154 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #F2F2F2;
+	margin: 0;
+}
+
+a {
+	color: black;
+}
+
+.logo {
+	height: 100px;
+	float: left;
+	background: url(images/mumble.svg) no-repeat;
+	background-size: 88px;
+	padding-left: 105px;
+	line-height: 55px;
+	font-size: 2.1em;
+}
+
+.logo-subtext {
+	display: block;
+	font-size: 16px;
+	font-weight: lighter;
+	line-height: 16px;
+}
+
+header {
+	padding: 10px;
+	width: 100vw;
+
+	background-color: #F2F2F2;
+	border-bottom: 1px solid #D2D2D2;
+}
+
+.header-content {
+	max-width: 1140px;
+	margin: auto;
+}
+
+nav {
+	text-align: right;
+	height: 100px;
+}
+
+ul.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	display: block;
+	float: left;
+}
+
+ul.menu li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+footer {
+	padding: 20px;
+	background-color: #F2F2F2;
+	border-top: 1px solid #D2D2D2;
+
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.footer-content {
+	max-width: 1140px;
+	margin: auto;
+}
+
+.footer-content ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-content ul li {
+	display: inline-block;
+	float: left;
+}
+
+.footer-content ul li a {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px 0px 0px;
+	text-decoration: none;
+}
+
+.footer-content .copyleft {
+	font-weight: lighter;
+}
+
+.download-items * {
+	margin-bottom: 20px;
+}
+
+.download-button {
+	background-color: #4CAF50;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	background-color: #4CAF50;
+	border-radius: 15px;
+	width: 150px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.download-text {
+	font-size: 1.5em;
+}
+
+.download-subtext {
+	font-size: 16px;
+	font-weight: lighter;
+	line-height: 16px;
+}
+
+.download-screenshot {
+	box-shadow: 5px 5px 30px 0px #888888;
+}
+
+.content-container {
+	background-color: white;
+	padding: 40px;
+}
+
+.content {
+	margin: auto;
+	max-width: 1140px;
+}
+
+.download-container {
+	display: flex;
+}
+
+.download-container-left {
+	flex: 33;
+}
+
+.download-container-right {
+	flex: 66;
+	text-align: center;
+}
