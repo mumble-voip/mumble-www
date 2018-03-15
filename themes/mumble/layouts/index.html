@@ -17,11 +17,13 @@
 			</h1>
 
 		 	<nav>
+				{{ if .Site.Menus.main }}
 	 			<ul class="menu">
 					{{ range .Site.Menus.main }}
 					<li><a href="{{ .URL }}">{{ .Title }}</a></li>
 					{{ end }}
 	 			</ul>
+				{{ end }}
 	 		</nav>
 	 	</div>
  	</header>
@@ -52,11 +54,13 @@
 
 	<footer>
 		<div class="footer-content">
+			{{ if .Site.Menus.footer }}
 			<ul>
-				<li><a href="#">Privacy</a></li>
-				<li><a href="#">Cookies</a></li>
-				<li><a href="#">Legal</a></li>
+			{{ range .Site.Menus.footer }}
+				<li><a href="{{ .URL }}">{{ .Title }}</a></li>
+			{{ end }}
 			</ul>
+			{{ end }}
 	 		<p class="copyleft">Copyright (c) 2018 The Mumble Developers</p>
 		</div>
 	</footer>

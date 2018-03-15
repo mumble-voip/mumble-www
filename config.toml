@@ -38,3 +38,21 @@ theme = "mumble"
     weight = 6
     identifier = "contribute"
     url = "https://github.com/mumble-voip/mumble"
+
+[[menu.footer]]
+    title = "Privacy"
+    weight = 1
+    identifier = "privacy"
+    url = "#"
+
+[[menu.footer]]
+    title = "Cookies"
+    weight = 2
+    identifier = "cookies"
+    url = "#"
+
+[[menu.footer]]
+    title = "Legal"
+    weight = 3
+    identifier = "legal"
+    url = "#"
