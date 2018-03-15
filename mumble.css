@@ -32,15 +32,13 @@ h1 > sub {
 }
 
 header {
-	padding: 10px;
-	width: 100vw;
-
 	background-color: #F2F2F2;
 	border-bottom: 1px solid #D2D2D2;
 }
 
 #header-content {
 	max-width: 1140px;
+	padding: 10px;
 	margin: auto;
 	display: grid;
 	grid-template-areas: "logo header nav";
