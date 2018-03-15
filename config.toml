@@ -1,0 +1,4 @@
+baseURL = "https://mumble.info/"
+languageCode = "en-us"
+title = "Mumble"
+theme = "mumble"
