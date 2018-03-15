@@ -2,3 +2,39 @@ baseURL = "https://mumble.info/"
 languageCode = "en-us"
 title = "Mumble"
 theme = "mumble"
+
+[[menu.main]]
+    title = "Home"
+    weight = 1
+    identifier = "home"
+    url = "/"
+
+[[menu.main]]
+    title = "Documentation"
+    weight = 2
+    identifier = "docs"
+    url = "/docs"
+
+[[menu.main]]
+    title = "Blog"
+    weight = 3
+    identifier = "blog"
+    url = "https://blog.mumble.info/"
+
+[[menu.main]]
+    title = "Forums"
+    weight = 4
+    identifier = "forums"
+    url = "https://www.forums.mumble.info"
+
+[[menu.main]]
+    title = "Reporting Bugs"
+    weight = 5
+    identifier = "bugs"
+    url = "https://github.com/mumble-voip/mumble/issues/new"
+
+[[menu.main]]
+    title = "Contribute"
+    weight = 6
+    identifier = "contribute"
+    url = "https://github.com/mumble-voip/mumble"

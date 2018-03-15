@@ -18,12 +18,9 @@
 
 		 	<nav>
 	 			<ul class="menu">
-	 				<li><a href="//">Home</a></li>
-					<li><a href="file:///dev/null">Documentation</a></li> <!-- XXX: use NUL on Windows -->
-		 			<li><a href="https://blog.mumble.info/">Blog</a></li>
-		 			<li><a href="https://www.forums.mumble.info">Forums</a></li>
-	 				<li><a href="https://github.com/mumble-voip/mumble/issues/new">Reporting Bugs</a></li>
-	 				<li><a href="https://github.com/mumble-voip/mumble">Contribute</a></li>
+					{{ range .Site.Menus.main }}
+					<li><a href="{{ .URL }}">{{ .Title }}</a></li>
+					{{ end }}
 	 			</ul>
 	 		</nav>
 	 	</div>
