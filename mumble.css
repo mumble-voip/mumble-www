@@ -9,20 +9,26 @@ a {
 }
 
 .logo {
+	grid-template: "logo";
+	align-self: center;
+	justify-self: center;
 	height: 100px;
-	float: left;
+	width: 100px;
 	background: url(images/mumble.svg) no-repeat;
-	background-size: 88px;
-	padding-left: 105px;
-	line-height: 55px;
-	font-size: 2.1em;
+	background-size: 100px;
 }
 
-.logo-subtext {
+h1 {
+	grid-template: "header";
+	font-size: 200%;
+	align-self: center;
+	padding-left: 10px;
+}
+
+h1 > sub {
 	display: block;
 	font-size: 16px;
 	font-weight: lighter;
-	line-height: 16px;
 }
 
 header {
@@ -33,14 +39,17 @@ header {
 	border-bottom: 1px solid #D2D2D2;
 }
 
-.header-content {
+#header-content {
 	max-width: 1140px;
 	margin: auto;
+	display: grid;
+	grid-template-areas: "logo header nav";
 }
 
 nav {
+	grid-template: "nav";
 	text-align: right;
-	height: 100px;
+	align-self: center;
 }
 
 ul.menu {
@@ -50,16 +59,19 @@ ul.menu {
 }
 
 ul.menu li {
-	display: block;
-	float: left;
+	display: inline-block;
 }
 
 ul.menu li a {
-	display: block;
+	display: inline-block;
 	color: black;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+}
+
+ul.menu li a:hover {
+	text-decoration: underline;
 }
 
 footer {
