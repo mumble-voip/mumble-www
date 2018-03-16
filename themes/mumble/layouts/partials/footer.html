@@ -1,0 +1,17 @@
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer-content">
+			{{ if .Site.Menus.footer }}
+			<ul>
+				{{ range .Site.Menus.footer }}
+				<li><a href="{{ .URL }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+			{{ end }}
+			<p class="copyleft">Copyright (c) 2018 The Mumble Developers</p>
+		</div>
+	</footer>
+</body>
+</html>
