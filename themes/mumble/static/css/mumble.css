@@ -165,6 +165,10 @@ body > footer {
 	text-align: center;
 }
 
+.download-container-right img {
+	max-width: 100%;
+}
+
 .markdown-body ul {
 	list-style-type: disc;
 }
