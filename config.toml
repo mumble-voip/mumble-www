@@ -33,16 +33,10 @@ disableKinds = ["taxonomy","taxonomyTerm"]
     url = "https://www.forums.mumble.info"
 
 [[menu.main]]
-    title = "Reporting Bugs"
-    weight = 5
-    identifier = "bugs"
-    url = "https://github.com/mumble-voip/mumble/issues/new"
-
-[[menu.main]]
     title = "Contribute"
     weight = 6
     identifier = "contribute"
-    url = "https://github.com/mumble-voip/mumble"
+    url = "/contribute"
 
 [[menu.footer]]
     title = "Privacy"
