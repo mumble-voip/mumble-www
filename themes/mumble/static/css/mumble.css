@@ -34,7 +34,7 @@ h1 > sub {
 	font-weight: lighter;
 }
 
-header {
+body > header {
 	background-color: #F2F2F2;
 	border-bottom: 1px solid #D2D2D2;
 }
@@ -47,7 +47,7 @@ header {
 	grid-template-areas: "logo header nav";
 }
 
-header nav {
+body > header nav {
 	grid-template: "nav";
 	text-align: right;
 	align-self: center;
@@ -75,7 +75,7 @@ ul.menu li a:hover {
 	text-decoration: underline;
 }
 
-footer {
+body > footer {
 	padding: 20px;
 	background-color: #F2F2F2;
 	border-top: 1px solid #D2D2D2;
@@ -194,11 +194,11 @@ nav.blogposts a {
 	color: #7e7e7e;
 }
 
-nav.blogposts a:nth-child(1) {
+nav.blogposts div:nth-child(1) {
 	text-align: left;
 }
 
-nav.blogposts a:nth-child(2) {
+nav.blogposts div:nth-child(2) {
 	text-align: right;
 }
 

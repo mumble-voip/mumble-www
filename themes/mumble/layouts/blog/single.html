@@ -1,11 +1,15 @@
 {{ partial "header.html" . }}
 <nav class="blogposts">
-{{ with .Next }}
+<div>
+{{ with .NextInSection }}
 <a href="{{ .URL | relURL }}">← {{ .Title }}</a>
 {{ end }}
-{{ with .Prev }}
+</div>
+<div>
+{{ with .PrevInSection }}
 <a href="{{ .URL | relURL }}">{{ .Title }} →</a>
 {{ end }}
+</div>
 </nav>
 
 <div class="markdown-body">
