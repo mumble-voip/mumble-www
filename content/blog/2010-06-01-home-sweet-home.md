@@ -6,7 +6,7 @@ categories:
   - News
 
 ---
-<img class="alignleft size-thumbnail wp-image-53" title="Home, Sweet Home" src="http://blog.mumble.info/wp-uploads/2010/07/Andy_Houses_on_the_horizon_-_Starburst_remix-150x150.png" alt="" width="150" height="150" />First things first: **Welcome to our shiny new blog 😉**
+First things first: **Welcome to our shiny new blog 😉**
 
 This is the official blog of the <a href="http://www.mumble.info/" target="_blank">Mumble project</a>. With this blog we will try to keep our user base informed about notable events in and around Mumble as well as other trivia we consider worth sharing.
 

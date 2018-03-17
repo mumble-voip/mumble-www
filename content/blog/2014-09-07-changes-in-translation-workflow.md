@@ -7,7 +7,7 @@ categories:
   - News
 
 ---
-<img class="alignleft size-thumbnail wp-image-198" title="spelling" src="http://blog.mumble.info/wp-uploads/2010/10/spelling-150x150.jpg" alt="" width="150" height="150" />We have finally finished integrating <a href="https://www.transifex.com/" target="_blank">Transifex </a>into our workflow. Transifex is an online translation tool which allows collaborative translation of applications directly from a browser.
+We have finally finished integrating <a href="https://www.transifex.com/" target="_blank">Transifex </a>into our workflow. Transifex is an online translation tool which allows collaborative translation of applications directly from a browser.
 
 For Mumble this means that it is now easier than ever before to contribute translations for your language to the project. Simply visit our <a href="https://www.transifex.com/projects/p/mumble/" target="_blank">Transifex project page</a>, sign up and get started. For a step by step guide see <a href="http://wiki.mumble.info/wiki/Language_Translation" target="_blank">this page in our wiki</a>.
 

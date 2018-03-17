@@ -8,7 +8,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />This Wednesday, to coincide with the release of iOS 7, we released [Mumble for iOS 1.2.2][1]. This is a primarily a release to fix incompatibilities with iOS 7, but it also includes a few other oft-requested goodies.
+This Wednesday, to coincide with the release of iOS 7, we released [Mumble for iOS 1.2.2][1]. This is a primarily a release to fix incompatibilities with iOS 7, but it also includes a few other oft-requested goodies.
 
 <!--more-->
 

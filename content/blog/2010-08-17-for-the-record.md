@@ -10,8 +10,6 @@ tags:
   - recording
 
 ---
-<img class="aligncenter size-full wp-image-89" title="Recorder dialog" src="http://blog.mumble.info/wp-uploads/2010/08/Recorder1.png" alt="Mumble 1.2.3 recorder dialog" width="497" height="283" />
-
 As you already know if you read the article on our [Tracker Squash Meeting][1] or listened to the buzz in [#mumble][2] the upcoming [1.2.3 release][3] will have a recording feature. The work on this has progressed nicely and since we are now shipping the first snapshots with this new feature in them we think it is time to give you a proper introduction.
 
 <!--more-->

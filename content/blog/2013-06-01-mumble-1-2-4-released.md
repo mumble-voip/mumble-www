@@ -7,7 +7,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft size-full wp-image-232" title="Mumblesoftwarelogo" src="http://mumble.sourceforge.net/w/logo.png" alt="" />The Mumble team is proud to announce the release of version 1.2.4 of the Mumble VoIP application.
+The Mumble team is proud to announce the release of version 1.2.4 of the Mumble VoIP application.
 
 With this new version we are introducing the revolutionary [Opus][1] [audio codec][2], Windows 8 support and many other improvements over our last stable release (see the [Mumble 1.2.4][3] wiki page for more information). Opus is now the primary audio codec of choice for Mumble.
 

@@ -9,7 +9,7 @@ categories:
   - Security
 
 ---
-<img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />The Mumble team has released [version 1.2.3 of the iOS Mumble client][1].
+The Mumble team has released [version 1.2.3 of the iOS Mumble client][1].
 
 This new version contains two important client-side security fixes, and we advise users to download this update from the App Store as soon as possible.
 

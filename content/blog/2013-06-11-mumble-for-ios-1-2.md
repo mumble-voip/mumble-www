@@ -8,7 +8,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />Earlier today, we released [Mumble for iOS 1.2][1].
+Earlier today, we released [Mumble for iOS 1.2][1].
 
 This release is compatible with the 1.2.4 protocol and includes support for the Opus codec.
 

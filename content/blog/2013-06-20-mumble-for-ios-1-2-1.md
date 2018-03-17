@@ -8,7 +8,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />Today, we&#8217;ll be releasing [Mumble for iOS 1.2.1][1]. This is a minor bug fix release to the 1.2 release we did earlier this month.
+Today, we&#8217;ll be releasing [Mumble for iOS 1.2.1][1]. This is a minor bug fix release to the 1.2 release we did earlier this month.
 
 We found a nasty race condition which could cause crashes when the audio subsystem of the app was started or restarted. This bug seemed to happen very often on 4th generation iPod Touch devices, but could happen on all iOS devices with some bad luck.
 

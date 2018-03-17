@@ -9,7 +9,7 @@ tags:
   - rc
 
 ---
-<img src="http://blog.mumble.info/wp-uploads/2010/12/Mumblesoftwarelogo.png" alt="" title="Mumblesoftwarelogo" width="135" height="135" class="alignleft size-full wp-image-232" />We just released our next Release Candidate: Mumble 1.2.3 RC2. This Candidate is pretty much what most of the people using the latest Snapshots have been using the last weeks and we consider it to be very reliable.
+We just released our next Release Candidate: Mumble 1.2.3 RC2. This Candidate is pretty much what most of the people using the latest Snapshots have been using the last weeks and we consider it to be very reliable.
 
 As always the download can be found on our webpage at <http://mumble.info>.
 

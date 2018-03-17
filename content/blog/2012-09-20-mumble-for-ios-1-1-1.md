@@ -8,7 +8,7 @@ categories:
   - Release
 
 ---
- <img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />We&#8217;ve released an emergency iOS 6 bug fix for the Mumble iOS client today — Mumble for iOS 1.1.1.
+ We&#8217;ve released an emergency iOS 6 bug fix for the Mumble iOS client today — Mumble for iOS 1.1.1.
 
 It works around a compatibility issue with iOS 6 that caused users to be silent when transmitting audio. A few other crash bugs have also been fixed in the 1.1.1 release.
 

@@ -6,7 +6,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft size-thumbnail wp-image-541" title="Version numbers" src="http://blog.mumble.info/wp-uploads/2014/02/kablam_Number_Animals-e1391992112887-150x100.png" alt="" width="150" height="100" />Mumble&#8217;s version numbers have been a great source of confusion for a long time. Version 1.1.8 being incompatible with 1.2.0, only incrementing the last place of the version number even though big changes were made and so on. This will change.
+Mumble&#8217;s version numbers have been a great source of confusion for a long time. Version 1.1.8 being incompatible with 1.2.0, only incrementing the last place of the version number even though big changes were made and so on. This will change.
 
 **TL;DR:** The next version will be 1.3.0 not 1.2.6. The next feature release after that 1.4.0 and so on.
 

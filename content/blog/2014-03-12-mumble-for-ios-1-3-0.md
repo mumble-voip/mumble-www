@@ -8,7 +8,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />The Mumble team has released [version 1.3.0 of the iOS Mumble client][1].
+The Mumble team has released [version 1.3.0 of the iOS Mumble client][1].
 
 This new version contains a fix for the [iOS 7.1 issue we recently blogged about][2]. It is also the first release to use the iOS 7 look and feel.
 

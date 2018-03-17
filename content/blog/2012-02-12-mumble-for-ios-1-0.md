@@ -8,7 +8,7 @@ categories:
   - Release
 
 ---
-[<img class="alignleft size-full wp-image-210" title="Mumble for iOS" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="Mumble for iOS" />][1]Today we&#8217;ve released [Mumble for iOS 1.0 on the App Store][1].
+Today we&#8217;ve released [Mumble for iOS 1.0 on the App Store][1].
 
 This has been brewing for some time, but we are finally comfortable with calling this release 1.0, from both a feature and a UI perspective. The app is, of course, free of charge and open source.
 

@@ -206,13 +206,6 @@ nav.blogposts div:nth-child(2) {
 	text-align: right;
 }
 
-img.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 24px;
-	margin-top: 4px;
-}
-
 @media only screen and (max-width: 768px) {
 	#header-content {
 		display: block !important;

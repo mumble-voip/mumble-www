@@ -9,7 +9,7 @@ tags:
   - latency
 
 ---
-[<img class="alignleft size-full wp-image-44" title="Stopwatch" src="http://blog.mumble.info/wp-uploads/2010/06/Stopwatch-150x150.png" alt="" width="150" height="150" />][1]When we first started with Mumble, we did it because none of the commercial alternatives had quality we were happy with, and there were no open source projects that would have been a good starting base. So, we made our own. This means Mumble was made to satisfy a need; the need we have for high quality voicecom when we play. As such, our two focus areas are voice quality and voice latency. Oh, and &#8220;cool technical stuff&#8221;. But I digress. Quality is subjective, and is hard to quantify, but latency is much easier to test.
+When we first started with Mumble, we did it because none of the commercial alternatives had quality we were happy with, and there were no open source projects that would have been a good starting base. So, we made our own. This means Mumble was made to satisfy a need; the need we have for high quality voicecom when we play. As such, our two focus areas are voice quality and voice latency. Oh, and &#8220;cool technical stuff&#8221;. But I digress. Quality is subjective, and is hard to quantify, but latency is much easier to test.
 
 <!--more-->
 
@@ -20,5 +20,3 @@ A few years pass. Other competing products arrive. Old competing products get re
 Our best repeatable results, achieved using either ALSA hw: or WASAPI exclusive mode, is around 40-50 ms. That&#8217;s mouth to ear, including network travel time. But what does that actually mean? According to Google, <a href="http://www.google.com/search?q=40ms+*+speed+of+sound" target="_self">40milliseconds equals 13.6 meters</a>. So, place two people 15 meters apart, each with a headset, and have person A say &#8220;Latency&#8221;. Person B will hear it in the headset before he can hear it through the air. That is _low_ latency. Unfortunately, such configurations are useless for actual gaming; exclusive hardware devices means the games can&#8217;t use it.
 
 It&#8217;s still a cool result.
-
- [1]: http://blog.mumble.info/wp-uploads/2010/06/Stopwatch-150x150.png

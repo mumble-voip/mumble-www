@@ -7,7 +7,7 @@ categories:
   - News
 
 ---
-<img class="alignleft" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="" />A word of warning: &#8216;Mumble for iOS&#8217; 1.2.3 is incredibly unusable on iOS 7.1 &#8211; if you depend on it, you should probably not update to iOS 7.1 just yet.﻿
+A word of warning: &#8216;Mumble for iOS&#8217; 1.2.3 is incredibly unusable on iOS 7.1 &#8211; if you depend on it, you should probably not update to iOS 7.1 just yet.﻿
 
 There is a problem with audio subsystem, which is causing it to endlessly try to restart itself. This manifests itself via iOS&#8217;s &#8216;red bar&#8217; (signalling that an app is using background audio) toggling itself on and off very fast (even when inside the app!), making the app unusable.
 

@@ -6,7 +6,7 @@ categories:
   - Release
 
 ---
-<img class="alignleft size-full wp-image-232" title="Mumblesoftwarelogo" src="http://blog.mumble.info/wp-uploads/2010/12/Mumblesoftwarelogo.png" alt="" width="135" height="135" />We have been closely monitoring our bug trackers and crash reporting database and have come to the conclusion that it is time to get Mumble 1.2.3 out there.
+We have been closely monitoring our bug trackers and crash reporting database and have come to the conclusion that it is time to get Mumble 1.2.3 out there.
 
 Since we had some minor code changes since the last RC we want to give the code a few more days to cool down and **we plan to release Mumble 1.2.3 stable the upcoming weekend**.
 

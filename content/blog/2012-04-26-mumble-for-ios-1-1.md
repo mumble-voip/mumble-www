@@ -12,7 +12,7 @@ categories:
   - Release
 
 ---
-[<img class="alignleft size-full wp-image-210" title="Mumble for iOS" src="http://blog.mumble.info/wp-uploads/2012/02/MumbleAppIcon.png" alt="Mumble for iOS" />][1]Today we&#8217;re releasing version 1.1 of the Mumble iOS app on the App Store.
+Today we&#8217;re releasing version 1.1 of the Mumble iOS app on the App Store.
 
 This release addresses quite a few of the most sought-after features missing from the 1.0 version, along with fixes for various crashes and memory leaks.
 

@@ -10,7 +10,7 @@ tags:
   - iphone
 
 ---
-<a rel="attachment wp-att-114" href="http://blog.mumble.info/mumble-for-ios-beta-test-phase1/iphone/"><img class="alignleft size-full wp-image-114" title="Mumble for iOS" src="http://blog.mumble.info/wp-uploads/2010/08/iphone.png" alt="" width="242" height="450" /></a>As promised some time ago, the beta test for Mumble for iOS-based devices has now gone live.
+As promised some time ago, the beta test for Mumble for iOS-based devices has now gone live.
 
 The portal for the beta testing efforts can be found at <a title="Mumble for iOS Beta Portal" href="http://mumble-ios.appspot.com/" target="_blank">http://mumble-ios.appspot.com/</a>. If you are interested in testing the application, please read on for more information on joining the beta test.
 

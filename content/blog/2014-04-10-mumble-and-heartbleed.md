@@ -7,7 +7,7 @@ categories:
   - Tech talk
 
 ---
-<img class="alignleft" height="200" src="http://blog.mumble.info/wp-uploads/2014/04/heartbleed.png" alt="" />Most of the Mumble project&#8217;s communication this week regarding the [Heartbleed][1] vulnerability has happened via IRC. This blog post attempts to fix that by providing answers to the most frequently asked questions here on our blog.
+Most of the Mumble project&#8217;s communication this week regarding the [Heartbleed][1] vulnerability has happened via IRC. This blog post attempts to fix that by providing answers to the most frequently asked questions here on our blog.
 
 <!--more-->
 

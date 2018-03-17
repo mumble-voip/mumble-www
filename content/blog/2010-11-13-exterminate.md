@@ -8,7 +8,7 @@ tags:
   - Bugs
 
 ---
-<img class="alignleft size-full wp-image-210" title="Bug" src="http://blog.mumble.info/wp-uploads/2010/11/lemmling_Ladybug1.png" alt="" width="150" height="150" />Hello fellow Mumblers,
+Hello fellow Mumblers,
 
 As you might have realised it has been quite some time since 1.2.2 was released and we are eager to take the next step: 1.2.3 stable.
 
