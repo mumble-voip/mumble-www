@@ -18,4 +18,4 @@ Along with that, the new version of the app uses the latest version of MumbleKit
 
 As always, it&#8217;s available on the [App Store][1]. And don’t forget — if you enjoy the app, please spread the word, and remember to rate it in the App Store.
 
- [1]: http://itunes.apple.com/us/app/mumble/id443472808?mt=8
+ [1]: https://itunes.apple.com/us/app/mumble/id443472808?mt=8

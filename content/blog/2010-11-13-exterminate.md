@@ -17,8 +17,8 @@ Unfortunately there is one tricky thing about stable releases: They should be s
 In our quest to exterminate each and every bug in Mumble, a quest at least as futile as honorable in software development, we rely on bugreports from you. If you want a quick and stable 1.2.3 release, then get one of our snapshots and test it. If you find a bug please visit our [bugtracker][2] and, unless there already is one, create a ticket. Please remember that for us to be able to fix the bug we will need as much information on it as possible.
 
 Thanks,
-  
+
 The Mumble Team
 
  [1]: http://www.sjuengling.de/mus/
- [2]: http://sourceforge.net/tracker/?group_id=147372&atid=768005
+ [2]: https://github.com/mumble-voip/mumble/issues/

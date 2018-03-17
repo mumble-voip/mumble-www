@@ -75,14 +75,14 @@ The app, like the Mumble desktop client, is Open Source, available under a BSD-s
 The source code is available on our GitHub page:
 
 <https://github.com/mumble-voip/mumble-iphoneos>
-  
+
 [https://github.com/mumble-voip/mumblekit][2]
 
 Contributions of any kind are always warmly welcomed.
 
 Regards,
-  
+
 The Mumble Team
 
- [1]: http://itunes.apple.com/us/app/mumble/id443472808?mt=8
+ [1]: https://itunes.apple.com/us/app/mumble/id443472808?mt=8
  [2]: https://github.com/mumble-voip/mumble-iphoneos
