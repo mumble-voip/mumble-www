@@ -173,6 +173,12 @@ footer {
 	margin-top: 30px;
 }
 
+#bloglist > div::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
 #bloglist > div:nth-child(1) {
 	margin-top: 0;
 }
@@ -194,4 +200,11 @@ nav.blogposts a:nth-child(1) {
 
 nav.blogposts a:nth-child(2) {
 	text-align: right;
+}
+
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
 }
