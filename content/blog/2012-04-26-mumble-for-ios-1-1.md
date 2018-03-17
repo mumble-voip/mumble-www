@@ -1,7 +1,6 @@
 ---
 title: Mumble for iOS 1.1
 author: mkrautz
-type: post
 date: 2012-04-26T20:08:44+00:00
 excerpt: |
   Today we're releasing version 1.1 of the Mumble iOS app on the App Store.

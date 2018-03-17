@@ -1,7 +1,6 @@
 ---
 title: New forums and wiki
 author: .D0T
-type: post
 date: 2014-09-07T11:11:08+00:00
 categories:
   - Community

@@ -1,7 +1,6 @@
 ---
 title: Changes in translation workflow
 author: .D0T
-type: post
 date: 2014-09-07T10:56:31+00:00
 categories:
   - Community

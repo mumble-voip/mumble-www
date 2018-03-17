@@ -1,7 +1,6 @@
 ---
 title: Home, Sweet Home
 author: .D0T
-type: post
 date: 2010-06-01T01:01:16+00:00
 categories:
   - News

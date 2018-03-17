@@ -1,7 +1,6 @@
 ---
 title: 'IMPORTANT: Update to Mumble 1.2.3a'
 author: .D0T
-type: post
 date: 2012-01-15T11:45:47+00:00
 categories:
   - News

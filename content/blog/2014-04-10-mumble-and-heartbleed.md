@@ -1,7 +1,6 @@
 ---
 title: Mumble and Heartbleed
 author: mkrautz
-type: post
 date: 2014-04-10T23:21:53+00:00
 categories:
   - Security

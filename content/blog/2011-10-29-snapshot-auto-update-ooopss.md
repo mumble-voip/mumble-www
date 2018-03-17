@@ -1,7 +1,6 @@
 ---
 title: Snapshot auto update ooopss
 author: .D0T
-type: post
 date: 2011-10-29T17:11:00+00:00
 categories:
   - News

@@ -1,7 +1,6 @@
 ---
 title: 'Mumble for iOS Beta Test: Phase 1'
 author: mkrautz
-type: post
 date: 2010-09-06T16:00:20+00:00
 categories:
   - iOS

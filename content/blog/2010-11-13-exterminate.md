@@ -1,7 +1,6 @@
 ---
 title: Exterminate
 author: .D0T
-type: post
 date: 2010-11-13T14:07:30+00:00
 categories:
   - Community

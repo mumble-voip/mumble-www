@@ -1,7 +1,6 @@
 ---
 title: ‘Mumble for iOS’ 1.2.3 is buggy when running on iOS 7.1
 author: mkrautz
-type: post
 date: 2014-03-10T22:47:03+00:00
 categories:
   - iOS
