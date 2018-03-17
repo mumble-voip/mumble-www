@@ -160,3 +160,7 @@ footer {
 	flex: 66;
 	text-align: center;
 }
+
+.markdown-body ul {
+	list-style-type: disc;
+}
