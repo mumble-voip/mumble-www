@@ -212,3 +212,16 @@ img.alignleft {
 	margin-right: 24px;
 	margin-top: 4px;
 }
+
+@media only screen and (max-width: 768px) {
+	#header-content {
+		display: block !important;
+		text-align: center !important;
+	}
+	#header-content .logo {
+		margin: 0 auto !important;
+	}
+	#header-content nav {
+		text-align: center !important;
+	}
+}
