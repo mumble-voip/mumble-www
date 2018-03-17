@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Mumble"
 theme = "mumble"
 
+disableKinds = ["taxonomy","taxonomyTerm"]
+
 [permalinks]
   blog = "/blog/:title/"
 
