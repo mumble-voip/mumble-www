@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Mumble"
 theme = "mumble"
 
+[permalinks]
+  blog = "/blog/:title/"
+
 [[menu.main]]
     title = "Home"
     weight = 1

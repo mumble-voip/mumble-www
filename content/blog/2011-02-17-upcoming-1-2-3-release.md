@@ -3,7 +3,6 @@ title: Upcoming 1.2.3 Release
 author: .D0T
 type: post
 date: 2011-02-17T06:51:44+00:00
-url: /?p=262
 categories:
   - Release
 

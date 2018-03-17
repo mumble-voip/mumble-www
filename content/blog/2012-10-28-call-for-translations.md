@@ -3,7 +3,6 @@ title: Call for translations
 author: .D0T
 type: post
 date: 2012-10-28T21:43:00+00:00
-url: /?p=418
 categories:
   - Uncategorized
 

@@ -3,7 +3,6 @@ title: Opus codec now IETF standard (RFC 6716)
 author: .D0T
 type: post
 date: 2012-09-11T20:00:01+00:00
-url: /?p=388
 categories:
   - Uncategorized
 

@@ -3,7 +3,6 @@ title: Building web services for Mumble
 author: Svedrin
 type: post
 date: 2010-09-27T16:00:19+00:00
-url: /?p=160
 categories:
   - Community
   - Tech talk

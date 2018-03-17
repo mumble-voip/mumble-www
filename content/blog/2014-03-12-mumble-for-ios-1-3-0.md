@@ -3,7 +3,6 @@ title: Mumble for iOS 1.3.0
 author: mkrautz
 type: post
 date: 2014-03-12T23:47:24+00:00
-url: /?p=567
 categories:
   - iOS
   - News

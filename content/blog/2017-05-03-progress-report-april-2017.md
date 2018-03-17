@@ -3,7 +3,6 @@ title: 'Progress Report: April 2017'
 author: Kissaki
 type: post
 date: 2017-05-03T10:36:33+00:00
-url: /?p=805
 categories:
   - News
 tags:

@@ -3,7 +3,6 @@ title: Mumble 1.2.4 released
 author: .D0T
 type: post
 date: 2013-06-01T22:13:27+00:00
-url: /?p=447
 categories:
   - News
   - Release

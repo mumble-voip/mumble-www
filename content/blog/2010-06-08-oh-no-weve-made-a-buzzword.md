@@ -3,7 +3,6 @@ title: Oh no, We’ve made a buzzword
 author: slicer
 type: post
 date: 2010-06-07T23:54:39+00:00
-url: /?p=24
 categories:
   - Tech talk
 tags:

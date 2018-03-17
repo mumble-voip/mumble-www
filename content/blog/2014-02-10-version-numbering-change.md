@@ -3,7 +3,6 @@ title: Version numbering change
 author: .D0T
 type: post
 date: 2014-02-10T21:19:13+00:00
-url: /?p=539
 categories:
   - Release
 

@@ -3,7 +3,6 @@ title: Lost in translation
 author: slicer
 type: post
 date: 2010-10-05T17:21:47+00:00
-url: /?p=195
 categories:
   - Community
 tags:

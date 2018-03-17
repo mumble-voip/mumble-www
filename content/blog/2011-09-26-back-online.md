@@ -3,7 +3,6 @@ title: Back online
 author: .D0T
 type: post
 date: 2011-09-26T20:48:23+00:00
-url: /?p=298
 categories:
   - News
 tags:

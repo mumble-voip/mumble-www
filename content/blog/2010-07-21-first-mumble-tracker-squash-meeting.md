@@ -3,7 +3,6 @@ title: First Mumble Tracker Squash Meeting
 author: slicer
 type: post
 date: 2010-07-21T23:01:44+00:00
-url: /?p=60
 categories:
   - Uncategorized
 
