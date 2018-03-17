@@ -6,7 +6,7 @@
 <a href="{{ .URL | relURL }}">{{ .Title }} →</a>
 {{ end }}
 <div class="markdown-body">
-<h2>{{ .Title }}</h2>
+<h2><a href="{{ .URL | relURL }}">{{ .Title }}</a></h2>
 <p>Posted on {{ .Date.Format "January 1, 2006" }}{{ with .Params.author }} by {{ . }}{{ end }}</p>
 
 {{ .Content }}

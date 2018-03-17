@@ -22,7 +22,7 @@ theme = "mumble"
     title = "Blog"
     weight = 3
     identifier = "blog"
-    url = "https://blog.mumble.info/"
+    url = "/blog"
 
 [[menu.main]]
     title = "Forums"
