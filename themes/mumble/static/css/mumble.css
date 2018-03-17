@@ -47,7 +47,7 @@ header {
 	grid-template-areas: "logo header nav";
 }
 
-nav {
+header nav {
 	grid-template: "nav";
 	text-align: right;
 	align-self: center;
@@ -175,4 +175,23 @@ footer {
 
 #bloglist > div:nth-child(1) {
 	margin-top: 0;
+}
+
+nav.blogposts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+nav.blogposts a {
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #7e7e7e;
+}
+
+nav.blogposts a:nth-child(1) {
+	text-align: left;
+}
+
+nav.blogposts a:nth-child(2) {
+	text-align: right;
 }
