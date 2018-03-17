@@ -13,7 +13,7 @@
 </nav>
 
 <div class="markdown-body">
-<h2><a href="{{ .URL | relURL }}">{{ .Title }}</a></h2>
+<h1><a href="{{ .URL | relURL }}">{{ .Title }}</a></h1>
 <p>Posted on {{ .Date.Format "January 1, 2006" }}{{ with .Params.author }} by {{ . }}{{ end }}</p>
 
 {{ .Content }}
