@@ -44,7 +44,7 @@ After restructuring our unit tests for easier testing we implemented more of the
 
   * Cleaned up wiki documentation and categorization
   * Updated documentation on [how to use (free) Let&#8217;s Encrypt server certificates][16]
-  * Describe SIGHUP and SIGUSR1 in the manual file (SIGHUP exists for quite some time, SIGUSR1 is a more recent new feature) PR [#3050][17] 
+  * Describe SIGHUP and SIGUSR1 in the manual file (SIGHUP exists for quite some time, SIGUSR1 is a more recent new feature) PR [#3050][17]
       * SIGHUP for log rotation
       * SIGUSR1 for reloading TLS settings (e.g. reloading Let&#8217;s Encrypt server certificates without downtime)
 
@@ -71,7 +71,7 @@ And as always, apart from these features that landed in our master development b
  [13]: https://github.com/mumble-voip/mumble/pull/2999
  [14]: https://github.com/mumble-voip/mumble/pull/3040
  [15]: https://github.com/mumble-voip/mumble/pull/3039
- [16]: http://wiki.mumble.info/wiki/Obtaining_a_Let%27s_Encrypt_Murmur_Certificate
+ [16]: https://wiki.mumble.info/wiki/Obtaining_a_Let%27s_Encrypt_Murmur_Certificate
  [17]: https://github.com/mumble-voip/mumble/pull/3050
  [18]: https://github.com/mumble-voip/mumble/pull/3051
  [19]: https://github.com/mumble-voip/mumble/pull/3054
@@ -82,4 +82,4 @@ And as always, apart from these features that landed in our master development b
  [24]: https://github.com/mumble-voip/mumble/pull/3011
  [25]: https://github.com/mumble-voip/mumble/pull/3033
  [26]: https://github.com/mumble-voip/mumble/pull/3034
- [27]: http://mumble.info/
+ [27]: https://www.mumble.info/

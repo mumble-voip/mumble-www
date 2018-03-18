@@ -20,4 +20,4 @@ So, if you find any spelling, grammar or textual logic errors in the current sna
 
 **UPDATE:** Strings are frozen now. Thanks for your help.
 
- [2]: http://mumble.info/en-ac2b6ca497387652bfe96ef75d444ac1cb622d76.html "Exported strings"
+ [2]: https://mumble.info/en-ac2b6ca497387652bfe96ef75d444ac1cb622d76.html "Exported strings"

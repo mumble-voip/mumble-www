@@ -30,5 +30,5 @@ We hope you&#8217;re going to enjoy being able to Mumble on the go, and that you
 
 Last but not least, we want to remind you there are already Mumble clients available for other mobile platforms. The Mumble client for Android is available on [GitHub][1], and the desktop version of Mumble runs on [Maemo][2] devices.
 
- [1]: http://github.com/pcgod/mumble-android "Mumble for Android"
- [2]: http://maemo.org/packages/view/mumble/ "Mumble for Maemo"
+ [1]: https://github.com/pcgod/mumble-android "Mumble for Android"
+ [2]: https://maemo.org/packages/view/mumble/ "Mumble for Maemo"

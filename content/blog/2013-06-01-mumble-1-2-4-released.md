@@ -25,10 +25,10 @@ For a list of known issues and their workarounds, please consult the [known issu
 
 The Mumble team
 
- [1]: http://www.opus-codec.org/
- [2]: http://en.wikipedia.org/wiki/Audio_codec
- [3]: http://mumble.sourceforge.net/1.2.4
- [4]: http://mumble.sourceforge.net/Positional-Audio
- [5]: http://mumble.sourceforge.net/Mumo_source
- [6]: https://sourceforge.net/apps/phpbb/mumble/
- [7]: http://mumble.sourceforge.net/1.2.4_Known_Issues
+ [1]: https://www.opus-codec.org/
+ [2]: https://en.wikipedia.org/wiki/Audio_codec
+ [3]: https://wiki.mumble.info/wiki/1.2.4
+ [4]: https://wiki.mumble.info/wiki/Positional-Audio
+ [5]: https://wiki.mumble.info/wiki/Mumo_source
+ [6]: https://forums.mumble.info/
+ [7]: https://wiki.mumble.info/wiki/1.2.4_Known_Issues

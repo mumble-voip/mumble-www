@@ -18,31 +18,31 @@ This new version contains two important client-side security fixes, and we advis
 Alongside these security fixes, this release also includes a few minor bug fixes:
 
   * Increased the size of Mumble&#8217;s encoding buffer for Opus packets
-  
+
     to be able to encode all Opus packets without triggering Opus&#8217;s
-  
+
     internal rate limiting.
   * Fixed a bug that could cause the certificate accept alert view that is shown
-  
+
     upon connecting to a server with an unknown certificate to sometimes be hidden
-  
+
     on iOS 7.
   * Several external libraries have been synced to their latest stable versions.
 
 Security advisories for the two fixed vulnerabilities are available below:
 
 [Mumble-SA-2014-003][2] [[sig][3]]
-  
+
 &#8211; A malformed Opus voice packet sent to a MumbleKit client could trigger a NULL pointer dereference.
 
 [Mumble-SA-2014-004][4] [[sig][5]]
-  
+
 &#8211; A malformed Opus voice packet sent to a MumbleKit client could trigger a heap-based buffer overflow.
 
 The Mumble team
 
- [1]: http://itunes.apple.com/us/app/mumble/id443472808?mt=8
- [2]: http://mumble.info/security/Mumble-SA-2014-003.txt
- [3]: http://mumble.info/security/Mumble-SA-2014-003.txt.sig
- [4]: http://mumble.info/security/Mumble-SA-2014-004.txt
- [5]: http://mumble.info/security/Mumble-SA-2014-004.txt.sig
+ [1]: https://itunes.apple.com/us/app/mumble/id443472808?mt=8
+ [2]: https://www.mumble.info/security/Mumble-SA-2014-003.txt
+ [3]: https://www.mumble.info/security/Mumble-SA-2014-003.txt.sig
+ [4]: https://www.mumble.info/security/Mumble-SA-2014-004.txt
+ [5]: https://www.mumble.info/security/Mumble-SA-2014-004.txt.sig

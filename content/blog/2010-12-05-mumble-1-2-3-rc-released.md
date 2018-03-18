@@ -14,12 +14,12 @@ We are happy to announce the release of the first Release Candidate of the upcom
 
 &nbsp;
 
-The Mumble 1.2.3 RC **download** can be found on our homepage at <http://mumble.info>.
-  
+The Mumble 1.2.3 RC **download** can be found on our homepage at <https://www.mumble.info/>.
+
 To find out **what is new** in this release visit the [upcoming releases page on our wiki][1].
 
 Regards,
-  
+
 The Mumble team
 
- [1]: http://mumble.sourceforge.net/1.2.3
+ [1]: https://wiki.mumble.info/wiki/1.2.3

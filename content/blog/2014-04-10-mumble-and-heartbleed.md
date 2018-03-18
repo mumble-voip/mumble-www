@@ -28,7 +28,7 @@ Once you have patched [OpenSSL][3] on any vulnerable systems, you should also st
 The Mumble Team
 
  [1]: http://heartbleed.com/
- [2]: http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160
- [3]: http://www.openssl.org/
+ [2]: https://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160
+ [3]: https://www.openssl.org/
  [4]: https://sourceforge.net/projects/mumble/
- [5]: http://mumble.info
+ [5]: https://mumble.info
