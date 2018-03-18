@@ -31,7 +31,6 @@ h1 a {
 h1 > sub {
 	display: block;
 	font-size: 16px;
-	font-weight: lighter;
 }
 
 body > header {
@@ -110,7 +109,7 @@ body > footer {
 }
 
 .footer-content .copyleft {
-	font-weight: lighter;
+	color: #a6a6a6;
 }
 
 .download-items * {
@@ -134,7 +133,6 @@ body > footer {
 
 .download-subtext {
 	font-size: 16px;
-	font-weight: lighter;
 	line-height: 16px;
 }
 
