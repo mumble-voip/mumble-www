@@ -10,7 +10,6 @@ a {
 .logo {
 	grid-template: "logo";
 	align-self: center;
-	justify-self: center;
 	height: 100px;
 	width: 100px;
 	background: url(mumble.svg) no-repeat;
@@ -43,6 +42,7 @@ body > header {
 	padding: 10px;
 	margin: auto;
 	display: grid;
+	grid-template-columns: auto 1fr 1fr;
 	grid-template-areas: "logo header nav";
 }
 
