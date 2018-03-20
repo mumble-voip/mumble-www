@@ -204,6 +204,56 @@ nav.blogposts div:nth-child(2) {
 	text-align: right;
 }
 
+.download-box-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.download-box {
+	justify-self: center;
+	align-self: center;
+	margin: 15px;
+	text-align: center;
+}
+
+.os-name {
+	display: block;
+}
+
+.download-size {
+	display: block;
+}
+
+.os {
+	display: block;
+	width: 150px;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	margin: 0 auto;
+}
+
+.os-windows {
+	background-image: url(icons/windows.svg);
+}
+
+.os-mac {
+	background-image: url(icons/apple.svg);
+}
+
+.os-linux {
+	background-image: url(icons/linux.svg);
+}
+
+.os-ios {
+	background-image: url(icons/app-store-ios.svg);
+}
+
+.os-android {
+	background-image: url(icons/android.svg);
+}
+
 @media only screen and (max-width: 768px) {
 	#header-content {
 		display: block !important;
@@ -214,5 +264,9 @@ nav.blogposts div:nth-child(2) {
 	}
 	#header-content nav {
 		text-align: center !important;
+	}
+
+	.download-box-container {
+		grid-template-columns: 1fr 1fr !important;
 	}
 }
