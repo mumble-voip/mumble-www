@@ -2,10 +2,6 @@
 title: Downloads
 ---
 
-## Stable release
-
-Version 1.2.19 is the latest stable version of Mumble and was released on January 27, 2017.
-
 <div class="download-box-container">
 
 <div class="download-box">
@@ -59,7 +55,32 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
 
 </div>
 
+Version 1.2.19 is the latest stable version of Mumble and was released on January 27, 2017.
+
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
+
+## Third party clients
+
+If you are looking for a client for an operating system we do not officially support ourselves, or if you are looking for an alternative client application please refer to the following overview of third party client applications.
+
+<div class="download-box-container">
+
+<div class="download-box">
+    <span class="os os-android" aria-hidden="true"></span>
+    <span class="os-name">Android</span>
+    Plumble<br />
+    <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Google Play</a><br />
+    <a href="https://f-droid.org/repository/browse/?fdid=com.morlunk.mumbleclient">F-Droid</a>
+</div>
+
+<div class="download-box">
+    <span class="os os-ios" aria-hidden="true"></span>
+    <span class="os-name">iOS</span>
+    Mumblefy<br />
+    <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
+</div>
+
+</div>
 
 ## Development snapshots
 
@@ -99,27 +120,3 @@ Development snapshots contain unreleased features and changes that will eventual
         </td>
     </tr>
 </table>
-
-
-## Third party clients
-
-If you are looking for a client for an operating system we do not officially support ourselves, or if you are looking for an alternative client application please refer to the following overview of third party client applications.
-
-<div class="download-box-container">
-
-<div class="download-box">
-    <span class="os os-android" aria-hidden="true"></span>
-    <span class="os-name">Android</span>
-    Plumble<br />
-    <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Google Play</a><br />
-    <a href="https://f-droid.org/repository/browse/?fdid=com.morlunk.mumbleclient">F-Droid</a>
-</div>
-
-<div class="download-box">
-    <span class="os os-ios" aria-hidden="true"></span>
-    <span class="os-name">iOS</span>
-    Mumblefy<br />
-    <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
-</div>
-
-</div>
