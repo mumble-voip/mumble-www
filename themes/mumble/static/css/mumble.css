@@ -222,8 +222,8 @@ nav.blogposts div:nth-child(2) {
 
 .os {
 	display: block;
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
