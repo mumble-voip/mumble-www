@@ -9,49 +9,49 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
 <div class="download-box-container">
 
 <div class="download-box">
-    <a href="#">
+    <a href="windows-32">
         <span class="os os-windows" aria-hidden="true"></span>
         <span class="os-name">Windows 32-bit</span>
     </a>
 </div>
 
 <div class="download-box">
-    <a href="#">
+    <a href="osx">
         <span class="os os-mac" aria-hidden="true"></span>
         <span class="os-name">OS X</span>
     </a>
 </div>
 
 <div class="download-box">
-    <a href="#">
+    <a href="osx-universal">
         <span class="os os-mac" aria-hidden="true"></span>
         <span class="os-name">OS X (Universal, Legacy)</span>
     </a>
 </div>
 
 <div class="download-box">
-    <a href="#">
+    <a href="ios">
         <span class="os os-ios" aria-hidden="true"></span>
         <span class="os-name">iOS</span>
     </a>
 </div>
 
 <div class="download-box">
-    <a href="#">
+    <a href="ubuntu">
         <span class="os os-linux" aria-hidden="true"></span>
         <span class="os-name">Ubuntu</span>
     </a>
 </div>
 
 <div class="download-box">
-    <a href="#">
+    <a href="linux-static-server">
         <span class="os os-linux" aria-hidden="true"></span>
         <span class="os-name">Static Linux Server</span>
     </a>
 </div>
 
 <div class="download-box">
-    <a href="#">
+    <a href="osx-static-server">
         <span class="os os-mac" aria-hidden="true"></span>
         <span class="os-name">Static OS X Server</span>
     </a>
@@ -77,25 +77,25 @@ Development snapshots contain unreleased features and changes that will eventual
     </tr>
     <tr>
         <td>
-            <a href="#">1.3.0~2717</a>
+            <a href="windows-64/snapshot">1.3.0~2717</a>
         </td>
         <td>
-            <a href="#">1.3.0~2717</a>
+            <a href="windows-32/snapshot">1.3.0~2717</a>
         </td>
         <td>
-            <a href="#">1.3.0~2717</a>
+            <a href="osx/snapshot">1.3.0~2717</a>
         </td>
         <td>
-            <a href="#">1.3.0~1645</a>
+            <a href="osx-universal/snapshot">1.3.0~1645</a>
         </td>
         <td>
-            <a href="#">PPA</a>
+            <a href="ubuntu/snapshot">PPA</a>
         </td>
         <td>
-            <a href="#">1.3.0~2717</a>
+            <a href="linux-static-server/snapshot">1.3.0~2717</a>
         </td>
         <td>
-            <a href="#">1.3.0~2717</a>
+            <a href="osx-static-server/snapshot">1.3.0~2717</a>
         </td>
     </tr>
 </table>
@@ -111,15 +111,15 @@ If you are looking for a client for an operating system we do not officially sup
     <span class="os os-android" aria-hidden="true"></span>
     <span class="os-name">Android</span>
     Plumble<br />
-    <a href="#">Google Play</a><br />
-    <a href="#">F-Droid</a>
+    <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Google Play</a><br />
+    <a href="https://f-droid.org/repository/browse/?fdid=com.morlunk.mumbleclient">F-Droid</a>
 </div>
 
 <div class="download-box">
     <span class="os os-ios" aria-hidden="true"></span>
     <span class="os-name">iOS</span>
     Mumblefy<br />
-    <a href="#">App Store</a>
+    <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
 </div>
 
 </div>
