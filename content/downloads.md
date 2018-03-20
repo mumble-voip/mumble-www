@@ -66,6 +66,8 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
 
 </div>
 
+Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
+
 ## Development snapshots
 
 Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on our issue tracker.
