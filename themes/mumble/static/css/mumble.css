@@ -250,6 +250,10 @@ nav.blogposts div:nth-child(2) {
 	background-image: url(icons/android.svg);
 }
 
+table.development-snapshots {
+	text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
 	#header-content {
 		display: block !important;

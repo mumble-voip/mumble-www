@@ -72,65 +72,40 @@ Instructions on [verifying GPG signatures of Mumble downloads](https://github.co
 
 Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on our issue tracker.
 
-<div class="download-box-container">
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-windows" aria-hidden="true"></span>
-        <span class="os-name">Windows 64-bit</span>
-        1.3.0~2717
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-windows" aria-hidden="true"></span>
-        <span class="os-name">Windows 32-bit</span>
-        1.3.0~2717
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-mac" aria-hidden="true"></span>
-        <span class="os-name">OS X</span>
-        1.3.0~2717
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-mac" aria-hidden="true"></span>
-        <span class="os-name">OS X (Universal, Legacy)</span>
-        1.3.0~1645
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-linux" aria-hidden="true"></span>
-        <span class="os-name">Ubuntu</span>
-        PPA
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-linux" aria-hidden="true"></span>
-        <span class="os-name">Static Linux Server</span>
-        1.3.0~2717
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="#">
-        <span class="os os-mac" aria-hidden="true"></span>
-        <span class="os-name">Static OS X Server</span>
-        1.3.0~2717
-    </a>
-</div>
-
-</div>
+<table class="development-snapshots">
+    <tr>
+        <th>Windows 64-bit</th>
+        <th>Windows 32-bit</th>
+        <th>OS X</th>
+        <th>OS X (Universal, Legacy)</th>
+        <th>Ubuntu</th>
+        <th>Static Linux Server</th>
+        <th>Static OS X Server</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="#">1.3.0~2717</a>
+        </td>
+        <td>
+            <a href="#">1.3.0~2717</a>
+        </td>
+        <td>
+            <a href="#">1.3.0~2717</a>
+        </td>
+        <td>
+            <a href="#">1.3.0~1645</a>
+        </td>
+        <td>
+            <a href="#">PPA</a>
+        </td>
+        <td>
+            <a href="#">1.3.0~2717</a>
+        </td>
+        <td>
+            <a href="#">1.3.0~2717</a>
+        </td>
+    </tr>
+</table>
 
 
 ## Third party clients
