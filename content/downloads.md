@@ -11,7 +11,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">Windows 32-bit</span>
         1.2.19
-        <span class="download-size">27M</span>
     </a>
 </div>
 
@@ -20,7 +19,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">OS X</span>
         1.2.19
-        <span class="download-size">27M</span>
     </a>
 </div>
 
@@ -29,7 +27,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">OS X (Universal, Legacy)</span>
         1.2.19
-        <span class="download-size">27M</span>
     </a>
 </div>
 
@@ -60,7 +57,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">Windows 64-bit</span>
         1.3.0~2717
-        <span class="download-size">27M</span>
     </a>
 </div>
 
@@ -69,7 +65,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">Windows 32-bit</span>
         1.3.0~2717
-        <span class="download-size">27M</span>
     </a>
 </div>
 
@@ -78,7 +73,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">OS X</span>
         1.3.0~2717
-        <span class="download-size">27M</span>
     </a>
 </div>
 
@@ -87,7 +81,6 @@ title: Downloads
     <a href="#">
         <span class="os-name">OS X (Universal, Legacy)</span>
         1.3.0~1645
-        <span class="download-size">27M</span>
     </a>
 </div>
 
