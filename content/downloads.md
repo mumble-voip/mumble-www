@@ -2,7 +2,9 @@
 title: Downloads
 ---
 
-### Stable release
+## Stable release
+
+Version 1.2.19 is the latest stable version of Mumble and was released on January 27, 2017.
 
 <div class="download-box-container">
 
@@ -48,7 +50,9 @@ title: Downloads
 
 </div>
 
-### Development snapshots
+## Development snapshots
+
+Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on our issue tracker.
 
 <div class="download-box-container">
 
@@ -95,7 +99,7 @@ title: Downloads
 </div>
 
 
-### Third party clients
+## Third party clients
 
 If you are looking for a client for an operating system we do not officially support ourselves, or if you are looking for an alternative client application please refer to the following overview of third party client applications.
 
