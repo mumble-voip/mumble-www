@@ -1,0 +1,573 @@
+commit e30d7acda6c04b667618ac86f49786cf966a08fb
+Author: Mikkel Krautz <mikkel@krautz.dk>
+Date:   Tue May 13 20:54:27 2014 +0200
+
+    mumble: fix Mumble-SA-2014-006.
+    
+    Usernames and channel names were not properly HTML-escaped
+    when used in Qt widgets that are rich-text enabled.
+    
+    This commit fixes that, but also touches various other
+    similar cases where an escaped version is appropriate.
+    
+    This commit is based on the following commits from the
+    master branch (Mumble 1.3.0):
+    
+      b7d9387bd6dacbad0b2345f03dd8502a51c42f6a
+      1caaec763b91c8a12b11d7ceb37e21622f4da76e
+      a0ebded7df388ce625dfbeb0c2bd65fb782da2a4
+      c52dedce8409da0654fd197690ff95411df3f9b2
+      1f6ddaf35f9583ef72f2d924b76b425ec85fc692
+      73a1a98d16a29c78d85e1c19b8feac7ba22dddfe
+      d58990c374502cfdd4a5f2bd8dbd490f19e9e511
+      b6e17cac696396d5bcbc3391846f9cacb9c072c4
+      9837c4dc2d1d6c60505f7246cd00ffa33ad808a9
+      17fa695b222a8b308438f9283e78dfba931e8712
+      d9ff1e947d4d00f6cd8d38fd04cd87f6e3167028
+    
+    Special thanks to Tim Cooper for various of the above
+    patches.
+
+diff --git a/src/mumble/ALSAAudio.cpp b/src/mumble/ALSAAudio.cpp
+index 9086093..fb5d9e1 100644
+--- a/src/mumble/ALSAAudio.cpp
++++ b/src/mumble/ALSAAudio.cpp
+@@ -362,7 +362,7 @@ void ALSAAudioInput::run() {
+ 			snd_pcm_close(capture_handle);
+ 			capture_handle = NULL;
+ 		}
+-		g.mw->msgBox(tr("Opening chosen ALSA Input failed: %1").arg(QLatin1String(snd_strerror(err))));
++		g.mw->msgBox(tr("Opening chosen ALSA Input failed: %1").arg(Qt::escape(QLatin1String(snd_strerror(err)))));
+ 		return;
+ 	}
+ 
+@@ -497,7 +497,7 @@ void ALSAAudioOutput::run() {
+ 			snd_pcm_writei(pcm_handle, zerobuff, period_size);
+ 
+ 	if (! bOk) {
+-		g.mw->msgBox(tr("Opening chosen ALSA Output failed: %1").arg(QLatin1String(snd_strerror(err))));
++		g.mw->msgBox(tr("Opening chosen ALSA Output failed: %1").arg(Qt::escape(QLatin1String(snd_strerror(err)))));
+ 		if (pcm_handle) {
+ 			snd_pcm_close(pcm_handle);
+ 			pcm_handle = NULL;
+diff --git a/src/mumble/ASIOInput.cpp b/src/mumble/ASIOInput.cpp
+index c64375a..3b27387 100644
+--- a/src/mumble/ASIOInput.cpp
++++ b/src/mumble/ASIOInput.cpp
+@@ -268,7 +268,7 @@ void ASIOConfig::on_qpbQuery_clicked() {
+ 			char err[255];
+ 			iasio->getErrorMessage(err);
+ 			SleepEx(10, false);
+-			QMessageBox::critical(this, QLatin1String("Mumble"), tr("ASIO Initialization failed: %1").arg(QLatin1String(err)), QMessageBox::Ok, QMessageBox::NoButton);
++			QMessageBox::critical(this, QLatin1String("Mumble"), tr("ASIO Initialization failed: %1").arg(Qt::escape(QLatin1String(err))), QMessageBox::Ok, QMessageBox::NoButton);
+ 		}
+ 		iasio->Release();
+ 	} else {
+@@ -293,7 +293,7 @@ void ASIOConfig::on_qpbConfig_clicked() {
+ 			char err[255];
+ 			iasio->getErrorMessage(err);
+ 			SleepEx(10, false);
+-			QMessageBox::critical(this, QLatin1String("Mumble"), tr("ASIO Initialization failed: %1").arg(QLatin1String(err)), QMessageBox::Ok, QMessageBox::NoButton);
++			QMessageBox::critical(this, QLatin1String("Mumble"), tr("ASIO Initialization failed: %1").arg(Qt::escape(QLatin1String(err))), QMessageBox::Ok, QMessageBox::NoButton);
+ 		}
+ 		iasio->Release();
+ 	} else {
+diff --git a/src/mumble/ASIOInput.ui b/src/mumble/ASIOInput.ui
+index 5b36a40..46add73 100644
+--- a/src/mumble/ASIOInput.ui
++++ b/src/mumble/ASIOInput.ui
+@@ -99,6 +99,9 @@
+         <property name="text">
+          <string/>
+         </property>
++        <property name="textFormat">
++         <enum>Qt::PlainText</enum>
++        </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+@@ -119,6 +122,9 @@
+         <property name="text">
+          <string/>
+         </property>
++        <property name="textFormat">
++         <enum>Qt::PlainText</enum>
++        </property>
+        </widget>
+       </item>
+      </layout>
+diff --git a/src/mumble/AudioConfigDialog.cpp b/src/mumble/AudioConfigDialog.cpp
+index 548e39c..a54cd4a 100644
+--- a/src/mumble/AudioConfigDialog.cpp
++++ b/src/mumble/AudioConfigDialog.cpp
+@@ -368,7 +368,7 @@ void AudioInputDialog::on_qcbSystem_currentIndexChanged(int) {
+ 
+ 		foreach(audioDevice d, ql) {
+ 			qcbDevice->addItem(d.first, d.second);
+-			qcbDevice->setItemData(idx, d.first, Qt::ToolTipRole);
++			qcbDevice->setItemData(idx, Qt::escape(d.first), Qt::ToolTipRole);
+ 			++idx;
+ 		}
+ 
+@@ -512,7 +512,7 @@ void AudioOutputDialog::on_qcbSystem_currentIndexChanged(int) {
+ 
+ 		foreach(audioDevice d, ql) {
+ 			qcbDevice->addItem(d.first, d.second);
+-			qcbDevice->setItemData(idx, d.first, Qt::ToolTipRole);
++			qcbDevice->setItemData(idx, Qt::escape(d.first), Qt::ToolTipRole);
+ 			++idx;
+ 		}
+ 		bool canmute = aor->canMuteOthers();
+diff --git a/src/mumble/AudioOutputSample.cpp b/src/mumble/AudioOutputSample.cpp
+index 5061a64..b7f12e0 100644
+--- a/src/mumble/AudioOutputSample.cpp
++++ b/src/mumble/AudioOutputSample.cpp
+@@ -214,7 +214,7 @@ QString AudioOutputSample::browseForSndfile() {
+ 		if (sf == NULL) {
+ 			QMessageBox::critical(NULL,
+ 			                      tr("Invalid sound file"),
+-			                      tr("The file '%1' cannot be used by Mumble. Please select a file with a compatible format and encoding.").arg(file));
++			                      tr("The file '%1' cannot be used by Mumble. Please select a file with a compatible format and encoding.").arg(Qt::escape(file)));
+ 			return QString();
+ 		}
+ 		delete sf;
+diff --git a/src/mumble/Cert.cpp b/src/mumble/Cert.cpp
+index 20d3766..314d8ad 100644
+--- a/src/mumble/Cert.cpp
++++ b/src/mumble/Cert.cpp
+@@ -54,6 +54,7 @@ CertView::CertView(QWidget *p) : QGroupBox(p) {
+ 	grid->addWidget(l, 0, 0, 1, 1, Qt::AlignRight);
+ 
+ 	qlSubjectName = new QLabel();
++	qlSubjectName->setTextFormat(Qt::PlainText);
+ 	qlSubjectName->setWordWrap(true);
+ 	grid->addWidget(qlSubjectName, 0, 1, 1, 1);
+ 
+@@ -61,6 +62,7 @@ CertView::CertView(QWidget *p) : QGroupBox(p) {
+ 	grid->addWidget(l, 1, 0, 1, 1, Qt::AlignRight);
+ 
+ 	qlSubjectEmail = new QLabel();
++	qlSubjectEmail->setTextFormat(Qt::PlainText);
+ 	qlSubjectEmail->setWordWrap(true);
+ 	grid->addWidget(qlSubjectEmail, 1, 1, 1, 1);
+ 
+@@ -68,6 +70,7 @@ CertView::CertView(QWidget *p) : QGroupBox(p) {
+ 	grid->addWidget(l, 2, 0, 1, 1, Qt::AlignRight);
+ 
+ 	qlIssuerName = new QLabel();
++	qlIssuerName->setTextFormat(Qt::PlainText);
+ 	qlIssuerName->setWordWrap(true);
+ 	grid->addWidget(qlIssuerName, 2, 1, 1, 1);
+ 
+@@ -103,12 +106,12 @@ void CertView::setCert(const QList<QSslCertificate> &cert) {
+ 		qlSubjectName->setText(tmpName);
+ 
+ 		if (emails.count() > 0)
+-			qlSubjectEmail->setText(emails.join(QLatin1String("<br />")));
++			qlSubjectEmail->setText(emails.join(QLatin1String("\n")));
+ 		else
+ 			qlSubjectEmail->setText(tr("(none)"));
+ 
+ 		if (qscCert.expiryDate() <= QDateTime::currentDateTime())
+-			qlExpiry->setText(QString::fromLatin1("<font color=\"red\"><b>%1</b></font>").arg(qscCert.expiryDate().toString(Qt::SystemLocaleDate)));
++			qlExpiry->setText(QString::fromLatin1("<font color=\"red\"><b>%1</b></font>").arg(Qt::escape(qscCert.expiryDate().toString(Qt::SystemLocaleDate))));
+ 		else
+ 			qlExpiry->setText(qscCert.expiryDate().toString(Qt::SystemLocaleDate));
+ 
+diff --git a/src/mumble/ConnectDialog.cpp b/src/mumble/ConnectDialog.cpp
+index 38c7495..dbecb16 100644
+--- a/src/mumble/ConnectDialog.cpp
++++ b/src/mumble/ConnectDialog.cpp
+@@ -439,7 +439,7 @@ QVariant ServerItem::data(int column, int role) const {
+ 		} else if (role == Qt::ToolTipRole) {
+ 			QStringList qsl;
+ 			foreach(const QHostAddress &qha, qlAddresses)
+-				qsl << qha.toString();
++				qsl << Qt::escape(qha.toString());
+ 
+ 			double ploss = 100.0;
+ 
+@@ -449,18 +449,18 @@ QVariant ServerItem::data(int column, int role) const {
+ 			QString qs;
+ 			qs +=
+ 			    QLatin1String("<table>") +
+-			    QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Servername"), qsName) +
+-			    QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Hostname"), qsHostname);
++			    QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Servername"), Qt::escape(qsName)) +
++			    QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Hostname"), Qt::escape(qsHostname));
+ 
+ 			if (! qsBonjourHost.isEmpty())
+-				qs += QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Bonjour name"), qsBonjourHost);
++				qs += QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Bonjour name"), Qt::escape(qsBonjourHost));
+ 
+ 			qs +=
+ 			    QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Port")).arg(usPort) +
+ 			    QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Addresses"), qsl.join(QLatin1String(", ")));
+ 
+ 			if (! qsUrl.isEmpty())
+-				qs += QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Website"), qsUrl);
++				qs += QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Website"), Qt::escape(qsUrl));
+ 
+ 			if (uiSent > 0) {
+ 				qs += QString::fromLatin1("<tr><th align=left>%1</th><td>%2</td></tr>").arg(ConnectDialog::tr("Packet loss"), QString::fromLatin1("%1% (%2/%3)").arg(ploss, 0, 'f', 1).arg(uiRecv).arg(uiSent));
+@@ -634,7 +634,7 @@ QMimeData *ServerItem::toMimeData(const QString &name, const QString &host, unsi
+ 	mime->setUrls(urls);
+ 
+ 	mime->setText(qs);
+-	mime->setHtml(QString::fromLatin1("<a href=\"%1\">%2</a>").arg(qs).arg(name));
++	mime->setHtml(QString::fromLatin1("<a href=\"%1\">%2</a>").arg(qs).arg(Qt::escape(name)));
+ 
+ 	return mime;
+ }
+diff --git a/src/mumble/Database.cpp b/src/mumble/Database.cpp
+index 52fff8f..f671f8a 100644
+--- a/src/mumble/Database.cpp
++++ b/src/mumble/Database.cpp
+@@ -117,7 +117,7 @@ Database::Database() {
+ 	QFileInfo fi(db.databaseName());
+ 
+ 	if (! fi.isWritable()) {
+-		QMessageBox::critical(NULL, QLatin1String("Mumble"), tr("The database '%1' is read-only. Mumble cannot store server settings (i.e. SSL certificates) until you fix this problem.").arg(fi.filePath()), QMessageBox::Ok | QMessageBox::Default, QMessageBox::NoButton);
++		QMessageBox::critical(NULL, QLatin1String("Mumble"), tr("The database '%1' is read-only. Mumble cannot store server settings (i.e. SSL certificates) until you fix this problem.").arg(Qt::escape(fi.filePath())), QMessageBox::Ok | QMessageBox::Default, QMessageBox::NoButton);
+ 		qWarning("Database: Database is read-only");
+ 	}
+ 
+diff --git a/src/mumble/LCD.cpp b/src/mumble/LCD.cpp
+index e7d8c5e..e83f692 100644
+--- a/src/mumble/LCD.cpp
++++ b/src/mumble/LCD.cpp
+@@ -111,7 +111,7 @@ LCDConfig::LCDConfig(Settings &st) : ConfigWidget(st) {
+ 		qtwi->setFlags(Qt::ItemIsEnabled |Qt::ItemIsUserCheckable);
+ 
+ 		qtwi->setText(0, d->name());
+-		qtwi->setToolTip(0, d->name());
++		qtwi->setToolTip(0, Qt::escape(d->name()));
+ 
+ 		QSize lcdsize = d->size();
+ 		QString qsSize = QString::fromLatin1("%1x%2").arg(lcdsize.width()).arg(lcdsize.height());
+diff --git a/src/mumble/Log.cpp b/src/mumble/Log.cpp
+index ac5c6a6..51c49f8 100644
+--- a/src/mumble/Log.cpp
++++ b/src/mumble/Log.cpp
+@@ -256,7 +256,7 @@ QString Log::msgColor(const QString &text, LogColorType t) {
+ }
+ 
+ QString Log::formatChannel(::Channel *c) {
+-	return QString::fromLatin1("<a href='channelid://%1/%3' class='log-channel'>%2</a>").arg(c->iId).arg(c->qsName).arg(QString::fromLatin1(g.sh->qbaDigest.toBase64()));
++	return QString::fromLatin1("<a href='channelid://%1/%3' class='log-channel'>%2</a>").arg(c->iId).arg(Qt::escape(c->qsName)).arg(QString::fromLatin1(g.sh->qbaDigest.toBase64()));
+ }
+ 
+ QString Log::formatClientUser(ClientUser *cu, LogColorType t) {
+@@ -268,10 +268,11 @@ QString Log::formatClientUser(ClientUser *cu, LogColorType t) {
+ 	}
+ 
+ 	if (cu) {
++		QString name = Qt::escape(cu->qsName);
+ 		if (cu->qsHash.isEmpty()) {
+-			return QString::fromLatin1("<a href='clientid://%2/%4' class='log-user log-%1'>%3</a>").arg(className).arg(cu->uiSession).arg(cu->qsName).arg(QString::fromLatin1(g.sh->qbaDigest.toBase64()));
++			return QString::fromLatin1("<a href='clientid://%2/%4' class='log-user log-%1'>%3</a>").arg(className).arg(cu->uiSession).arg(name).arg(QString::fromLatin1(g.sh->qbaDigest.toBase64()));
+ 		} else {
+-			return QString::fromLatin1("<a href='clientid://%2' class='log-user log-%1'>%3</a>").arg(className).arg(cu->qsHash).arg(cu->qsName);
++			return QString::fromLatin1("<a href='clientid://%2' class='log-user log-%1'>%3</a>").arg(className).arg(cu->qsHash).arg(name);
+ 		}
+ 	} else {
+ 		return QString::fromLatin1("<span class='log-server log-%1'>%2</span>").arg(className).arg(tr("the server"));
+@@ -448,7 +449,7 @@ void Log::log(MsgType mt, const QString &console, const QString &terse, bool own
+ 		if (qdDate != dt.date()) {
+ 			qdDate = dt.date();
+ 			tc.insertBlock();
+-			tc.insertHtml(tr("[Date changed to %1]\n").arg(qdDate.toString(Qt::DefaultLocaleShortDate)));
++			tc.insertHtml(tr("[Date changed to %1]\n").arg(Qt::escape(qdDate.toString(Qt::DefaultLocaleShortDate))));
+ 			tc.movePosition(QTextCursor::End);
+ 		}
+ 
+@@ -461,7 +462,7 @@ void Log::log(MsgType mt, const QString &console, const QString &terse, bool own
+ 		} else if (! g.mw->qteLog->document()->isEmpty()) {
+ 			tc.insertBlock();
+ 		}
+-		tc.insertHtml(Log::msgColor(QString::fromLatin1("[%1] ").arg(dt.time().toString(Qt::DefaultLocaleShortDate)), Log::Time));
++		tc.insertHtml(Log::msgColor(QString::fromLatin1("[%1] ").arg(Qt::escape(dt.time().toString(Qt::DefaultLocaleShortDate))), Log::Time));
+ 		validHtml(console, true, &tc);
+ 		tc.movePosition(QTextCursor::End);
+ 		g.mw->qteLog->setTextCursor(tc);
+diff --git a/src/mumble/MainWindow.cpp b/src/mumble/MainWindow.cpp
+index 8224149..57a7709 100644
+--- a/src/mumble/MainWindow.cpp
++++ b/src/mumble/MainWindow.cpp
+@@ -651,7 +651,7 @@ static void recreateServerHandler() {
+ }
+ 
+ void MainWindow::openUrl(const QUrl &url) {
+-	g.l->log(Log::Information, tr("Opening URL %1").arg(url.toString()));
++	g.l->log(Log::Information, tr("Opening URL %1").arg(Qt::escape(url.toString())));
+ 	if (url.scheme() == QLatin1String("file")) {
+ 		QFile f(url.toLocalFile());
+ 		if (! f.exists() || ! f.open(QIODevice::ReadOnly)) {
+@@ -739,7 +739,7 @@ void MainWindow::openUrl(const QUrl &url) {
+ 	g.s.qsLastServer = name;
+ 	rtLast = MumbleProto::Reject_RejectType_None;
+ 	qaServerDisconnect->setEnabled(true);
+-	g.l->log(Log::Information, tr("Connecting to server %1.").arg(Log::msgColor(host, Log::Server)));
++	g.l->log(Log::Information, tr("Connecting to server %1.").arg(Log::msgColor(Qt::escape(host), Log::Server)));
+ 	g.sh->setConnectionInfo(host, port, user, pw);
+ 	g.sh->start(QThread::TimeCriticalPriority);
+ }
+@@ -931,7 +931,7 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
+ 		qsDesiredChannel = QString();
+ 		rtLast = MumbleProto::Reject_RejectType_None;
+ 		qaServerDisconnect->setEnabled(true);
+-		g.l->log(Log::Information, tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer, Log::Server)));
++		g.l->log(Log::Information, tr("Connecting to server %1.").arg(Log::msgColor(Qt::escape(cd->qsServer), Log::Server)));
+ 		g.sh->setConnectionInfo(cd->qsServer, cd->usPort, cd->qsUsername, cd->qsPassword);
+ 		g.sh->start(QThread::TimeCriticalPriority);
+ 	}
+@@ -1007,7 +1007,7 @@ void MainWindow::on_qaSelfRegister_triggered() {
+ 		return;
+ 
+ 	QMessageBox::StandardButton result;
+-	result = QMessageBox::question(this, tr("Register yourself as %1").arg(p->qsName), tr("<p>You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as '%1' on this server.</p><p>Are you sure you want to register yourself?</p>").arg(p->qsName), QMessageBox::Yes|QMessageBox::No);
++	result = QMessageBox::question(this, tr("Register yourself as %1").arg(p->qsName), tr("<p>You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as '%1' on this server.</p><p>Are you sure you want to register yourself?</p>").arg(Qt::escape(p->qsName)), QMessageBox::Yes|QMessageBox::No);
+ 
+ 	if (result == QMessageBox::Yes)
+ 		g.sh->registerUser(p->uiSession);
+@@ -1092,7 +1092,7 @@ void MainWindow::on_qaServerInformation_triggered() {
+ 		qsVersion.append(tr("<p>No build information or OS version available.</p>"));
+ 	} else {
+ 		qsVersion.append(tr("<p>%1 (%2)<br />%3</p>")
+-		                 .arg(g.sh->qsRelease, g.sh->qsOS, g.sh->qsOSVersion));
++		                 .arg(Qt::escape(g.sh->qsRelease), Qt::escape(g.sh->qsOS), Qt::escape(g.sh->qsOSVersion)));
+ 	}
+ 
+ 	QString host, uname, pw;
+@@ -1101,10 +1101,10 @@ void MainWindow::on_qaServerInformation_triggered() {
+ 	g.sh->getConnectionInfo(host,port,uname,pw);
+ 
+ 	QString qsControl=tr("<h2>Control channel</h2><p>Encrypted with %1 bit %2<br />%3 ms average latency (%4 deviation)</p><p>Remote host %5 (port %6)</p>").arg(QString::number(qsc.usedBits()),
+-	                  qsc.name(),
++	                  Qt::escape(qsc.name()),
+ 	                  QString::fromLatin1("%1").arg(boost::accumulators::mean(g.sh->accTCP), 0, 'f', 2),
+ 	                  QString::fromLatin1("%1").arg(sqrt(boost::accumulators::variance(g.sh->accTCP)),0,'f',2),
+-	                  host,
++	                  Qt::escape(host),
+ 	                  QString::number(port));
+ 	QString qsVoice, qsCrypt, qsAudio;
+ 
+@@ -1361,9 +1361,9 @@ void MainWindow::on_qaUserRegister_triggered() {
+ 	QMessageBox::StandardButton result;
+ 
+ 	if (session == g.uiSession)
+-		result = QMessageBox::question(this, tr("Register yourself as %1").arg(p->qsName), tr("<p>You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as '%1' on this server.</p><p>Are you sure you want to register yourself?</p>").arg(p->qsName), QMessageBox::Yes|QMessageBox::No);
++		result = QMessageBox::question(this, tr("Register yourself as %1").arg(p->qsName), tr("<p>You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as '%1' on this server.</p><p>Are you sure you want to register yourself?</p>").arg(Qt::escape(p->qsName)), QMessageBox::Yes|QMessageBox::No);
+ 	else
+-		result = QMessageBox::question(this, tr("Register user %1").arg(p->qsName), tr("<p>You are about to register %1 on the server. This action cannot be undone, the username cannot be changed, and as a registered user, %1 will have access to the server even if you change the server password.</p><p>From this point on, %1 will be authenticated with the certificate currently in use.</p><p>Are you sure you want to register %1?</p>").arg(p->qsName), QMessageBox::Yes|QMessageBox::No);
++		result = QMessageBox::question(this, tr("Register user %1").arg(p->qsName), tr("<p>You are about to register %1 on the server. This action cannot be undone, the username cannot be changed, and as a registered user, %1 will have access to the server even if you change the server password.</p><p>From this point on, %1 will be authenticated with the certificate currently in use.</p><p>Are you sure you want to register %1?</p>").arg(Qt::escape(p->qsName)), QMessageBox::Yes|QMessageBox::No);
+ 
+ 	if (result == QMessageBox::Yes) {
+ 		p = ClientUser::get(session);
+@@ -1499,7 +1499,7 @@ void MainWindow::on_qaUserCommentReset_triggered() {
+ 	unsigned int session = p->uiSession;
+ 
+ 	int ret = QMessageBox::question(this, QLatin1String("Mumble"),
+-	                                tr("Are you sure you want to reset the comment of user %1?").arg(p->qsName),
++	                                tr("Are you sure you want to reset the comment of user %1?").arg(Qt::escape(p->qsName)),
+ 	                                QMessageBox::Yes, QMessageBox::No);
+ 	if (ret == QMessageBox::Yes) {
+ 		g.sh->setUserComment(session, QString());
+@@ -1690,7 +1690,7 @@ void MainWindow::on_qaChannelRemove_triggered() {
+ 
+ 	int id = c->iId;
+ 
+-	ret=QMessageBox::question(this, QLatin1String("Mumble"), tr("Are you sure you want to delete %1 and all its sub-channels?").arg(c->qsName), QMessageBox::Yes, QMessageBox::No);
++	ret=QMessageBox::question(this, QLatin1String("Mumble"), tr("Are you sure you want to delete %1 and all its sub-channels?").arg(Qt::escape(c->qsName)), QMessageBox::Yes, QMessageBox::No);
+ 
+ 	c = Channel::get(id);
+ 	if (!c)
+@@ -2445,7 +2445,7 @@ void MainWindow::serverDisconnected(QAbstractSocket::SocketError err, QString re
+ 
+ 	if (! g.sh->qlErrors.isEmpty()) {
+ 		foreach(QSslError e, g.sh->qlErrors)
+-			g.l->log(Log::Warning, tr("SSL Verification failed: %1").arg(e.errorString()));
++			g.l->log(Log::Warning, tr("SSL Verification failed: %1").arg(Qt::escape(e.errorString())));
+ 		if (! g.sh->qscCert.isEmpty()) {
+ 			QSslCertificate c = g.sh->qscCert.at(0);
+ 			QString basereason;
+@@ -2456,7 +2456,7 @@ void MainWindow::serverDisconnected(QAbstractSocket::SocketError err, QString re
+ 			}
+ 			QStringList qsl;
+ 			foreach(QSslError e, g.sh->qlErrors)
+-				qsl << QString::fromLatin1("<li>%1</li>").arg(e.errorString());
++				qsl << QString::fromLatin1("<li>%1</li>").arg(Qt::escape(e.errorString()));
+ 
+ 			QMessageBox qmb(QMessageBox::Warning, QLatin1String("Mumble"),
+ 			                tr("<p>%1.<br />The specific errors with this certificate are: </p><ol>%2</ol>"
+@@ -2489,7 +2489,7 @@ void MainWindow::serverDisconnected(QAbstractSocket::SocketError err, QString re
+ 
+ 
+ 		if (! reason.isEmpty()) {
+-			g.l->log(Log::ServerDisconnected, tr("Server connection failed: %1.").arg(reason));
++			g.l->log(Log::ServerDisconnected, tr("Server connection failed: %1.").arg(Qt::escape(reason)));
+ 		}  else {
+ 			g.l->log(Log::ServerDisconnected, tr("Disconnected from server."));
+ 		}
+@@ -2636,10 +2636,10 @@ void MainWindow::updateChatBar() {
+ 		if (!g.s.bChatBarUseSelection || c == NULL) // If no channel selected fallback to current one
+ 			c = ClientUser::get(g.uiSession)->cChannel;
+ 
+-		qteChat->setDefaultText(tr("<center>Type message to channel '%1' here</center>").arg(c->qsName));
++		qteChat->setDefaultText(tr("<center>Type message to channel '%1' here</center>").arg(Qt::escape(c->qsName)));
+ 	} else {
+ 		// User target
+-		qteChat->setDefaultText(tr("<center>Type message to user '%1' here</center>").arg(p->qsName));
++		qteChat->setDefaultText(tr("<center>Type message to user '%1' here</center>").arg(Qt::escape(p->qsName)));
+ 	}
+ 
+ 	updateMenuPermissions();
+diff --git a/src/mumble/Messages.cpp b/src/mumble/Messages.cpp
+index d6763e9..97d07f2 100644
+--- a/src/mumble/Messages.cpp
++++ b/src/mumble/Messages.cpp
+@@ -88,7 +88,7 @@ void MainWindow::msgBanList(const MumbleProto::BanList &msg) {
+ void MainWindow::msgReject(const MumbleProto::Reject &msg) {
+ 	rtLast = msg.type();
+ 
+-	QString reason(u8(msg.reason()));;
++	QString reason;
+ 
+ 	switch (rtLast) {
+ 		case MumbleProto::Reject_RejectType_InvalidUsername:
+@@ -104,6 +104,7 @@ void MainWindow::msgReject(const MumbleProto::Reject &msg) {
+ 			reason = tr("Wrong password");
+ 			break;
+ 		default:
++			reason = Qt::escape(u8(msg.reason()));
+ 			break;
+ 	}
+ 
+@@ -150,7 +151,7 @@ void MainWindow::msgServerSync(const MumbleProto::ServerSync &msg) {
+ 	ClientUser *p=ClientUser::get(g.uiSession);
+ 	connect(p, SIGNAL(talkingChanged()), this, SLOT(talkingChanged()));
+ 
+-	qstiIcon->setToolTip(tr("Mumble: %1").arg(Channel::get(0)->qsName));
++	qstiIcon->setToolTip(tr("Mumble: %1").arg(Qt::escape(Channel::get(0)->qsName)));
+ 
+ 	// Update QActions and menues
+ 	on_qmServer_aboutToShow();
+@@ -214,7 +215,7 @@ void MainWindow::msgPermissionDenied(const MumbleProto::PermissionDenied &msg) {
+ 					g.s.bTTS = true;
+ 					quint32 oflags = g.s.qmMessages.value(Log::PermissionDenied);
+ 					g.s.qmMessages[Log::PermissionDenied] = (oflags | Settings::LogTTS) & (~Settings::LogSoundfile);
+-					g.l->log(Log::PermissionDenied, QString::fromAscii(g.ccHappyEaster + 39).arg(u));
++					g.l->log(Log::PermissionDenied, QString::fromAscii(g.ccHappyEaster + 39).arg(Qt::escape(u)));
+ 					g.s.qmMessages[Log::PermissionDenied] = oflags;
+ 					g.s.bDeaf = bold;
+ 					g.s.bTTS = bold2;
+@@ -239,7 +240,7 @@ void MainWindow::msgPermissionDenied(const MumbleProto::PermissionDenied &msg) {
+ 			break;
+ 		case MumbleProto::PermissionDenied_DenyType_UserName: {
+ 				if (msg.has_name())
+-					g.l->log(Log::PermissionDenied, tr("Invalid username: %1.").arg(u8(msg.name())));
++					g.l->log(Log::PermissionDenied, tr("Invalid username: %1.").arg(Qt::escape(u8(msg.name()))));
+ 				else
+ 					g.l->log(Log::PermissionDenied, tr("Invalid username."));
+ 			}
+@@ -254,7 +255,7 @@ void MainWindow::msgPermissionDenied(const MumbleProto::PermissionDenied &msg) {
+ 			break;
+ 		default: {
+ 				if (msg.has_reason())
+-					g.l->log(Log::PermissionDenied, tr("Denied: %1.").arg(u8(msg.reason())));
++					g.l->log(Log::PermissionDenied, tr("Denied: %1.").arg(Qt::escape(u8(msg.reason()))));
+ 				else
+ 					g.l->log(Log::PermissionDenied, tr("Permission denied."));
+ 			}
+@@ -503,7 +504,7 @@ void MainWindow::msgUserRemove(const MumbleProto::UserRemove &msg) {
+ 	ACTOR_INIT;
+ 	SELF_INIT;
+ 
+-	QString reason = u8(msg.reason());
++	QString reason = Qt::escape(u8(msg.reason()));
+ 
+ 	if (pDst == pSelf) {
+ 		if (msg.ban())
+diff --git a/src/mumble/Overlay.cpp b/src/mumble/Overlay.cpp
+index d1e47a3..c63cac2 100644
+--- a/src/mumble/Overlay.cpp
++++ b/src/mumble/Overlay.cpp
+@@ -102,7 +102,7 @@ Overlay::Overlay() : QObject() {
+ #endif
+ 
+ 	if (! qlsServer->listen(pipepath)) {
+-		QMessageBox::warning(NULL, QLatin1String("Mumble"), tr("Failed to create communication with overlay at %2: %1. No overlay will be available.").arg(qlsServer->errorString(),pipepath), QMessageBox::Ok, QMessageBox::NoButton);
++		QMessageBox::warning(NULL, QLatin1String("Mumble"), tr("Failed to create communication with overlay at %2: %1. No overlay will be available.").arg(Qt::escape(qlsServer->errorString()), Qt::escape(pipepath)), QMessageBox::Ok, QMessageBox::NoButton);
+ 	} else {
+ 		qWarning() << "Overlay: Listening on" << qlsServer->fullServerName();
+ 		connect(qlsServer, SIGNAL(newConnection()), this, SLOT(newConnection()));
+@@ -338,4 +338,4 @@ void Overlay::requestTexture(ClientUser *cu) {
+ 		else
+ 			verifyTexture(cu, false);
+ 	}
+-}
+\ No newline at end of file
++}
+diff --git a/src/mumble/Plugins.cpp b/src/mumble/Plugins.cpp
+index 74a08d1..82b3ec6 100644
+--- a/src/mumble/Plugins.cpp
++++ b/src/mumble/Plugins.cpp
+@@ -165,7 +165,7 @@ void PluginConfig::refillPluginList() {
+ 		i->setCheckState(1, pi->enabled ? Qt::Checked : Qt::Unchecked);
+ 		i->setText(0, pi->description);
+ 		if (pi->p->longdesc)
+-			i->setToolTip(0, QString::fromStdWString(pi->p->longdesc()));
++			i->setToolTip(0, Qt::escape(QString::fromStdWString(pi->p->longdesc())));
+ 		i->setData(0, Qt::UserRole, pi->filename);
+ 	}
+ 	qtwPlugins->setCurrentItem(qtwPlugins->topLevelItem(0));
+@@ -381,7 +381,7 @@ void Plugins::on_Timer_timeout() {
+ 	QReadLocker lock(&qrwlPlugins);
+ 
+ 	if (prevlocked) {
+-		g.l->log(Log::Information, tr("%1 lost link.").arg(prevlocked->shortname));
++		g.l->log(Log::Information, tr("%1 lost link.").arg(Qt::escape(prevlocked->shortname)));
+ 		prevlocked = NULL;
+ 	}
+ 
+@@ -455,7 +455,7 @@ void Plugins::on_Timer_timeout() {
+ 	if (pi->enabled) {
+ 		if (pi->p2 ? pi->p2->trylock(pids) : pi->p->trylock()) {
+ 			pi->shortname = QString::fromStdWString(pi->p->shortname);
+-			g.l->log(Log::Information, tr("%1 linked.").arg(pi->shortname));
++			g.l->log(Log::Information, tr("%1 linked.").arg(Qt::escape(pi->shortname)));
+ 			pi->locked = true;
+ 			bUnlink = false;
+ 			locked = pi;
+@@ -630,15 +630,15 @@ void Plugins::fetched(QByteArray data, QUrl url) {
+ 					if (f.open(QIODevice::WriteOnly)) {
+ 						f.write(data);
+ 						f.close();
+-						g.mw->msgBox(tr("Downloaded new or updated plugin to %1.").arg(f.fileName()));
++						g.mw->msgBox(tr("Downloaded new or updated plugin to %1.").arg(Qt::escape(f.fileName())));
+ 					} else {
+ 						f.setFileName(qsUserPlugins + QLatin1String("/") + fname);
+ 						if (f.open(QIODevice::WriteOnly)) {
+ 							f.write(data);
+ 							f.close();
+-							g.mw->msgBox(tr("Downloaded new or updated plugin to %1.").arg(f.fileName()));
++							g.mw->msgBox(tr("Downloaded new or updated plugin to %1.").arg(Qt::escape(f.fileName())));
+ 						} else {
+-							g.mw->msgBox(tr("Failed to install new plugin to %1.").arg(f.fileName()));
++							g.mw->msgBox(tr("Failed to install new plugin to %1.").arg(Qt::escape(f.fileName())));
+ 						}
+ 					}
+ 
+diff --git a/src/mumble/VersionCheck.cpp b/src/mumble/VersionCheck.cpp
+index 6623d10..e60a17a 100644
+--- a/src/mumble/VersionCheck.cpp
++++ b/src/mumble/VersionCheck.cpp
+@@ -169,7 +169,7 @@ void VersionCheck::fetched(QByteArray a, QUrl url) {
+ 							file.remove();
+ 						}
+ 					} else {
+-						g.mw->msgBox(tr("Downloading new snapshot from %1 to %2").arg(fetch.toString(), filename));
++						g.mw->msgBox(tr("Downloading new snapshot from %1 to %2").arg(Qt::escape(fetch.toString()), Qt::escape(filename)));
+ 						WebFetch::fetch(fetch, this, SLOT(fetched(QByteArray,QUrl)));
+ 						return;
+ 					}

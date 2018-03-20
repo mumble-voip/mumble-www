@@ -1,0 +1,529 @@
+commit c7aecb2956f214cd83b7a862a4fcf15cc76c4450
+Author: Mikkel Krautz <mikkel@krautz.dk>
+Date:   Tue May 13 20:23:05 2014 +0200
+
+    mumble: fix Mumble-SA-2014-005.
+    
+    Qt's SVG image plugin is not safe to use with potentially
+    unsafe SVGs, such as those downloaded over the network.
+    
+    More specifically, it is possible to trigger local file
+    access via Qt's SVG renderer using SVG features such as XML
+    stylesheets (XSL) and SVG image tags, and potentially other
+    features. This allows an attacker to have Qt read arbitrary
+    files into the memory space of the Mumble process.
+    
+    This makes it easy to perform a Denial of Service attack
+    against a Mumble client. A client DoS can be accomplished
+    by serving it an SVG file that refers to a filesystem path
+    that is un-ending or is known to block under certain
+    circumstances.
+    
+    Having arbitrary files read into the Mumble process could
+    potentially also be abused by an attacker to gain access
+    to the content of the files, if combined with an (as of
+    yet unknown) vulnerability that allows the attacker to
+    read Mumble's memory.
+    
+    To fix the issue, this change removes SVG as a supported
+    image format for all externally received images. This
+    includes things such as text messages, user comments,
+    channel comments and user textures/avatars. It also removes
+    the ability to transmit SVGs using any of the aforementioned
+    channels.
+    
+    This is accomplished by introducing a new class called
+    RichTextImage. The RichTextImage class is used, via its
+    isValidImage() method, to validate images before they are used
+    in a rich text context in Mumble. In its current form, the
+    isValidImage() method simply checks whether the image's format
+    is part of the set of image formats that are deemed safe
+    (PNG, JPG, GIF).
+    
+    The LogDocument class, which is the QTextDocument that backs
+    the Mumble log view, undergoes the following changes:
+    
+     - LogDocument now restricts images loaded via QNetworkRequest
+       and QNetworkReply to those that pass the
+       RichTextImage::isValidImage() check.
+     - Resources that use the data:// scheme are now loaded via
+       QNetworkRequest and QNetworkReply, just like http:// and
+       https:// URLs. This allows all resources to make use of
+       LogDocument's new image format restrictions.
+     - The functionality of the ValidDocument class, a subclass
+       of LogDocument that was used to validate HTML snippets,
+       is now part of LogDocument itself. The original
+       ValidDocument class has been removed.
+    
+    The RichTextEditor class is used to author text messages
+    and user comments. The RichTextEditor is changed to use
+    a LogDocument instead of a regular QTextDocument as its
+    backing document. This allows the RichTextEditor to benefit
+    from LogDocument's new image filtering functionality.
+    
+    The static method Log::validHtml is used to validate
+    HTML before using it in various contexts such as the Mumble
+    log view and tooltips. This method is modified to use the
+    LogDocument class instead of the ValidDocument class.
+    A call to documentLayout() on the LogDocument is also
+    added to the method. This ensures that image loading
+    (and thus validation) is performed.
+    
+    The MainWindow::openImageFile() method is re-worked to
+    sniff and validate a selected image using
+    RichTextImage::isValidImage to ensure that only valid
+    rich text images can be selected, regardless of file
+    extension.
+    
+    The Overlay::verifyTexture() method is used to verify and
+    set a ClientUser's texture and texture format, either by
+    reading it from the local cache, or by reqesting a new
+    texture from the server. This method is changed to only
+    verify and set textures that pass the
+    RichTextImage::isValidImage() check.
+    
+    The ServerHandler::setUserTexture() method (also known as
+    ServerHandler::setTexture() in some 1.2.x versions of Mumble)
+    is changed to only allow settings textures that pass the
+    RichTextImage::isValidImage() check.
+    
+    Thanks to Tim Cooper for reporting this issue, proposing an
+    initial patch and reviewing the final patch. This commit has
+    also been reviewed and iterated upon by Stefan Hacker.
+
+diff --git a/src/mumble/Log.cpp b/src/mumble/Log.cpp
+index 875d246..ac5c6a6 100644
+--- a/src/mumble/Log.cpp
++++ b/src/mumble/Log.cpp
+@@ -39,6 +39,7 @@
+ #include "Global.h"
+ #include "MainWindow.h"
+ #include "NetworkConfig.h"
++#include "RichTextEditor.h"
+ #include "ServerHandler.h"
+ #include "TextToSpeech.h"
+ 
+@@ -346,13 +347,23 @@ QString Log::imageToImg(QImage img) {
+ 
+ QString Log::validHtml(const QString &html, bool allowReplacement, QTextCursor *tc) {
+ 	QDesktopWidget dw;
+-	ValidDocument qtd(allowReplacement);
++	LogDocument qtd;
+ 	bool valid = false;
+ 
++	qtd.setAllowHTTPResources(allowReplacement);
++	qtd.setOnlyLoadDataURLs(true);
++
+ 	QRectF qr = dw.availableGeometry(dw.screenNumber(g.mw));
+ 	qtd.setTextWidth(qr.width() / 2);
+ 	qtd.setDefaultStyleSheet(qApp->styleSheet());
+ 
++	// Call documentLayout on our LogDocument to ensure
++	// it has a layout backing it. With a layout set on
++	// the document, it will attempt to load all the
++	// resources it contains as soon as we call setHtml(),
++	// allowing our validation checks for things such as
++	// data URL images to run.
++	(void) qtd.documentLayout();
+ 	qtd.setHtml(html);
+ 	valid = qtd.isValid();
+ 
+@@ -546,65 +557,85 @@ void Log::postQtNotification(MsgType mt, const QString &plain) {
+ 	}
+ }
+ 
+-ValidDocument::ValidDocument(bool allowhttp, QObject *p) : QTextDocument(p) {
+-	bValid = true;
+-	qslValidImage << QLatin1String("data");
+-	if (allowhttp) {
+-		qslValidImage << QLatin1String("http");
+-		qslValidImage << QLatin1String("https");
+-	}
+-}
+-
+-QVariant ValidDocument::loadResource(int type, const QUrl &url) {
+-	QVariant v = QLatin1String("PlaceHolder");
+-	if ((type == QTextDocument::ImageResource) && qslValidImage.contains(url.scheme()))
+-		return QTextDocument::loadResource(type, url);
+-	bValid = false;
+-	return v;
+-}
+-
+-bool ValidDocument::isValid() const {
+-	return bValid;
+-}
+-
+-LogDocument::LogDocument(QObject *p) : QTextDocument(p) {
++LogDocument::LogDocument(QObject *p)
++	: QTextDocument(p)
++	, m_valid(true)
++	, m_onlyLoadDataURLs(false)
++	, m_allowHTTPResources(true) {
+ }
+ 
+ QVariant LogDocument::loadResource(int type, const QUrl &url) {
+-	if (type != QTextDocument::ImageResource)
++	if (type != QTextDocument::ImageResource) {
++		m_valid = false;
+ 		return QLatin1String("No external resources allowed.");
+-	if (g.s.iMaxImageSize <= 0)
+-		return QLatin1String("Image download disabled.");
+-
+-	if (url.scheme() == QLatin1String("data")) {
+-		QVariant v = QTextDocument::loadResource(type, url);
+-		addResource(type, url, v);
+-		return v;
+ 	}
+ 
+-	qWarning() << "LogDocument::loadResource " << type << url.toString();
++	if (url.scheme() != QLatin1String("data") && g.s.iMaxImageSize <= 0) {
++		m_valid = false;
++		return QLatin1String("Image download disabled.");
++	}
+ 
+ 	QImage qi(1, 1, QImage::Format_Mono);
+ 	addResource(type, url, qi);
+ 
+-	if (! url.isValid() || url.isRelative())
++	if (! url.isValid() || url.isRelative()) {
++		m_valid = false;
+ 		return qi;
++	}
+ 
+-	if ((url.scheme() != QLatin1String("http")) && (url.scheme() != QLatin1String("https")))
++	QStringList allowedSchemes;
++	allowedSchemes << QLatin1String("data");
++	if (m_allowHTTPResources) {
++		allowedSchemes << QLatin1String("http");
++		allowedSchemes << QLatin1String("https");
++	}
++
++	if (!allowedSchemes.contains(url.scheme())) {
++		m_valid = false;
+ 		return qi;
++	}
++
++	bool shouldLoad = true;
++	if (m_onlyLoadDataURLs && url.scheme() != QLatin1String("data")) {
++		shouldLoad = false;
++	}
++
++	if (shouldLoad) {
++		QNetworkReply *rep = Network::get(url);
++		connect(rep, SIGNAL(metaDataChanged()), this, SLOT(receivedHead()));
++		connect(rep, SIGNAL(finished()), this, SLOT(finished()));
++
++		// Handle data URLs immediately without a roundtrip to the event loop.
++		// We need this to perform proper validation for data URL images when
++		// a LogDocument is used inside Log::validHtml().
++		if (url.scheme() == QLatin1String("data")) {
++			QCoreApplication::sendPostedEvents(rep, 0);
++		}
++	}
+ 
+-	QNetworkReply *rep = Network::get(url);
+-	connect(rep, SIGNAL(metaDataChanged()), this, SLOT(receivedHead()));
+-	connect(rep, SIGNAL(finished()), this, SLOT(finished()));
+ 	return qi;
+ }
+ 
++void LogDocument::setAllowHTTPResources(bool allowHTTPResources) {
++	m_allowHTTPResources = allowHTTPResources;
++}
++
++void LogDocument::setOnlyLoadDataURLs(bool onlyLoadDataURLs) {
++	m_onlyLoadDataURLs = onlyLoadDataURLs;
++}
++
++bool LogDocument::isValid() {
++	return m_valid;
++}
++
+ void LogDocument::receivedHead() {
+ 	QNetworkReply *rep = qobject_cast<QNetworkReply *>(sender());
+-	QVariant length = rep->header(QNetworkRequest::ContentLengthHeader);
+-	if (length == QVariant::Invalid || length.toInt() > g.s.iMaxImageSize) {
+-		qWarning() << "Image "<< rep->url().toString() <<" (" << length.toInt() << " byte) to big, request aborted. ";
+-		rep->abort();
++	if (rep->url().scheme() != QLatin1String("data")) {
++		QVariant length = rep->header(QNetworkRequest::ContentLengthHeader);
++		if (length == QVariant::Invalid || length.toInt() > g.s.iMaxImageSize) {
++			m_valid = false;
++			rep->abort();
++		}
+ 	}
+ }
+ 
+@@ -612,14 +643,42 @@ void LogDocument::finished() {
+ 	QNetworkReply *rep = qobject_cast<QNetworkReply *>(sender());
+ 
+ 	if (rep->error() == QNetworkReply::NoError) {
+-		QVariant qv = rep->readAll();
++		QByteArray ba = rep->readAll();
++		QByteArray fmt;
+ 		QImage qi;
+ 
+-		if (qi.loadFromData(qv.toByteArray()) && qi.width() <= g.s.iMaxImageWidth && qi.height() <= g.s.iMaxImageHeight) {
+-			addResource(QTextDocument::ImageResource, rep->request().url(), qi);
+-			g.mw->qteLog->setDocument(this);
+-		} else qWarning() << "Image "<< rep->url().toString() <<" (" << qi.width() << "x" << qi.height() <<") to large.";
+-	} else qWarning() << "Image "<< rep->url().toString() << " download failed.";
++		// Sniff the format instead of relying on the MIME type.
++		// There are many misconfigured servers out there and
++		// Mumble has historically sniffed the received data
++		// instead of strictly requiring a correct Content-Type.
++		if (RichTextImage::isValidImage(ba, fmt)) {
++			if (qi.loadFromData(ba, fmt)) {
++				bool ok = true;
++				if (rep->url().scheme() != QLatin1String("data")) {
++					ok = (qi.width() <= g.s.iMaxImageWidth && qi.height() <= g.s.iMaxImageHeight);
++				}
++				if (ok) {
++					addResource(QTextDocument::ImageResource, rep->request().url(), qi);
++
++					// Force a re-layout of the QTextEdit the next
++					// time we enter the event loop.
++					// We must not trigger a re-layout immediately.
++					// Doing so can trigger crashes deep inside Qt
++					// if the QTextDocument has just been set on the
++					// text edit widget.
++					QTextEdit *qte = qobject_cast<QTextEdit *>(parent());
++					if (qte != NULL) {
++						QEvent *e = new QEvent(QEvent::FontChange);
++						QApplication::postEvent(qte, e);
++					}
++				} else {
++					m_valid = false;
++				}
++			}
++		} else {
++			m_valid = false;
++		}
++	}
+ 
+ 	rep->deleteLater();
+ }
+diff --git a/src/mumble/Log.h b/src/mumble/Log.h
+index 6c9f11e..3d6de8a 100644
+--- a/src/mumble/Log.h
++++ b/src/mumble/Log.h
+@@ -100,29 +100,23 @@ class Log : public QObject {
+ 		void log(MsgType t, const QString &console, const QString &terse=QString(), bool ownMessage = false);
+ };
+ 
+-class ValidDocument : public QTextDocument {
+-	private:
+-		Q_OBJECT
+-		Q_DISABLE_COPY(ValidDocument)
+-	protected:
+-		QStringList qslValidImage;
+-		bool bValid;
+-		QVariant loadResource(int, const QUrl &);
+-	public:
+-		ValidDocument(bool httpimages, QObject *p = NULL);
+-		bool isValid() const;
+-};
+-
+ class LogDocument : public QTextDocument {
+ 	private:
+ 		Q_OBJECT
+ 		Q_DISABLE_COPY(LogDocument)
+ 	public:
+ 		LogDocument(QObject *p = NULL);
+-		QVariant loadResource(int, const QUrl &);
++		virtual QVariant loadResource(int, const QUrl &);
++		void setAllowHTTPResources(bool allowHttpResources);
++		void setOnlyLoadDataURLs(bool onlyLoadDataURLs);
++		bool isValid();
+ 	public slots:
+ 		void receivedHead();
+ 		void finished();
++	private:
++		bool m_allowHTTPResources;
++		bool m_valid;
++		bool m_onlyLoadDataURLs;
+ };
+ 
+ #endif
+diff --git a/src/mumble/MainWindow.cpp b/src/mumble/MainWindow.cpp
+index 8dbe54e..8224149 100644
+--- a/src/mumble/MainWindow.cpp
++++ b/src/mumble/MainWindow.cpp
+@@ -54,6 +54,7 @@
+ #include "Overlay.h"
+ #include "Plugins.h"
+ #include "PTTButtonWidget.h"
++#include "RichTextEditor.h"
+ #include "ServerHandler.h"
+ #include "TextMessage.h"
+ #include "Tokens.h"
+@@ -2743,7 +2744,7 @@ QPair<QByteArray, QImage> MainWindow::openImageFile() {
+ 	if (g.s.qsImagePath.isEmpty() || ! QDir::root().exists(g.s.qsImagePath))
+ 		g.s.qsImagePath = QDesktopServices::storageLocation(QDesktopServices::PicturesLocation);
+ 
+-	QString fname = QFileDialog::getOpenFileName(this, tr("Choose image file"), g.s.qsImagePath, tr("Images (*.png *.jpg *.jpeg *.svg)"));
++	QString fname = QFileDialog::getOpenFileName(this, tr("Choose image file"), g.s.qsImagePath, tr("Images (*.png *.jpg *.jpeg)"));
+ 
+ 	if (fname.isNull())
+ 		return retval;
+@@ -2763,7 +2764,17 @@ QPair<QByteArray, QImage> MainWindow::openImageFile() {
+ 	QBuffer qb(&qba);
+ 	qb.open(QIODevice::ReadOnly);
+ 
+-	QImageReader qir(&qb, fi.suffix().toUtf8());
++	QImageReader qir;
++	qir.setAutoDetectImageFormat(false);
++
++	QByteArray fmt;
++	if (!RichTextImage::isValidImage(qba, fmt)) {
++		QMessageBox::warning(this, tr("Failed to load image"), tr("Image format not recognized."));
++		return retval;
++	}
++
++	qir.setFormat(fmt);
++	qir.setDevice(&qb);
+ 
+ 	QImage img = qir.read();
+ 	if (img.isNull()) {
+diff --git a/src/mumble/Overlay.cpp b/src/mumble/Overlay.cpp
+index 31e6ff7..d1e47a3 100644
+--- a/src/mumble/Overlay.cpp
++++ b/src/mumble/Overlay.cpp
+@@ -40,6 +40,7 @@
+ #include "MainWindow.h"
+ #include "Message.h"
+ #include "OverlayText.h"
++#include "RichTextEditor.h"
+ #include "ServerHandler.h"
+ #include "User.h"
+ #include "WebFetch.h"
+@@ -272,15 +273,21 @@ void Overlay::verifyTexture(ClientUser *cp, bool allowupdate) {
+ 			qb.open(QIODevice::ReadOnly);
+ 
+ 			QImageReader qir;
+-			if (cp->qbaTexture.startsWith("<?xml"))
+-				qir.setFormat("svg");
+-			qir.setDevice(&qb);
+-			if (! qir.canRead() || (qir.size().width() > 1024) || (qir.size().height() > 1024)) {
+-				valid = false;
++			qir.setAutoDetectImageFormat(false);
++
++			QByteArray fmt;
++			if (RichTextImage::isValidImage(cp->qbaTexture, fmt)) {
++				qir.setFormat(fmt);
++				qir.setDevice(&qb);
++				if (! qir.canRead() || (qir.size().width() > 1024) || (qir.size().height() > 1024)) {
++					valid = false;
++				} else {
++					cp->qbaTextureFormat = qir.format();
++					QImage qi = qir.read();
++					valid = ! qi.isNull();
++				}
+ 			} else {
+-				cp->qbaTextureFormat = qir.format();
+-				QImage qi = qir.read();
+-				valid = ! qi.isNull();
++				valid = false;
+ 			}
+ 		}
+ 		if (! valid) {
+diff --git a/src/mumble/RichTextEditor.cpp b/src/mumble/RichTextEditor.cpp
+index d333b80..ca4baa6 100644
+--- a/src/mumble/RichTextEditor.cpp
++++ b/src/mumble/RichTextEditor.cpp
+@@ -37,6 +37,8 @@
+ #include "MainWindow.h"
+ 
+ RichTextHtmlEdit::RichTextHtmlEdit(QWidget *p) : QTextEdit(p) {
++	m_document = new LogDocument(this);
++	setDocument(m_document);
+ }
+ 
+ /* On nix, some programs send utf8, some send wchar_t. Some zeroterminate once, some twice, some not at all.
+@@ -627,3 +629,20 @@ QString RichTextEditor::text() {
+ 	bChanged = false;
+ 	return qptePlainText->toPlainText();
+ }
++
++bool RichTextImage::isValidImage(const QByteArray &ba, QByteArray &fmt) {
++	QBuffer qb;
++	qb.setData(ba);
++	if (!qb.open(QIODevice::ReadOnly)) {
++		return false;
++	}
++
++	QByteArray detectedFormat = QImageReader::imageFormat(&qb).toLower();
++	if (detectedFormat == QByteArray("png") || detectedFormat == QByteArray("jpg")
++            || detectedFormat == QByteArray("jpeg") || detectedFormat == QByteArray("gif")) {
++		fmt = detectedFormat;
++		return true;
++	}
++
++	return false;
++}
+diff --git a/src/mumble/RichTextEditor.h b/src/mumble/RichTextEditor.h
+index 7152774..cdcfe76 100644
+--- a/src/mumble/RichTextEditor.h
++++ b/src/mumble/RichTextEditor.h
+@@ -33,6 +33,8 @@
+ 
+ #include <QtGui/QTextEdit>
+ 
++class LogDocument;
++
+ class RichTextHtmlEdit : public QTextEdit {
+ 	private:
+ 		Q_OBJECT
+@@ -41,6 +43,8 @@ class RichTextHtmlEdit : public QTextEdit {
+ 		void insertFromMimeData(const QMimeData *source);
+ 	public:
+ 		RichTextHtmlEdit(QWidget *p);
++	private:
++		LogDocument *m_document;
+ };
+ 
+ #include "ui_RichTextEditor.h"
+@@ -89,4 +93,9 @@ class RichTextEditor : public QTabWidget, Ui::RichTextEditor {
+ 		void onCurrentChanged(int);
+ };
+ 
++class RichTextImage {
++	public:
++		static bool isValidImage(const QByteArray &buf, QByteArray &fmt);
++};
++
+ #endif
+diff --git a/src/mumble/ServerHandler.cpp b/src/mumble/ServerHandler.cpp
+index 2b5914b..b66f8e0 100644
+--- a/src/mumble/ServerHandler.cpp
++++ b/src/mumble/ServerHandler.cpp
+@@ -43,6 +43,7 @@
+ #include "NetworkConfig.h"
+ #include "OSInfo.h"
+ #include "PacketDataStream.h"
++#include "RichTextEditor.h"
+ #include "SSL.h"
+ #include "User.h"
+ 
+@@ -679,11 +680,19 @@ void ServerHandler::setTexture(const QByteArray &qba) {
+ 		texture = qba;
+ 	} else {
+ 		QByteArray raw = qba;
++
+ 		QBuffer qb(& raw);
+ 		qb.open(QIODevice::ReadOnly);
++
+ 		QImageReader qir;
+-		if (qba.startsWith("<?xml"))
+-			qir.setFormat("svg");
++		qir.setDecideFormatFromContent(false);
++
++		QByteArray fmt;
++		if (!RichTextImage::isValidImage(qba, fmt)) {
++			return;
++		}
++
++		qir.setFormat(fmt);
+ 		qir.setDevice(&qb);
+ 
+ 		QSize sz = qir.size();
