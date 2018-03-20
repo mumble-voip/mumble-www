@@ -48,6 +48,22 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     </a>
 </div>
 
+<div class="download-box">
+    <a href="#">
+        <span class="os os-linux" aria-hidden="true"></span>
+        <span class="os-name">Static Linux Server</span>
+        1.2.19
+    </a>
+</div>
+
+<div class="download-box">
+    <a href="#">
+        <span class="os os-mac" aria-hidden="true"></span>
+        <span class="os-name">Static OS X Server</span>
+        1.2.19
+    </a>
+</div>
+
 </div>
 
 ## Development snapshots
@@ -93,6 +109,22 @@ Development snapshots contain unreleased features and changes that will eventual
         <span class="os os-linux" aria-hidden="true"></span>
         <span class="os-name">Ubuntu</span>
         PPA
+    </a>
+</div>
+
+<div class="download-box">
+    <a href="#">
+        <span class="os os-linux" aria-hidden="true"></span>
+        <span class="os-name">Static Linux Server</span>
+        1.3.0~2717
+    </a>
+</div>
+
+<div class="download-box">
+    <a href="#">
+        <span class="os os-mac" aria-hidden="true"></span>
+        <span class="os-name">Static OS X Server</span>
+        1.3.0~2717
     </a>
 </div>
 
