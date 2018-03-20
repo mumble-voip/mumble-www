@@ -12,7 +12,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-windows" aria-hidden="true"></span>
         <span class="os-name">Windows 32-bit</span>
-        1.2.19
     </a>
 </div>
 
@@ -20,7 +19,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-mac" aria-hidden="true"></span>
         <span class="os-name">OS X</span>
-        1.2.19
     </a>
 </div>
 
@@ -28,7 +26,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-mac" aria-hidden="true"></span>
         <span class="os-name">OS X (Universal, Legacy)</span>
-        1.2.19
     </a>
 </div>
 
@@ -36,7 +33,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-ios" aria-hidden="true"></span>
         <span class="os-name">iOS</span>
-        1.3.0
     </a>
 </div>
 
@@ -44,7 +40,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-linux" aria-hidden="true"></span>
         <span class="os-name">Ubuntu</span>
-        PPA
     </a>
 </div>
 
@@ -52,7 +47,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-linux" aria-hidden="true"></span>
         <span class="os-name">Static Linux Server</span>
-        1.2.19
     </a>
 </div>
 
@@ -60,7 +54,6 @@ Version 1.2.19 is the latest stable version of Mumble and was released on Januar
     <a href="#">
         <span class="os os-mac" aria-hidden="true"></span>
         <span class="os-name">Static OS X Server</span>
-        1.2.19
     </a>
 </div>
 
