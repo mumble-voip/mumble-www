@@ -31,11 +31,11 @@ Alongside these security fixes, this release also includes a few minor bug fixes
 
 Security advisories for the two fixed vulnerabilities are available below:
 
-[Mumble-SA-2014-003][2] [[sig][3]]
+[Mumble-SA-2014-003](/security/mumble-sa-2014-003) ([txt](/security/Mumble-SA-2014-003.txt), [sig](/security/Mumble-SA-2014-003.sig))
 
 &#8211; A malformed Opus voice packet sent to a MumbleKit client could trigger a NULL pointer dereference.
 
-[Mumble-SA-2014-004][4] [[sig][5]]
+[Mumble-SA-2014-004](/security/mumble-sa-2014-004) ([txt](/security/Mumble-SA-2014-004.txt), [sig](/security/Mumble-SA-2014-004.sig))
 
 &#8211; A malformed Opus voice packet sent to a MumbleKit client could trigger a heap-based buffer overflow.
 
