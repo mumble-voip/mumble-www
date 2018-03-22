@@ -17,21 +17,16 @@ We&#8217;ve identified the problem, and we&#8217;re working on a fix. If you&#82
 
 To work around the issue, you disable Echo Cancellation in the app. Here&#8217;s how:
 
-1. In Mumble&#8217;s Preferences, navigate to &#8216;Advanced&#8217; under Audio.
+  * In Mumble&#8217;s Preferences, navigate to &#8216;Advanced&#8217; under Audio.
+  * When in there, look for the &#8216;Audio Input&#8217; section.
+  * There should be a checkbox for Echo Cancellation. Disable it.
 
-2. When in there, look for the &#8216;Audio Input&#8217; section.
-
-3. There should be a checkbox for Echo Cancellation. Disable it.
-  
 It can be hard when the bug is occurring. If you&#8217;re having trouble, swipe/drag the checkbox&#8217;s button to disable it.
 
-4. Double tap your home button.
-
-5. Swipe upwards on the Mumble app to close it.
-
-6. Re-open Mumble. The issue should be gone.
-
-7. If the issue is still present, navigate to &#8216;Echo Cancellation&#8217; again, and check that it&#8217;s really disabled. It might not work the first time, due to the &#8216;red bar&#8217; making it very hard to actually execute these steps.
+  * Double tap your home button.
+  * Swipe upwards on the Mumble app to close it.
+  * Re-open Mumble. The issue should be gone.
+  * If the issue is still present, navigate to &#8216;Echo Cancellation&#8217; again, and check that it&#8217;s really disabled. It might not work the first time, due to the &#8216;red bar&#8217; making it very hard to actually execute these steps.
 
 We hope it works for you!
 

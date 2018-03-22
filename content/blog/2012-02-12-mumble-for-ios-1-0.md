@@ -14,7 +14,7 @@ This has been brewing for some time, but we are finally comfortable with calling
 
 **UPDATE:** _The initial release was excluded from the App Store in France. We&#8217;ve since fixed this error, and apologize for any inconvenience this has caused!_
 
-_<!--more-->_
+<!--more-->
 
 ## Availability
 

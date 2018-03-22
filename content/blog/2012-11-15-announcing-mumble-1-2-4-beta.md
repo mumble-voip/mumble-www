@@ -12,7 +12,7 @@ tags:
 ---
 The Mumble team is proud to announce the first beta of Mumble 1.2.4.
 
-This is a big step towards the next stable release in the 1.2 series.
+This is a big step towards the next stable release in the 1.2 series.<!--more-->
 
 Now is a good time to try the [new][1] and old features and report back to us about any issues you can find.
 
