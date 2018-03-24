@@ -8,7 +8,7 @@ categories:
 ---
 Hi,
 
-Mumble version 1.2.4 is now feature complete. Accordingly we have entered string freeze before the upcoming release. This means there will be no new text added or replaced before the release.
+Mumble version 1.2.4 is now feature complete. Accordingly we have entered string freeze before the upcoming release. This means there will be no new text added or replaced before the release.<!--more-->
 
 Our translation guide can be found at <https://wiki.mumble.info/wiki/Language_Translation> .
 

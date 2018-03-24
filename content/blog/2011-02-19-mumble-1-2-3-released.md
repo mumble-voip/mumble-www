@@ -10,8 +10,6 @@ After a rather long development cycle we are proud to present: Mumble 1.2.3 stab
 
 <!--more-->
 
-
-
 The following Mumble 1.2.3 stable packages are available for download:
 
   * [Windows Client + Server][4]

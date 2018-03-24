@@ -12,7 +12,7 @@ tags:
 ---
 As promised some time ago, the beta test for Mumble for iOS-based devices has now gone live.
 
-The portal for the beta testing efforts can be found at <a title="Mumble for iOS Beta Portal" href="http://mumble-ios.appspot.com/" target="_blank">http://mumble-ios.appspot.com/</a>. If you are interested in testing the application, please read on for more information on joining the beta test.
+The portal for the beta testing efforts can be found at ~~Mumble for iOS Beta Portal~~. If you are interested in testing the application, please read on for more information on joining the beta test.
 
 <!--more-->
 

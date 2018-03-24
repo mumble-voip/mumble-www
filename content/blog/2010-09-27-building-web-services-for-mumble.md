@@ -36,5 +36,5 @@ If you have any proposals for the standard, please feel free to visit the [#mumb
 
  [5]: https://wiki.mumble.info/wiki/IRC
  [6]: http://sourceforge.net/apps/phpbb/mumble/
- [7]: http://mumble-django.org/
+ [7]: https://bitbucket.org/Svedrin/mumble-django/wiki/Home
  [8]: https://wiki.mumble.info/wiki/FAQ/English#How_can_I_help_or_contact_you.3F
