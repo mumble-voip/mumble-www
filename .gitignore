@@ -1,0 +1,6 @@
+# Files copied from Mumble Git repository
+/static/AUTHORS
+/static/LICENSE
+
+# Generated site
+/public/
