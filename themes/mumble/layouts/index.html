@@ -1,21 +1,21 @@
-{{ partial "header.html" . }}
-<div class="download-container">
-	<div class="download-container-left">
-		<div class="download-items">
-			<div class="download-text">Mumble 1.3.0 now available</div>
-			<a class="download-button" href="{{ relref . "downloads" }}">Download now</a>
-			<div class="download-subtext">
-				New theme, lots of new features:
-				<ul>
-					<li>Better stuff</li>
-					<li>Hopefully not worse stuff</li>
-					<li><a href="/changelog-1.3.0">...and much more</a></li>
-				</ul>
+{{ define "main" }}
+	<div class="download-container">
+		<div class="download-container-left">
+			<div class="download-items">
+				<div class="download-text">Mumble 1.3.0 now available</div>
+				<a class="download-button" href="{{ relref . "downloads" }}">Download now</a>
+				<div class="download-subtext">
+					New theme, lots of new features:
+					<ul>
+						<li>Better stuff</li>
+						<li>Hopefully not worse stuff</li>
+						<li><a href="/changelog-1.3.0">...and much more</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
+		<div class="download-container-right">
+			<img class="download-screenshot" src="screenshot-win.png" />
+		</div>
 	</div>
-	<div class="download-container-right">
-		<img class="download-screenshot" src="screenshot-win.png" />
-	</div>
-</div>
-{{ partial "footer.html" . }}
+{{ end }}

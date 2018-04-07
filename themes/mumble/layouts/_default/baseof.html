@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ if not .Page.IsHome }}{{ with .Page.Title }}{{ . }} | {{ end }}{{ end }}Mumble</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ partial "header-css.html" . }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+
+    <div class="content-container">
+        <div class="content">
+            {{ block "main" . }}{{ end }}
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+</html>

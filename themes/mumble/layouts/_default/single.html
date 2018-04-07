@@ -1,8 +1,8 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
 <div class="markdown-body">
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 </div>
 
-{{ partial "footer.html" . }}
+{{ end }}

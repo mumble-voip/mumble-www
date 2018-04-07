@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ if not .Page.IsHome }}{{ with .Page.Title }}{{ . }} | {{ end }}{{ end }}Mumble</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="renderer" content="webkit">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,400,700">
-	<link rel="stylesheet" type="text/css" href="{{ "css/reset.css" | relURL }}">
-	<link rel="stylesheet" type="text/css" href="{{ "css/github-markdown.css" | relURL }}">
-	<link rel="stylesheet" type="text/css" href="{{ "css/mumble.css" | relURL }}">
-</head>
-<body>
 <header>
-	<div id="header-content">
-		<div class="logo"><a href="{{ .Site.BaseURL | relURL }}"></a></div>
+    <div id="header-content">
+        <div class="logo"><a href="{{ .Site.BaseURL | relURL }}"></a></div>
 
-		<h1>
-			<a href="{{ .Site.BaseURL | relURL }}">Mumble</a>
-			<sub>Open Source, Low Latency, High Quality Voice Chat</sub>
-		</h1>
+        <h1>
+            <a href="{{ .Site.BaseURL | relURL }}">Mumble</a>
+            <sub>Open Source, Low Latency, High Quality Voice Chat</sub>
+        </h1>
 
-		<nav>
-			{{ if .Site.Menus.main }}
-			<ul class="menu">
-				{{ range .Site.Menus.main }}
-				<li><a href="{{ .URL }}">{{ .Title }}</a></li>
-				{{ end }}
-			</ul>
-			{{ end }}
-		</nav>
-	</div>
+        <nav>
+            {{ if .Site.Menus.main }}
+            <ul class="menu">
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </nav>
+    </div>
 </header>
-
-<div class="content-container">
-	<div class="content">

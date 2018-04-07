@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
 {{ $paginator := .Paginate (where .Pages ".Type" "==" "blog") (index .Site.Params "paginate" | default 10) }}
 
@@ -46,4 +46,4 @@
 </footer>
 {{ end }}
 
-{{ partial "footer.html" . }}
+{{ end }}

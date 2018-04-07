@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 <nav class="blogposts">
 <div>
 {{ with .NextInSection }}
@@ -19,4 +19,4 @@
 {{ .Content }}
 </div>
 
-{{ partial "footer.html" . }}
+{{ end }}
