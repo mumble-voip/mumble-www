@@ -117,14 +117,20 @@ body > footer {
 }
 
 .download-button {
+	display: block;
 	background-color: #4CAF50;
 	color: white;
 	font-size: 20px;
+	line-height: 20px;
 	padding: 20px;
 	border-radius: 15px;
 	width: 150px;
 	cursor: pointer;
 	text-align: center;
+	text-decoration: none;
+}
+.download-button:hover {
+	background-color: #0C9F10;
 }
 
 .download-text {
