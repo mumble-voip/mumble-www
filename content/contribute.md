@@ -62,3 +62,5 @@ Most of our positional audio plugins regularly break on game updates. To read on
 ## Mumble itself
 
 We are always looking for helping hands willing to contribute to mumble. You'll need a good understanding of C++ and previous knowledge in Qt is definitely helpful. The best way to get into mumble development is to link up with us on [IRC](https://wiki.mumble.info/wiki/IRC) ([#mumble on freenode](irc://chat.freenode.net/mumble)), there is always small stuff to do to get you started. Also check the [Development wiki page](https://wiki.mumble.info/wiki/Development) on more info about the source code and building it.
+
+{{<aside>}}This pages content is based on our [Contributing wiki page](https://wiki.mumble.info/wiki/Contributing), which is licensed as [CC-By-SA](http://creativecommons.org/licenses/by-sa/2.5/).{{</aside>}}
