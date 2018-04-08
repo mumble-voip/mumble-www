@@ -6,7 +6,7 @@ categories:
   - Release
 
 ---
-After a rather long development cycle we are proud to present: Mumble 1.2.3 stable. This stable marks the fourth release in our 1.2.X Mumble series and besides ton of bug-fixes introduces some long awaited features like [recording][2], priority speakers [and more][3].
+After a rather long development cycle we are proud to present: Mumble 1.2.3 stable. This stable marks the fourth release in our 1.2.X Mumble series and besides ton of bug-fixes introduces some long awaited features like [recording][2], priority speakers {{< wiki "1.2.3" "and more" />}}.
 
 <!--more-->
 
@@ -26,7 +26,6 @@ Your,
 Mumble Team
 
  [2]: http://blog.mumble.info/for-the-record/
- [3]: https://wiki.mumble.info/wiki/1.2.3
  [4]: http://sourceforge.net/projects/mumble/files/Mumble/1.2.3/mumble-1.2.3.msi/download
  [5]: http://sourceforge.net/projects/mumble/files/Mumble/1.2.3/Mumble-1.2.3.dmg/download
  [6]: http://sourceforge.net/projects/mumble/files/Mumble/1.2.3/murmur-static_x86-1.2.3.tar.bz2/download
