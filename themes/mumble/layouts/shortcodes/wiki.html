@@ -1,0 +1,15 @@
+{{- if .IsNamedParams -}}
+    {{- $url := printf "https://wiki.mumble.info/wiki/%s" (replace (.Get "path") " " "_" ) -}}
+    <a href="{{ $url }}">{{ with .Inner }}{{.}}{{else}}{{ .Get "path" }}{{end}}</a>
+{{- else }}
+    {{- if len .Params | eq 2 -}}
+        {{- $url := printf "https://wiki.mumble.info/wiki/%s" (replace (.Get 0) " " "_" ) -}}
+        <a href="{{ $url }}">{{.Get 1}}</a>
+    {{- else if len .Params | eq 1 -}}
+        {{ $url := printf "https://wiki.mumble.info/wiki/%s" (replace (.Get 0) " " "_" ) -}}
+        <a href="{{ $url }}">{{ .Get 0 }}</a>
+    {{- else -}}
+        {{ $url := "https://wiki.mumble.info/" }}
+        <a href="{{ $url }}">{{ with (.Get 0) }}{{.}}{{else}}Docs Wiki Home{{end}}</a>
+    {{- end -}}
+{{- end -}}
