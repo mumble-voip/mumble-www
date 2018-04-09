@@ -10,7 +10,7 @@ tags:
   - recording
 
 ---
-As you already know if you read the article on our [Tracker Squash Meeting][1] or listened to the buzz in [#mumble][2] the upcoming [1.2.3 release][3] will have a recording feature. The work on this has progressed nicely and since we are now shipping the first snapshots with this new feature in them we think it is time to give you a proper introduction.
+As you already know if you read the article on our [Tracker Squash Meeting][1] or listened to the buzz in `#mumble` on {{< wiki IRC />}} the upcoming {{< wiki "1.2.3" "1.2.3 release" />}} will have a recording feature. The work on this has progressed nicely and since we are now shipping the first snapshots with this new feature in them we think it is time to give you a proper introduction.
 
 <!--more-->
 
@@ -47,8 +47,6 @@ The Mumble Team
 Appendix: So this is how we save it. But the audio geeks among you might ask themselves what we do actually save? Currently the answer to that is: Pretty much the same as you can hear minus positional audio (mono only at this time) plus what you say. Meaning it receives the same post-processing as the audio you hear does and if you have 44.1Khz audio output the file will contain 44.1Khz afterwards (this will change later, internally Mumble always operates at 48Khz and we want to retain that level of quality). The files contain either 24bit PCM (wav & flac) or the full 32bit float range (au & vorbis). Note that due to an internal API restriction our preprocessors currently only operate on 16bit PCM data. This is going to change soon which will make our whole processing pipeline 48Khz/32bit float. As far as codecs go the only lossy codec we offer is ogg/vorbis. For now we stick with the default quality level libsndfile chose for it which is [0.4][7].
 
  [1]: http://blog.mumble.info/first-mumble-tracker-squash-meeting
- [2]: https://wiki.mumble.info/wiki/IRC
- [3]: https://wiki.mumble.info/wiki/1.2.3
  [4]: http://www.mega-nerd.com/libsndfile/FAQ.html#Q020
  [5]: http://www.mega-nerd.com/libsndfile/
  [6]: https://sourceforge.net/projects/audacity/
