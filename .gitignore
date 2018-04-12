@@ -1,6 +1,5 @@
-# Files copied from Mumble Git repository
-/hugo/static/AUTHORS
-/hugo/static/LICENSE
+# Compiled server
+/mumble-www
 
 # Generated site
 /public/
