@@ -60,7 +60,6 @@ func main() {
 	githubCache := NewGithubCache(time.Minute * 10)
 	mux.Handle("/LICENSE", githubCache.Handle("/LICENSE"))
 	mux.Handle("/AUTHORS", githubCache.Handle("/AUTHORS"))
-	mux.Handle("/README", githubCache.Handle("/README"))
 
 	mux.Handle("/", fs)
 
