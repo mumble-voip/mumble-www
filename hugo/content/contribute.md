@@ -9,7 +9,7 @@ Mumble is a great program, but that is no reason to stop polishing it. There are
 
 Use the developer snapshots of Mumble and Murmur (see [Downloads]({{< relref "downloads" >}})) and see if you can find any issues with them. If you do, check if the issue has already been reported, add details if you have more, or add a new tracker item if it has not been reported yet. The issue tracker can be found at https://github.com/mumble-voip/mumble/issues.
 
-You may also want to suggest new features at https://github.com/mumble-voip/mumble/issues. 
+The issue tracker is also used to track [feature requests, which are marked with the `feature-request` label](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc). Please vote with a thumbs up on those you would like to see being fulfilled, describe your use cases or otherwise participate in the discussion on existing tickets. And if you want to request a feature not suggested yet, please create a new feature request ticket possibly with some elaboration and use cases.
 
 # Translation
 
