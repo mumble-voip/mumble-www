@@ -36,7 +36,7 @@ func (s *SnapshotCache) updater(cacheTime time.Duration) {
 	ticker := time.NewTicker(cacheTime)
 	defer ticker.Stop()
 
-	const root = `https://dl.mumble.info/?C=M;O=D` // sorted by most last modified first
+	const root = `https://dl.mumble.info/?C=M;O=D` // sorted by last modified first
 	rootURL, _ := url.Parse(root)
 
 	for {
