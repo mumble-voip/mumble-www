@@ -50,7 +50,10 @@ func main() {
 	}
 
 	{
-		// TODO: snapshots
+		snapshotCache := NewSnapshotCache(time.Hour)
+		for source := range snapshotRegexps {
+			mux.Handle("/downloads/"+source+"/snapshot", snapshotCache.Handle(source))
+		}
 		mux.Handle(
 			"/downloads/ubuntu/snapshot",
 			http.RedirectHandler("https://launchpad.net/~mumble/+archive/snapshot", http.StatusTemporaryRedirect),

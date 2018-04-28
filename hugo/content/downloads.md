@@ -84,7 +84,7 @@ If you are looking for a client for an operating system we do not officially sup
 
 ## Development snapshots
 
-Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on our issue tracker.
+[Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on our issue tracker.
 
 <table class="development-snapshots">
     <tr>
@@ -98,25 +98,25 @@ Development snapshots contain unreleased features and changes that will eventual
     </tr>
     <tr>
         <td>
-            <a href="windows-64/snapshot">1.3.0~2717</a>
+            <a href="windows-64/snapshot">.msi</a>
         </td>
         <td>
-            <a href="windows-32/snapshot">1.3.0~2717</a>
+            <a href="windows-32/snapshot">.msi</a>
         </td>
         <td>
-            <a href="osx/snapshot">1.3.0~2717</a>
+            <a href="osx/snapshot">.dmg</a>
         </td>
         <td>
-            <a href="osx-universal/snapshot">1.3.0~1645</a>
+            <a href="osx-universal/snapshot">.dmg</a>
         </td>
         <td>
             <a href="ubuntu/snapshot">PPA</a>
         </td>
         <td>
-            <a href="linux-static-server/snapshot">1.3.0~2717</a>
+            <a href="linux-static-server/snapshot">.tar.bz2</a>
         </td>
         <td>
-            <a href="osx-static-server/snapshot">1.3.0~2717</a>
+            <a href="osx-static-server/snapshot">.tar.bz2</a>
         </td>
     </tr>
 </table>
