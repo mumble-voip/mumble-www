@@ -1,0 +1,2 @@
+Contact: security@mumble.info
+Acknowledgements: https://www.mumble.info/security
