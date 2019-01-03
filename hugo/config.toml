@@ -36,7 +36,7 @@ disableKinds = ["taxonomy","taxonomyTerm"]
     title = "Forums"
     weight = 5
     identifier = "forums"
-    url = "https://www.forums.mumble.info"
+    url = "https://forums.mumble.info"
 
 [[menu.main]]
     title = "Contribute"
