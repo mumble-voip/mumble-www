@@ -24,15 +24,6 @@ func main() {
 
 	fs := http.FileServer(http.Dir(*public))
 
-	mux.HandleFunc("/grumble/", func(w http.ResponseWriter, r *http.Request) {
-		r2 := new(http.Request)
-		*r2 = *r
-		r2.URL = new(url.URL)
-		*r2.URL = *r.URL
-		r2.URL.Path = "/grumble/"
-		fs.ServeHTTP(w, r2)
-	})
-
 	{
 		stable := map[string]string{
 			"windows-32":          "https://github.com/mumble-voip/mumble/releases/download/1.2.19/mumble-1.2.19.msi",
