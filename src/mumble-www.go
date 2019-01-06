@@ -59,7 +59,7 @@ func setupStaticFiles(mux *http.ServeMux) {
 }
 
 func main() {
-	addr := flag.String("addr", "127.0.0.1:8080", "bind address")
+	addr := flag.String("addr", "127.0.0.1:8081", "bind address")
 	flag.Parse()
 
 	log.Printf("Starting server on %s\n", *addr)
