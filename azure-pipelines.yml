@@ -44,3 +44,12 @@ steps:
     ../hugobin/hugo
   displayName: 'Build Hugo Website'
   workingDirectory: 'hugo'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'src/mumble-www'
+    artifactName: mumble-www
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'public'
+    artifactName: public
