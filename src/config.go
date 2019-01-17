@@ -7,7 +7,7 @@ import (
 )
 
 type Config struct {
-	Host                string `yaml:"host"`
+	Host                string `yaml:host`
 	Port                int    `yaml:port`
 	PublicPath          string `yaml:publicpath`
 	GitHubCacheTimeMins int    `yaml:githubcachetimemins`
