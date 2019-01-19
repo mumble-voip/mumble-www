@@ -429,3 +429,9 @@ figure img {
 		display: none;
 	}
 }
+
+.servercount {
+	font-size: 10px;
+	margin-left: 4px;
+	vertical-align: top;
+}
