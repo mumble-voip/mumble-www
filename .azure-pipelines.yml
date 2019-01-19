@@ -21,6 +21,8 @@ steps:
 - script: |
     go version
     go build -v .
+    mkdir ../bin
+    mv mumble-www ../bin
   workingDirectory: 'src'
   displayName: 'Build Go Webserver'
 
@@ -44,3 +46,13 @@ steps:
     ../hugobin/hugo
   displayName: 'Build Hugo Website'
   workingDirectory: 'hugo'
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'mumble-www'
+    targetPath: 'bin'
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'public'
+    targetPath: 'public'
