@@ -1,0 +1,155 @@
+---
+title: Public Server List
+---
+<p>This page lists public servers.</p>
+<p class="target-admin">
+    Note for Hosters: If you want to make your server appear in this public server list please refer to the <a href="https://wiki.mumble.info/wiki/Murmur.ini#Server_Registration">register configuration options of your server.</a>
+</p>
+<div id="servers">
+    This page requires JavaScript to be enabled in your webbrowser to list of public Mumble servers.
+</div>
+<script>
+window.serverlist = {
+    url: 'https://publist.mumble.info/v1/list',
+    targetEl: null,
+    continents: {},
+    init: function() {
+        this.targetEl = document.getElementById('servers')
+        this.targetEl.innerText = 'Loading…'
+        this.fetch()
+    },
+    fetch: function() {
+        var oReq = new XMLHttpRequest()
+        oReq.addEventListener('load', this.onFetchResult.bind(this))
+        oReq.open('GET', this.url)
+        oReq.send()
+    },
+    onFetchResult: function(ev) {
+        var xhr = ev.target
+        var doc = xhr.responseXML
+        this.setDocument(doc)
+        this.updateView()
+    },
+    setDocument: function(doc) {
+        servers = doc.querySelectorAll('server')
+        console.log('Handling ' + servers.length + ' servers…')
+        for (var i = 0; i < servers.length; ++i) {
+            var serverNode = servers[i]
+            var server = {}
+            var attr = serverNode.attributes
+            /// servers -> server: name, ca, continent_code, country, country_code, ip, port, region, url
+            for (var j = 0; j < attr.length; ++j) {
+                var a = attr[j]
+                server[a.name] = a.value
+            }
+            this.fixupServer(server)
+            this.addServer(server)
+        }
+    },
+    fixupServer: function(server) {
+        if (server.continent === undefined) {
+            server.continent = '??'
+        }
+        if (server.country_code === undefined) {
+            server.country_code = '??'
+            server.country = 'Unknown'
+        }
+    },
+    addServer: function (server) {
+        var continent = server.continent_code
+        if (!(continent in this.continents)) {
+            this.continents[continent] = {}
+        }
+        var con = this.continents[continent]
+        var country = server.country_code
+        if (!(country in con)) {
+            con[country] = {'code': server.country_code, 'label': server.country, servers: [],}
+        }
+        var servers = con[country].servers
+        var obj = { 'name': server.name, 'ip': server.ip, 'port': server.port, 'url': server.url, }
+        servers.push(obj)
+    },
+    updateView: function() {
+        console.log('Updating view…')
+        this.targetEl.innerText = ''
+        this.targetEl.appendChild(this.createContinentNodes(this.continents))
+    },
+    createContinentNodes: function(continents) {
+        var ul = document.createElement('ul')
+        for (var code in this.continents) {
+            var li = document.createElement('li')
+            li.id = 'continent-' + code
+            li.appendChild(this.createContinentNode(code, this.continents[code]))
+            ul.appendChild(li)
+        }
+        return ul
+    },
+    createContinentNode: function(name, countries) {
+        var det = document.createElement('details')
+        var sum = document.createElement('summary')
+        sum.innerText = name
+        det.appendChild(sum)
+        for (var cc in countries) {
+            var country = countries[cc]
+            det.appendChild(this.createCountryNode(country))
+        }
+        return det
+    },
+    createCountryNode: function(country) {
+        var detCou = document.createElement('details')
+        var sumCou = document.createElement('summary')
+        sumCou.innerText = country.label
+        sumCou.insertAdjacentHTML('beforeEnd', '<span class="servercount">(' + country.servers.length + ')</span>')
+        detCou.appendChild(sumCou)
+
+        var t = document.createElement('table')
+        t.insertAdjacentHTML('beforeend', '<thead><tr><th>Name</th><th>Connect</th><th>Address</th><th>URL</th></tr></thead>')
+        var tb = document.createElement('tbody')
+        t.appendChild(tb)
+        for (var i in country.servers) {
+            var s = country.servers[i]
+            tb.appendChild(this.createServerNode(s))
+        }
+
+        detCou.appendChild(t)
+        return detCou
+    },
+    createServerNode: function(server) {
+        var s = document.createElement('tr')
+        s.appendChild(this.createTdNode(server.name))
+        var addr = server.ip
+        var isDefaultPort = server.port == 64738
+        if (!isDefaultPort) {
+            addr += ':' + server.port
+        }
+        var tdConnect = document.createElement('td')
+        s.appendChild(tdConnect)
+        var aConnect = document.createElement('a')
+        tdConnect.appendChild(aConnect)
+        aConnect.href = 'mumble://' + addr + '?version=1.2.0'
+        aConnect.innerText = 'connect'
+        var tdAddr = document.createElement('td')
+        s.appendChild(tdAddr)
+        tdAddr.innerText = addr
+        s.appendChild(this.createTdNode(server.url))
+        return s
+    },
+    createTextNode: function(type, text) {
+        var node = document.createElement(type)
+        node.innerText = text
+        return node
+    },
+    createTdNode: function(text) {
+        var node = document.createElement('td')
+        node.innerText = text
+        return node
+    },
+}
+window.serverlist.init()
+
+// See also Mumbles source ConnectDialog::fetched
+// qsUserCountry = headers.value(QLatin1String("Geo-Country"));
+// qsUserCountryCode = headers.value(QLatin1String("Geo-Country-Code")).toLower();
+// qsUserContinentCode = headers.value(QLatin1String("Geo-Continent-Code")).toLower();
+
+</script>
