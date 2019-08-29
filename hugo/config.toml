@@ -24,7 +24,7 @@ disableKinds = ["taxonomy","taxonomyTerm"]
     title = "Documentation"
     weight = 3
     identifier = "docs"
-    url = "/docs"
+    url = "https://wiki.mumble.info/"
 
 [[menu.main]]
     title = "Blog"
