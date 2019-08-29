@@ -191,6 +191,9 @@ body > footer {
 .markdown-body {
 	line-height: 1.7em;
 }
+.markdown-body b, .markdown-body strong {
+	font-weight: bold;
+}
 
 #bloglist > div {
 	margin-top: 30px;
@@ -290,4 +293,50 @@ table.development-snapshots {
 	.download-box-container {
 		grid-template-columns: 1fr 1fr !important;
 	}
+}
+
+.release-notes h2 {
+	border: 0;
+}
+.release-notes .item { display: grid; grid-template: "title" auto
+"desc" auto
+"prs" auto
+"commits" auto / 100%;
+	border: 1px solid darkgrey;
+	border-radius: 4px;
+	margin: 1em 0 0.4em 0;
+	padding: 0.4em;
+}
+.release-notes .category-title { display: inline; }
+.release-notes .item-title { grid-area: title; margin: 0; line-height: 1.8em; }
+.release-notes .item-desc { grid-area: desc; margin-bottom: 0.4em; line-height: 1.8em; }
+.release-notes .item-prs { grid-area: prs; }
+.release-notes .item-commits { grid-area: commits; }
+.release-notes .item-commits > details { display: inline-block; }
+.release-notes .item-prs,
+.release-notes .item-commits { margin-bottom: 4px; font-size: 0.8em; line-height: 1.8em; }
+.release-notes .item-commits > details { vertical-align: top; }
+.release-notes .item-commits > details > summary { list-style-position: outside; margin-left: 16px; }
+.release-notes .item-prs > .pr-link,
+.release-notes .item-commits > details > summary > * { background-color: lightgrey; border-radius: 4px; margin-right: 2px; padding: 2px 4px; }
+.release-notes .commit-hashlink,
+.release-notes .pr-link { display: inline-block; line-height: 1.2em; }
+
+figure {
+	border: 0px solid #c0c0c0;
+	display: inline-block;
+}
+figcaption {
+	display: block;
+    background-color: #eeeeee;
+	/* font: italic smaller sans-serif; */
+	font-style: italic;
+	padding: 3px 6px;
+}
+figure img {
+	display: block;
+}
+.figp {
+	display: block;
+	margin-bottom: 16px;
 }
