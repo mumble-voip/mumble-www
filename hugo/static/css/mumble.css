@@ -25,11 +25,14 @@ aside {
 	height: 100%;
 }
 
+header h1 {
+	padding-left: 10px;
+}
+
 h1 {
 	grid-template: "header";
 	font-size: 200%;
 	align-self: center;
-	padding-left: 10px;
 }
 
 h1 a {
