@@ -340,3 +340,10 @@ figure img {
 	display: block;
 	margin-bottom: 16px;
 }
+
+.headlineanchor { font-size: 0.9em; visibility: hidden; padding-left: 4px; position: absolute; top: 0; display: inline-block; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 { position: relative; }
+.markdown-body h1:hover .headlineanchor,
+.markdown-body h2:hover .headlineanchor,
+.markdown-body h3:hover .headlineanchor,
+.markdown-body h4:hover .headlineanchor { visibility: visible; }
