@@ -5,6 +5,13 @@ title: Downloads
 <div class="download-box-container">
 
 <div class="download-box">
+    <a href="windows-34">
+        <span class="os os-windows" aria-hidden="true"></span>
+        <span class="os-name">Windows 64-bit</span>
+    </a>
+</div>
+
+<div class="download-box">
     <a href="windows-32">
         <span class="os os-windows" aria-hidden="true"></span>
         <span class="os-name">Windows 32-bit</span>
