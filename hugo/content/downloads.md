@@ -5,7 +5,7 @@ title: Downloads
 <div class="download-box-container">
 
 <div class="download-box">
-    <a href="windows-34">
+    <a href="windows-64">
         <span class="os os-windows" aria-hidden="true"></span>
         <span class="os-name">Windows 64-bit</span>
     </a>
@@ -62,7 +62,7 @@ title: Downloads
 
 </div>
 
-Version 1.2.19 is the latest stable version of Mumble and was released on January 27, 2017.
+Version 1.3.0 RC2 is the latest stable version of Mumble and was released on June 25, 2019.
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
