@@ -24,7 +24,8 @@
 <div class="markdown-body">
     <h2><a href="{{ .URL | relURL }}">{{ .Title }}</a></h2>
     {{ .Summary }}
-    {{ if .Truncated }}<a href="{{ .URL | relURL }}">Read more...</a>{{ end }}
+    {{ if .Truncated }}<p><a href="{{ .URL | relURL }}">Read more...</a></p>{{ end }}
+    {{ if .Params.summaryReadMoreLink }}<p><a href="{{ .URL | relURL }}">Read on for the details…</a></p>{{ end }}
 </div>
 {{ end }}
 </div>
