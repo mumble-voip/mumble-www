@@ -1,21 +1,73 @@
 {{ define "main" }}
-	<div class="download-container">
-		<div class="download-container-left">
-			<div class="download-items">
-				<div class="download-text">Mumble 1.3.0 now available</div>
-				<a class="download-button" href="{{ relref . "downloads" }}">Download now</a>
-				<div class="download-subtext">
-					New theme, lots of new features:
-					<ul>
-						<li>Better stuff</li>
-						<li>Hopefully not worse stuff</li>
-						<li><a href="/changelog-1.3.0">...and much more</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="download-container-right">
-			<img class="download-screenshot" src="screenshot-win.png" />
-		</div>
+<div class="markdown-body">
+	<p>Welcome to <b>official website of the Mumble project!</b></p>
+	<p><a class="download-button" href="{{ relref . "downloads" }}">Download now</a> <span class="label">new</span> <a href="{{ relref . "blog/2019-08-29-mumble-1-3-0" }}">Version 1.3.0 now available!</a></p>
+
+	<h2>About Mumble</h2>
+	<p><b>Mumble is a free, open source, low latency, high quality voice chat application.</b></p>
+	<p>Mumble is <b>primarily intended for gamers</b>, and was the first to establish true low latency voice communication over a decade ago, but finds <b>good use in many different environments as well</b>.</p>
+	<p>We heard from users who record podcasts with our multi-channel audio recorder, players seeking realism with our positional audio in games, Eve Online players with huge communities of over 100 simultaneous voice participants (I bet they make good use of our extensive permission system 😄), the competitive Team Fortress 2 community making us their required voice communication platform, hobby radio transmission users, and a variety of workplaces adapting Mumble to fit their needs - be it on-head mobile devices or communicating across countries or into airplanes.</p>
+	<p>Administrators appreciate Mumble for being able to <b>own their and their users data</b>. Some make use of the extensive permission system for complex scenarios (for example separating two groups but leaders being able to talk to both). Some love to provide their users with additional functionality with scripts making use of server APIs, or host music bots and the like that connect to the server. Those that have an existing user database often make use of authenticators to allow authenticating with existing account login data.</p>
+	<h2>Features</h2>
+	<p>Different user groups are interested in different capabilities and so we describe some of the features specific to each kind of user.</p>
+
+	<h3 id="user-features">For End-Users</h3>
+	<div class="home-screenshots" style="float:right;">
+		<figure><img class="download-screenshot" src="/client-screenshots/empty.png" alt="" /><figcaption>Mumble Client</figcaption></figure>
+		<figure><img class="download-screenshot" src="/client-screenshots/connected.png" alt="" /><figcaption>Connected to a Server</figcaption></figure>
+		<figure><img class="download-screenshot" src="/client-screenshots/public-server-list.png" alt="" /><figcaption>Public Server List</figcaption></figure>
 	</div>
+	<ul>
+		<li>Low-latency - great for talking and gaming</li>
+		<li>Stay private and secure
+			<ul>
+				<li>always encrypted communication</li>
+				<li>Public/private-key authentication by default</li>
+			</ul>
+		</li>
+		<li>Recognize friends across servers</li>
+		<li>For gamers:
+			<ul>
+				<li>In-game Overlay - see who is talking, FPS and the current time</li>
+				<li>Positional audio - hear the players from where they are located in-game</li>
+			</ul>
+		<li>Wizards to guide you through setup, like configuring your microphone</li>
+	</ul>
+	<p>To get started simply <a href="/downloads">download</a>, install and start Mumble and connect to a public server, or a specific one you know of.</p>
+
+	<h3 id="administrator-features">For Administrators</h3>
+	<ul>
+		<li>Libre software - no licensing hassle, caveats and limitations</li>
+		<li>Open Source - open in security and technology, and open to extendibility</li>
+		<li>Extensive user permission system (ACL)</li>
+		<li>Extendible through Ice and GRPC protocols
+			<ul>
+				<li>Web interfaces - free choice of several community free software projects</li>
+				<li>Channel viewers - even without direct Ice access, if the hoster provides the CVP, easily set up your channel viewer of choice</li>
+				<li>Authenticators - to allow users to authenticate against an existing user database</li>
+				<li>Custom chat commands and context (right click) menu entries</li>
+			</ul>
+		</li>
+	</ul>
+	<p>To get started you can check out our <a href="https://wiki.mumble.info/wiki/Murmurguide">Server guide</a>.</p>
+	<p>For configuration options see <a href="https://wiki.mumble.info/wiki/Murmur.ini">Murmur.ini</a> and our documentation on third party administration software, scripts, and bots.</p>
+	<h3 id="hoster-features">For Hosters</h3>
+	<ul>
+		<li>Free software - no licensing hassle or cost</li>
+		<li>Automatable administration through Ice middleware</li>
+		<li>Low resource cost for hosting</li>
+		<li>Very stable server software</li>
+		<li>Free choice between official and third party server software</li>
+		<li>Custom web-interfaces for users through Ice
+			<ul>
+				<li>Or host one of the available free software web interfaces</li>
+			</ul>
+		</li>
+		<li>Provide users with channel viewer data (CVP) without giving control away
+			<li>Or empower the users by providing the Ice or GRPC interface</li>
+		</li>
+	</ul>
+	<p>To get started you can check out our <a href="https://wiki.mumble.info/wiki/Murmurguide">Server guide</a>.</p>
+	<div style="clear:right;"></div>
+</div>
 {{ end }}
