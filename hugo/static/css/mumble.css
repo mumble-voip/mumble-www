@@ -347,3 +347,25 @@ figure img {
 .markdown-body h2:hover .headlineanchor,
 .markdown-body h3:hover .headlineanchor,
 .markdown-body h4:hover .headlineanchor { visibility: visible; }
+
+@media (max-width: 1899px) {
+	aside.article-toc { display: none; }
+}
+.article-toc {
+	position: fixed;
+	right: 2em;
+	border: 1px solid #ccc;
+	border-radius: 0.4em;
+	padding: 4px 8px;
+	max-width: 280px;
+}
+.article-toc-title {
+	font-weight: bold;
+}
+.article-toc p {
+	margin-bottom: 0.4em;
+}
+.article-toc ul {
+	list-style-type: none;
+	padding-left: 0;
+}
