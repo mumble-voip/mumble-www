@@ -222,6 +222,7 @@ body > footer {
 
 .markdown-body ul {
 	list-style-type: disc;
+	padding-left: 0em;
 }
 .markdown-body {
 	line-height: 1.7em;
@@ -359,6 +360,7 @@ table.development-snapshots {
 .release-notes .item-commits > details > summary > * { background-color: lightgrey; border-radius: 4px; margin-right: 2px; padding: 2px 4px; }
 .release-notes .commit-hashlink,
 .release-notes .pr-link { display: inline-block; line-height: 1.2em; }
+.release-notes ul { padding-left: 1em; }
 
 figure {
 	border: 0px solid #c0c0c0;
