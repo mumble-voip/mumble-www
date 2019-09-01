@@ -1,25 +1,25 @@
 {{ define "main" }}
 <nav class="blogposts">
-<div>
-{{ with .NextInSection }}
-<a href="{{ .RelPermalink }}">← {{ .Title }}</a>
-{{ end }}
-</div>
-<div>
-{{ with .PrevInSection }}
-<a href="{{ .RelPermalink }}">{{ .Title }} →</a>
-{{ end }}
-</div>
+    <div>
+    {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}">← {{ .Title }}</a>
+    {{ end }}
+    </div>
+    <div>
+    {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    {{ end }}
+    </div>
 </nav>
 
 <div class="markdown-body">
-<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-{{- partial "toc.html" . -}}
-<p>Posted on {{ .Date.Format "January 1, 2006" }}{{ with .Params.author }} by {{ . }}{{ end }}</p>
+    <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+    {{- partial "toc.html" . -}}
+    <p>Posted on {{ .Date.Format "January 1, 2006" }}{{ with .Params.author }} by {{ . }}{{ end }}</p>
 
-{{- with .Content -}}
-{{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="headlineanchor" aria-label="Anchor Link">🔗&#xFE0E;</a>${3}` | safeHTML }}
-{{- end -}}
+    {{- with .Content -}}
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="headlineanchor" aria-label="Anchor Link">🔗&#xFE0E;</a>${3}` | safeHTML }}
+    {{- end -}}
 </div>
 
 {{ end }}
