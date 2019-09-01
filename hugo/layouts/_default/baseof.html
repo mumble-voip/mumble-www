@@ -15,9 +15,12 @@
 
     <div class="content-container">
         <div class="content">
-            {{ block "main" . }}{{ end }}
+            <main>
+                {{ block "main" . }}{{ end }}
+            </main>
         </div>
     </div>
+
     {{ partial "footer.html" . }}
 </body>
 </html>
