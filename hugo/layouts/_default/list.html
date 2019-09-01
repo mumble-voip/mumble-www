@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="markdown-body">
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        {{.Content}}
+    </article>
+    <ul>
+    {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+    {{ end }}
+    </ul>
+</div>
+{{ end }}
