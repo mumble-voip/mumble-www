@@ -1,0 +1,43 @@
+.release-notes {
+    h2 {
+        border: 0;
+    }
+    .item {
+        display: grid;
+        grid-template: "title" auto
+            "desc" auto
+            "prs" auto
+            "commits" auto / 100%;
+        border: 1px solid darkgrey;
+        border-radius: 4px;
+        margin: 1em 0 0.4em 0;
+        padding: 0.4em;
+    }
+    .category-title { display: inline; }
+    .item-title { grid-area: title; margin: 0; line-height: 1.8em; }
+    .item-desc { grid-area: desc; margin-bottom: 0.4em; line-height: 1.8em; }
+    .item-prs { grid-area: prs; }
+
+    .item-commits {
+        grid-area: commits;
+        margin-bottom: 4px; font-size: 0.8em; line-height: 1.8em;
+
+        & > details {
+             display: inline-block;
+             
+            & > summary {
+                list-style-position: outside; margin-left: 16px;
+
+                & > * { background-color: lightgrey; border-radius: 4px; margin-right: 2px; padding: 2px 4px; }
+            }
+        }
+    }
+    .item-prs,
+    .item-commits > details { vertical-align: top; }
+
+    .item-prs > .pr-link,
+    .commit-hashlink,
+    .pr-link { display: inline-block; line-height: 1.2em; }
+
+    ul { padding-left: 1em; }
+}

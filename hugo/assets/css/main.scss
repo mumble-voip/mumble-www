@@ -1,0 +1,26 @@
+@import 'layout.scss';
+
+@import 'blog/release-notes.scss';
+@import 'downloads';
+@import 'home';
+
+@media only screen and (max-width: 768px) {
+	#header-content {
+		display: block !important;
+		text-align: center !important;
+
+		.logo {
+			margin: 0 auto !important;
+		}
+		nav {
+			text-align: center !important;
+		}
+	}
+	
+	.download-box-container {
+		grid-template-columns: 1fr 1fr !important;
+	}
+	.home-screenshots {
+		display: none;
+	}
+}
