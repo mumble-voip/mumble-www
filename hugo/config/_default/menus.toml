@@ -1,0 +1,47 @@
+[[main]]
+    title = "Home"
+    weight = 1
+    identifier = "home"
+    url = "/"
+
+[[main]]
+    title = "Downloads"
+    weight = 2
+    identifier = "downloads"
+    url = "/downloads"
+
+[[main]]
+    title = "Documentation"
+    weight = 3
+    identifier = "docs"
+    url = "https://wiki.mumble.info/"
+
+[[main]]
+    title = "Blog"
+    weight = 4
+    identifier = "blog"
+    url = "/blog"
+
+[[main]]
+    title = "Forums"
+    weight = 5
+    identifier = "forums"
+    url = "https://forums.mumble.info"
+
+[[main]]
+    title = "Contribute"
+    weight = 6
+    identifier = "contribute"
+    url = "/contribute"
+
+[[footer]]
+    title = "Security"
+    weight = 1
+    identifier = "security"
+    url = "/security"
+
+[[footer]]
+    title = "Privacy"
+    weight = 2
+    identifier = "privacy"
+    url = "/privacy"
