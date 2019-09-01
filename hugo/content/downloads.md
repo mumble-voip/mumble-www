@@ -1,6 +1,7 @@
 ---
 title: Downloads
 ---
+Version 1.3.0 is the latest stable version of Mumble and was released on September 02, 2019.
 
 <div class="download-box-container">
     <div class="download-box">
@@ -53,7 +54,7 @@ title: Downloads
     </div>
 </div>
 
-Version 1.3.0 is the latest stable version of Mumble and was released on September 02, 2019.
+For the individual files and for a zipped sources file see the [1.3.0 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.0).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
