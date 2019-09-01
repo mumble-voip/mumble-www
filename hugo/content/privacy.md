@@ -1,5 +1,60 @@
 ---
 title: Privacy
 ---
+This privacy policy describes our various services and products and how we handle data within their context.
 
-We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, [click here](http://www.google.co.uk/privacy_ads.html).
+## This Website at mumble.info
+
+The Mumble website makes use of Google Analytics for website usage statistics. A cookie with name `_ga` specific to our domain is used for tracking. Please refer to [this Google page for more information](https://support.google.com/analytics/answer/6004245).
+
+The webserver may log non-person specific information.
+
+As the website itself has no form of user input, we do not handle any user and personal information beyond that.
+
+On the website source contributors will be shown as such under the names they identify themselves as and contribute as. They may be shown on individual pages for attribution.
+
+## The Documentation Wiki at wiki.mumble.info
+
+The Mumble documentation wiki makes use of Google Analytics for website usage statistics. A cookie with name `_ga` specific to our domain is used for tracking. Please refer to [this Google page for more information](https://support.google.com/analytics/answer/6004245).
+
+The webserver may log non-person specific information.
+
+Users registering and account and making changes to the wiki content will do so under the specified name, account and license. They will be listed in a pages history as a contributor along with their contribution.
+
+## Mumble Client
+
+### Optional Anonymous Usage Statistics
+
+When a user decides to support us by submitting anonymous usage statistics some general usage and environment information will be sent to us. This includes operating system, ip address (for country information), Mumble version, and some other information. For the current specifics the client source code can be inspected.
+
+This anonymous data is publicly accessible in an aggregated form at [stats.mumble.info](http://stats.mumble.info/).
+
+### Optional Update Checks
+
+If enabled the client will automatically check for available application updates. It will only send the required information to be able to do so: the application version and the operating system/type of application.
+
+If enabled the positional audio plugin and overlay update check will send the corresponding version and operating system type in a similar fashion for this purpose.
+
+The settings are located in the client applications settings dialog: Settings ➡ Network ➡ Privacy section.
+
+### Public Server List
+
+When opening the public server list in the connect dialog, the client will request this list from our server. Only the data required for doing so is sent.
+
+This functionality can be disabled through a hidden configuration setting (not visible in the user interface).
+
+### Data Sent to Listed and Connected To Servers (not us)
+
+While this is not data being sent to us we want to mention this for completeness.
+
+When you see servers listed in the connect dialog a “ping” request packet will be sent to it in order to display the ping (connection latency) and user count as you will see them in the user interface.
+
+When connecting to a server the technically required data is sent to and received from the server. Please refer to the server providers privacy policy for details.
+
+The user can prevent sending OS information to servers they connect to in the Settings ➡ Network ➡ Privacy section; Do not send OS information to Mumble and web servers.
+
+## Mumble Server (“Murmur”)
+
+When the server is configured to register with our public server list ([`register*` settings][1]) the configured or automatically determined information (as described in the configuration documentation) is sent to us and consequently being listed publicly on our public server list.
+
+ [1]: https://wiki.mumble.info/wiki/Murmur.ini#Server_Registration
