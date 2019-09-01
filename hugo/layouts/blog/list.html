@@ -2,22 +2,7 @@
 
 {{ $paginator := .Paginate (where .Pages ".Type" "==" "blog") (index .Site.Params "paginate" | default 10) }}
 
-{{ if gt $paginator.TotalPages 1 }}
-<footer>
-    <nav class="blogposts">
-        <div>
-            {{ if $paginator.HasPrev }}
-            <a href="{{ $paginator.Prev.URL }}">← Newer posts</a>
-            {{ end }}
-        </div>
-        <div>
-            {{ if $paginator.HasNext }}
-            <a href="{{ $paginator.Next.URL }}">Older posts →</a>
-            {{ end }}
-        </div>
-    </nav>
-</footer>
-{{ end }}
+{{ partial "blog/nav-prev-next" $paginator }}
 
 <div id="bloglist">
 {{ range $paginator.Pages }}
@@ -30,21 +15,6 @@
 {{ end }}
 </div>
 
-{{ if gt $paginator.TotalPages 1 }}
-<footer>
-    <nav class="blogposts">
-        <div>
-        {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}">← Newer posts</a>
-        {{ end }}
-        </div>
-        <div>
-        {{ if $paginator.HasNext }}
-        <a href="{{ $paginator.Next.URL }}">Older posts →</a>
-        {{ end }}
-        </div>
-    </nav>
-</footer>
-{{ end }}
+{{ partial "blog/nav-prev-next" $paginator }}
 
 {{ end }}

@@ -1,0 +1,16 @@
+{{ if gt .TotalPages 1 }}
+<aside>
+    <nav class="blogposts">
+        <div>
+            {{ if .HasPrev }}
+            <a href="{{ .Prev.URL }}">← Newer posts</a>
+            {{ end }}
+        </div>
+        <div>
+            {{ if .HasNext }}
+            <a href="{{ .Next.URL }}">Older posts →</a>
+            {{ end }}
+        </div>
+    </nav>
+</aside>
+{{ end }}
