@@ -3,63 +3,54 @@ title: Downloads
 ---
 
 <div class="download-box-container">
-
-<div class="download-box">
-    <a href="windows-64">
-        <span class="os os-windows" aria-hidden="true"></span>
-        <span class="os-name">Windows 64-bit</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="windows-32">
-        <span class="os os-windows" aria-hidden="true"></span>
-        <span class="os-name">Windows 32-bit</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="osx">
-        <span class="os os-mac" aria-hidden="true"></span>
-        <span class="os-name">OS X</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="osx-universal">
-        <span class="os os-mac" aria-hidden="true"></span>
-        <span class="os-name">OS X (Universal, Legacy)</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="ios">
-        <span class="os os-ios" aria-hidden="true"></span>
-        <span class="os-name">iOS</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="ubuntu">
-        <span class="os os-linux" aria-hidden="true"></span>
-        <span class="os-name">Ubuntu</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="linux-static-server">
-        <span class="os os-linux" aria-hidden="true"></span>
-        <span class="os-name">Static Linux Server</span>
-    </a>
-</div>
-
-<div class="download-box">
-    <a href="osx-static-server">
-        <span class="os os-mac" aria-hidden="true"></span>
-        <span class="os-name">Static OS X Server</span>
-    </a>
-</div>
-
+    <div class="download-box">
+        <a href="windows-64">
+            <span class="os os-windows" aria-hidden="true"></span>
+            <span class="os-name">Windows 64-bit</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="windows-32">
+            <span class="os os-windows" aria-hidden="true"></span>
+            <span class="os-name">Windows 32-bit</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="osx">
+            <span class="os os-mac" aria-hidden="true"></span>
+            <span class="os-name">OS X</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="osx-universal">
+            <span class="os os-mac" aria-hidden="true"></span>
+            <span class="os-name">OS X (Universal, Legacy)</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="ios">
+            <span class="os os-ios" aria-hidden="true"></span>
+            <span class="os-name">iOS</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="ubuntu">
+            <span class="os os-linux" aria-hidden="true"></span>
+            <span class="os-name">Ubuntu</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="linux-static-server">
+            <span class="os os-linux" aria-hidden="true"></span>
+            <span class="os-name">Static Linux Server</span>
+        </a>
+    </div>
+    <div class="download-box">
+        <a href="osx-static-server">
+            <span class="os os-mac" aria-hidden="true"></span>
+            <span class="os-name">Static OS X Server</span>
+        </a>
+    </div>
 </div>
 
 Version 1.3.0 RC2 is the latest stable version of Mumble and was released on June 25, 2019.
@@ -71,22 +62,19 @@ Instructions on [verifying GPG signatures of Mumble downloads](https://github.co
 If you are looking for a client for an operating system we do not officially support ourselves, or if you are looking for an alternative client application please refer to the following overview of third party client applications.
 
 <div class="download-box-container">
-
-<div class="download-box">
-    <span class="os os-android" aria-hidden="true"></span>
-    <span class="os-name">Android</span>
-    Plumble<br />
-    <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Google Play</a><br />
-    <a href="https://f-droid.org/repository/browse/?fdid=com.morlunk.mumbleclient">F-Droid</a>
-</div>
-
-<div class="download-box">
-    <span class="os os-ios" aria-hidden="true"></span>
-    <span class="os-name">iOS</span>
-    Mumblefy<br />
-    <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
-</div>
-
+    <div class="download-box">
+        <span class="os os-android" aria-hidden="true"></span>
+        <span class="os-name">Android</span>
+        Plumble<br />
+        <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Google Play</a><br />
+        <a href="https://f-droid.org/repository/browse/?fdid=com.morlunk.mumbleclient">F-Droid</a>
+    </div>
+    <div class="download-box">
+        <span class="os os-ios" aria-hidden="true"></span>
+        <span class="os-name">iOS</span>
+        Mumblefy<br />
+        <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
+    </div>
 </div>
 
 ## Development snapshots
