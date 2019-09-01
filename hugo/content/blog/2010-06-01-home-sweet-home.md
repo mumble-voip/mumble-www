@@ -14,4 +14,4 @@ We hope you will like this blog. You can give us feedback via comments as well a
 
 **Have fun.**
 
-**PS:** For those of you who visited our &#8220;old&#8221; blog (the one at http://sourceforge.net/apps/wordpress/mumble/ ) please update your bookmarks to point to this one (<http://blog.mumble.info>) and spread the word.
+**PS:** For those of you who visited our &#8220;old&#8221; blog (the one at `http://sourceforge.net/apps/wordpress/mumble/`) please update your bookmarks to point to this one (<http://blog.mumble.info>) and spread the word.

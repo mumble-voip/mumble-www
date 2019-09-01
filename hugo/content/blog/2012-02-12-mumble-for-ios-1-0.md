@@ -26,29 +26,29 @@ The application is currently built for the phone form factor, and work is still 
 
 The 1.0 version of the application includes the functionality that is needed to get a typical Mumble user up and running on an iOS device. However, the client is not at feature parity with its desktop sibling just yet. Current features include:
 
-  * Voice-Activity, Push-To-Talk and Continuous transmission modes.
-  * Ability to turn off audio preprocessing to save power (and reduce UI lag). This feature is provided mainly for users of iPhone 3Gs and iPod Touch 3rd Gen, where preprocessing is more taxing on the CPU.
-  * Codec presets (Low, Balanced and High), for selecting your Transmission Quality.
-  * Force TCP-mode for networks where that is required.
-  * Support for creating self-signed certificates on-device and using them to connect to a server.
-  * Support for importing certificates into the app from iTunes. Export to iTunes also possible.
-  * Support for connecting to passworded servers (using either a user password or a server password).
-  * Access token support for &#8216;password protected&#8217; channels, and other access token trickeries.
-  * The same world-wide public server list that is available in the desktop Mumble client.
-  * Excellent favourite server support.
-  * Support for connecting to LAN servers discovered via Bonjour.
-  * Ability to join servers by opening mumble:// URLs
-  * Separate server and channel-only views for easier use on small screens. (Push-To-Talk only available in the channel view.)
-  * Support for self-muting and self-deafening.
-  * Support for sending and receiving text messages.
+* Voice-Activity, Push-To-Talk and Continuous transmission modes.
+* Ability to turn off audio preprocessing to save power (and reduce UI lag). This feature is provided mainly for users of iPhone 3Gs and iPod Touch 3rd Gen, where preprocessing is more taxing on the CPU.
+* Codec presets (Low, Balanced and High), for selecting your Transmission Quality.
+* Force TCP-mode for networks where that is required.
+* Support for creating self-signed certificates on-device and using them to connect to a server.
+* Support for importing certificates into the app from iTunes. Export to iTunes also possible.
+* Support for connecting to passworded servers (using either a user password or a server password).
+* Access token support for &#8216;password protected&#8217; channels, and other access token trickeries.
+* The same world-wide public server list that is available in the desktop Mumble client.
+* Excellent favourite server support.
+* Support for connecting to LAN servers discovered via Bonjour.
+* Ability to join servers by opening mumble:// URLs
+* Separate server and channel-only views for easier use on small screens. (Push-To-Talk only available in the channel view.)
+* Support for self-muting and self-deafening.
+* Support for sending and receiving text messages.
 
 (A similar list of features, but tailored towards the casual AppStore app-cruising user is available [here][1])
 
 We have tried hard to include the features that a regular, non-administrator user of Mumble would use on a day-to-day basis, and we think we have mostly succeeded in that. However, not everything we would like to have available at launch is there. These missing features are:
 
-  * Self-registration
-  * Local muting other people
-  * Viewing channel comments and setting and viewing user comments
+* Self-registration
+* Local muting other people
+* Viewing channel comments and setting and viewing user comments
 
 We&#8217;re aware that these features are nice-to-haves, and will work on making these available as soon as we can.
 

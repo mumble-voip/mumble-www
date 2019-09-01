@@ -12,12 +12,12 @@ After a rather long development cycle we are proud to present: Mumble 1.2.3 stab
 
 The following Mumble 1.2.3 stable packages are available for download:
 
-  * [Windows Client + Server][4]
-  * [MacOSX Client + Server][5]
-  * [Linux Server binaries][6]
-  * [Source release (.tar.gz)][7]
+* [Windows Client + Server][4]
+* [MacOSX Client + Server][5]
+* [Linux Server binaries][6]
+* [Source release (.tar.gz)][7]
 
-All of those can also be found on our [homepage][8]. We also have Ubuntu https://launchpad.net/~slicer/+archive/ppa
+All of those can also be found on our [homepage][8]. We also have Ubuntu <https://launchpad.net/~slicer/+archive/ppa>
 
 Special thanks to our community for their contributions to code, documentation, support and testing as well as the many great ideas they have come up with.
 

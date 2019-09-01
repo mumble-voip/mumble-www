@@ -9,7 +9,7 @@ categories:
 ---
 As you might have already noticed we changed the hosting for our wiki as well as the forums. Especially if our previous forums hosted at SourceForge gave you trouble or the slow loading when editing the wiki made you sad this is the time to take another look.
 
-You can find the **forums** on <a href="https://forums.mumble.info" target="_blank">https://forums.mumble.info</a> . The **wiki** as usual can be reached via <a href="https://www.mumble.info" target="_blank">https://www.mumble.info</a> .
+You can find the **forums** on <https://forums.mumble.info>. The **wiki** as usual can be reached via <https://www.mumble.info>.
 
 <!--more-->
 

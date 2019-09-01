@@ -23,4 +23,3 @@ If you have any questions or suggestions feel free to send them to the translato
 Regards,
 
 The Mumble team
- 

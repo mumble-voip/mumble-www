@@ -17,17 +17,17 @@ This new version contains two important client-side security fixes, and we advis
 
 Alongside these security fixes, this release also includes a few minor bug fixes:
 
-  * Increased the size of Mumble&#8217;s encoding buffer for Opus packets to be able to encode all Opus packets without triggering Opus&#8217;s internal rate limiting.
-  * Fixed a bug that could cause the certificate accept alert view that is shown upon connecting to a server with an unknown certificate to sometimes be hidden on iOS 7.
-  * Several external libraries have been synced to their latest stable versions.
+* Increased the size of Mumble&#8217;s encoding buffer for Opus packets to be able to encode all Opus packets without triggering Opus&#8217;s internal rate limiting.
+* Fixed a bug that could cause the certificate accept alert view that is shown upon connecting to a server with an unknown certificate to sometimes be hidden on iOS 7.
+* Several external libraries have been synced to their latest stable versions.
 
 Security advisories for the two fixed vulnerabilities are available below:
 
-  * [Mumble-SA-2014-003](/security/mumble-sa-2014-003) ([txt](/security/Mumble-SA-2014-003.txt), [sig](/security/Mumble-SA-2014-003.sig))
-    * A malformed Opus voice packet sent to a MumbleKit client could trigger a NULL pointer dereference.
+* [Mumble-SA-2014-003](/security/mumble-sa-2014-003) ([txt](/security/Mumble-SA-2014-003.txt), [sig](/security/Mumble-SA-2014-003.sig))
+  * A malformed Opus voice packet sent to a MumbleKit client could trigger a NULL pointer dereference.
 
-  * [Mumble-SA-2014-004](/security/mumble-sa-2014-004) ([txt](/security/Mumble-SA-2014-004.txt), [sig](/security/Mumble-SA-2014-004.sig))
-    * A malformed Opus voice packet sent to a MumbleKit client could trigger a heap-based buffer overflow.
+* [Mumble-SA-2014-004](/security/mumble-sa-2014-004) ([txt](/security/Mumble-SA-2014-004.txt), [sig](/security/Mumble-SA-2014-004.sig))
+  * A malformed Opus voice packet sent to a MumbleKit client could trigger a heap-based buffer overflow.
 
 The Mumble team
 

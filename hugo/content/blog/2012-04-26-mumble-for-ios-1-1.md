@@ -20,27 +20,27 @@ This release addresses quite a few of the most sought-after features missing fro
 
 ## **New Features**
 
-  * An improved icon for the app. Thanks Karsten Bruns!
-  * Searchable public server list. Thanks Jimmy Selgen Nielsen!
-  * Bluetooth headset support.
-  * Echo Cancellation support for the built-in mic.
-  * Improved Push-to-Talk configurability and discoverability.
-  * Self-registration is now supported.
-  * Intermediate certificates can now, optionally, be shown in the Certificate Preferences. Intermediate certificates are colored green. Identities keep their yellow color.
-  * When exporting a certificate for which a chain can be built, the whole chain will be exported.
-  * Improved crash reporting. After a crash, the app will allow you to submit a crash report directly to the Mumble Developers. An &#8216;Always&#8217; option is also available, and we hope users will make use of this feature.
+* An improved icon for the app. Thanks Karsten Bruns!
+* Searchable public server list. Thanks Jimmy Selgen Nielsen!
+* Bluetooth headset support.
+* Echo Cancellation support for the built-in mic.
+* Improved Push-to-Talk configurability and discoverability.
+* Self-registration is now supported.
+* Intermediate certificates can now, optionally, be shown in the Certificate Preferences. Intermediate certificates are colored green. Identities keep their yellow color.
+* When exporting a certificate for which a chain can be built, the whole chain will be exported.
+* Improved crash reporting. After a crash, the app will allow you to submit a crash report directly to the Mumble Developers. An &#8216;Always&#8217; option is also available, and we hope users will make use of this feature.
 
 ## **Bug Fixes**
 
-  * Various crash bugs have been fixed.
-  * Various memory leaks have been plugged. Thanks Jimmy Selgen Nielsen!
-  * The 1.0 version of the app failed to parse some Distinguished Names from X.509 certificates. A more solid DN parser has been implemented.
-  * When connecting to a server, the client will now attempt to build up a full certificate chain using certificates found in the app&#8217;s keychain.
-  * Importing a PKCS #12 file now correctly imports an identity (certificate and private key), along with all intermediate certificates.
-  * All action sheets in the app have been converted to black to better fit in with the rest of the app.
-  * Transitioning between the Channel view and a modal view, such as Access Tokens, now provides a better visual experience.
-  * The mumble.sqlite database is no longer a hidden file in ~/Documents. It now lives in ~/Library.
-  * The public server list file is no longer a hidden file in ~/Documents. It now lives in ~/Library.
+* Various crash bugs have been fixed.
+* Various memory leaks have been plugged. Thanks Jimmy Selgen Nielsen!
+* The 1.0 version of the app failed to parse some Distinguished Names from X.509 certificates. A more solid DN parser has been implemented.
+* When connecting to a server, the client will now attempt to build up a full certificate chain using certificates found in the app&#8217;s keychain.
+* Importing a PKCS #12 file now correctly imports an identity (certificate and private key), along with all intermediate certificates.
+* All action sheets in the app have been converted to black to better fit in with the rest of the app.
+* Transitioning between the Channel view and a modal view, such as Access Tokens, now provides a better visual experience.
+* The mumble.sqlite database is no longer a hidden file in ~/Documents. It now lives in ~/Library.
+* The public server list file is no longer a hidden file in ~/Documents. It now lives in ~/Library.
 
 Mumble for iOS is Open Source software released under the BSD license. We&#8217;re always looking for new contributors, and valuable feedback from the community. We&#8217;d like to thank the people who&#8217;ve reported bugs, and helped beta test the 1.1 release.
 
