@@ -435,3 +435,16 @@ figure img {
 		display: none;
 	}
 }
+
+.feed-icons {
+	text-align: right;
+	margin-top: 1em;
+	line-height: 32px;
+}
+.feed-icons a {
+	display: inline-block;
+}
+.feed-icons img {
+	width: 32px;
+	height: 32px;
+}

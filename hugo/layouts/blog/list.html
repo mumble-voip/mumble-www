@@ -17,4 +17,9 @@
 
 {{ partial "blog/nav-prev-next" $paginator }}
 
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    <aside class="feed-icons"><a href="{{ .Permalink }}" title="RSS Feed"><img src="/icons/Feed-icon.svg" alt="RSS feed"></a></aside>
+{{ end -}}
+
 {{ end }}
