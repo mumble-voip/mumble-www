@@ -23,12 +23,6 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
         </a>
     </div>
     <div class="download-box">
-        <a href="osx-universal">
-            <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">OS X (Universal, Legacy)</span>
-        </a>
-    </div>
-    <div class="download-box">
         <a href="ios">
             <span class="os os-ios" aria-hidden="true"></span>
             <span class="os-name">iOS</span>
