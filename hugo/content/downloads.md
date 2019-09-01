@@ -53,7 +53,7 @@ title: Downloads
     </div>
 </div>
 
-Version 1.3.0 RC2 is the latest stable version of Mumble and was released on June 25, 2019.
+Version 1.3.0 is the latest stable version of Mumble and was released on September 02, 2019.
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
