@@ -1,4 +1,7 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,400,700">
 <link rel="stylesheet" type="text/css" href="{{ "css/reset.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "css/github-markdown.css" | relURL }}">
-<link rel="stylesheet" type="text/css" href="{{ "css/mumble.css" | relURL }}">
+
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "/css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
