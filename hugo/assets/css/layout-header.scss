@@ -13,7 +13,7 @@
 	}
 }
 
-header {
+#page-head {
 	h1 {
 		padding-left: 10px;
 		margin-top: 10px;
@@ -29,7 +29,7 @@ header {
 	}
 }
 
-body > header {
+body > #page-head {
 	background-color: #F2F2F2;
 	border-bottom: 1px solid #D2D2D2;
 
