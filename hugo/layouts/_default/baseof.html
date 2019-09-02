@@ -8,10 +8,10 @@
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
-    {{ partial "header-css.html" . }}
+    {{ partial "layout/header-css.html" . }}
 </head>
 <body>
-    {{ partial "header.html" . }}
+    {{ partial "layout/header.html" . }}
 
     <div class="content-container">
         <div class="content">
@@ -21,6 +21,6 @@
         </div>
     </div>
 
-    {{ partial "footer.html" . }}
+    {{ partial "layout/footer.html" . }}
 </body>
 </html>
