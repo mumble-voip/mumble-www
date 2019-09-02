@@ -1,5 +1,6 @@
 ---
 title: Security
+contentonly: true
 ---
 
 This page lists security advisories for the Mumble project.

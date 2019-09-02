@@ -6,6 +6,7 @@
         </header>
         {{.Content}}
     </article>
+    {{ if not .Params.contentonly }}
     <ul>
     {{ range .Pages }}
         <li>
@@ -13,5 +14,6 @@
         </li>
     {{ end }}
     </ul>
+    {{ end }}
 </div>
 {{ end }}
