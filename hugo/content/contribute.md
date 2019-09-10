@@ -13,7 +13,7 @@ The issue tracker is also used to track [feature requests, which are marked with
 
 # Translation
 
-Mumble currently (March 2014) supports 18 different languages. As more people get to know and use Mumble versions in their native languages become more and more important.
+Mumble currently (September 2019) supports over 20 different languages (41 if including unfinished translations). As more people get to know and use Mumble, versions in their native languages become more and more important.
 
 We are thankful for any contribution on translating. Please check the {{< wiki "Language Translation" "Language Translation wiki page" />}} for more information.
 
