@@ -1,7 +1,5 @@
 # The Mumble Website
 
-**This is a work in progress not yet released.**
-
 Source of the Mumble Website available at [mumble.info](https://mumble.info/).
 
 Implemented and served through a combination of a Go webserver for dynamic content and static files generated with [hugo](https://gohugo.io/).
