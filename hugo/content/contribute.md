@@ -23,7 +23,7 @@ Mumble and all around it needs documentation. Great documentation for a great pr
 
 **Website**: This website has a public hugo source repository at [mumble-www](https://github.com/mumble-voip/mumble-www). You can report [issues](https://github.com/mumble-voip/mumble-www/issues), create [requests](https://github.com/mumble-voip/mumble-www/issues), and create pull requests for implemented change suggestions.
 
-**Wiki**: Our [documentation wiki] covers some more advanced topics than this website; for example for server administrators and contributors. Any contributions welcome, be it improving existing pages or creating new ones with useful content. Also see the {{< wiki "Category:Please_Improve" "Please Improve Category" />}}.
+**Wiki**: Our [documentation wiki](https://wiki.mumble.info) covers some more advanced topics than this website; for example for server administrators and contributors. Any contributions welcome, be it improving existing pages or creating new ones with useful content. Also see the {{< wiki "Category:Please_Improve" "Please Improve Category" />}}.
 
 **Wikipedia**: Someone that is not a development team member needs to maintain the [article at Wikipedia](https://en.wikipedia.org/wiki/Mumble_%28software%29). At the moment it’s missing references; try to find some. (This requires more work than just googling). Contributing to or creating a mumble article on non-English Wikipedia are also appreciated. See Promotion section below.
 
