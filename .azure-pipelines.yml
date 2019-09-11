@@ -4,7 +4,7 @@ pool:
 variables:
   GOROOT: '/usr/local/go1.11' # Go installation path
   GO111MODULE: on
-  HUGO_VERSION: 0.53
+  HUGO_VERSION: 0.58.1
   HUGO_SHA: 0e4424c90ce5c7a0c0f7ad24a558dd0c2f1500256023f6e3c0004f57a20ee119
 
 steps:
