@@ -19,7 +19,7 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
     <div class="download-box">
         <a href="osx">
             <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">OS X</span>
+            <span class="os-name">macOS</span>
         </a>
     </div>
     <div class="download-box">
@@ -43,7 +43,7 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
     <div class="download-box">
         <a href="osx-static-server">
             <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">Static OS X Server</span>
+            <span class="os-name">Static macOS Server</span>
         </a>
     </div>
 </div>
@@ -80,11 +80,11 @@ If you are looking for a client for an operating system we do not officially sup
     <tr>
         <th>Windows 64-bit</th>
         <th>Windows 32-bit</th>
-        <th>OS X</th>
-        <th>OS X (Universal, Legacy)</th>
+        <th>macOS</th>
+        <th>macOS (Universal, Legacy)</th>
         <th>Ubuntu</th>
         <th>Static Linux Server</th>
-        <th>Static OS X Server</th>
+        <th>Static macOS Server</th>
     </tr>
     <tr>
         <td>
