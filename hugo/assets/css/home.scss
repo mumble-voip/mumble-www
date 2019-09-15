@@ -2,11 +2,11 @@
 .home-screenshots {
 	display: flex;
 	flex-direction: column;
-	box-shadow: 5px 5px 30px 0px #888888;
 
 	figure {
 		width: 500px;
 		margin: 0 0 1em 1em;
+		box-shadow: 2px 2px 8px 0px #888888;
 	}
 }
 @media (max-width: 949px) {
