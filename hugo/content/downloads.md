@@ -74,7 +74,9 @@ If you are looking for a client for an operating system we do not officially sup
 
 ## Development snapshots
 
-[Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on our issue tracker.
+[Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
+
+When a new feature release is published the snapshots will naturally transform into them. If you want to keep using snapshots after the next feature release, you will have to manually upgrade to one again.
 
 <table class="development-snapshots">
     <tr>
