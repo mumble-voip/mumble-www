@@ -9,6 +9,7 @@ type Flags struct {
 	ConfigPath          string
 	Host                string
 	Port                int
+	JsonPath            string
 	PublicPath          string
 	GitHubCacheTimeMins int
 }
@@ -22,6 +23,7 @@ func ParseFlags() (f *Flags) {
 	flag.StringVar(&f.ConfigPath, "config", "", "path to yaml config file")
 	flag.StringVar(&f.Host, "host", "", "bind host address")
 	flag.IntVar(&f.Port, "port", 0, "bind port number")
+	flag.StringVar(&f.JsonPath, "jsonpath", "", "path to the JSON file containing info about the current releases")
 	flag.StringVar(&f.PublicPath, "publicpath", "", "path to public web files folder")
 	flag.IntVar(&f.GitHubCacheTimeMins, "githubcachetimemins", 0, "Cache time in minutes to cache GitHub content")
 	flag.Parse()
@@ -31,7 +33,7 @@ func ParseFlags() (f *Flags) {
 func ParseInit() (config *Config) {
 	flags := ParseFlags()
 
-	if flags.ConfigPath == "" && (flags.Host == "" || flags.Port == 0 || flags.PublicPath == "" || flags.GitHubCacheTimeMins == 0) {
+	if flags.ConfigPath == "" && (flags.Host == "" || flags.Port == 0 || flags.JsonPath == "" || flags.PublicPath == "" || flags.GitHubCacheTimeMins == 0) {
 		flag.Usage()
 		log.Fatalln("Missing parameter config or complete configuration parameters")
 	}
@@ -49,6 +51,9 @@ func ParseInit() (config *Config) {
 	}
 	if flags.Port != 0 {
 		config.Port = flags.Port
+	}
+	if flags.JsonPath != "" {
+		config.JsonPath = flags.JsonPath
 	}
 	if flags.PublicPath != "" {
 		config.PublicPath = flags.PublicPath
