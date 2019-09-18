@@ -18,6 +18,7 @@ Version 1.3.1 is the latest stable version of Mumble and was released on June 08
 Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay a significant amount of money. *(Issue tracked in {{< issue 4263 >}})*
 
 {{< content-layout/downloads >}}
+{{< content-layout/download name="AppImage x64" href="appimage-x64" osclass="appimage">}}
 {{< content-layout/download name="Ubuntu" href="ubuntu" osclass="ubuntu">}}
 {{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
 {{< /content-layout/downloads >}}
@@ -70,6 +71,7 @@ When a new feature release is published the snapshots will naturally transform i
     <tr>
         <th>Windows 64-bit</th>
         <th>Windows 32-bit</th>
+        <th>AppImage x64</th>
         <th>macOS</th>
         <th>macOS (Universal, Legacy)</th>
         <th>Ubuntu</th>
@@ -82,6 +84,9 @@ When a new feature release is published the snapshots will naturally transform i
         </td>
         <td>
             <a href="windows-32/snapshot">.msi</a>
+        </td>
+        <td>
+            <a href="appimage-x64/snapshot">.AppImage</a>
         </td>
         <td>
             <a href="osx/snapshot">.dmg</a>
