@@ -17,6 +17,12 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
         </a>
     </div>
     <div class="download-box">
+        <a href="appimage-x64">
+            <span class="os os-appimage" aria-hidden="true"></span>
+            <span class="os-name">AppImage x64</span>
+        </a>
+    </div>
+    <div class="download-box">
         <a href="osx">
             <span class="os os-mac" aria-hidden="true"></span>
             <span class="os-name">macOS</span>
@@ -82,6 +88,7 @@ When a new feature release is published the snapshots will naturally transform i
     <tr>
         <th>Windows 64-bit</th>
         <th>Windows 32-bit</th>
+        <th>AppImage x64</th>
         <th>macOS</th>
         <th>macOS (Universal, Legacy)</th>
         <th>Ubuntu</th>
@@ -94,6 +101,9 @@ When a new feature release is published the snapshots will naturally transform i
         </td>
         <td>
             <a href="windows-32/snapshot">.msi</a>
+        </td>
+        <td>
+            <a href="appimage-x64/snapshot">.AppImage</a>
         </td>
         <td>
             <a href="osx/snapshot">.dmg</a>
