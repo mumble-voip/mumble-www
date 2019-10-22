@@ -14,7 +14,7 @@
     title = "Documentation"
     weight = 3
     identifier = "docs"
-    url = "https://wiki.mumble.info/"
+    url = "/documentation"
 
 [[main]]
     title = "Blog"
