@@ -24,3 +24,10 @@
 		display: none;
 	}
 }
+
+main a[href^="https://wiki.mumble.info"]::after {
+	content: 'W';
+	vertical-align: super;
+	font-size: 8px;
+	margin-left: 2px;
+}
