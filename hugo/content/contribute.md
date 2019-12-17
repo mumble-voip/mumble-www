@@ -5,11 +5,30 @@ toc: true
 
 Mumble is a great program, but that is no reason to stop polishing it. There are numerous areas where the development team needs help, and if you feel like contributing, then any of the below is for you.
 
-# Find and report Bugs, suggest features
+# Provide Community Support
 
-Use the developer snapshots of Mumble and Murmur (see [Downloads]({{< relref "downloads" >}})) and see if you can find any issues with them. If you do, check if the issue has already been reported, add details if you have more, or add a new tracker item if it has not been reported yet. The issue tracker can be found at https://github.com/mumble-voip/mumble/issues.
+If you are looking for support yourself or want to provide some help to users these are the places to do so:
 
-The issue tracker is also used to track [feature requests, which are marked with the `feature-request` label](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc). Please vote with a thumbs up on those you would like to see being fulfilled, describe your use cases or otherwise participate in the discussion on existing tickets. And if you want to request a feature not suggested yet, please create a new feature request ticket possibly with some elaboration and use cases.
+* Our [Forums](https://forums.mumble.info/)
+* IRC [#mumble on irc.freenode.net](irc://irc.freenode.org/mumble)
+* Chat [Mumble room on Riot/Matrix](https://riot.im/app/#/room/#mumble:matrix.org) (shares messages with IRC)
+* Our [issue tracker](https://github.com/mumble-voip/mumble/issues)
+
+# Report Bugs and Issues
+
+If you found a bug or issue you can report them in our [issue tracker](https://github.com/mumble-voip/mumble/issues). Please check if a ticket already exists for your issue before creating a new one.
+
+# Suggest Changes and Features
+
+The issue tracker is also used to track [feature requests, which are marked with the `feature-request` label](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc).
+
+Please vote with a thumbs up on those you would like to see being fulfilled, describe your use cases or otherwise participate in the discussion on existing tickets. And if you want to request a feature not suggested yet, please create a new feature request ticket possibly with some elaboration and use cases.
+
+# Test new features and developments
+
+Apart from our stable releases we also provide development snapshots for testing the current, intermediate state of development. You can download them from our [Downloads page]({{< relref "downloads" >}})).
+
+If you find any issues with them please check if the issue has already been reported, add details if you have more, or add a new tracker item if it has not been reported yet.
 
 # Translation
 
