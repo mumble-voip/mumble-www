@@ -60,9 +60,8 @@ If you are looking for a client for an operating system we do not officially sup
     <div class="download-box">
         <span class="os os-android" aria-hidden="true"></span>
         <span class="os-name">Android</span>
-        Plumble<br />
-        <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Google Play</a><br />
-        <a href="https://f-droid.org/repository/browse/?fdid=com.morlunk.mumbleclient">F-Droid</a>
+        Mumla<br />
+        <a href="https://f-droid.org/packages/se.lublin.mumla">F-Droid</a>
     </div>
     <div class="download-box">
         <span class="os os-ios" aria-hidden="true"></span>
