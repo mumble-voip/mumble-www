@@ -44,7 +44,7 @@ jobs:
   - script: |
       set -e
       wget --no-verbose https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb -O hugo.deb
-      echo "${HUGO_SHA}  hugo.deb" | sha256sum -c
+      echo "${HUGO_SHA}  hugo.deb" | sha256sum --strict --check
       sudo dpkg -i hugo.deb
       rm hugo.deb
       hugo version
