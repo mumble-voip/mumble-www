@@ -5,7 +5,7 @@ variables:
   GOROOT: '/usr/local/go1.11' # Go installation path
   GO111MODULE: on
   HUGO_VERSION: 0.69.0
-  HUGO_SHA: 6c6cf8ad4d517df6589c27b91454ef13f7f7f4d0e7a864755b3f5d2987bb72a5
+  HUGO_SHA: 319cfd6b9ff789f49731ca12dcdd9a5859246f4808e4b67a444d05e18d8c39b5
 
 jobs:
 - job: go_webserver
@@ -43,17 +43,16 @@ jobs:
   steps:
   - script: |
       set -e
-      mkdir hugobin
-      wget -O ${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-      echo "${HUGO_SHA}  ${HUGO_VERSION}.tar.gz" | sha256sum -c
-      tar xf ${HUGO_VERSION}.tar.gz --directory=hugobin hugo
-      rm -r ${HUGO_VERSION}.tar.gz
-      hugobin/hugo version
+      wget --no-verbose https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb -O hugo.deb
+      echo "${HUGO_SHA}  hugo.deb" | sha256sum -c
+      sudo dpkg -i hugo.deb
+      rm hugo.deb
+      hugo version
     displayName: 'Prepare Hugo Environment'
 
   - script: |
-      ../hugobin/hugo version
-      ../hugobin/hugo
+      hugo version
+      hugo
     displayName: 'Build Hugo Website'
     workingDirectory: 'hugo'
 
