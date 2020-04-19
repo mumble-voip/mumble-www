@@ -44,7 +44,7 @@ jobs:
   - script: |
       set -e
       mkdir hugobin
-      wget -O ${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+      wget --no-verbose -O ${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
       echo "${HUGO_SHA}  ${HUGO_VERSION}.tar.gz" | sha256sum --strict --check
       tar xf ${HUGO_VERSION}.tar.gz --directory=hugobin hugo
       rm -r ${HUGO_VERSION}.tar.gz
