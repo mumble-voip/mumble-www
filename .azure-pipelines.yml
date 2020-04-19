@@ -7,53 +7,57 @@ variables:
   HUGO_VERSION: 0.58.1
   HUGO_SHA: 85da8bf54ca6129f1d5f9d31c0dd2e8afae379120573dfa76741f94311c70ea2
 
-steps:
-- script: |
-    echo '##vso[task.prependpath]$(GOROOT)/bin'
-  displayName: 'Prepare Go Environment'
+jobs:
+- job: go_webserver
+  steps:
+  - script: |
+      echo '##vso[task.prependpath]$(GOROOT)/bin'
+    displayName: 'Prepare Go Environment'
 
-- script: |
-    go version
-    go get -v .
-  workingDirectory: 'src'
-  displayName: 'Get Go Webserver Dependencies'
+  - script: |
+      go version
+      go get -v .
+    workingDirectory: 'src'
+    displayName: 'Get Go Webserver Dependencies'
 
-- script: |
-    go version
-    go build -v .
-    mkdir ../bin
-    mv mumble-www ../bin
-  workingDirectory: 'src'
-  displayName: 'Build Go Webserver'
+  - script: |
+      go version
+      go build -v .
+      mkdir ../bin
+      mv mumble-www ../bin
+    workingDirectory: 'src'
+    displayName: 'Build Go Webserver'
 
-- script: |
-    go version
-    go test
-  workingDirectory: 'src'
-  displayName: 'Execute Go Webserver Tests'
+  - script: |
+      go version
+      go test
+    workingDirectory: 'src'
+    displayName: 'Execute Go Webserver Tests'
 
-- script: |
-    set -e
-    mkdir hugobin
-    wget -O ${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-    echo "${HUGO_SHA}  ${HUGO_VERSION}.tar.gz" | sha256sum -c
-    tar xf ${HUGO_VERSION}.tar.gz --directory=hugobin hugo
-    rm -r ${HUGO_VERSION}.tar.gz
-    hugobin/hugo version
-  displayName: 'Prepare Hugo Environment'
+  - task: PublishPipelineArtifact@0
+    inputs:
+      artifactName: 'mumble-www'
+      targetPath: 'bin'
 
-- script: |
-    ../hugobin/hugo version
-    ../hugobin/hugo
-  displayName: 'Build Hugo Website'
-  workingDirectory: 'hugo'
+- job: hugo
+  steps:
+  - script: |
+      set -e
+      mkdir hugobin
+      wget -O ${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+      echo "${HUGO_SHA}  ${HUGO_VERSION}.tar.gz" | sha256sum -c
+      tar xf ${HUGO_VERSION}.tar.gz --directory=hugobin hugo
+      rm -r ${HUGO_VERSION}.tar.gz
+      hugobin/hugo version
+    displayName: 'Prepare Hugo Environment'
 
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'mumble-www'
-    targetPath: 'bin'
+  - script: |
+      ../hugobin/hugo version
+      ../hugobin/hugo
+    displayName: 'Build Hugo Website'
+    workingDirectory: 'hugo'
 
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'public'
-    targetPath: 'public'
+  - task: PublishPipelineArtifact@0
+    inputs:
+      artifactName: 'public'
+      targetPath: 'public'
