@@ -32,7 +32,7 @@ If you find any issues with them please check if the issue has already been repo
 
 # Translation
 
-Mumble currently (September 2019) supports over 20 different languages (41 if including unfinished translations). As more people get to know and use Mumble, versions in their native languages become more and more important.
+Mumble currently (April 2020) supports over 15 different languages (38 if including unfinished translations). As more people get to know and use Mumble, versions in their native languages become more and more important.
 
 We are thankful for any contribution on translating. Please check the {{< wiki "Language Translation" "Language Translation wiki page" />}} for more information.
 
@@ -80,6 +80,6 @@ Most of our positional audio plugins regularly break on game updates. To read on
 
 ## Mumble itself
 
-We are always looking for helping hands willing to contribute to mumble. You'll need a good understanding of C++ and previous knowledge in Qt is definitely helpful. The best way to get into mumble development is to link up with us on {{< wiki IRC />}} ([#mumble on freenode](irc://chat.freenode.net/mumble)), there is always small stuff to do to get you started. Also check the {{< wiki Development "Development wiki page" />}} on more info about the source code and building it.
+We are always looking for helping hands willing to contribute to mumble. You'll need a good understanding of C++ and previous knowledge in Qt is definitely helpful. The best way to get into mumble development is to link up with us on {{< wiki IRC />}} ([#mumble-dev on freenode](irc://chat.freenode.net/mumble-dev)), there is always small stuff to do to get you started. Also check the {{< wiki Development "Development wiki page" />}} on more info about the source code and building it.
 
 {{<aside>}}This pages content is based on our {{< wiki Contributing "Contributing wiki page" />}}, which is licensed as [CC-By-SA](http://creativecommons.org/licenses/by-sa/2.5/).{{</aside>}}
