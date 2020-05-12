@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2018-07-30T12:57:39"
+date = "2020-05-12T23:46:23"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -91,7 +91,7 @@ Moves deafened users into an AFK channel.
 ### Anti recording
 * [antirec with contextmenus on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/antirec-contextmenu)
 
-If a user starts to record in Mumble he will be deafened or kicked from the server.
+If a user starts to record in Mumble they will be deafened or kicked from the server.
 
 ### Max users
 [mumo-maxusers on GitHub](https://github.com/ExplodingFist/mumo-maxusers/)
@@ -111,12 +111,12 @@ A user who gets the sticky status can't do more than sitting in one special chan
 ### AntiFlood
 [antiflood on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/antiflood)
 
-If a user exceeds a limit of actions within a timeframe (both can be changed) he will be kicked from the server.
+If a user exceeds a limit of actions within a timeframe (both can be changed) they will be kicked from the server.
 
 ### GetSupport
 [getsupport on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/getsupport)
 
-A user can write for example "!helpme support message up to 160 characters..." to a channel/user/himself and everyone on the server who is member of a special group gets a notification.
+A user can write for example "!helpme support message up to 160 characters..." to a channel/user/themselves and everyone on the server who is member of a special group gets a notification.
 
 ### OS-Suffixes
 [os-suffixes on GitHub](https://github.com/Natenom/mumblemoderator-module-collection/tree/master/os-suffixes)
