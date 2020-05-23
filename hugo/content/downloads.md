@@ -3,6 +3,8 @@ title: Downloads
 ---
 Version 1.3.0 is the latest stable version of Mumble and was released on September 08, 2019.
 
+### Windows ###
+
 <div class="download-box-container">
     <div class="download-box">
         <a href="windows-64">
@@ -16,6 +18,10 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
             <span class="os-name">Windows 32-bit</span>
         </a>
     </div>
+</div>
+    
+### macOS ###
+<div class="download-box-container">
     <div class="download-box">
         <a href="osx">
             <span class="os os-mac" aria-hidden="true"></span>
@@ -23,11 +29,16 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
         </a>
     </div>
     <div class="download-box">
-        <a href="ios">
-            <span class="os os-ios" aria-hidden="true"></span>
-            <span class="os-name">iOS</span>
+        <a href="osx-static-server">
+            <span class="os os-mac" aria-hidden="true"></span>
+            <span class="os-name">Static macOS server</span>
         </a>
     </div>
+</div>
+
+### Linux ###
+
+<div class="download-box-container"> 
     <div class="download-box">
         <a href="ubuntu">
             <span class="os os-ubuntu" aria-hidden="true"></span>
@@ -40,21 +51,44 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
             <span class="os-name">Static Linux Server</span>
         </a>
     </div>
-    <div class="download-box">
-        <a href="osx-static-server">
-            <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">Static macOS Server</span>
+    
+</div>
+
+For other Linux distributions and more information, see the [Installation page in Mumble's official wiki](https://wiki.mumble.info/wiki/Installing_Mumble#Linux).
+
+## Downloads & Source code on Github ##
+For the individual files and for zipped sources files see the [1.3.0 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.0).
+
+Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
+
+## Mobile clients ##
+
+### iOS ###
+
+#### Official App ####
+<div class="download-box-container">
+<div class="download-box">
+        <a href="ios">
+            <span class="os os-ios" aria-hidden="true"></span>
+            <span class="os-name">iOS</span>
         </a>
     </div>
 </div>
 
-For the individual files and for a zipped sources file see the [1.3.0 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.0).
+#### Third-Party app ####
+Note: This is a third-party app, that is not officially supported by us.
 
-Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
+<div class="download-box-container">
+<div class="download-box">
+        <span class="os os-ios" aria-hidden="true"></span>
+        <span class="os-name">iOS</span>
+        Mumblefy<br />
+        <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
+    </div>
+</div>
 
-## Third party clients
-
-If you are looking for a client for an operating system we do not officially support ourselves, or if you are looking for an alternative client application please refer to the following overview of third party client applications.
+### Android ###
+Note: This is a third-party app, that is not officially supported by us.
 
 <div class="download-box-container">
     <div class="download-box">
@@ -63,15 +97,9 @@ If you are looking for a client for an operating system we do not officially sup
         Mumla<br />
         <a href="https://f-droid.org/packages/se.lublin.mumla">F-Droid</a>
     </div>
-    <div class="download-box">
-        <span class="os os-ios" aria-hidden="true"></span>
-        <span class="os-name">iOS</span>
-        Mumblefy<br />
-        <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
-    </div>
 </div>
 
-## Development snapshots
+## Development snapshots ##
 
 [Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
