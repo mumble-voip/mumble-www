@@ -2,8 +2,6 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  GOROOT: '/usr/local/go1.11' # Go installation path
-  GO111MODULE: on
   HUGO_VERSION: 0.69.0
   HUGO_SHA: 6c6cf8ad4d517df6589c27b91454ef13f7f7f4d0e7a864755b3f5d2987bb72a5
 
@@ -11,8 +9,8 @@ jobs:
 - job: go_webserver
   steps:
   - script: |
-      echo '##vso[task.prependpath]$(GOROOT)/bin'
-    displayName: 'Prepare Go Environment'
+      go version
+    displayName: 'Go Version Information'
 
   - script: |
       go version
