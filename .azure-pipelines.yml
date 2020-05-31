@@ -11,13 +11,11 @@ jobs:
   - script: |
       go version
     displayName: 'Go Version Information'
-
   - script: |
       go version
       go get -v .
     workingDirectory: 'src'
     displayName: 'Get Go Webserver Dependencies'
-
   - script: |
       go version
       go build -v .
@@ -25,13 +23,11 @@ jobs:
       mv mumble-www ../bin
     workingDirectory: 'src'
     displayName: 'Build Go Webserver'
-
   - script: |
       go version
       go test
     workingDirectory: 'src'
     displayName: 'Execute Go Webserver Tests'
-
   - task: PublishPipelineArtifact@0
     inputs:
       artifactName: 'mumble-www'
@@ -48,13 +44,11 @@ jobs:
       rm -r ${HUGO_VERSION}.tar.gz
       hugobin/hugo version
     displayName: 'Prepare Hugo Environment'
-
   - script: |
       ../hugobin/hugo version
       ../hugobin/hugo
     displayName: 'Build Hugo Website'
     workingDirectory: 'hugo'
-
   - task: PublishPipelineArtifact@0
     inputs:
       artifactName: 'public'
