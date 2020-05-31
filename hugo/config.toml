@@ -8,4 +8,10 @@ disableKinds = ["taxonomy","taxonomyTerm"]
 [permalinks]
   blog = "/blog/:title/"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Render HTML in Markdown files (and “potentially dangerous links”).
+      unsafe = true
+
 # See the config folder for additional configuration
