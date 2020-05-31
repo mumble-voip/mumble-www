@@ -1,16 +1,30 @@
 ---
-title: Security
+title: Security Policy
 contentonly: true
 ---
 
-This page lists security advisories for the Mumble project.
+## Supported Versions
+
+We always support our latest stable feature version.
+
+Depending on the state of the project, version and environments we may patch older versions or support multiple feature versions.
+
+## Reporting a Vulnerability
+
+Please report vulnerabilities in private to `security@mumble.info`.
+
+We will do our best to respond, verify them and resolve them as quickly as possible.
+
+## Security Advisories
 
 ## 2016
+
 ### January
 
 - [Mumble-SA-2016-001](/security/mumble-sa-2016-001/) ([txt](Mumble-SA-2016-001.txt), [sig](Mumble-SA-2016-001.txt.sig)), [Blog post](/blog/mumble-1.2.13/)
 
 ## 2014
+
 ### February
 
 - [Mumble-SA-2014-001](/security/mumble-sa-2014-001/) ([txt](Mumble-SA-2014-001.txt), [sig](Mumble-SA-2014-001.txt.sig)), [Blog post](/blog/mumble-1.2.5/)
