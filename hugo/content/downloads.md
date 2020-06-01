@@ -30,7 +30,7 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
     </div>
     <div class="download-box">
         <a href="ubuntu">
-            <span class="os os-linux" aria-hidden="true"></span>
+            <span class="os os-ubuntu" aria-hidden="true"></span>
             <span class="os-name">Ubuntu</span>
         </a>
     </div>
