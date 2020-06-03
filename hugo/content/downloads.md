@@ -1,6 +1,8 @@
 ---
 title: Downloads
 ---
+We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer, which we will describe below. We also link to some third party projects.
+
 Version 1.3.1 is the latest stable version of Mumble and was released on June 08, 2020.
 
 <div class="download-box-container">
@@ -16,6 +18,9 @@ Version 1.3.1 is the latest stable version of Mumble and was released on June 08
             <span class="os-name">Windows 32-bit</span>
         </a>
     </div>
+</div>
+
+<div class="download-box-container">
     <div class="download-box">
         <a href="osx">
             <span class="os os-mac" aria-hidden="true"></span>
@@ -23,11 +28,14 @@ Version 1.3.1 is the latest stable version of Mumble and was released on June 08
         </a>
     </div>
     <div class="download-box">
-        <a href="ios">
-            <span class="os os-ios" aria-hidden="true"></span>
-            <span class="os-name">iOS</span>
+        <a href="osx-static-server">
+            <span class="os os-mac" aria-hidden="true"></span>
+            <span class="os-name">Static macOS Server</span>
         </a>
     </div>
+</div>
+
+<div class="download-box-container">
     <div class="download-box">
         <a href="ubuntu">
             <span class="os os-ubuntu" aria-hidden="true"></span>
@@ -40,21 +48,46 @@ Version 1.3.1 is the latest stable version of Mumble and was released on June 08
             <span class="os-name">Static Linux Server</span>
         </a>
     </div>
-    <div class="download-box">
-        <a href="osx-static-server">
-            <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">Static macOS Server</span>
-        </a>
-    </div>
 </div>
+
+Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
 For the individual files and for a zipped sources file see the [1.3.1 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.1).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
-## Third party clients
+## Linux
 
-If you are looking for a client for an operating system we do not officially support ourselves, or if you are looking for an alternative client application please refer to the following overview of third party client applications.
+Your distribution probably provides official packages for Mumble. Please refer to your OS packages. Distributions with official packages include Debian, Ubuntu, Fedora, openSUSE, Arch Linux, Mandriva/ROSA/Unity.
+
+### Ubuntu
+
+Ubuntu provides their own packages. But we also provide a PPA (Personal Package Archive) which you can add to use more recent stable or development snapshot versions.
+
+    sudo add-apt-repository ppa:mumble/release
+
+### Snap/Snapcraft
+
+A Snap package is published and maintained by the third party Snapcraft community at <https://snapcraft.io/mumble>
+
+### Flatpak
+
+A Flatpak Package is published and maintained by the third party Flatpak community at <https://www.flathub.org/apps/details/info.mumble.Mumble>
+
+## Mobile Clients
+
+<div class="download-box-container">
+    <div class="download-box">
+        <a href="ios">
+            <span class="os os-ios" aria-hidden="true"></span>
+            <span class="os-name">iOS</span>
+        </a>
+    </div>
+</div>
+
+### Android (third party)
+
+We do not currently provide an official Android client. However, you can use one of the third party clients (that we do not develop or support ourselves).
 
 <div class="download-box-container">
     <div class="download-box">
