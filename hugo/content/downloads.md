@@ -3,7 +3,7 @@ title: Downloads
 ---
 Version 1.3.0 is the latest stable version of Mumble and was released on September 08, 2019.
 
-### Windows ###
+## Windows
 
 <div class="download-box-container">
     <div class="download-box">
@@ -19,8 +19,9 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
         </a>
     </div>
 </div>
-    
-### macOS ###
+
+## macOS
+
 <div class="download-box-container">
     <div class="download-box">
         <a href="osx">
@@ -36,7 +37,7 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
     </div>
 </div>
 
-### Linux ###
+## Linux
 
 <div class="download-box-container"> 
     <div class="download-box">
@@ -51,21 +52,22 @@ Version 1.3.0 is the latest stable version of Mumble and was released on Septemb
             <span class="os-name">Static Linux Server</span>
         </a>
     </div>
-    
 </div>
 
 For other Linux distributions and more information, see the [Installation page in Mumble's official wiki](https://wiki.mumble.info/wiki/Installing_Mumble#Linux).
 
-## Downloads & Source code on Github ##
+## Downloads & Source code on Github
+
 For the individual files and for zipped sources files see the [1.3.0 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.0).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
-## Mobile clients ##
+## Mobile clients
 
-### iOS ###
+### iOS
 
-#### Official App ####
+#### Official App
+
 <div class="download-box-container">
 <div class="download-box">
         <a href="ios">
@@ -75,7 +77,8 @@ Instructions on [verifying GPG signatures of Mumble downloads](https://github.co
     </div>
 </div>
 
-#### Third-Party app ####
+#### Third-Party app
+
 Note: This is a third-party app, that is not officially supported by us.
 
 <div class="download-box-container">
@@ -87,7 +90,8 @@ Note: This is a third-party app, that is not officially supported by us.
     </div>
 </div>
 
-### Android ###
+### Android
+
 Note: This is a third-party app, that is not officially supported by us.
 
 <div class="download-box-container">
@@ -99,7 +103,7 @@ Note: This is a third-party app, that is not officially supported by us.
     </div>
 </div>
 
-## Development snapshots ##
+## Development snapshots
 
 [Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
