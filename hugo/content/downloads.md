@@ -66,7 +66,7 @@ Instructions on [verifying GPG signatures of Mumble downloads](https://github.co
 
 ### iOS
 
-#### Official App
+Note: The iOS app is outdated, but functional.
 
 <div class="download-box-container">
 <div class="download-box">
@@ -74,19 +74,6 @@ Instructions on [verifying GPG signatures of Mumble downloads](https://github.co
             <span class="os os-ios" aria-hidden="true"></span>
             <span class="os-name">iOS</span>
         </a>
-    </div>
-</div>
-
-#### Third-Party app
-
-Note: This is a third-party app, that is not officially supported by us.
-
-<div class="download-box-container">
-<div class="download-box">
-        <span class="os os-ios" aria-hidden="true"></span>
-        <span class="os-name">iOS</span>
-        Mumblefy<br />
-        <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
     </div>
 </div>
 
