@@ -102,3 +102,9 @@ When a new feature release is published the snapshots will naturally transform i
 </table>
 
 Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay. *(Issue tracked in {{< issue 4263 >}})*
+
+## Source Code
+
+As a free software project the source code is publicly readable and under a permissive license.
+
+Our Mumble project source code is hosted on GitHub as [`mumble`](https://github.com/mumble-voip/mumble). The iOS app as [`mumble-iphoneos`](https://github.com/mumble-voip/mumble-iphoneos).
