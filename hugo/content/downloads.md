@@ -15,6 +15,8 @@ Version 1.3.1 is the latest stable version of Mumble and was released on June 08
 {{< content-layout/download name="Static macOS Server" href="osx-static-server" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
+Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay a significant amount of money. *(Issue tracked in {{< issue 4263 >}})*
+
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Ubuntu" href="ubuntu" osclass="ubuntu">}}
 {{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
@@ -98,3 +100,5 @@ When a new feature release is published the snapshots will naturally transform i
         </td>
     </tr>
 </table>
+
+Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay. *(Issue tracked in {{< issue 4263 >}})*
