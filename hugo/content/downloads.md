@@ -48,7 +48,7 @@ Version 1.3.1 is the latest stable version of Mumble and was released on June 08
     </div>
 </div>
 
-For the individual files and for a zipped sources file see the [1.3.0 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.0).
+For the individual files and for a zipped sources file see the [1.3.1 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.1).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
