@@ -67,7 +67,7 @@ If you are looking for a client for an operating system we do not officially sup
         <span class="os os-ios" aria-hidden="true"></span>
         <span class="os-name">iOS</span>
         Mumblefy<br />
-        <a href="https://itunes.apple.com/dk/app/mumblefy/id858752232">App Store</a>
+        <a href="https://apps.apple.com/us/app/mumblefy/id858752232">App Store</a>
     </div>
 </div>
 
