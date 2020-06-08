@@ -5,50 +5,20 @@ We provide downloads for the official client and server programs. A Linux distri
 
 Version 1.3.1 is the latest stable version of Mumble and was released on June 08, 2020.
 
-<div class="download-box-container">
-    <div class="download-box">
-        <a href="windows-64">
-            <span class="os os-windows" aria-hidden="true"></span>
-            <span class="os-name">Windows 64-bit</span>
-        </a>
-    </div>
-    <div class="download-box">
-        <a href="windows-32">
-            <span class="os os-windows" aria-hidden="true"></span>
-            <span class="os-name">Windows 32-bit</span>
-        </a>
-    </div>
-</div>
+{{< content-layout/downloads >}}
+{{< content-layout/download name="Windows 64-bit" href="windows-64" osclass="windows">}}
+{{< content-layout/download name="Windows 32-bit" href="windows-32" osclass="windows">}}
+{{< /content-layout/downloads >}}
 
-<div class="download-box-container">
-    <div class="download-box">
-        <a href="osx">
-            <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">macOS</span>
-        </a>
-    </div>
-    <div class="download-box">
-        <a href="osx-static-server">
-            <span class="os os-mac" aria-hidden="true"></span>
-            <span class="os-name">Static macOS Server</span>
-        </a>
-    </div>
-</div>
+{{< content-layout/downloads >}}
+{{< content-layout/download name="macOS" href="osx" osclass="mac">}}
+{{< content-layout/download name="Static macOS Server" href="osx-static-server" osclass="mac">}}
+{{< /content-layout/downloads >}}
 
-<div class="download-box-container">
-    <div class="download-box">
-        <a href="ubuntu">
-            <span class="os os-ubuntu" aria-hidden="true"></span>
-            <span class="os-name">Ubuntu</span>
-        </a>
-    </div>
-    <div class="download-box">
-        <a href="linux-static-server">
-            <span class="os os-linux" aria-hidden="true"></span>
-            <span class="os-name">Static Linux Server</span>
-        </a>
-    </div>
-</div>
+{{< content-layout/downloads >}}
+{{< content-layout/download name="Ubuntu" href="ubuntu" osclass="ubuntu">}}
+{{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
+{{< /content-layout/downloads >}}
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
@@ -76,27 +46,17 @@ A Flatpak Package is published and maintained by the third party Flatpak communi
 
 ## Mobile Clients
 
-<div class="download-box-container">
-    <div class="download-box">
-        <a href="ios">
-            <span class="os os-ios" aria-hidden="true"></span>
-            <span class="os-name">iOS</span>
-        </a>
-    </div>
-</div>
+{{< content-layout/downloads >}}
+{{< content-layout/download name="iOS" href="ios" osclass="ios">}}
+{{< /content-layout/downloads >}}
 
 ### Android (third party)
 
 We do not currently provide an official Android client. However, you can use one of the third party clients (that we do not develop or support ourselves).
 
-<div class="download-box-container">
-    <div class="download-box">
-        <span class="os os-android" aria-hidden="true"></span>
-        <span class="os-name">Android</span>
-        Mumla<br />
-        <a href="https://f-droid.org/packages/se.lublin.mumla">F-Droid</a>
-    </div>
-</div>
+{{< content-layout/downloads >}}
+{{< content-layout/download name="Mumla (F-Droid)" href="https://f-droid.org/packages/se.lublin.mumla" osclass="android">}}
+{{< /content-layout/downloads >}}
 
 ## Development snapshots
 
