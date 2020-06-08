@@ -1,7 +1,7 @@
 ---
 title: Downloads
 ---
-Version 1.3.0 is the latest stable version of Mumble and was released on September 08, 2019.
+Version 1.3.1 is the latest stable version of Mumble and was released on June 08, 2020.
 
 <div class="download-box-container">
     <div class="download-box">
