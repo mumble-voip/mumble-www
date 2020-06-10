@@ -58,7 +58,7 @@ A Flatpak Package is published and maintained by the third party Flatpak communi
 We do not currently provide an official Android client. However, you can use one of the third party clients (that we do not develop or support ourselves).
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Mumla (F-Droid)" href="https://f-droid.org/packages/se.lublin.mumla" osclass="android">}}
+{{% content-layout/download-ext osclass="android" %}}Mumla ([Play](https://play.google.com/store/apps/details?id=se.lublin.mumla),<br>[Play-Donate](https://play.google.com/store/apps/details?id=se.lublin.mumla.donation), [F-Droid](https://f-droid.org/packages/se.lublin.mumla)){{%/ content-layout/download-ext %}}
 {{< /content-layout/downloads >}}
 
 ## Development snapshots
