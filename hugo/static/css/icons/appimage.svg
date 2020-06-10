@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="448" height="512" version="1">
+  <g transform="translate(0 464)">
+    <rect y="-432" ry="26" rx="26" height="448" width="448"/>
+    <path style="marker:none" d="M188-402v69h-39l75 81 75-81h-39v-69zm24 170c-2 0-3 3-3 7v26c-8 1-15 5-22 9l-18-18c-3-3-6-5-7-3l-17 17c-2 1 0 4 3 7l18 18c-4 7-8 14-9 22h-26c-4 0-7 1-7 3v24c0 2 3 3 7 3h26c1 8 5 15 9 22l-18 18c-3 3-5 6-3 7l17 17c1 2 4 0 7-3l18-18c7 4 14 8 22 9v26c0 4 1 7 3 7h24c2 0 3-3 3-7v-26c8-1 15-5 22-9l18 18c3 3 6 5 7 3l17-17c2-1 0-4-3-7l-18-18c4-7 8-14 9-22h26c4 0 7-1 7-3v-24c0-2-3-3-7-3h-26c-1-8-5-15-9-22l18-18c3-3 5-6 3-7l-17-17c-1-2-4 0-7 3l-18 18c-7-4-14-8-22-9v-26c0-4-1-7-3-7z" overflow="visible" fill="#fff" stroke="#fff"/>
+    <path style="marker:none" d="M224-167c19 0 35 16 35 35s-16 35-35 35-35-16-35-35 16-35 35-35z" overflow="visible"/>
+  </g>
+</svg>

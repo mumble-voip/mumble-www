@@ -16,6 +16,7 @@ var snapshotRegexps = map[string]*regexp.Regexp{
 	"windows-32":    regexp.MustCompile(`^mumble-[.0-9]*~[0-9]*~g[0-9a-z]*~snapshot\.msi$`),
 	"osx":           regexp.MustCompile(`^Mumble-[.0-9]*~[0-9]*~g[0-9a-z]*~snapshot\.dmg$`),
 	"osx-universal": regexp.MustCompile(`^Mumble-Universal-[.0-9]*~[0-9]*~g[0-9a-z]*~snapshot\.dmg$`),
+	// "appimage-x64": regexp.MustCompile(`^Mumble-[0-9a-z]+-x86_64.AppImage$`),
 	// "tarball": regexp.MustCompile(`^mumble-[\.0-9]*~[0-9]*~g[0-9a-z]*~snapshot\.tar\.gz$`),
 	"linux-static-server": regexp.MustCompile(`^murmur-static_x86-[.0-9]*~[0-9]*~g[0-9a-z]*~snapshot\.tar\.bz2$`),
 	"osx-static-server":   regexp.MustCompile(`^Murmur-OSX-Static-[.0-9]*~[0-9]*~g[0-9a-z]*~snapshot\.tar\.bz2$`),
