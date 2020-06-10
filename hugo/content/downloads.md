@@ -71,7 +71,6 @@ When a new feature release is published the snapshots will naturally transform i
     <tr>
         <th>Windows 64-bit</th>
         <th>Windows 32-bit</th>
-        <th>AppImage x64</th>
         <th>macOS</th>
         <th>macOS (Universal, Legacy)</th>
         <th>Ubuntu</th>
@@ -84,9 +83,6 @@ When a new feature release is published the snapshots will naturally transform i
         </td>
         <td>
             <a href="windows-32/snapshot">.msi</a>
-        </td>
-        <td>
-            <a href="appimage-x64/snapshot">.AppImage</a>
         </td>
         <td>
             <a href="osx/snapshot">.dmg</a>
