@@ -1,4 +1,4 @@
-baseURL = "https://mumble.info/"
+baseURL = "https://www.mumble.info/"
 languageCode = "en-us"
 title = "Mumble"
 publishDir = "../public"
