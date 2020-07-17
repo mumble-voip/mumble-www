@@ -1,6 +1,6 @@
 +++
 title = "Mumo"
-date = "2020-05-12T23:46:23"
+date = "2020-07-17T21:09:29"
 license = "CC by-sa 2.5"
 categories = ["3rd Party"]
 +++
@@ -167,6 +167,31 @@ mumo requires:
 
 # Installing mumo
 The newest version of mumo is always available from our mumo repository at https://github.com/mumble-voip/mumo .
+
+## Docker
+A docker image can be run with the command:
+
+    docker run --name mumo --net=container:<id_of_mumble_server_container> -d -v /path/to/mumo/folder:/data mumblevoip/mumo
+
+This is the base of the mumo service. It's allow addition of new module.
+
+Warning:
+
+    - the service network-mode is mandatory to link mumble and mumo. Ice need to be in mumble-server localhost.
+    - the volume is to store all modules and configurations, you can add yours here. Subfolders will be automatically created ad first start.
+    - When you add new modules, you need the restart the container.
+
+Here a docker-compose(v2.4) example:
+
+    mumble-mumo:
+        image: mumblevoip/mumo
+        container_name: mumble-mumo
+        restart: on-failure
+        volumes:
+            - /path/to/mumo/folder:/data
+        network_mode : "service:mumble-server"
+        depends_on:
+            - mumble-server
 
 ## Ubuntu 12.04
 *Note:* This guide only shows the basic steps for trying out mumo. For a more permanent setup you'll want to run mumo with its own user and a startup script.
