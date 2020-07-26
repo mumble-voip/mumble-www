@@ -64,42 +64,7 @@ We do not currently provide an official Android client. However, you can use one
 
 [Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-When a new feature release is published the snapshots will naturally transform into them. If you want to keep using snapshots after the next feature release, you will have to manually upgrade to one again.
-
-<table class="development-snapshots">
-    <tr>
-        <th>Windows 64-bit</th>
-        <th>Windows 32-bit</th>
-        <th>macOS</th>
-        <th>macOS (Universal, Legacy)</th>
-        <th>Ubuntu</th>
-        <th>Static Linux Server</th>
-        <th>Static macOS Server</th>
-    </tr>
-    <tr>
-        <td>
-            <a href="windows-64/snapshot">.msi</a>
-        </td>
-        <td>
-            <a href="windows-32/snapshot">.msi</a>
-        </td>
-        <td>
-            <a href="osx/snapshot">.dmg</a>
-        </td>
-        <td>
-            <a href="osx-universal/snapshot">.dmg</a>
-        </td>
-        <td>
-            <a href="ubuntu/snapshot">PPA</a>
-        </td>
-        <td>
-            <a href="linux-static-server/snapshot">.tar.bz2</a>
-        </td>
-        <td>
-            <a href="osx-static-server/snapshot">.tar.bz2</a>
-        </td>
-    </tr>
-</table>
+At the moment we are in the process of changing our build infrastructure for releases. Our next snapshots will be based on the new system. **Until the new system is established we are not publishing development snapshots** (using the old system).
 
 Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay. *(Issue tracked in {{< issue 4263 >}})*
 
