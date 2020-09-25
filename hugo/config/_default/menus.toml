@@ -23,14 +23,8 @@
     url = "/blog"
 
 [[main]]
-    title = "Forums"
-    weight = 5
-    identifier = "forums"
-    url = "https://forums.mumble.info"
-
-[[main]]
     title = "Contribute"
-    weight = 6
+    weight = 5
     identifier = "contribute"
     url = "/contribute"
 
