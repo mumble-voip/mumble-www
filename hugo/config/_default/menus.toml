@@ -28,6 +28,12 @@
     identifier = "contribute"
     url = "/contribute"
 
+[[main]]
+    title = "Sponsors"
+    weight = 6
+    identifier = "sponsors"
+    url = "/sponsors"
+
 [[footer]]
     title = "Security"
     weight = 1
