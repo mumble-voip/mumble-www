@@ -6,7 +6,7 @@ Our infrastructure is made possible thanks to the help of the sponsors that supp
 
 ## Fastly
 
-![Fastly's logo](/logos/fastly.svg)
+<img src="/logos/fastly.svg" alt="Fastly's logo" style="float:right; width: 380px; max-width: 40vw; margin: 12px 0 12px 24px;">
 
 Thanks to [Fastly](https://www.fastly.com)'s CDN, only ~5% of the traffic hits our servers. The rest of the traffic is served by their insanely fast network.
 
@@ -22,7 +22,7 @@ Also, we haven't experienced a single downtime in many years.
 
 ## MacStadium
 
-![MacStadium's logo](/logos/macstadium.svg)
+<img src="/logos/macstadium.svg" alt="MacStadium's logo" style="float:right; width: 380px; max-width: 40vw; margin: 12px 0 12px 24px;">
 
 Thanks to [MacStadium](https://www.macstadium.com) we can maintain support for macOS, as they provide us access to a 2012 Mac Mini.
 
