@@ -4,7 +4,7 @@ title: Sponsors
 
 Our infrastructure is made possible thanks to the help of the sponsors that supported us over the years by providing their services for free.
 
-# Fastly
+## Fastly
 
 ![Fastly's logo](/logos/fastly.svg)
 
@@ -20,7 +20,7 @@ This service provides us quite a few important advantages, such as:
 
 Also, we haven't experienced a single downtime in many years.
 
-# MacStadium
+## MacStadium
 
 ![MacStadium's logo](/logos/macstadium.svg)
 
