@@ -12,8 +12,8 @@ We marked our issue tickets that are [marked with the **good first issue** label
 
 The [**help wanted** label](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) also contains tickets for which we would welcome contributions. These may be more difficult or more effort though.
 
-But the event is not limited to these tickets. In fact not even limited to tickets at all. Any created Pull Request is eligible as a contribution unless marked as invalid or spam. Please see the project website for specifics.
+But the event is not limited to these tickets. In fact not even limited to tickets at all. Any created Pull Request is eligible as a contribution unless marked as invalid or spam. Please see the event website for specifics.
 
-In general we welcome contributions, and if you are unsure of how you can best spend your time with us, or whether to invest time into a specific solution feel free to comment on tickets and feature requests, create a ticket for discussion, create draft pull request laying out a design and concept, or reaching out to us in chat.
+In general we welcome contributions. If you are unsure of how you can best spend your time with us, or whether to invest time into a specific solution, feel free to comment on tickets and feature requests, create a ticket for discussion, create draft pull request laying out a design and concept, or reaching out to us in chat.
 
 Good luck and have fun!
