@@ -3,7 +3,7 @@ title: Downloads
 ---
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer, which we will describe below. We also link to some third party projects.
 
-Version 1.3.2 is the latest stable version of Mumble and was released on July 08, 2020.
+Version 1.3.3 is the latest stable version of Mumble and was released on October 5th, 2020.
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows 64-bit" href="windows-64" osclass="windows">}}
@@ -15,8 +15,6 @@ Version 1.3.2 is the latest stable version of Mumble and was released on July 08
 {{< content-layout/download name="Static macOS Server" href="osx-static-server" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
-Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay a significant amount of money. *(Issue tracked in {{< issue 4263 >}})*
-
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Ubuntu" href="ubuntu" osclass="ubuntu">}}
 {{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
@@ -24,7 +22,7 @@ Note (macOS): Apple introduced a stricter verification and warning process. macO
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
-For the individual files and for a zipped sources file see the [1.3.2 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.2).
+For the individual files and for a zipped sources file see the [1.3.3 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.3).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found in the linked document.
 
