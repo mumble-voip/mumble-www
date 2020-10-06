@@ -39,4 +39,4 @@ system.
 
 ## Warning
 
-- The static server binary for Linux is using an outdated version of OpenSSL - see https://github.com/mumble-voip/mumble/issues/4001 for details.
+- The static server binary for Linux is using an outdated version of OpenSSL - see https://github.com/mumble-voip/mumble/issues/4001 for details. This warning only applies to the package released by us named  `murmur-static_x86`. It does not apply to our Ubuntu PPA releases or other maintained packages.
