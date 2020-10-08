@@ -29,3 +29,20 @@ Thanks to [MacStadium](https://www.macstadium.com) we can maintain support for m
 Before that, the only member of our team who owns a Mac used to do all the macOS-related work, until he unfortunately had no time to dedicate to the project anymore.
 
 We’re very happy with the service so far. *Slightly* less happy with macOS, but that’s another story (and unrelated to the service itself).
+
+## 1Password
+
+<img src="/logos/1password.svg" alt="1Password’s logo" style="float:right; width: 380px; max-width: 40vw; margin: 12px 0 12px 24px;">
+
+Our experience with 1Password began years ago, when looking for a versatile way to share credentials with the team.
+
+A team member had already been using their service for a while, so we decided to give it a try.
+
+Fast forward to today and we can say for sure that we couldn't be happier.
+
+* The web interface is great. Navigating between multiple vaults and managing the organization is intuitive.
+* The password generator is excellent, it outputs passwords that can be easily typed.
+* No trackers. This is very important, especially when dealing with credentials.
+* 2FA is supported, allowing us to use it for shared accounts.
+
+They are now offering us their service for free! For reference: https://github.com/1Password/1password-teams-open-source/pull/243
