@@ -90,3 +90,24 @@ nav.blogposts {
 		text-align: right;
 	}
 }
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+
+	.heading-link {
+		display: none;
+		width: 21px;
+		position: absolute;
+		top: 6px;
+		left: -21px;
+		opacity: 0.7;
+		font-size: 12px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&:hover .heading-link {
+		display: block;
+	}
+}

@@ -22,5 +22,16 @@
     </div>
 
     {{ partial "layout/footer.html" . }}
+    <script>
+        let headings = document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]')
+        for (let i = 0; i < headings.length; ++i) {
+            let heading = headings[i]
+            let anchor = document.createElement('a')
+            anchor.href = '#' + heading.id
+            anchor.className = 'heading-link'
+            anchor.innerText = '🔗'
+            heading.prepend(anchor)
+        }
+    </script>
 </body>
 </html>
