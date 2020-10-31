@@ -5,6 +5,59 @@ We provide downloads for the official client and server programs. A Linux distri
 
 Version 1.3.3 is the latest stable version of Mumble and was released on October 5th, 2020.
 
+## Suggested Mumble Version
+
+<div id="suggested-download" style="display: grid; grid-template-columns: auto 1fr;">We suggest a download by determining the operating system with JavaScript. However JavaScript seems to not be enabled. Please refer to the manual download choices instead.</div>
+<script>
+'use strict'
+/* For win always Win32 on Firefox and Chrome */
+function parsePlatform(value) {
+    value = value.toLowerCase()
+    if (value.includes('Windows NT')) {
+        if (value.includes('win64') || value.includes('wow64')) {
+            return 'win64'
+        }
+        return 'win32'
+    }
+    if (value.includes('windows')) {
+        return 'win64'
+    }
+    if (value.includes('Mac OS X') || value.includes('macOS')) {
+        return 'macos'
+    }
+    if (value.includes('android')) {
+        return 'android'
+    }
+    if (value.includes('linux')) {
+        return 'linux'
+    }
+}
+function getPlatform() {
+    return parsePlatform(navigator.oscpu) || parsePlatform(navigator.appVersion) || parsePlatform(navigator.userAgent) || parsePlatform(navigator.platform)
+}
+function getButton(href, icon, caption) {
+    return '<a href="' + href + '" style="display: grid; grid-template-columns: auto 1fr; grid-gap: 16px; background: #3fb33f linear-gradient(#30dd30, #3fb33f); border: 1px solid #66b566; border-radius: 8px; padding: 24px 24px; color: #000; font-size: 32px; line-height: 32px;"><img src="/css/icons/' + icon + '" style="height: 32px; background: transparent;"><div style="margin: auto 0;">' + caption + '</div></a>'
+}
+function getPlatformContent(platform) {
+    switch (platform) {
+        case 'win64':
+            return getButton('windows-64', 'windows.svg', 'Mumble for Windows 64-bit')
+        case 'win32':
+            return getButton('windows-32', 'windows.svg', 'Mumble for Windows 32-bit')
+        case 'linux':
+            return getButton('ubuntu', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
+        case 'macos':
+            return getButton('osx', 'apple.svg', 'Mumble for macOS')
+        default:
+            return 'We could not determine the OS you are browsing this website on. Please choose the appropriate download yourself.'
+            break;
+    }
+}
+document.getElementById('suggested-download').innerHTML = getPlatformContent(getPlatform())
+</script>
+
+## Manual Download
+
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows 64-bit" href="windows-64" osclass="windows">}}
 {{< content-layout/download name="Windows 32-bit" href="windows-32" osclass="windows">}}
