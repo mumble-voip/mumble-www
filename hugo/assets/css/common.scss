@@ -44,17 +44,6 @@ ul.menu {
 	b, strong {
 		font-weight: bold;
 	}
-	h1, h2, h3, h4, h5, h6 {
-		position: relative;
-	}
-	
-	.headlineanchor { font-size: 0.9em; visibility: hidden; padding-left: 4px; position: absolute; top: 0; display: inline-block; }
-
-	h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-		.headlineanchor {
-			visibility: visible;
-		}
-	}
 }
 
 figure {
