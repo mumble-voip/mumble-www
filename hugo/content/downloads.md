@@ -36,7 +36,7 @@ function getPlatform() {
     return parsePlatform(navigator.oscpu) || parsePlatform(navigator.appVersion) || parsePlatform(navigator.userAgent) || parsePlatform(navigator.platform)
 }
 function getButton(href, icon, caption) {
-    return '<a href="' + href + '" style="display: grid; grid-template-columns: auto 1fr; grid-gap: 16px; background: #3fb33f linear-gradient(#30dd30, #3fb33f); border: 1px solid #66b566; border-radius: 8px; padding: 24px 24px; color: #000; font-size: 32px; line-height: 32px;"><img src="/css/icons/' + icon + '" style="height: 32px; background: transparent;"><div style="margin: auto 0;">' + caption + '</div></a>'
+    return '<a class="suggested-download-button" href="' + href + '"><img class="suggested-download-button-icon" src="/css/icons/' + icon + '"><div class="suggested-download-button-caption">' + caption + '</div></a>'
 }
 function getPlatformContent(platform) {
     switch (platform) {

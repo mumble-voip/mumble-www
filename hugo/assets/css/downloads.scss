@@ -55,3 +55,24 @@
 table.development-snapshots {
 	text-align: center;
 }
+
+a.suggested-download-button {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 16px;
+	background: #3fb33f linear-gradient(#30dd30, #3fb33f);
+	border: 1px solid #66b566;
+	border-radius: 8px;
+	padding: 24px 24px;
+	color: #000;
+	font-size: 32px;
+	line-height: 32px;
+
+	> img.suggested-download-button-icon {
+		height: 32px;
+		background: transparent;
+	}
+	> .suggested-download-button-caption {
+		margin: auto 0;
+	}
+}
