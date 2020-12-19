@@ -73,6 +73,8 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 {{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
 {{< /content-layout/downloads >}}
 
+**Note:** `Static Linux Server` is using an outdated version of OpenSSL - see [#4001](https://github.com/mumble-voip/mumble/issues/4001) for details. 
+
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
 For the individual files and for a zipped sources file see the [1.3.3 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.3).
@@ -102,6 +104,8 @@ A Flatpak Package is published and maintained by the third party Flatpak communi
 {{< content-layout/downloads >}}
 {{< content-layout/download name="iOS" href="ios" osclass="ios">}}
 {{< /content-layout/downloads >}}
+
+**Note:** The iOS app is unmaintained; last update in 2017.
 
 ### Android (third party)
 
