@@ -117,9 +117,23 @@ We do not currently provide an official Android client. However, you can use one
 
 ## Development snapshots
 
-[Development snapshots](https://dl.mumble.info/) contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
+Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-At the moment we are in the process of changing our build infrastructure for releases. Our next snapshots will be based on the new system. **Until the new system is established we are not publishing development snapshots** (using the old system).
+The most recent snapshot version is the first snapshot of Mumble version 1.4.0
+([Release Announcement](https://www.mumble.info/blog/first-mumble-1.4.0-development-snapshot/)).
+
+Note that we are currently not able to provide static server binaries for Linux or macOS nor are we able to provide a snapshot PPA for Linux just yet.
+
+{{< content-layout/downloads >}}
+{{< content-layout/download name="Windows Client 64-bit" href="https://dl.mumble.info/snapshot/Mumble-1.4.0~2020-12-24~gdb4b6be~snapshot.winx64.msi" osclass="windows">}}
+{{< content-layout/download name="Windows Server 64-bit" href="https://dl.mumble.info/snapshot/Murmur-1.4.0~2020-12-24~gdb4b6be~snapshot.winx64.msi" osclass="windows">}}
+{{< content-layout/download name="Windows Client 32-bit" href="https://dl.mumble.info/snapshot/Mumble-1.4.0~2020-12-24~gdb4b6be~snapshot.msi" osclass="windows">}}
+{{< content-layout/download name="Windows Server 32-bit" href="https://dl.mumble.info/snapshot/Murmur-1.4.0~2020-12-24~gdb4b6be~snapshot.msi" osclass="windows">}}
+{{< /content-layout/downloads >}}
+
+{{< content-layout/downloads >}}
+{{< content-layout/download name="macOS" href="https://dl.mumble.info/snapshot/Mumble-1.4.0~2020-12-24~gdb4b6be~snapshot.dmg" osclass="mac">}}
+{{< /content-layout/downloads >}}
 
 Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay. *(Issue tracked in {{< issue 4263 >}})*
 
