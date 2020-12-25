@@ -36,7 +36,7 @@ important for us to be able to make the actual release as stable and reliable as
 ## Feature spotlight
 
 As there are many, many changes with this new version, here is a selection of things that we think are most prominent. If you're interested in all
-changes, have a look at the full [changelog](#Changelog).
+changes, have a look at the full [changelog](#changelog).
 
 ### Channel listeners
 
