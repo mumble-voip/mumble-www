@@ -29,19 +29,32 @@
     url = "/contribute/"
 
 [[main]]
-    title = "Sponsors"
+    title = "About"
     weight = 6
-    identifier = "sponsors"
-    url = "/sponsors/"
+    identifier = "about"
+    url = "/about/"
+
+[[footer]]
+    title = "Contact"
+    weight = 1
+    identifier = "contact"
+    url = "/contact/"
 
 [[footer]]
     title = "Security"
-    weight = 1
+    weight = 2
     identifier = "security"
     url = "/security/"
 
 [[footer]]
     title = "Privacy"
-    weight = 2
+    weight = 3
     identifier = "privacy"
     url = "/privacy/"
+
+[[footer]]
+    title = "Sponsors"
+    weight = 4
+    identifier = "sponsors"
+    url = "/sponsors/"
+
