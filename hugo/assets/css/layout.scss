@@ -56,7 +56,7 @@ body {
 	}
 }
 
-#bloglist {
+#newslist {
 	& > div {
 		margin-top: 30px;
 	}
@@ -72,7 +72,7 @@ body {
 	}
 }
 
-nav.blogposts {
+nav.newsposts {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 

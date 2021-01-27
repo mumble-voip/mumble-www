@@ -3,7 +3,7 @@ title: Mumble Security Advisory 2014-002
 date: 2014-02-05
 ---
 
-ID:              Mumble-SA-2014-002 ([txt](../Mumble-SA-2014-002.txt), [sig](../Mumble-SA-2014-002.txt.sig), [Blog post](/blog/mumble-1.2.5/))
+ID:              Mumble-SA-2014-002 ([txt](../Mumble-SA-2014-002.txt), [sig](../Mumble-SA-2014-002.txt.sig), [Blog post](/news/mumble-1.2.5/))
 
 Date:            February 2014
 

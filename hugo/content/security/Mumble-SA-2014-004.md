@@ -3,7 +3,7 @@ title: Mumble Security Advisory 2014-004
 date: 2014-02-05
 ---
 
-ID:              Mumble-SA-2014-004 ([txt](../Mumble-SA-2014-004.txt), [sig](../Mumble-SA-2014-004.txt.sig), [Blog post](/blog/mumble-for-ios-1.2.3/))
+ID:              Mumble-SA-2014-004 ([txt](../Mumble-SA-2014-004.txt), [sig](../Mumble-SA-2014-004.txt.sig), [Blog post](/news/mumble-for-ios-1.2.3/))
 
 Date:            February 2014
 

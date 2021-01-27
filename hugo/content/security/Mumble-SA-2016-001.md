@@ -3,7 +3,7 @@ title: Mumble Security Advisory 2016-001
 date: 2016-01-10
 ---
 
-ID:              Mumble-SA-2016-001 ([txt](../Mumble-SA-2016-001.txt), [sig](../Mumble-SA-2016-001.txt.sig), [Blog post](/blog/mumble-1.2.13/))
+ID:              Mumble-SA-2016-001 ([txt](../Mumble-SA-2016-001.txt), [sig](../Mumble-SA-2016-001.txt.sig), [Blog post](/news/mumble-1.2.13/))
 
 Date:            January 2016
 

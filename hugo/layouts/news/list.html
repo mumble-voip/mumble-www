@@ -1,10 +1,10 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Pages ".Type" "==" "blog") (index .Site.Params "paginate" | default 10) }}
+{{ $paginator := .Paginate (where .Pages ".Type" "==" "news") (index .Site.Params "paginate" | default 10) }}
 
-{{ partial "blog/nav-prev-next" $paginator }}
+{{ partial "news/nav-prev-next" $paginator }}
 
-<div id="bloglist">
+<div id="newslist">
 {{ range $paginator.Pages }}
 <div class="markdown-body">
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -15,7 +15,7 @@
 {{ end }}
 </div>
 
-{{ partial "blog/nav-prev-next" $paginator }}
+{{ partial "news/nav-prev-next" $paginator }}
 
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

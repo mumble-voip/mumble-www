@@ -17,10 +17,10 @@
     url = "/documentation"
 
 [[main]]
-    title = "Blog"
+    title = "News"
     weight = 4
-    identifier = "blog"
-    url = "/blog"
+    identifier = "news"
+    url = "/news"
 
 [[main]]
     title = "Contribute"

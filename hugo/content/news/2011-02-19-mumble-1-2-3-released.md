@@ -25,7 +25,7 @@ Your,
 
 Mumble Team
 
- [2]: http://blog.mumble.info/for-the-record/
+ [2]: https://www.mumble.info/news/for-the-record/
  [4]: http://sourceforge.net/projects/mumble/files/Mumble/1.2.3/mumble-1.2.3.msi/download
  [5]: http://sourceforge.net/projects/mumble/files/Mumble/1.2.3/Mumble-1.2.3.dmg/download
  [6]: http://sourceforge.net/projects/mumble/files/Mumble/1.2.3/murmur-static_x86-1.2.3.tar.bz2/download

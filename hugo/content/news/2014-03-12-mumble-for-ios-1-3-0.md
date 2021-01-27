@@ -17,4 +17,4 @@ As always, it’s available on the [App Store][1]. And don’t forget — if you
 The Mumble team
 
  [1]: https://itunes.apple.com/us/app/mumble/id443472808?mt=8
- [2]: http://blog.mumble.info/mumble-for-ios-1-2-3-is-buggy-when-running-on-ios-7-1/
+ [2]: https://www.mumble.info/news/mumble-for-ios-1.2.3-is-buggy-when-running-on-ios-7.1/

@@ -58,7 +58,7 @@ Older clients (< 1.4.0) will not indicate listeners in the UI though! They are i
 
 Note: This feature requires server-side support and is thus only available on servers at least running Mumble 1.4.0.
 
-![Channel listeners](/blog/media/ChannelListeners.png)
+![Channel listeners](/news/media/ChannelListeners.png)
 
 
 ### TalkingUI
@@ -79,7 +79,7 @@ Note that the TalkingUI is highly configurable (Settings -> User Interface) and 
 it in the main window. In fact the selection between TalkingUI and main window is synchronized and thus this plays really nice with the new "whisper
 to selected" feature allowing to whisper to whatever currently is selected in the UI (be it a channel or a user).
 
-![TalkingUI](/blog/media/TalkingUI.png)
+![TalkingUI](/news/media/TalkingUI.png)
 
 
 ### UI indication for access restrictions
@@ -96,7 +96,7 @@ correct password (access token) set) whereas red means that you are not allowed 
 Note that this is also a feature that requires server-side support and thus only takes effect on servers that are at least running Mumble version
 1.4.0.
 
-![Access restricted channels](/blog/media/AccessRestrictedChannels.png)
+![Access restricted channels](/news/media/AccessRestrictedChannels.png)
 
 
 ### Markdown
@@ -133,7 +133,7 @@ Although these are not pretty, they do work and are supported.
 We can escape special characters using the \\ character: \*not italic\* and \*\*not bold\*\*
 ````
 
-![Markdown](/blog/media/Markdown.png)
+![Markdown](/news/media/Markdown.png)
 
 
 ### Stereo playback
@@ -161,7 +161,7 @@ assigned to changes their client-certificate (Mumble's way of keeping track of a
 Note that nicknames are _not_ tied to a particular server. That means that if you assign a nickname to a user on server A and then you meet that
 person again on server B, they will still have that very same nickname set on server B.
 
-![Nicknames](/blog/media/Nicknames.png)
+![Nicknames](/news/media/Nicknames.png)
 
 
 ## Special thanks

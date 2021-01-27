@@ -3,7 +3,7 @@ title: Mumble Security Advisory 2014-006
 date: 2014-05-14
 ---
 
-ID:              Mumble-SA-2014-006 ([txt](../Mumble-SA-2014-005.txt), [sig](../Mumble-SA-2014-005.txt.sig), [patch](../Mumble-SA-2014-005.patch), [patch sig](../Mumble-SA-2014-005.patch.sig), [Blog post](/blog/mumble-1.2.6/))
+ID:              Mumble-SA-2014-006 ([txt](../Mumble-SA-2014-005.txt), [sig](../Mumble-SA-2014-005.txt.sig), [patch](../Mumble-SA-2014-005.patch), [patch sig](../Mumble-SA-2014-005.patch.sig), [Blog post](/news/mumble-1.2.6/))
 
 Date:            May 2014
 

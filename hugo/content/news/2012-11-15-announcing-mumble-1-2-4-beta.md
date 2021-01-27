@@ -21,4 +21,4 @@ You can get the 1.2.4 beta from our page at [www.mumble.info][2].
 We would also like to encourage you again to [translate Mumble][3] to your native language.
 
  [2]: https://www.mumble.info
- [3]: http://blog.mumble.info/call-for-translations/
+ [3]: https://www.mumble.info/news/call-for-translations/

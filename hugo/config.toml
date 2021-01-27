@@ -6,7 +6,8 @@ publishDir = "../public"
 disableKinds = ["taxonomy","taxonomyTerm"]
 
 [permalinks]
-  blog = "/blog/:title/"
+  news = "/news/:title/"
+  blog = "/news/:title/"
 
 [markup]
   [markup.goldmark]
