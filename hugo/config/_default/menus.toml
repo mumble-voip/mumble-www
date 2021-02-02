@@ -8,40 +8,40 @@
     title = "Downloads"
     weight = 2
     identifier = "downloads"
-    url = "/downloads"
+    url = "/downloads/"
 
 [[main]]
     title = "Documentation"
     weight = 3
     identifier = "docs"
-    url = "/documentation"
+    url = "/documentation/"
 
 [[main]]
     title = "Blog"
     weight = 4
     identifier = "blog"
-    url = "/blog"
+    url = "/blog/"
 
 [[main]]
     title = "Contribute"
     weight = 5
     identifier = "contribute"
-    url = "/contribute"
+    url = "/contribute/"
 
 [[main]]
     title = "Sponsors"
     weight = 6
     identifier = "sponsors"
-    url = "/sponsors"
+    url = "/sponsors/"
 
 [[footer]]
     title = "Security"
     weight = 1
     identifier = "security"
-    url = "/security"
+    url = "/security/"
 
 [[footer]]
     title = "Privacy"
     weight = 2
     identifier = "privacy"
-    url = "/privacy"
+    url = "/privacy/"
