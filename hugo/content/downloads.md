@@ -4,7 +4,7 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version 1.3.3 is the latest stable version of Mumble and was released on October 5th, 2020.
+Version 1.3.4 is the latest stable version of Mumble and was released on February 10th, 2021.
 
 ## Suggested Mumble Version
 
@@ -79,7 +79,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
-For the individual files and for a zipped sources file see the [1.3.3 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.3).
+For the individual files and for a zipped sources file see the [1.3.4 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.4).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found
 in the linked document.
