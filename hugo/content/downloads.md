@@ -4,7 +4,10 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version 1.3.4 is the latest stable version of Mumble and was released on February 10th, 2021.
+Version **1.3.4** is the latest stable version of Mumble and was released on February 10th, 2021.
+
+**Note:** Due to problems with our macOS builder, we are currently unable to provide 1.3.4 binaries for macOS. We are working on it, but for the time
+being the **macOS download** will still refer to version **1.3.3**.
 
 ## Suggested Mumble Version
 
