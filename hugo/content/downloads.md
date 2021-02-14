@@ -52,7 +52,7 @@ function getPlatformContent(platform) {
         case 'linux':
             return getButton('ubuntu', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
         case 'macos':
-            return getButton('osx', 'apple.svg', 'Mumble for macOS')
+            return getButton('osx', 'apple.svg', 'Mumble for macOS >= 10.13')
         default:
             return 'We could not determine the OS you are browsing this website on. Please choose the appropriate download yourself.'
             break;
@@ -69,12 +69,16 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="macOS" href="osx" osclass="mac">}}
-{{< content-layout/download name="Static macOS Server" href="osx-static-server" osclass="mac">}}
+{{< content-layout/download name="macOS >= 10.13" href="osx" osclass="mac">}}
+{{< content-layout/download name="macOS <= 10.12" href="osx-hfs+" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Ubuntu" href="ubuntu" osclass="ubuntu">}}
+{{< /content-layout/downloads >}}
+
+{{< content-layout/downloads >}}
+{{< content-layout/download name="Static macOS Server" href="osx-static-server" osclass="mac">}}
 {{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
 {{< /content-layout/downloads >}}
 
