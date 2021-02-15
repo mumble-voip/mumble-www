@@ -169,7 +169,7 @@ The new documentation can be found in the following repos:
 It is written in Markdown.
 -->
 
-#### Documentation Issues & Pull requests
+### Documentation Issues & Pull requests
 
 Also take a look at open Issues and Pull Requests:
 
@@ -179,7 +179,7 @@ Also take a look at open Issues and Pull Requests:
 
 ### Special Documentation
 
-##### Ice methods
+#### Ice methods
 
 We have a [generated documentation](https://www.mumble.info/documentation/slice/1.3.0/html/Murmur.html) <!-- old link: http://mumble.sourceforge.net/slice/ --> for exposed Ice methods. Although probably only developers will be able to understand it, please give us a note on any inconsistencies, errors or needed clarifications if you find them.sk
 
