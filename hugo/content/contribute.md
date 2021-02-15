@@ -9,12 +9,12 @@ You can contribute to the Mumble Project in multiple ways:
 
 - [Report Bugs and suggest Improvements/Features](#report-bugs-and-feature-requests)
 - [Help with Development](#development)
-    - [Coding](#coding)
-        - [Additional projects](#additional-projects)
-    - Non-Coding:
-        - [Translation](#translation)
-        - [Testing](#testing)
-        - [GUI/Mumble Themes](#mumble-theme)
+  - [Coding](#coding)
+    - [Additional projects](#additional-projects)
+  - Non-Coding:
+    - [Translation](#translation)
+    - [Testing](#testing)
+    - [GUI/Mumble Themes](#mumble-theme)
 - Improve the [Documentation](#documentation) and [Website](#website)
 - [Support other users & take part in our community](#community)
 - [Host a Mumble server](#hosting)
