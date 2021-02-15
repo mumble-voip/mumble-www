@@ -134,9 +134,9 @@ You find the official Mumble theme in its own [repository on GitHub](https://git
 
 ##### Additional themes
 
-Additional Mumble themes bring variety into Mumble's design and choices for different tastes.
+Additional Mumble themes bring variety into Mumble's visual design and choices for different tastes.
 
-Create new themes for Mumble! Information can be found on our {{< wiki Skinning "Skinning wiki page" />}} and existing themes we know about on the {{< wiki Skins "Skins wiki page" />}}.
+You can find more information about themes in general and how to create themes on our {{< wiki Themes "Themes wiki page" />}}.
 
 ## Documentation & Website
 
