@@ -71,8 +71,6 @@ Take a look at the following documentation:
 
 Also take a look at open [issues](https://github.com/mumble-voip/mumble/issues) and [pull requests](https://github.com/mumble-voip/mumble/pulls) on GitHub, especially with the following Labels:
 
-<!-- add label for important tasks? -->
-
 - [Good first issue](https://github.com/mumble-voip/mumble/labels/good%20first%20issue)
 - [Help wanted](https://github.com/mumble-voip/mumble/labels/help%20wanted)
 - [Help needed](https://github.com/mumble-voip/mumble/labels/help-needed)
@@ -181,7 +179,7 @@ Also take a look at open Issues and Pull Requests:
 
 #### Ice methods
 
-We have a [generated documentation](https://www.mumble.info/documentation/slice/1.3.0/html/Murmur.html) <!-- old link: http://mumble.sourceforge.net/slice/ --> for exposed Ice methods. Although probably only developers will be able to understand it, please give us a note on any inconsistencies, errors or needed clarifications if you find them.sk
+We have a [generated documentation](https://www.mumble.info/documentation/slice/1.3.0/html/Murmur.html) for exposed Ice methods. Although probably only developers will be able to understand it, please give us a note on any inconsistencies, errors or needed clarifications if you find them.sk
 
 ### External Documentation
 
@@ -201,8 +199,6 @@ You find the [Community Channels on the Contact page](https://www.mumble.info/co
 
 Host your own Mumble Server and register it on our Public Server List (optional).
 See our {{< wiki "Running_Murmur" "Server guide" />}} and [Server Registration details](https://wiki.mumble.info/wiki/Murmur.ini#Server_Registration).
-
-<!-- deleted link to the list of hosters for now -->
 
 # Promotion
 
