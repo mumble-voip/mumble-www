@@ -22,7 +22,7 @@ You can contribute to the Mumble Project in multiple ways:
 
 ---
 
-# Report bugs and Feature Requests
+## Report bugs and Feature Requests
 
 1. Take a look at existing [issues in our GitHub repo](https://github.com/mumble-voip/mumble/issues) to check whether your issue or request was already reported.
    If that's the case, then vote for it with a thumbs up or add useful information & ideas with a comment.
@@ -30,16 +30,16 @@ You can contribute to the Mumble Project in multiple ways:
 
 **Note:** For security issues, see [Report a vulnerability]({{< relref "security#reporting-a-vulnerability" >}}).
 
-# Development
+## Development
 
 We are always looking for helping hands willing to contribute to Mumble.
 
-## Coding
+### Coding
 
 Mumble is mostly written in **C++** using the **Qt** library.
 Thus previous knowledge in C++ and Qt is definitely useful, but we also encourage interested people who want to learn it to give it a try. We're happy to help you out, if needed.
 
-### Getting Started
+#### Getting Started
 
 The best way to get into Mumble development is to link up with us on IRC ([#mumble-dev on freenode](irc://chat.freenode.net/mumble-dev)), also available via Matrix (Join: `#freenode_#mumble-dev:matrix.org` or use the [Direct Link via Element.io (Web App)](https://app.element.io/#/room/!VNUpYnUPdhTAqagvUu:matrix.org)).
 
@@ -47,7 +47,7 @@ Alternatively you can create or comment (on) a pull request or issue report on G
 
 For more information, see the categories below:
 
-#### Source Code
+##### Source Code
 
 Our source code is hosted on GitHub:
 
@@ -55,7 +55,7 @@ Our source code is hosted on GitHub:
 - [Main Mumble Repo](https://github.com/mumble-voip/mumble): includes the Server and Client
 - [iOS app](https://github.com/mumble-voip/mumble-iphoneos): unmaintained; help wanted
 
-#### Documentation regarding Development
+##### Documentation regarding Development
 
 Take a look at the following documentation:
 
@@ -67,7 +67,7 @@ Take a look at the following documentation:
 - [C++ guidelines & tools](https://github.com/mumble-voip/mumble/discussions/4261) 
 -->
 
-#### Open issues and ongoing development
+##### Open issues and ongoing development
 
 Also take a look at open [issues](https://github.com/mumble-voip/mumble/issues) and [pull requests](https://github.com/mumble-voip/mumble/pulls) on GitHub, especially with the following Labels:
 
@@ -77,42 +77,42 @@ Also take a look at open [issues](https://github.com/mumble-voip/mumble/issues) 
 - [Feature Request](https://github.com/mumble-voip/mumble/labels/feature-request)
 - [Bug](https://github.com/mumble-voip/mumble/labels/bug)
 
-#### Tips
+##### Tips
 
 - To avoid unnecessary work and duplication, comment on issues and inform others what you plan to work on.
 - You can also create [Draft Pull Requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests); this way you can work on the Pull Request, while others can see the progress and give you feedback.
 
-### Additional projects
+#### Additional projects
 
-#### 3rd party Interfaces
+##### 3rd party Interfaces
 
 Web interfaces, web-viewers, administration programs, CMS website modules – all neat things we would love to see! These could be written in any language supported by our Ice- or gRPC-based RPC Interfaces. You could start your own project or link up with an {{< wiki "3rd Party Applications" "already existing one" />}}. To get an idea about how interaction with the Mumble server might look like, you can take a look at the example scripts in our [GitHub repository for mumble-scripts](https://github.com/mumble-voip/mumble-scripts).
 
-#### Ice authenticators
+##### Ice authenticators
 
 See {{< wiki Authenticators />}}. We’re happy for every authenticator and authenticator improvement.
 
-#### Positional Audio plugins
+##### Positional Audio plugins
 
 Most of our [positional audio plugins](https://wiki.mumble.info/wiki/Games#Positional_audio) regularly break on game updates. To read on how you can help us update the plugins see the {{< wiki Pluginguide />}} page. 
 
 You can also add positional audio support to Games via our standard `Link` plugin. This way it will not get outdated, but you need permission to change (and access to) the Source Code of a game (e.g. via an open license or developer permission). See {{< wiki "Link" "Linking a game to Mumble" />}}.
 
-#### Other 3rd party projects
+##### Other 3rd party projects
 
 If you are interested in more projects (Clients, Servers, cli tools etc.), you can also take a look at {{< wiki "3rd Party Applications" />}}.
 
 Many of these projects will either gladly accept help or can (often) be forked easily, because of the open licenses.
 
-## Non-Coding
+### Non-Coding
 
-### Translation
+#### Translation
 
 Mumble currently (April 2020) supports over 15 different languages (38 if including unfinished translations). As more people get to know and use Mumble, versions in their native languages become more and more important.
 
 We are thankful for any contribution on translating. Please check the {{< wiki "Language Translation" "Language Translation wiki page" />}} for more information.
 
-### Testing
+#### Testing
 
 To find bugs and polish new releases we need testers.
 
@@ -124,25 +124,25 @@ If you want to test the newest development versions, you have two options:
 
 If you find any issues, take a look at [Report Bugs](#report-bugs-and-feature-requests).
 
-### Development Documentation
+#### Development Documentation
 
 See [Section "Documentation" below](#documentation). 
 
-### Mumble theme
+#### Mumble theme
 
 You find the official Mumble theme in its own [repository on GitHub](https://github.com/mumble-voip/mumble-theme).
 
-#### Additional themes
+##### Additional themes
 
 Additional Mumble themes bring variety into Mumble's design and choices for different tastes.
 
 Create new themes for Mumble! Information can be found on our {{< wiki Skinning "Skinning wiki page" />}} and existing themes we know about on the {{< wiki Skins "Skins wiki page" />}}.
 
-# Documentation & Website
+## Documentation & Website
 
 Improve our Documentation and Website.
 
-## Documentation
+### Documentation
 
 Right now you find most of the **(User) Documentation** in our [wiki](https://wiki.mumble.info).
 
@@ -167,7 +167,7 @@ The new documentation can be found in the following repos:
 It is written in Markdown.
 -->
 
-### Documentation Issues & Pull requests
+#### Documentation Issues & Pull requests
 
 Also take a look at open Issues and Pull Requests:
 
@@ -175,32 +175,32 @@ Also take a look at open Issues and Pull Requests:
 - [Pull Request with TYPE label "Docs"](https://github.com/mumble-voip/mumble/pulls?q=is%3Apr+is%3Aopen+docs)
 - [Documentation issues in Mumble's Website repo](https://github.com/mumble-voip/mumble-www/labels/docs)
 
-### Special Documentation
+#### Special Documentation
 
-#### Ice methods
+##### Ice methods
 
 We have a [generated documentation](https://www.mumble.info/documentation/slice/1.3.0/html/Murmur.html) for exposed Ice methods. Although probably only developers will be able to understand it, please give us a note on any inconsistencies, errors or needed clarifications if you find them.sk
 
-### External Documentation
+#### External Documentation
 
 - **Wikipedia**: Someone that is not a development team member needs to maintain the [article(s) at Wikipedia](https://en.wikipedia.org/wiki/Mumble_%28software%29).
 
-## Website
+### Website
 
 Take a look at the [Website's GitHub repo](https://github.com/mumble-voip/mumble-www).
 
-## Community
+### Community
 
 Be a part of our community and help others!
 
 You find the [Community Channels on the Contact page](https://www.mumble.info/contact#community-channels).
 
-# Hosting
+## Hosting
 
 Host your own Mumble Server and register it on our Public Server List (optional).
 See our {{< wiki "Running_Murmur" "Server guide" />}} and [Server Registration details](https://wiki.mumble.info/wiki/Murmur.ini#Server_Registration).
 
-# Promotion
+## Promotion
 
 Recommend Mumble to your friends and colleagues ;).
 
