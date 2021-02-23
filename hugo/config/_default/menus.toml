@@ -58,3 +58,9 @@
     identifier = "sponsors"
     url = "/sponsors/"
 
+[[footer]]
+    title = "Mumble on GitHub"
+    weight = 5
+    identifier = "githublink"
+    url = "https://github.com/mumble-voip"
+
