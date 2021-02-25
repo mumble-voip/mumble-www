@@ -48,13 +48,13 @@ function getButton(href, icon, caption) {
 function getPlatformContent(platform) {
     switch (platform) {
         case 'win64':
-            return getButton('windows-64', 'windows.svg', 'Mumble for Windows 64-bit')
+            return getButton('https://dl.mumble.info/latest/stable/client-windows-x64', 'windows.svg', 'Mumble for Windows (x64)')
         case 'win32':
-            return getButton('windows-32', 'windows.svg', 'Mumble for Windows 32-bit')
+            return getButton('https://dl.mumble.info/latest/stable/client-windows-x86', 'windows.svg', 'Mumble for Windows (x86)')
         case 'linux':
-            return getButton('ubuntu', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
+            return getButton('https://launchpad.net/~mumble/+archive/release', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
         case 'macos':
-            return getButton('osx', 'apple.svg', 'Mumble for macOS >= 10.13')
+            return getButton('https://dl.mumble.info/latest/stable/client-macos-x64', 'apple.svg', 'Mumble for macOS >= 10.13 (x64)')
         default:
             return 'We could not determine the OS you are browsing this website on. Please choose the appropriate download yourself.'
             break;
@@ -66,22 +66,22 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 ## Manual Download
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Windows 64-bit" href="windows-64" osclass="windows">}}
-{{< content-layout/download name="Windows 32-bit" href="windows-32" osclass="windows">}}
+{{< content-layout/download name="Windows (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
+{{< content-layout/download name="Windows (x86)" href="https://dl.mumble.info/latest/stable/client-windows-x86" osclass="windows">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="macOS >= 10.13" href="osx" osclass="mac">}}
-{{< content-layout/download name="macOS <= 10.12" href="osx-hfs+" osclass="mac">}}
+{{< content-layout/download name="macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/stable/client-macos-x64" osclass="mac">}}
+{{< content-layout/download name="macOS <= 10.12 (x64)" href="https://dl.mumble.info/latest/stable/client-macos-hfs+-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Ubuntu" href="ubuntu" osclass="ubuntu">}}
+{{< content-layout/download name="Ubuntu" href="https://launchpad.net/~mumble/+archive/release" osclass="ubuntu">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Static macOS Server" href="osx-static-server" osclass="mac">}}
-{{< content-layout/download name="Static Linux Server" href="linux-static-server" osclass="linux">}}
+{{< content-layout/download name="Static macOS server (x64)" href="https://dl.mumble.info/latest/stable/server-macos-x64" osclass="mac">}}
+{{< content-layout/download name="Static Linux server (x86)" href="https://dl.mumble.info/latest/stable/server-linux-x86" osclass="linux">}}
 {{< /content-layout/downloads >}}
 
 **Note:** `Static Linux Server` is using an outdated version of OpenSSL - see [#4001](https://github.com/mumble-voip/mumble/issues/4001) for details. 
@@ -141,14 +141,15 @@ The most recent snapshot version is the first snapshot of Mumble version 1.4.0
 Note that we are currently not able to provide static server binaries for Linux or macOS nor are we able to provide a snapshot PPA for Linux just yet.
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Windows Client 64-bit" href="https://dl.mumble.info/snapshot/Mumble-1.4.0~2020-12-24~gdb4b6be~snapshot.winx64.msi" osclass="windows">}}
-{{< content-layout/download name="Windows Server 64-bit" href="https://dl.mumble.info/snapshot/Murmur-1.4.0~2020-12-24~gdb4b6be~snapshot.winx64.msi" osclass="windows">}}
-{{< content-layout/download name="Windows Client 32-bit" href="https://dl.mumble.info/snapshot/Mumble-1.4.0~2020-12-24~gdb4b6be~snapshot.msi" osclass="windows">}}
-{{< content-layout/download name="Windows Server 32-bit" href="https://dl.mumble.info/snapshot/Murmur-1.4.0~2020-12-24~gdb4b6be~snapshot.msi" osclass="windows">}}
+{{< content-layout/download name="Client for Windows (x64)" href="https://dl.mumble.info/latest/snapshot/client-windows-x64" osclass="windows">}}
+{{< content-layout/download name="Server for Windows (x64)" href="https://dl.mumble.info/latest/snapshot/server-windows-x64" osclass="windows">}}
+{{< content-layout/download name="Client for Windows (x86)" href="https://dl.mumble.info/latest/snapshot/client-windows-x86" osclass="windows">}}
+{{< content-layout/download name="Server for Windows (x86)" href="https://dl.mumble.info/latest/snapshot/server-windows-x86" osclass="windows">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="macOS" href="https://dl.mumble.info/snapshot/Mumble-1.4.0~2020-12-24~gdb4b6be~snapshot.dmg" osclass="mac">}}
+{{< content-layout/download name="Client for macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-x64" osclass="mac">}}
+{{< content-layout/download name="Client for macOS <= 10.12 (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-hfs+-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
 Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is
