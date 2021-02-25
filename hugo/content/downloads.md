@@ -17,6 +17,8 @@ JavaScript. However JavaScript seems to not be enabled. Please refer to the manu
 'use strict'
 /* For win always Win32 on Firefox and Chrome */
 function parsePlatform(value) {
+    if (!value)
+        return false;
     value = value.toLowerCase()
     if (value.includes('Windows NT')) {
         if (value.includes('win64') || value.includes('wow64')) {
