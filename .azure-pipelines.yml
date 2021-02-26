@@ -6,33 +6,6 @@ variables:
   HUGO_SHA: 11c46ecc3ad6d96f94515358e5528d01dfe88f4956b56027c85e9a516348ef12
 
 jobs:
-- job: go_webserver
-  steps:
-  - script: |
-      go version
-    displayName: 'Go Version Information'
-  - script: |
-      go version
-      go get -v .
-    workingDirectory: 'src'
-    displayName: 'Get Go Webserver Dependencies'
-  - script: |
-      go version
-      go build -v .
-      mkdir ../bin
-      mv mumble-www ../bin
-    workingDirectory: 'src'
-    displayName: 'Build Go Webserver'
-  - script: |
-      go version
-      go test
-    workingDirectory: 'src'
-    displayName: 'Execute Go Webserver Tests'
-  - task: PublishPipelineArtifact@0
-    inputs:
-      artifactName: 'mumble-www'
-      targetPath: 'bin'
-
 - job: hugo
   steps:
   - script: |
