@@ -20,7 +20,7 @@ function parsePlatform(value) {
     if (!value)
         return false;
     value = value.toLowerCase()
-    if (value.includes('Windows NT')) {
+    if (value.includes('windows nt')) {
         if (value.includes('win64') || value.includes('wow64')) {
             return 'win64'
         }
@@ -29,7 +29,7 @@ function parsePlatform(value) {
     if (value.includes('windows')) {
         return 'win64'
     }
-    if (value.includes('Mac OS X') || value.includes('macOS')) {
+    if (value.includes('mac os x') || value.includes('macos')) {
         return 'macos'
     }
     if (value.includes('android')) {
