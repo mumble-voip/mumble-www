@@ -25,14 +25,13 @@ We are a team of voluntary developers - both professional and non-professional -
 
 Active Team Members are:
 
-| Name | GitHub Profile | Assignment |
+| Name | GitHub Profile | Focus |
 | --- | --- | --- |
 | Davide Beatrici | [davidebeatrici](https://github.com/davidebeatrici) | Core developer |
 | Robert Adam | [Krzmbrzl](https://github.com/Krzmbrzl) | Core developer, GitHub Management |
 | Nik Reist | [ZeroAbility](https://github.com/ZeroAbility) | Developer, Release Management |
 | Jan Klass | [Kissaki](https://github.com/Kissaki) | Developer, Website & Community work |
 | - | [Natenom](https://github.com/Natenom) | Testing |
-
 
 ### Contributors
 
