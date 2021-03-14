@@ -8,9 +8,7 @@
 {{ range $paginator.Pages }}
 <div class="markdown-body">
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ .Summary }}
-    {{ if .Truncated }}<p><a href="{{ .RelPermalink }}">Read more...</a></p>{{ end }}
-    {{ if .Params.summaryReadMoreLink }}<p><a href="{{ .RelPermalink }}">Read on for the details…</a></p>{{ end }}
+    {{ partial "blog/teaser" .}}
 </div>
 {{ end }}
 </div>
