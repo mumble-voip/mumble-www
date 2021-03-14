@@ -3,6 +3,21 @@
 	<p>Welcome to <b>official website of the Mumble project!</b></p>
 	<p><a class="download-button" href="{{ relref . "downloads" }}">Download now</a></p>
 
+	<h2>Latest News</h2>
+	<div>
+		{{ $blog := .Site.GetPage "blog" }}
+		{{ $pages := $blog.Pages }}
+		{{ $news := where $pages ".Params.categories" "intersect" (slice "News") }}
+		{{ $page := first 1 $news }}
+		{{ range $page }}
+			<div class="markdown-body">
+			<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+			{{ partial "blog/teaser" . }}
+		{{ else }}
+			<p>No news has been published yet.</p>
+		{{ end }}
+	</div>
+
 	<h2>About Mumble</h2>
 	<p><b>Mumble is a free, open source, low latency, high quality voice chat application.</b></p>
 	<p>Mumble was the first VoIP application to establish true low latency voice communication over a decade ago. But low latency and gaming are not the only use cases it shines in.</p>

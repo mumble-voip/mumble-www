@@ -1,0 +1,3 @@
+{{ .Summary }}
+{{ if .Truncated }}<p><a href="{{ .RelPermalink }}">Read more...</a></p>{{ end }}
+{{ if .Params.summaryReadMoreLink }}<p><a href="{{ .RelPermalink }}">Read on for the details…</a></p>{{ end }}
