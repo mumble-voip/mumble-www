@@ -108,9 +108,17 @@ Many of these projects will either gladly accept help or can (often) be forked e
 
 #### Translation
 
-Mumble currently (April 2020) supports over 15 different languages (38 if including unfinished translations). As more people get to know and use Mumble, versions in their native languages become more and more important.
+Mumble is available in various languages.
 
-We are thankful for any contribution on translating. Please check the {{< wiki "Language Translation" "Language Translation wiki page" />}} for more information.
+You can help improve or update existing translations, translate new texts on existing languages, or introduce additional languages.
+
+We have a [Mumble project on Weblate](https://hosted.weblate.org/projects/mumble/mumble-client/) where you can register and start translating.
+
+Weblate is a web translation platform. As a Website it is easy to access and use with any browser. For translators a global and project memory of translations as well as machine translations can help in finding good translations. Nevertheless, a native or good speaker is required to implement good translations.
+
+The current status of our translations can be seen in the following graph:
+
+[![Weblate translation status by language](https://hosted.weblate.org/widgets/mumble/-/mumble-client/horizontal-auto.svg)](https://hosted.weblate.org/engage/mumble/)
 
 #### Testing
 
