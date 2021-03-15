@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="markdown-body">
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        {{.Content}}
+    </article>
+    {{ if not .Params.contentonly }}
+    <h2>Topics</h2>
+    <ul>
+    {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Title}}</a>
+        </li>
+    {{ end }}
+    </ul>
+    {{ end }}
+</div>
+{{ end }}
