@@ -2,8 +2,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  HUGO_VERSION: 0.72.0
-  HUGO_SHA: 11c46ecc3ad6d96f94515358e5528d01dfe88f4956b56027c85e9a516348ef12
+  HUGO_VERSION: 0.81.0
+  HUGO_SHA: 3c7d034405c67bf571b6d8f001d5a9c49dd87dbfa32b3b19d16e898c46f8f5e2
 
 jobs:
 - job: hugo
