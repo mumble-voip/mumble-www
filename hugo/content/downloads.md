@@ -135,8 +135,8 @@ ourselves).
 Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems
 you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-The most recent snapshot version is the forth snapshot of Mumble version 1.4.0
-([Release Announcement]({{< relref "/blog/2021-04-03-mumble-1-4-0-snapshot4" >}})).
+The most recent snapshot version is the fifth snapshot of Mumble version 1.4.0
+([Release Announcement]({{< relref "/blog/2021-04-21-mumble-1-4-0-snapshot5" >}})).
 
 Note that we are currently not able to provide static server binaries for Linux or macOS nor are we able to provide a snapshot PPA for Linux just yet.
 
