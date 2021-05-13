@@ -4,6 +4,7 @@ author: Robert Adam
 date: 2020-12-24
 categories:
   - News
+  - Release
   - Development Snapshot
 ---
 

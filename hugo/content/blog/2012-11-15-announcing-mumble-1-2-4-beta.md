@@ -3,7 +3,7 @@ title: Announcing Mumble 1.2.4 beta
 author: .D0T
 date: 2012-11-15T15:56:22+00:00
 categories:
-  - Beta
+  - Release
 tags:
   - beta
   - feature
