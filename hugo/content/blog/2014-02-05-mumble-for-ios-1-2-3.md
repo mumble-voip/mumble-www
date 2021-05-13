@@ -3,10 +3,11 @@ title: Mumble for iOS 1.2.3
 author: mkrautz
 date: 2014-02-05T15:00:12+00:00
 categories:
-  - iOS
   - News
   - Release
   - Security
+tags:
+  - ios
 
 ---
 The Mumble team has released [version 1.2.3 of the iOS Mumble client][1].

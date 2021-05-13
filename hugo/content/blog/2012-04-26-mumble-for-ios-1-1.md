@@ -7,9 +7,10 @@ excerpt: |
 
   This release addresses quite a few of the most sought-after features missing from the 1.0 version, along with fixes for various crashes and memory leaks.
 categories:
-  - iOS
   - News
   - Release
+tags:
+  - ios
 
 ---
 Today we&#8217;re releasing version 1.1 of the Mumble iOS app on the App Store.

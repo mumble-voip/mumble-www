@@ -3,9 +3,10 @@ title: Mumble for iOS 1.2.2
 author: mkrautz
 date: 2013-09-20T10:23:32+00:00
 categories:
-  - iOS
   - News
   - Release
+tags:
+  - ios
 
 ---
 This Wednesday, to coincide with the release of iOS 7, we released [Mumble for iOS 1.2.2][1]. This is a primarily a release to fix incompatibilities with iOS 7, but it also includes a few other oft-requested goodies.

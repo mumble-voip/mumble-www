@@ -1,6 +1,8 @@
 ---
 title: Hacktoberfest - GitHub contribution event
 date: 2020-10-01
+categories:
+  - News
 ---
 **Hacktoberfest** is a yearly month-long event encouraging contributions on GitHub, organized by the cloud hoster Digital Ocean. You can find more information about the event on the [Hacktoberfest website](https://hacktoberfest.digitalocean.com/).
 

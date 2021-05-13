@@ -4,7 +4,6 @@ author: .D0T
 date: 2011-10-29T17:11:00+00:00
 categories:
   - News
-  - Uncategorized
 tags:
   - snapshot
 

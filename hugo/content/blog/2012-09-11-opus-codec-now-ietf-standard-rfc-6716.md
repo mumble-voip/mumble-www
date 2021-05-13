@@ -3,7 +3,7 @@ title: Opus codec now IETF standard (RFC 6716)
 author: .D0T
 date: 2012-09-11T20:00:01+00:00
 categories:
-  - Uncategorized
+  - Tech talk
 
 ---
 Mumble&#8217;s future primary codec Opus is now an official IETF standard ([RFC 6716][1]) and its reference implementations officially released. This is very good news for the Web as well as Mumble. If you want to figure out more about this new codec take a look at the announcements of [Mozilla][2] and the [Xiph.Org Foundation][3] .

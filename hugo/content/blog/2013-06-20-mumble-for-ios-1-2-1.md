@@ -3,9 +3,10 @@ title: Mumble for iOS 1.2.1
 author: mkrautz
 date: 2013-06-20T21:57:41+00:00
 categories:
-  - iOS
   - News
   - Release
+tags:
+  - ios
 
 ---
 Today, we&#8217;ll be releasing [Mumble for iOS 1.2.1][1]. This is a minor bug fix release to the 1.2 release we did earlier this month.

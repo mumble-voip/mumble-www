@@ -3,7 +3,7 @@ title: First Mumble Tracker Squash Meeting
 author: slicer
 date: 2010-07-21T23:01:44+00:00
 categories:
-  - Uncategorized
+  - News
 
 ---
 Over the past few months, most of the Mumble team has been busy with other projects. This has lead to an unfortunate build-up of unsolved bug and feature requests. This Sunday, we had our first developer meeting to address this.

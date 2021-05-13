@@ -3,9 +3,10 @@ title: Mumble for iOS 1.1.1
 author: mkrautz
 date: 2012-09-20T22:20:52+00:00
 categories:
-  - iOS
   - News
   - Release
+tags:
+  - ios
 
 ---
  We&#8217;ve released an emergency iOS 6 bug fix for the Mumble iOS client today — Mumble for iOS 1.1.1.
