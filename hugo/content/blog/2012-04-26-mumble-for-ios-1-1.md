@@ -7,7 +7,6 @@ excerpt: |
 
   This release addresses quite a few of the most sought-after features missing from the 1.0 version, along with fixes for various crashes and memory leaks.
 categories:
-  - News
   - Release
 tags:
   - ios

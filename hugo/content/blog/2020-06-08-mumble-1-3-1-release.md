@@ -3,7 +3,6 @@ title: Mumble 1.3.1 Release Announcement
 author: Jan Klass
 date: 2020-06-08
 categories:
-  - News
   - Release
   - Security
 ---

@@ -3,7 +3,6 @@ title: Mumble 1.3.3 Release Announcement
 author: Robert Adam
 date: 2020-10-05
 categories:
-  - News
   - Release
   - Security
 ---

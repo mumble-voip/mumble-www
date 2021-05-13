@@ -3,7 +3,6 @@ title: Mumble 1.3.2 Release Announcement
 author: Robert Adam
 date: 2020-07-09
 categories:
-  - News
   - Release
 ---
 The Mumble team has released [**version 1.3.2**](https://github.com/mumble-voip/mumble/releases/tag/1.3.2) of the Mumble VoIP application. This is a
