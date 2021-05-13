@@ -3,20 +3,34 @@
 	<p>Welcome to <b>official website of the Mumble project!</b></p>
 	<p><a class="download-button" href="{{ relref . "downloads" }}">Download now</a></p>
 
-	<h2>Latest News</h2>
-	<div>
-		{{ $blog := .Site.GetPage "blog" }}
-		{{ $pages := $blog.Pages }}
-		{{ $news := where $pages ".Params.categories" "intersect" (slice "News") }}
-		{{ $page := first 1 $news }}
-		{{ range $page }}
-			<div class="markdown-body">
-				<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-				{{ partial "blog/teaser" . }}
+	{{ $blogpages := (.Site.GetPage "blog").Pages }}
+	{{ $news := where $blogpages ".Params.categories" "intersect" (slice "News") }}
+	{{ $releases := where $blogpages ".Params.categories" "intersect" (slice "Release") }}
+	<div id="home-newsblock">
+		<div>
+			<h2>Latest News</h2>
+			<div>
+				{{ $latestNews := first 1 $news }}
+				{{ range $latestNews }}
+					<div class="markdown-body">
+						<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+						{{ partial "blog/teaser" . }}
+					</div>
+				{{ end }}
 			</div>
-		{{ else }}
-			<p>No news has been published yet.</p>
-		{{ end }}
+		</div>
+		<div>
+			<h2>Latest Release</h2>
+			<div>
+				{{ $latestRelease := first 1 ($releases) }}
+				{{ range $latestRelease }}
+					<div class="markdown-body">
+						<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+						{{ partial "blog/teaser" . }}
+					</div>
+				{{ end }}
+			</div>
+		</div>
 	</div>
 
 	<h2>About Mumble</h2>
