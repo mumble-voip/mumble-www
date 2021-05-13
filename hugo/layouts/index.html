@@ -11,8 +11,9 @@
 		{{ $page := first 1 $news }}
 		{{ range $page }}
 			<div class="markdown-body">
-			<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-			{{ partial "blog/teaser" . }}
+				<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+				{{ partial "blog/teaser" . }}
+			</div>
 		{{ else }}
 			<p>No news has been published yet.</p>
 		{{ end }}
