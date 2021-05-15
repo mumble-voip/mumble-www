@@ -3,7 +3,6 @@ title: Mumble 1.2.3 RC2 released
 author: .D0T
 date: 2011-01-23T04:38:44+00:00
 categories:
-  - News
   - Release
 tags:
   - rc

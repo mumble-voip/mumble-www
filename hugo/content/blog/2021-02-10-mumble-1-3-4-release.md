@@ -3,7 +3,6 @@ title: Mumble 1.3.4 Release Announcement
 author: Robert Adam
 date: 2021-01-10
 categories:
-  - News
   - Release
   - Security
 ---

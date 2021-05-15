@@ -3,7 +3,6 @@ title: 1.4.0 Development Snapshot 2
 author: Robert Adam
 date: 2021-02-26
 categories:
-  - News
   - Release
   - Development Snapshot
 ---

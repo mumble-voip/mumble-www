@@ -3,7 +3,6 @@ title: For the record
 author: .D0T
 date: 2010-08-17T21:20:17+00:00
 categories:
-  - News
   - Tech talk
 tags:
   - feature
