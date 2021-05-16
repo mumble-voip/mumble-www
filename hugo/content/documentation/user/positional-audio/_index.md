@@ -46,3 +46,7 @@ A plugin may have configuration options. If it does the Configure button will op
 Currently the only Plugin that has such a page is the “Manual Positional Audio” Plugin.
 
 See [Manual Plugin]({{< relref "/documentation/user/positional-audio/manual-plugin" >}})
+
+## Supported Engines, Games and Game Mods
+
+See the [list of supported engines, games and game mods]({{< relref "supported-games" >}})
