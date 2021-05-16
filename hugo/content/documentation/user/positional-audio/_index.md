@@ -44,3 +44,5 @@ The server will only transmit positional audio data to clients with a matching c
 A plugin may have configuration options. If it does the Configure button will open a dialog for the selected plugin.
 
 Currently the only Plugin that has such a page is the “Manual Positional Audio” Plugin.
+
+See [Manual Plugin]({{< relref "/documentation/user/positional-audio/manual-plugin" >}})
