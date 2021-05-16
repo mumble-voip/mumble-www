@@ -2,6 +2,8 @@
 title: Developer Translation Documentation
 date: 2021-03-14
 lastmod: 2021-03-14
+aliases: 
+  - "/documentation/translation/"
 ---
 Mumble makes use of the Qt framework. This is also the case for translations. We follow the Qt tools and translation workflow.
 
