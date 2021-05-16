@@ -6,6 +6,14 @@ aside, em, i {
 	font-style: italic;
 }
 
+sup {
+	vertical-align: super;
+}
+
+sub {
+	vertical-align: sub;
+}
+
 h1 {
 	grid-template: "header";
 	font-size: 200%;
