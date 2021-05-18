@@ -7,7 +7,7 @@ categories:
   - Development Snapshot
 ---
 
-Following in the [last snapshot](2021-04-21-mumble-1-4-0-snapshot5.md) we proudly present our sixth development snapshot of the upcoming 1.4.0 stable
+Following the [last snapshot]({{< relref "2021-04-21-mumble-1-4-0-snapshot5" >}}) we proudly present our sixth development snapshot of the upcoming 1.4.0 stable
 release. Note that this snapshot is intended to be the last one before the final release and as such with its publication we are introducing a
 feature-freeze of the 1.4.x series. From now on only bug fixes will make it into this series.
 
