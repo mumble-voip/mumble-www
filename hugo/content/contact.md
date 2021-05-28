@@ -15,6 +15,8 @@ You can contact us in several ways.
 
 ## Email
 
+Note: Please **DON'T** use email for general support issues. For that, please refer to our community channels (see above).
+
 **General contact:**
 
 contact [at] mumble [dot] info
