@@ -5,7 +5,7 @@ Our infrastructure is made possible thanks to the help of the following sponsors
 
 ## Cyberia
 
-<img src="/images/lain.png" alt="Let's all love Lain!" style="float:right; width: 380px; max-width: 40vw">
+<img src="/images/lain.png" alt="Let's all love Lain!" style="float:right; max-width: min(40vw, 380px); max-height: 200px; ">
 
 [Cyberia](https://cyberia.club) is a collective named after an important place in the anime *Serial Experiments Lain*.
 
