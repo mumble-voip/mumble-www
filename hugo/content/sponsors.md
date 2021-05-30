@@ -1,25 +1,19 @@
 ---
 title: Sponsors
 ---
-
 Our infrastructure is made possible thanks to the help of the following sponsors:
 
 ## Cyberia
 
 <img src="/images/lain.png" alt="Let's all love Lain!" style="float:right; width: 380px; max-width: 40vw">
 
-The name should ring a bell if you have watched the masterpiece that is Serial Experiments Lain!
+[Cyberia](https://cyberia.club) is a collective named after an important place in the anime *Serial Experiments Lain*.
 
-[Cyberia](https://cyberia.club) is managed by fans who decided to name their awesome collective after an important place in the anime.
+They've been using our project for years and donated us physical Mac hardware to improve our development workflow and handling of macOS development.
 
-Turns out they've been using our project for years, without us even being aware until a member of Cyberia wrote in our Matrix channel.
+Previously we used a remote machine to test and develop on a macOS system. Both managing for this machine as well as it being remote and hosted meant unnecesary efforts with a cumbersome and error prone workflow. Thanks to Cyberia we can use our own physical hardware now, which helps us a lot in moving forward with macOS.
 
-Only a few days after the interaction they donated us physical Mac hardware so that we could easily develop and test on macOS!
-
-Before that, every time we wanted to do anything on macOS we had to connect to a remote machine.  
-The remote desktop experience is represented by Lain's expression in the picture.
-
-Make sure to visit Cyberia and thank them for supporting us!
+Thank you very much Cyberia!
 
 ## Fastly
 
