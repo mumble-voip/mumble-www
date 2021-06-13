@@ -8,9 +8,9 @@ You can contact us in several ways.
 
 * [Issue tracker on GitHub](https://github.com/mumble-voip/mumble/issues)
 * [Discussions on GitHub](https://github.com/mumble-voip/mumble/discussions)
-* Chat:
-    * IRC: [#mumble on irc.freenode.net](irc://irc.freenode.org/mumble)
-    * Matrix: Join `#freenode_#mumble:matrix.org`; for example via [Element.io (Web App)](https://app.element.io/#/room/#mumble:matrix.org) (shares messages with IRC)
+* Chat `#mumble:matrix.org`  
+  usable with any Matrix chat client; for example [open with Element](https://app.element.io/#/room/#mumble:matrix.org)  
+  *(We had a Freenode IRC channel in the past, but it is now obsolete and we are in the process of moving away from it.)*
 * [Forum](https://forums.mumble.info/)
 
 ## Email
