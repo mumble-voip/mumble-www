@@ -10,7 +10,6 @@ You can contact us in several ways.
 * [Discussions on GitHub](https://github.com/mumble-voip/mumble/discussions)
 * Chat `#mumble:matrix.org`  
   usable with any Matrix chat client; for example [open with Element](https://app.element.io/#/room/#mumble:matrix.org)  
-  *(We had a Freenode IRC channel in the past, but it is now obsolete and we are in the process of moving away from it.)*
 * [Forum](https://forums.mumble.info/)
 
 ## Email
