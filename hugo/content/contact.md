@@ -8,7 +8,7 @@ You can contact us in several ways.
 
 * [Issue tracker on GitHub](https://github.com/mumble-voip/mumble/issues)
 * [Discussions on GitHub](https://github.com/mumble-voip/mumble/discussions)
-* Chat `#mumble:matrix.org`  
+* Chat [`#mumble:matrix.org`](https://matrix.to/#/#mumble:matrix.org)  
   usable with any Matrix chat client; for example [open with Element](https://app.element.io/#/room/#mumble:matrix.org)  
 * [Forum](https://forums.mumble.info/)
 
