@@ -25,7 +25,7 @@ Thus previous knowledge in C++ and Qt is definitely useful, but we also encourag
 
 #### Getting Started
 
-The best way to get into Mumble development is to link up with us on IRC ([#mumble-dev on freenode](irc://chat.freenode.net/mumble-dev)), also available via Matrix (Join: `#freenode_#mumble-dev:matrix.org` or use the [Direct Link via Element.io (Web App)](https://app.element.io/#/room/!VNUpYnUPdhTAqagvUu:matrix.org)).
+The best way to get into Mumble development is to link up with us on [Matrix](https://matrix.org/). Join [`#mumble-dev:matrix.org`](https://matrix.to/#/#mumble-dev:matrix.org) or use the [Direct Link via Element.io (Web App)](https://app.element.io/#/room/!VNUpYnUPdhTAqagvUu:matrix.org).
 
 Alternatively you can create or comment (on) a pull request or issue report on GitHub.
 
