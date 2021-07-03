@@ -5,7 +5,7 @@ Warning: Be aware that the tools/methods used in this tutorial might trigger ant
 
 Game positional audio is a feature of Mumble that many users consider very useful. However, creating the game plugin can sometimes be complicated, and for the average person, daunting. This guide will help you understand how a game plugin works, what it does, and how you can make one.
 
-If you have any questions regarding the process hit us in IRC (#mumble @ freenode) and we will try to help.
+If you have any questions regarding the process hit us up in [`#mumble-dev:matrix.org`](https://matrix.to/#/#mumble-dev:matrix.org) and we will try to help.
 
 We also accept new plugins into our codebase as long as you are willing to support them. Be aware however that we might reject plugins for games with short update cycles as our current distribution method makes keeping those working for longer times quite painful. When in doubt please verify with us before puttin in the work.
 

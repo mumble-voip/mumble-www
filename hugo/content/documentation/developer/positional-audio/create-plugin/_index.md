@@ -7,7 +7,7 @@ This is an abstract overview of how to add positional audio support; for step-by
 
 For positional audio, we need two things: Your position in the 3D world, and the direction you are looking in. If you have access to the source code for the game, exporting this to Mumble is easy, just use the Link plugin. If this is a 3rd party game, we'll have to extract the position from the running game.
 
-If you have any questions regarding the process hit us in IRC (#mumble @ freenode) and we will try to help.
+If you have any questions regarding the process hit us up in [`#mumble-dev:matrix.org`](https://matrix.to/#/#mumble-dev:matrix.org) and we will try to help.
 
 We also accept new plugins into our codebase as long as you are willing to support them. Be aware however that we might reject plugins for games with short update cycles as our current distribution method makes keeping those working for longer times quite painful. When in doubt please verify with us before puttin in the work.
 
