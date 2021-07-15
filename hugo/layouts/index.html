@@ -1,6 +1,22 @@
 {{ define "main" }}
 <div class="markdown-body">
 	<p>Welcome to <b>official website of the Mumble project!</b></p>
+
+	<link href="https://cdn.sur.ly/widget-awards/css/diamond.min.css?d20210507" rel="stylesheet">
+	<div class="surly__diamond surly__black surly__id_5496695" onclick="if(event.target.nodeName.toLowerCase() != 'a' && event.target.parentElement.nodeName.toLowerCase() != 'a') {window.open('https://sur.ly/i/mumble.info'); return 0;}">
+		<div class="surly__logo-container">
+			<a href="https://sur.ly" class="surly__name"><span class="surly__name-prefix">by</span> <span>sur.ly</span></a>
+		</div>
+		<div class="surly__content">
+			<span class="surly__title surly__title_r2">
+				<span class="surly__subtitle">Super Convenient</span>
+				<span class="surly__subtitle">Voice Chat</span>
+			</span>
+			<span class="surly__text">App</span>
+			<span class="surly__date">2021</span>
+		</div>
+	</div>
+
 	<p><a class="download-button" href="{{ relref . "downloads" }}">Download now</a></p>
 
 	{{ $blogpages := (.Site.GetPage "blog").Pages }}
