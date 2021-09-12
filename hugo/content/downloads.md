@@ -135,10 +135,10 @@ ourselves).
 Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems
 you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-The most recent snapshot version is the sixth snapshot of Mumble version 1.4.0
-([Release Announcement]({{< relref "/blog/2021-05-16-mumble-1-4-0-snapshot6" >}})).
+The most recent snapshot version is actually the first release candidate for Mumble 1.4.0
+([Release Announcement]({{< relref "/blog/2021-09-12-mumble-release-candidate1" >}})).
 
-Note that we are currently not able to provide static server binaries for Linux or macOS nor are we able to provide a snapshot PPA for Linux just yet.
+Note that we are currently not able to provide static server binaries for Linux nor are we able to provide a snapshot PPA for Linux just yet.
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Client for Windows (x64)" href="https://dl.mumble.info/latest/snapshot/client-windows-x64" osclass="windows">}}
@@ -149,11 +149,11 @@ Note that we are currently not able to provide static server binaries for Linux 
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Client for macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-x64" osclass="mac">}}
-{{< content-layout/download name="Client for macOS <= 10.12 (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-hfs+-x64" osclass="mac">}}
+{{< content-layout/download name="Server for macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/snapshot/server-macos-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
-Note (macOS): Apple introduced a stricter verification and warning process. macOS will now warn you when installing the Mumble application. This is
-expected and not a security issue. Apple will not currently verify and acknowledge our package unless we pay. *(Issue tracked in {{< issue 4263 >}})*
+Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
+versions anymore.
 
 ## Source Code
 
