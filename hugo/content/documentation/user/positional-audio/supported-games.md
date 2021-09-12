@@ -13,7 +13,7 @@ Mumble version 1.2 introduced additional, extended positional audio features. To
 
 Games and game engines that provide native support remain functional across game updates.
 
-*Developer reference: [See developer integration documentation]({{< relref "/documentation/developer/positional-audio/link-plugin/" >}})*
+*Developer reference: [See developer integration documentation]({{< relref "/documentation/developer/positional-audio/link-plugin" >}})*
 
 ### 3D/Game Engines With Native Support
 
