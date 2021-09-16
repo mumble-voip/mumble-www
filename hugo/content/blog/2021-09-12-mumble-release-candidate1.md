@@ -63,3 +63,4 @@ The changes listed here are relative to the last snapshot version.
 - Autoscroll of chat window not working properly on Linux ({{< issue 4638 >}}, {{< issue 2504 >}})
 - Certain special characters are not rendered on Windows ({{< issue 4939 >}})
 - The RC is still being displayed as a "snapshot"
+- Positional audio will not work across 1.4.0 clients and older ones ({{< issue 5217 >}})
