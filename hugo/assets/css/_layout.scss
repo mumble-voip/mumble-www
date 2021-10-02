@@ -4,8 +4,8 @@ body {
 }
 
 @import 'common.scss';
-@import 'layout-header.scss';
-@import 'layout-footer.scss';
+@import 'layout/header.scss';
+@import 'layout/footer.scss';
 
 .content-container {
 	background-color: white;

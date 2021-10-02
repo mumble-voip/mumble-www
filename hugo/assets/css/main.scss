@@ -1,8 +1,8 @@
-@import 'layout.scss';
+@import 'layout';
 
-@import 'blog/release-notes.scss';
-@import 'downloads';
-@import 'home';
+@import 'content/blog/release-notes';
+@import 'content/downloads';
+@import 'content/home';
 
 @media only screen and (max-width: 768px) {
 	#header-content {
