@@ -1,0 +1,2 @@
+{{- $image := .Page.Resources.GetMatch (.Get 0) -}}
+{{ partial "sponsors/logoimg.html" (slice ($image.RelPermalink) (.Get 1)) }}

@@ -5,7 +5,7 @@ Our infrastructure is made possible thanks to the help of the following sponsors
 
 ## Cyberia
 
-<img src="logos/lain.png" alt="Let's all love Lain!" style="float:right; max-width: min(40vw, 380px); max-height: 200px; ">
+{{< sponsors/logo "logos/lain.png" "Let's all love Lain!" >}}
 
 [Cyberia](https://cyberia.club) is a collective named after an important place in the anime *Serial Experiments Lain*.
 
@@ -17,7 +17,7 @@ Thank you very much Cyberia!
 
 ## Fastly
 
-<img src="logos/fastly.svg" alt="Fastly’s logo" style="float:right; width: 380px; max-width: 40vw; margin: 12px 0 12px 24px;">
+{{< sponsors/logosvg "logos/fastly.svg" "Fastly’s logo" >}}
 
 Thanks to [Fastly](https://www.fastly.com)’s CDN, only ~5% of the traffic hits our servers. The rest of the traffic is served by their insanely fast network.
 
@@ -33,7 +33,7 @@ Also, we haven’t experienced a single downtime in many years.
 
 ## MacStadium
 
-<img src="logos/macstadium.svg" alt="MacStadium’s logo" style="float:right; width: 380px; max-width: 40vw; margin: 12px 0 12px 24px;">
+{{< sponsors/logosvg "logos/macstadium.svg" "MacStadium’s logo" >}}
 
 Thanks to [MacStadium](https://www.macstadium.com) we can maintain support for macOS, as they provide us access to a 2012 Mac Mini.
 
@@ -43,7 +43,7 @@ We’re very happy with the service so far. *Slightly* less happy with macOS, bu
 
 ## 1Password
 
-<img src="logos/1password.svg" alt="1Password’s logo" style="float:right; width: 380px; max-width: 40vw; margin: 12px 0 12px 24px;">
+{{< sponsors/logosvg "logos/1password.svg" "1Password’s logo" >}}
 
 Our experience with 1Password began years ago, when looking for a versatile way to share credentials with the team.
 
