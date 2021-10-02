@@ -1,2 +1,3 @@
 {{- $image := .Page.Resources.GetMatch (.Get 0) -}}
+{{- $image := $image.Fit "380x200" -}}
 {{ partial "sponsors/logoimg.html" (slice $image.RelPermalink (.Get 1)) }}
