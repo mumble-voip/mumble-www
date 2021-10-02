@@ -11,7 +11,7 @@ Our infrastructure is made possible thanks to the help of the following sponsors
 
 They've been using our project for years and donated us physical Mac hardware to improve our development workflow and handling of macOS development.
 
-Previously we used a remote machine to test and develop on a macOS system. Both managing for this machine as well as it being remote and hosted meant unnecesary efforts with a cumbersome and error prone workflow. Thanks to Cyberia we can use our own physical hardware now, which helps us a lot in moving forward with macOS.
+Previously we used a remote machine to test and develop on a macOS system. Both managing for this machine as well as it being remote and hosted meant unnecessary efforts with a cumbersome and error prone workflow. Thanks to Cyberia we can use our own physical hardware now, which helps us a lot in moving forward with macOS.
 
 Thank you very much Cyberia!
 
