@@ -1,0 +1,79 @@
+{{ define "pagecss" }}
+<style>
+#feature-requests ul {
+    margin: 1.8em 0;
+}
+#feature-requests li {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    line-height: 1.8em;
+}
+#feature-requests .title {
+    font-size: 1.4rem;
+}
+#feature-requests .labels span {
+    padding: 2px 8px;
+    color: #fff;
+    text-shadow: black 0 0 5px;
+    margin: 0 4px;
+}
+</style>
+{{ end }}
+{{ define "main" }}
+
+<div class="markdown-body">
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+</div>
+<div id="feature-requests">Loading…</div>
+<script>
+function setFailure() {
+    target.innerText = 'Failed to load feature requests. Please refer to <a href="https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc+">the repository issues directly</a>.'
+}
+// obj: total_count incomplete_results
+//      items array
+//                  html_url number title state locked assignee comments body
+//                  labels array(name color description)
+//                  reactions obj(total_count +1 -1 laugh hooray confused heart rocket eyes)
+function handleResult(res) {
+    let target = document.getElementById('feature-requests')
+    let list = ''
+    for (let item of res.items) {
+        let labels = ''
+        for (let label of item.labels) {
+            labels += `<span style="background-color:#${label.color};" title="${label.description}">${label.name}</span>`
+        }
+        list += `<li>
+                <div class="title"><a href="${item.html_url}">${item.title} (#${item.number})</a></div>
+                <div class="">${item.comments} comments, ${item.reactions.total_count} reactions. ${item.reactions['+1']} 👍 (+1), ${item.reactions.heart} ❤️, ${item.reactions.rocket} 🚀, ${item.reactions.eyes} 👀</div>
+                <div class="labels">labels: ${labels}</div>
+            </li>`
+    }
+    target.innerHTML = `
+        <h1>Open Feature Requests (${res.total_count})</h1>
+        <ul>${list}</ul>
+        ${res.incomplete_results ? '<i>More in the tracker…' : ''}
+    `
+}
+function load() {
+    let req = new XMLHttpRequest()
+    if (!req) {
+        setFailure()
+        return false;
+    }
+    req.onreadystatechange = function() {
+        if (req.readyState === XMLHttpRequest.DONE) {
+            if (req.status === 200) {
+                let json = JSON.parse(req.responseText)
+                handleResult(json)
+            } else {
+                setFailure()
+            }
+        }
+    }
+    req.open('GET', 'https://api.github.com/search/issues?q=repo:mumble-voip/mumble+is:issue+label:feature-request+is:open+sort:reactions-%2B1-desc')
+    req.send()
+}
+load()
+</script>
+{{ end }}
