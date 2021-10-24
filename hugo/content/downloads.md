@@ -116,7 +116,7 @@ A Flatpak Package is published and maintained by the third party Flatpak communi
 ## Mobile Clients
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="iOS" href="ios" osclass="ios">}}
+{{< content-layout/download name="iOS" href="https://apps.apple.com/us/app/mumble/id443472808" osclass="ios">}}
 {{< /content-layout/downloads >}}
 
 **Note:** The iOS app is unmaintained; last update in 2017.
