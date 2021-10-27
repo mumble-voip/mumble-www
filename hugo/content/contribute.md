@@ -6,95 +6,36 @@ You can contribute to the Mumble Project in multiple ways:
 
 {{< toc >}}
 
-## Report bugs and Feature Requests
+## Report Bugs
+
+We track bugs, tasks and feature requests as [***issues* on GitHub**](https://github.com/mumble-voip/mumble/issues).
+
+If you find a bug, please **check if an issue ticket already exists** for it. If you find an existing issue ticket
+
+* Provide additional information if you think any is missing (especially for reproducibility or environment conditions)
+* Thumbs-up (👍) the ticket itself to indicate you experienced the issue too
+* Sometimes we ask for testers for a potential fix *(see also our [`test-needed` ticket label](https://github.com/mumble-voip/mumble/labels/needs-testing))*
+* You can follow it for update notifications
+
+If you **can not find a ticket** for your issue, please **create one**. Provide any context, expected and actual behavior, and environment information that can help us understand, reproduce, and fix the issue.
+
+**Note:** For bugs that cause security concerns, please see [Report a vulnerability]({{< relref "security#reporting-a-vulnerability" >}}).
+
+## Vote for Feature Requests
 
 Take a look at our tracked [Feature Requests]({{< relref "/feature-requests" >}}) and vote for those that you would love to see with a thumbs up (👍) reaction on GitHub.
 
-For bug reports check our tracked [issues on GitHub](https://github.com/mumble-voip/mumble/issues) for existing ones, and to create new ones too.
+## Community Support
 
-We depend on our community to report issues, to offer details about tracked issues, and sometimes to test potential solutions (see the [`test-needed` label](https://github.com/mumble-voip/mumble/labels/needs-testing) specifically). You can look for issues you are interested in, for issues you experience yourself, or issues you can provide details on or help resolve.
+We receive support requests. We are often able to resolve them in a timely manner. But you may be able to help resolve them by communicating with the help-seeker.
 
-We also receive support requests as issues which you may be able to help and resolve by communicating with the help-seeker. Please refer to the [open support tickets](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Asupport), if there are any (they have the label *support*).
-
-**Note:** For security issues, see [Report a vulnerability]({{< relref "security#reporting-a-vulnerability" >}}).
+The [tickets are labeled with `support`](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Asupport). Our [Web-Forums](https://forums.mumble.info/) and the [r/mumble/ subreddit](https://www.reddit.com/r/mumble/new/) also regularly receive support requests.
 
 ## Development
 
 We are always looking for helping hands willing to contribute to Mumble.
 
-### Coding
-
-Mumble is mostly written in **C++** using the **Qt** library.
-Thus previous knowledge in C++ and Qt is definitely useful, but we also encourage interested people who want to learn it to give it a try. We're happy to help you out, if needed.
-
-#### Getting Started
-
-The best way to get into Mumble development is to link up with us on [Matrix](https://matrix.org/). Join [`#mumble-dev:matrix.org`](https://matrix.to/#/#mumble-dev:matrix.org) or use the [Direct Link via Element.io (Web App)](https://app.element.io/#/room/!VNUpYnUPdhTAqagvUu:matrix.org).
-
-Alternatively you can create or comment (on) a pull request or issue report on GitHub.
-
-For more information, see the categories below:
-
-##### Source Code
-
-Our source code is hosted on GitHub:
-
-- [Overview of Mumble Projects/Repos](https://github.com/mumble-voip/)
-- [Main Mumble Repo](https://github.com/mumble-voip/mumble): includes the Server and Client
-- [iOS app](https://github.com/mumble-voip/mumble-iphoneos): unmaintained; help wanted
-
-##### Documentation regarding Development
-
-Take a look at the following documentation:
-
-- [Contributing guidelines](https://github.com/mumble-voip/mumble#contributing)
-- [Development Documentation](https://github.com/mumble-voip/mumble/tree/master/docs/dev)
-- [Build Instructions](https://github.com/mumble-voip/mumble#building)
-
-<!-- Should be implemented once it's ready:
-- [C++ guidelines & tools](https://github.com/mumble-voip/mumble/discussions/4261) 
--->
-
-##### Open issues and ongoing development
-
-Also take a look at open [issues](https://github.com/mumble-voip/mumble/issues) and [pull requests](https://github.com/mumble-voip/mumble/pulls) on GitHub, especially with the following Labels:
-
-- [Good first issue](https://github.com/mumble-voip/mumble/labels/good%20first%20issue)
-- [Help wanted](https://github.com/mumble-voip/mumble/labels/help%20wanted)
-- [Help needed](https://github.com/mumble-voip/mumble/labels/help-needed)
-- [Feature Request](https://github.com/mumble-voip/mumble/labels/feature-request)
-- [Bug](https://github.com/mumble-voip/mumble/labels/bug)
-
-##### Tips
-
-- To avoid unnecessary work and duplication, comment on issues and inform others what you plan to work on.
-- You can also create [Draft Pull Requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests); this way you can work on the Pull Request, while others can see the progress and give you feedback.
-
-#### Additional projects
-
-##### 3rd party Interfaces
-
-Web interfaces, web-viewers, administration programs, CMS website modules – all neat things we would love to see! These could be written in any language supported by our Ice- or gRPC-based RPC Interfaces. You could start your own project or link up with an {{< wiki "3rd Party Applications" "already existing one" />}}. To get an idea about how interaction with the Mumble server might look like, you can take a look at the example scripts in our [GitHub repository for mumble-scripts](https://github.com/mumble-voip/mumble-scripts).
-
-##### Ice authenticators
-
-See {{< wiki Authenticators />}}. We’re happy for every authenticator and authenticator improvement.
-
-##### Positional Audio plugins
-
-Most of our [positional audio plugins](https://wiki.mumble.info/wiki/Games#Positional_audio) regularly break on game updates. To read on how you can help us update the plugins see the {{< wiki Pluginguide />}} page. 
-
-You can also add positional audio support to Games via our standard `Link` plugin. This way it will not get outdated, but you need permission to change (and access to) the Source Code of a game (e.g. via an open license or developer permission). See {{< wiki "Link" "Linking a game to Mumble" />}}.
-
-##### Other 3rd party projects
-
-If you are interested in more projects (Clients, Servers, cli tools etc.), you can also take a look at {{< wiki "3rd Party Applications" />}}.
-
-Many of these projects will either gladly accept help or can (often) be forked easily, because of the open licenses.
-
-### Non-Coding
-
-#### Translation
+### Translation
 
 Mumble is available in various languages.
 
@@ -108,27 +49,86 @@ The current status of our translations can be seen in the following graph:
 
 [![Weblate translation status by language](https://hosted.weblate.org/widgets/mumble/-/mumble-client/horizontal-auto.svg)](https://hosted.weblate.org/engage/mumble/)
 
-#### Testing
+### Testing
 
 To find bugs and polish new releases we need testers.
 
 If you want to test the newest development versions, you have two options:
 
 - We provide development snapshots. You can download them from our [Downloads page]({{< relref "downloads#development-snapshots" >}}).
-
 - Build the latest development version of Mumble, see [Building Mumble](https://github.com/mumble-voip/mumble#building).
 
 If you find any issues, take a look at [Report Bugs](#report-bugs-and-feature-requests).
 
-#### Development Documentation
+### Mumble Development
 
-See [Section "Documentation" below](#documentation). 
+Mumble is mostly written in **C++** using the **Qt** library.  
+Thus previous knowledge in C++ and Qt is definitely useful, but we also encourage interested people who want to learn it to give it a try. We're happy to help you out, if needed.
 
-#### Mumble theme
+The best way to get into Mumble development is to link up with us on [Matrix](https://matrix.org/). Join [`#mumble-dev:matrix.org`](https://matrix.to/#/#mumble-dev:matrix.org) or use the [Direct Link via Element.io (Web App)](https://app.element.io/#/room/!VNUpYnUPdhTAqagvUu:matrix.org).
+
+Alternatively you can create or comment on a pull request or issue report on GitHub.
+
+#### Source Code
+
+Our source code is hosted on GitHub:
+
+- [Overview of Mumble Projects/Repos](https://github.com/mumble-voip/)
+- [Main Mumble Repo](https://github.com/mumble-voip/mumble): includes the Server and Client
+- [iOS app](https://github.com/mumble-voip/mumble-iphoneos): unmaintained; help wanted
+
+#### Documentation regarding Development
+
+Take a look at the following documentation:
+
+- [Contributing guidelines](https://github.com/mumble-voip/mumble#contributing)
+- [Development Documentation](https://github.com/mumble-voip/mumble/tree/master/docs/dev)
+- [Build Instructions](https://github.com/mumble-voip/mumble#building)
+
+<!-- Should be implemented once it's ready:
+- [C++ guidelines & tools](https://github.com/mumble-voip/mumble/discussions/4261) 
+-->
+
+#### Open issues and ongoing development
+
+Also take a look at open [issues](https://github.com/mumble-voip/mumble/issues) and [pull requests](https://github.com/mumble-voip/mumble/pulls) on GitHub, especially with the following Labels:
+
+- [Good first issue](https://github.com/mumble-voip/mumble/labels/good%20first%20issue)
+- [Help wanted](https://github.com/mumble-voip/mumble/labels/help%20wanted)
+- [Help needed](https://github.com/mumble-voip/mumble/labels/help-needed)
+- [Feature Request](https://github.com/mumble-voip/mumble/labels/feature-request)
+- [Bug](https://github.com/mumble-voip/mumble/labels/bug)
+
+#### Tips
+
+- To avoid unnecessary work and duplication, comment on issues and inform others what you plan to work on.
+- You can also create [Draft Pull Requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests); this way you can work on the Pull Request, while others can see the progress and give you feedback.
+
+### Additional projects
+
+#### 3rd party Interfaces
+
+Web interfaces, web-viewers, administration programs, CMS website modules – all neat things we would love to see! These could be written in any language supported by our Ice- or gRPC-based RPC Interfaces. You could start your own project or link up with an {{< wiki "3rd Party Applications" "already existing one" />}}. To get an idea about how interaction with the Mumble server might look like, you can take a look at the example scripts in our [GitHub repository for mumble-scripts](https://github.com/mumble-voip/mumble-scripts).
+
+#### Ice authenticators
+
+See {{< wiki Authenticators />}}. We’re happy for every authenticator and authenticator improvement.
+
+#### Positional Audio plugins
+
+Most of our [positional audio plugins](https://wiki.mumble.info/wiki/Games#Positional_audio) regularly break on game updates. To read on how you can help us update the plugins see the {{< wiki Pluginguide />}} page. 
+
+You can also add positional audio support to Games via our standard `Link` plugin. This way it will not get outdated, but you need permission to change (and access to) the Source Code of a game (e.g. via an open license or developer permission). See {{< wiki "Link" "Linking a game to Mumble" />}}.
+
+#### Other 3rd party projects
+
+If you are interested in more projects (Clients, Servers, cli tools etc.), you can also take a look at {{< wiki "3rd Party Applications" />}}.
+
+Many of these projects will either gladly accept help or can (often) be forked easily, because of the open licenses.
+
+### Mumble Themes
 
 You find the official Mumble theme in its own [repository on GitHub](https://github.com/mumble-voip/mumble-theme).
-
-##### Additional themes
 
 Additional Mumble themes bring variety into Mumble's visual design and choices for different tastes.
 
