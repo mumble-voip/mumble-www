@@ -16,6 +16,7 @@
     color: #fff;
     text-shadow: black 0 0 5px;
     margin: 0 4px;
+    font-size: 0.8rem;
 }
 </style>
 {{ end }}
@@ -24,8 +25,8 @@
 <div class="markdown-body">
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-</div>
 <div id="feature-requests">Loading…</div>
+</div>
 <script>
 function setFailure() {
     target.innerText = 'Failed to load feature requests. Please refer to <a href="https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc+">the repository issues directly</a>.'
@@ -45,7 +46,7 @@ function handleResult(res) {
         }
         list += `<li>
                 <div class="title"><a href="${item.html_url}">${item.title} (#${item.number})</a></div>
-                <div class="">${item.comments} comments, ${item.reactions.total_count} reactions. ${item.reactions['+1']} 👍 (+1), ${item.reactions.heart} ❤️, ${item.reactions.rocket} 🚀, ${item.reactions.eyes} 👀</div>
+                <div class="">${item.comments} comments, ${item.reactions.total_count} reactions. ${item.reactions['+1']} 👍, ${item.reactions.heart} ❤️, ${item.reactions.rocket} 🚀, ${item.reactions.eyes} 👀</div>
                 <div class="labels">labels: ${labels}</div>
             </li>`
     }
