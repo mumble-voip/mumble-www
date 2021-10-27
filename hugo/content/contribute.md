@@ -12,7 +12,7 @@ Take a look at our tracked [Feature Requests]({{< relref "/feature-requests" >}}
 
 For bug reports check our tracked [issues on GitHub](https://github.com/mumble-voip/mumble/issues) for existing ones, and to create new ones too.
 
-We depend on our community to report issues, to offer details about tracked issues, and sometimes to test potential solutions. You can look for issues you are interested in, you experience yourself, can provide details on, or help resolve.
+We depend on our community to report issues, to offer details about tracked issues, and sometimes to test potential solutions (see the [`test-needed` label](https://github.com/mumble-voip/mumble/labels/needs-testing) specifically). You can look for issues you are interested in, for issues you experience yourself, or issues you can provide details on or help resolve.
 
 We also receive support requests as issues which you may be able to help and resolve by communicating with the help-seeker. Please refer to the [open support tickets](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Asupport), if there are any (they have the label *support*).
 
