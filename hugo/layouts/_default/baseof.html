@@ -9,6 +9,7 @@
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     {{ partial "layout/header-css.html" . }}
+    {{ block "pagecss" . }}{{ end }}
 </head>
 <body>
     {{ partial "layout/header.html" . }}

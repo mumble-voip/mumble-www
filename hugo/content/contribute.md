@@ -8,9 +8,13 @@ You can contribute to the Mumble Project in multiple ways:
 
 ## Report bugs and Feature Requests
 
-1. Take a look at existing [issues in our GitHub repo](https://github.com/mumble-voip/mumble/issues) to check whether your issue or request was already reported.
-   If that's the case, then vote for it with a thumbs up or add useful information & ideas with a comment.
-2. If there is no issue report yet, then create a [new one](https://github.com/mumble-voip/mumble/issues/new/choose).
+Take a look at our tracked [Feature Requests]({{< relref "/feature-requests" >}}) and vote for those that you would love to see with a thumbs up (👍) reaction on GitHub.
+
+For bug reports check our tracked [issues on GitHub](https://github.com/mumble-voip/mumble/issues) for existing ones, and to create new ones too.
+
+We depend on our community to report issues, to offer details about tracked issues, and sometimes to test potential solutions. You can look for issues you are interested in, you experience yourself, can provide details on, or help resolve.
+
+We also receive support requests as issues which you may be able to help and resolve by communicating with the help-seeker. Please refer to the [open support tickets](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Asupport), if there are any (they have the label *support*).
 
 **Note:** For security issues, see [Report a vulnerability]({{< relref "security#reporting-a-vulnerability" >}}).
 
