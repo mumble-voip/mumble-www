@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | relURL }}">
-    <link rel="apple-touch-icon" href="{{ "/css/apple-touch-icon.png" | relURL }}">
+    <link rel="apple-touch-icon" href="{{ "/css/apple-touch-icon.png" | absURL }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#ffffff">
 
@@ -11,7 +11,7 @@
     <meta name="description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
     <meta property="og:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}" />
     <meta property="og:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
-    <meta property="og:image" content="{{ "/css/mumble.svg" | relURL }}" />
+    <meta property="og:image" content="{{ "/css/mumble.svg" | absURL }}" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}">
     <meta name="twitter:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
