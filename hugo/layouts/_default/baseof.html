@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ if not .Page.IsHome }}{{ with .Page.Title }}{{ . }} | {{ end }}{{ end }}Mumble</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | relURL }}">
+    <link rel="apple-touch-icon" href="{{ "/css/apple-touch-icon.png" | relURL }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{{ if not .Page.IsHome }}{{ with .Page.Title }}{{ . }} | {{ end }}{{ end }}Mumble</title>
+    <meta name="description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
+    <meta property="og:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}" />
+    <meta property="og:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
+    <meta property="og:image" content="{{ "/css/mumble.svg" | relURL }}" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}">
+    <meta name="twitter:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
+
+
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
