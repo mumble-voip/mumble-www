@@ -11,10 +11,10 @@
     <meta name="description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
     <meta property="og:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}" />
     <meta property="og:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
-    <meta property="og:image" content="{{ "/css/opengraph-icon.svg" | absURL }}" />
+    <meta property="og:image" content="{{ "/css/opengraph-icon.png" | absURL }}" />
     <meta name="twitter:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}">
     <meta name="twitter:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
-
+    <meta name="twitter:image" content="{{ "/css/opengraph-icon.png" | absURL }}" />
 
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
