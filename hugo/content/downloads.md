@@ -4,10 +4,11 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version **1.3.4** is the latest stable version of Mumble and was released on February 10th, 2021.
+Version **1.4.230** is the latest stable version of Mumble and was released on January 16th, 2022.
 
-**Note:** Due to problems with our macOS builder, we are currently unable to provide 1.3.4 binaries for macOS. We are working on it, but for the time
-being the **macOS download** will still refer to version **1.3.3**.
+Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
+versions anymore.
+
 
 ## Suggested Mumble Version
 
@@ -52,7 +53,8 @@ function getPlatformContent(platform) {
         case 'win32':
             return getButton('https://dl.mumble.info/latest/stable/client-windows-x86', 'windows.svg', 'Mumble for Windows (x86)')
         case 'linux':
-            return getButton('https://launchpad.net/~mumble/+archive/release', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
+			return 'For Linux, please refer to the dedicated section below.';
+            // return getButton('https://launchpad.net/~mumble/+archive/release', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
         case 'macos':
             return getButton('https://dl.mumble.info/latest/stable/client-macos-x64', 'apple.svg', 'Mumble for macOS >= 10.13 (x64)')
         default:
@@ -66,29 +68,33 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 ## Manual Download
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Windows (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
-{{< content-layout/download name="Windows (x86)" href="https://dl.mumble.info/latest/stable/client-windows-x86" osclass="windows">}}
+{{< content-layout/download name="Windows client (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
+{{< content-layout/download name="Windows client (x86)" href="https://dl.mumble.info/latest/stable/client-windows-x86" osclass="windows">}}
+{{< /content-layout/downloads >}}
+
+{{< content-layout/downloads >}}
+{{< content-layout/download name="Windows server (x64)" href="https://dl.mumble.info/latest/stable/server-windows-x64" osclass="windows">}}
+{{< content-layout/download name="Windows server (x86)" href="https://dl.mumble.info/latest/stable/server-windows-x86" osclass="windows">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/stable/client-macos-x64" osclass="mac">}}
-{{< content-layout/download name="macOS <= 10.12 (x64)" href="https://dl.mumble.info/latest/stable/client-macos-hfs+-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
+<!-- The PPA is completely outdated
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Ubuntu" href="https://launchpad.net/~mumble/+archive/release" osclass="ubuntu">}}
 {{< /content-layout/downloads >}}
+-->
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Static macOS server (x64)" href="https://dl.mumble.info/latest/stable/server-macos-x64" osclass="mac">}}
-{{< content-layout/download name="Static Linux server (x86)" href="https://dl.mumble.info/latest/stable/server-linux-x86" osclass="linux">}}
+{{< content-layout/download name="Static Linux server (x64)" href="https://dl.mumble.info/latest/stable/server-linux-x64" osclass="linux">}}
 {{< /content-layout/downloads >}}
-
-**Note:** `Static Linux Server` is using an outdated version of OpenSSL - see [#4001](https://github.com/mumble-voip/mumble/issues/4001) for details. 
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
-For the individual files and for a zipped sources file see the [1.3.4 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/1.3.4).
+For the individual files and for a zipped sources file see the [1.4.230 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.4.230).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found
 in the linked document.
@@ -97,13 +103,6 @@ in the linked document.
 
 Your distribution probably provides official packages for Mumble. Please refer to your OS packages. Distributions with official packages include
 Debian, Ubuntu, Fedora, openSUSE, Arch Linux, Mandriva/ROSA/Unity.
-
-### Ubuntu
-
-Ubuntu provides their own packages. But we also provide a PPA (Personal Package Archive) which you can add to use more recent stable or development
-snapshot versions.
-
-    sudo add-apt-repository ppa:mumble/release
 
 ### Snap/Snapcraft
 
