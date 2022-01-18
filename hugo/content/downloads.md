@@ -9,6 +9,8 @@ Version **1.4.230** is the latest stable version of Mumble and was released on J
 Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
 versions anymore.
 
+Note also that you have to **uninstall any previous Mumble version** before installing 1.4, since the **upgrade path is unfixably broken**. See [here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
+
 
 ## Suggested Mumble Version
 
