@@ -89,7 +89,9 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Static macOS server (x64)" href="https://dl.mumble.info/latest/stable/server-macos-x64" osclass="mac">}}
+<!--
 {{< content-layout/download name="Static Linux server (x64)" href="https://dl.mumble.info/latest/stable/server-linux-x64" osclass="linux">}}
+-->
 {{< /content-layout/downloads >}}
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
