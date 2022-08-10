@@ -48,17 +48,17 @@ function getPlatform() {
 function getButton(href, icon, caption) {
     return '<a class="suggested-download-button" href="' + href + '"><img class="suggested-download-button-icon" src="/css/icons/' + icon + '"><div class="suggested-download-button-caption">' + caption + '</div></a>'
 }
-function getWinRedistNotice(arch) {
-    return '<div style="grid-row: 2; font-style: italic;">Requires installed <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ 2015-2022 Redistributable</a> to run</div>'
+function getWinRedistNotice() {
+    return '<div style="grid-row: 2; font-style: italic;">Requires installed Microsoft Visual C++ 2015-2022 Redistributable <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64</a> and <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86</a> to run</div>'
 }
 function getPlatformContent(platform) {
     switch (platform) {
         case 'win64':
             return getButton('https://dl.mumble.info/latest/stable/client-windows-x64', 'windows.svg', 'Mumble for Windows (x64)')
-                + getWinRedistNotice('x64')
+                + getWinRedistNotice()
         case 'win32':
             return getButton('https://dl.mumble.info/latest/stable/client-windows-x86', 'windows.svg', 'Mumble for Windows (x86)')
-                + getWinRedistNotice('x86')
+                + getWinRedistNotice()
         case 'linux':
 			return 'For Linux, please refer to the dedicated section below.';
             // return getButton('https://launchpad.net/~mumble/+archive/release', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
@@ -74,7 +74,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 ## Manual Download
 
-*Note: On Windows Microsoft Visual C++ 2015-2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a>, or <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86 download</a>) is required to be installed.*
+*Note: On Windows Microsoft Visual C++ 2015-2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a> and <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86 download</a>) is required to be installed.*
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows client (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
