@@ -4,12 +4,13 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version **1.4.230** is the latest stable version of Mumble and was released on January 16th, 2022.
+Version **1.4.274** is the latest stable version of Mumble and was released on August 21st, 2022.
 
 Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
 versions anymore.
 
-Note also that you have to **uninstall any previous Mumble version** before installing 1.4, since the **upgrade path is unfixably broken**. See [here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
+Note also that you have to **uninstall any previous Mumble version** before installing 1.4, since the **upgrade path is unfixably broken**. See
+[here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
 
 
 ## Suggested Mumble Version
@@ -105,7 +106,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
-For the individual files and for a zipped sources file see the [1.4.230 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.4.230).
+For the individual files and for a zipped sources file see the [1.4.274 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.4.274).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found
 in the linked document.
