@@ -8,13 +8,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <title>{{ if not .Page.IsHome }}{{ with .Page.Title }}{{ . }} | {{ end }}{{ end }}Mumble</title>
-    <meta name="description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
+    <meta name="description" content="{{ $.Site.Params.description }}">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}" />
-    <meta property="og:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
+    <meta property="og:description" content="{{ $.Site.Params.description }}">
     <meta property="og:image" content="{{ "/css/mumble.svg" | absURL }}" />
     <meta name="twitter:title" content="Mumble{{ if not .Page.IsHome }}{{ with .Page.Title }} | {{ . }}{{ end }}{{ end }}">
-    <meta name="twitter:description" content="Mumble is a free, open source, low latency, high quality voice chat application.">
+    <meta name="twitter:description" content="{{ $.Site.Params.description }}">
     <meta name="twitter:image" content="{{ "/css/mumble.svg" | absURL }}" />
 
     {{ range .AlternativeOutputFormats -}}

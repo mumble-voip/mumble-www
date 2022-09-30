@@ -5,6 +5,9 @@ publishDir = "../public"
 
 disableKinds = ["taxonomy","taxonomyTerm"]
 
+[params]
+  description = "Mumble is a free, open source, low latency, high quality voice chat application."
+
 [permalinks]
   blog = "/blog/:title/"
 
