@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="markdown-body">
-<h1>{{ .Title }}</h1>
+<h1 id="page-title">{{ .Title }} <a id="page-edit-button" href="{{ .Site.Params.gitWebURL }}edit/master/hugo/content/{{ .Page.File.Path }}">Edit on {{ .Site.Params.gitSite }}</a></h1>
 {{- partial "toc.html" . -}}
 {{ .Content }}
 </div>

@@ -1,0 +1,11 @@
+#page-title {
+    display: flex;
+    flex-direction: row;
+    #page-edit-button {
+        font-size: .5em;
+        margin: auto 0 .25em auto;
+        &:is(a) {
+            color: grey;
+        }
+    }
+}
