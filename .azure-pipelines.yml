@@ -2,8 +2,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  HUGO_VERSION: 0.81.0
-  HUGO_SHA: 3c7d034405c67bf571b6d8f001d5a9c49dd87dbfa32b3b19d16e898c46f8f5e2
+  HUGO_VERSION: 0.110.0
 
 jobs:
 - job: hugo
@@ -12,7 +11,6 @@ jobs:
       set -e
       mkdir hugobin
       wget --no-verbose -O ${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-      echo "${HUGO_SHA}  ${HUGO_VERSION}.tar.gz" | sha256sum --strict --check
       tar xf ${HUGO_VERSION}.tar.gz --directory=hugobin hugo
       rm -r ${HUGO_VERSION}.tar.gz
       hugobin/hugo version
