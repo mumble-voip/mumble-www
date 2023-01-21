@@ -146,16 +146,14 @@ ourselves).
 Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems
 you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-The most recent snapshot version is actually the first release candidate for Mumble 1.4.0
-([Release Announcement]({{< relref "/blog/2021-09-12-mumble-release-candidate1" >}})).
+The most recent snapshot version is actually the first release candidate for Mumble 1.5.x
+([Release Announcement]({{< relref "/blog/2023-01-21-mumble-1-5-517" >}})).
 
 Note that we are currently not able to provide static server binaries for Linux nor are we able to provide a snapshot PPA for Linux just yet.
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Client for Windows (x64)" href="https://dl.mumble.info/latest/snapshot/client-windows-x64" osclass="windows">}}
 {{< content-layout/download name="Server for Windows (x64)" href="https://dl.mumble.info/latest/snapshot/server-windows-x64" osclass="windows">}}
-{{< content-layout/download name="Client for Windows (x86)" href="https://dl.mumble.info/latest/snapshot/client-windows-x86" osclass="windows">}}
-{{< content-layout/download name="Server for Windows (x86)" href="https://dl.mumble.info/latest/snapshot/server-windows-x86" osclass="windows">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
