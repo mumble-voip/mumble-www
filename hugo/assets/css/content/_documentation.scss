@@ -1,0 +1,35 @@
+#documentation-header {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+    align-items: flex-end;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--lt-color-border-default);
+    justify-content: space-between;
+    #page-title {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    #page-edit-button {
+        font-size: 0.8rem;
+        font-weight: bold;
+        border: 1px solid var(--lt-color-border-default);
+        border-radius: 1rem;
+        padding: 0.4rem 1rem 0.35rem 1rem;
+        line-height: normal;
+        text-decoration: none;
+        transition: 0.2s background-color, 0.15s color, 0.025s border;
+        &:is(a) {
+            color: var(--lt-color-gray-500);
+        }
+        &:hover {
+            background-color: var(--lt-color-border-light);
+            color: var(--lt-color-gray-600);
+        }
+        &:active {
+            background-color: var(--lt-color-border-default);
+            color: var(--lt-color-gray-600);
+        }
+    }
+}
