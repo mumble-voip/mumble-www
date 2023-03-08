@@ -1,10 +1,10 @@
 {{ define "main" }}
 
 <div class="markdown-body">
-    <div id="documentation-header">
+    <header id="documentation-header">
         <h1 id="page-title">{{ .Title }}</h1>
         <a id="page-edit-button" href="{{ .Site.Params.gitWebURL }}edit/master/hugo/content/{{ .Page.File.Path }}">Improve this page</a>
-    </div>
+    </header>
 
 {{- partial "toc.html" . -}}
 {{ .Content }}

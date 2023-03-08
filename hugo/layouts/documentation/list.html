@@ -1,20 +1,23 @@
 {{ define "main" }}
 <div class="markdown-body">
     <article>
-        <header>
-            <h1>{{.Title}}</h1>
+        <header id="documentation-header">
+            <h1 id="page-title">{{.Title}}</h1>
+            <a id="page-edit-button" href="{{ .Site.Params.gitWebURL }}edit/master/hugo/content/{{ .Page.File.Path }}">Improve this page</a>
         </header>
         {{.Content}}
     </article>
     {{ if not .Params.contentonly }}
     <h2>Topics</h2>
-    <ul>
-    {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.LinkTitle}}</a>
-        </li>
-    {{ end }}
-    </ul>
+    <section id="topics">
+        <ul>
+        {{ range .Pages }}
+            <li>
+                <a href="{{.Permalink}}">{{.LinkTitle}}</a>
+            </li>
+        {{ end }}
+        </ul>
+    </section>
     {{ end }}
 </div>
 {{ end }}
