@@ -1,9 +1,18 @@
-#page-title {
+#documentation-header {
     display: flex;
     flex-direction: row;
+    margin: 1em 0 .5em;
+    align-items: center;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+    justify-content: space-between;
+    #page-title {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
     #page-edit-button {
-        font-size: .5em;
-        margin: auto 0 .25em auto;
+        font-size: 0.9rem;
         &:is(a) {
             color: grey;
         }
