@@ -35,11 +35,11 @@ To describe the default permission setup we refer to the following example chann
 
 ```text
 Root
-  ChannelA1
-    ChannelA11
-    ChannelA12
-    ChannelA13
-  ChannelB
+├── ChannelA1
+│   ├── ChannelA11
+│   ├── ChannelA12
+│   └── ChannelA13
+└── ChannelB
 ```
 
 By default
@@ -105,11 +105,11 @@ For example, given the following channel setup
 
 ```text
 Root
-  ChanA1
-    ChanA11
-    ChanA12
-    ChanA13
-  ChanB
+├── ChannelA1
+│   ├── ChannelA11
+│   ├── ChannelA12
+│   └── ChannelA13
+└── ChannelB
 ```
 
 `@admin` defined on channel `Root` with *Allow* `Write ACL` will give members of the `admin` group all permissions.
@@ -134,11 +134,11 @@ Some special groups can be used in ACL rules. The members of these groups are no
 Given a channel tree
 
 ```text
-Root
-  ChanA1
-    ChanA11
-    ChanA12
-  ChanB
+Root/
+├── ChannelA1
+│   ├── ChannelA11
+│   ├── ChannelA12
+└── ChannelB
 ```
 
 To deny users outside of ChanA1 to send text messages to it, but allow users inside of it to send text messages, we add two rules.
@@ -170,8 +170,8 @@ Given the channel tree
 
 ```text
 ChanA
-  ChanB
-    ChanC
+└── ChanB
+    └── ChanC
 ```
 
 | Selector     | On channel | Applies to user in        |
@@ -193,8 +193,8 @@ Given the channel tree
 
 ```text
 ChanA
-  ChanB
-    ChanC
+└── ChanB
+    └── ChanC
 ```
 
 A `@sub` rule (equivalent to `@sub,0,1`) on `ChanA` applies to users in `ChanB` and `ChanC` but gives permission on `ChanA`.
@@ -218,8 +218,8 @@ Given the channel tree
 
 ```text
 ChanA
-  ChanB1
-  ChanB2
+└── ChanB
+    └── ChanC
 ```
 
 Defining an ACL rule `@in` on `ChanA` that inherits to subchannels means it *exists* in `ChanA` as well as its children `ChanB1` and `ChanB2`.
