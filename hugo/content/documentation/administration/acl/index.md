@@ -2,7 +2,7 @@
 title: Mumble Permission Configuration - ACL
 date: 2023-03-12
 ---
-For the configuration of permissions, Mumble uses ACL (Access Control Lists). A rule may apply to a user or group of users and may give or revoke permissions.
+For the configuration of permissions, Mumble uses ACLs (Access Control Lists). A rule may apply to a user or group of users and may give or revoke permissions.
 
 While the Group and ACL dialogs might seem complex at first, for simple configuration much of their complexity can be ignored.
 The high configurability can be used for advanced and complex use cases.
@@ -73,7 +73,8 @@ ACL rules are configured in the ACL tab of the channel edit dialog.
 
 ![Screenshot of ACL dialog](screenshot-channel-acl.jpg)
 
-The Access Control *List* can have multiple rules. Rules may be inherited from parent channels - displayed in italics - or defined on this channel.
+The Access Control *List* can have multiple rules. Rules may be inherited from parent channels - displayed in italics - or defined on the edited channel.
+
 
 Permission are evaluated from top to bottom. (*Allow* and *deny* may be overwritten further down.)
 
@@ -89,7 +90,8 @@ The **selector defines who the rule applies to** - a user, user group, or passwo
 | `@`    | Id-Type       | Group                                            | `@admin`, `@all`, `@moderator` |
 | `@#`   | Id-Type       | Channel password / Access Token                  | `@#secret`, `@#u8DhwG2`        |
 | `~`    | Eval-Locality | Evaluate in context of definition, not inherited | `@~sub 1,1`, `@~moderator`     |
-| `!`    | Inversion     | Invert membership (not in group)                 | `!TrustedUser`, `!@moderator`  |
+| `!`    | Inversion     | Invert the meaning of the rest of the selector                 | `!TrustedUser`, `!@moderator`  |
+
 
 The tilde `~` eliminates any effect of inheritance or links.
 
@@ -110,7 +112,8 @@ Root
   ChanB
 ```
 
-`@admin` defined on channel `Root` with *Allow* `Write ACL` will give members of the `admin` group full permissions.
+`@admin` defined on channel `Root` with *Allow* `Write ACL` will give members of the `admin` group all permissions.
+
 
 ![Screenshot of giving admin group Write ACL permission](acl-admin-allow-writeacl.jpg)
 
@@ -149,7 +152,7 @@ Now users in `Root`, `ChanA11`, `ChanA12`, ChanB can not send text messages to C
 
 ![Screenshot of in rule example in rule](acl-in-example1-2in.jpg)
 
-The rule is inherited into `ChanA11` and `ChanA12`. But it applies as a rule within that channel. So users outside of `ChanA11` can not send text messages to `ChanA11`, but users inside of it can. Users outside of `ChanA12` can not send text messages to `ChanA12`, but users inside of it can.
+The rule is inherited into `ChanA11` and `ChanA12`. But it applies as a rule within each of those  channels individually. So users outside of `ChanA11` can not send text messages to `ChanA11`, but users inside of it can. Users outside of `ChanA12` can not send text messages to `ChanA12`, but users inside of it can.
 
 If we define the second rule [on `ChanA1`] as `@~in` instead of `@in` then the inherited rule in `ChanA11` and `ChanA12` is interpreted in the context of `ChanA1`. That means that a user in `ChanA1` will be able to send text messages to `ChanA1`, `ChanA11`, and `ChanA12`. But a user not in `ChanA1` can not. Users in `ChanA11` and `ChanA12` will also not be able to send text messages to `ChanA1`, `ChanA11`, and `ChanA12`.
 
@@ -220,10 +223,11 @@ ChanA
 ```
 
 Defining an ACL rule `@in` on `ChanA` that inherits to subchannels means it *exists* in `ChanA` as well as its children `ChanB1` and `ChanB2`.
-But each rule applies to the channel *it is defined on*.
+Therefore, when checking this ACL inside e.g. `ChanB2` it acts as if it had been defined on it (aka: the evaluation of the ACL does not know that the original ACL was defined on `ChanA`).
 
 Defining an ACL rule `@~in` on `ChanA` that inherits to subchannels means it applies to `ChanA` as well as its children `ChanB1` and `ChanB2`.
-But each rule applies to `ChanA` - where it is originally defined on.
+But this time the evaluation of the ACL _does_ know that the ACL is defined in the context of `ChanA` and therefore `@~in` only refers to users in `ChanA`.
+
 
 For example:
 
