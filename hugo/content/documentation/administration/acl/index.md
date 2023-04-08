@@ -163,8 +163,9 @@ The `sub` group applies to subchannels and has three optional parameters `a,b,c`
 | Parameter | Description                      | Default |
 | --------- | -------------------------------- | ------- |
 | a         | minimum number of common parents | `0`     |
-| b         | minimum path depth               | `1`     |
-| c         | maximum path depth               |         |
+| b         | minimum child path depth         | `1`     |
+| c         | maximum child path depth         |         |
+
 
 Given the channel tree
 
