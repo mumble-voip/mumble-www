@@ -56,11 +56,11 @@ For example, to have different moderators users in separate channel trees, given
 
 ```text
 Root
-  ChannelA1
-    ChannelA11
-    ChannelA12
-    ChannelA13
-  ChannelB
+├── ChannelA1
+│   ├── ChannelA11
+│   ├── ChannelA12
+│   └── ChannelA13
+└── ChannelB
 ```
 
 we can define a group `moderatorA` in `ChannelA1` and a group `moderatorB` in `ChannelB`.
