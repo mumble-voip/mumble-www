@@ -90,7 +90,7 @@ The **selector defines who the rule applies to** - a user, user group, or passwo
 | `@`    | Id-Type       | Group                                            | `@admin`, `@all`, `@moderator` |
 | `@#`   | Id-Type       | Channel password / Access Token                  | `@#secret`, `@#u8DhwG2`        |
 | `~`    | Eval-Locality | Evaluate in context of definition                | `@~sub 1,1`, `@~moderator`     |
-| `!`    | Inversion     | Invert the meaning of the rest of the selector                 | `!TrustedUser`, `!@moderator`  |
+| `!`    | Inversion     | Invert the meaning of the rest of the selector   | `!TrustedUser`, `!@moderator`  |
 
 ### Permission Allow/Deny
 
