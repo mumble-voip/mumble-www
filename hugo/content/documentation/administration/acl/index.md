@@ -195,6 +195,14 @@ ChanA
 
 In other words, `b` and `c` define the child depth span (children of `b`-th to `c`-th depth).
 
+Laid out in a different form:
+
+```text
+Channel Tree:   ChanA / ChanB / ChanC
+@~sub,0,1                 x       x           a=0: no sibling logic, b=1 start one level below the current channel, c empty: no depth limit
+@~sub,0,1,1               x                   a=0: no sibling logic, b=1 start one level below the current channel, c=1: end one level below the current channel (inclusive)
+```
+
 ##### `sub` Example 1
 
 Given the channel tree
