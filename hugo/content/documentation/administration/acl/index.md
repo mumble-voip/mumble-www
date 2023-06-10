@@ -115,9 +115,7 @@ Root
 
 ### Meta Groups
 
-Meta groups can be used in ACL rules.
-
-The members of meta groups are not defined explicitly. They are determined implicitly through user state. For example, which channel they are in in relation to the rule.
+Meta groups can be used in ACL rules. Meta groups have implicitly defined members. The members are determined by user state.
 
 | Group    | Description         | Notes          |
 | -------- | ------------------- | -------------- |
