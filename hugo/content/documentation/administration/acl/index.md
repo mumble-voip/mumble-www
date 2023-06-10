@@ -111,7 +111,6 @@ Root
 
 `@admin` defined on channel `Root` with *Allow* `Write ACL` will give members of the `admin` group all permissions.
 
-
 ![Screenshot of giving admin group Write ACL permission](acl-admin-allow-writeacl.jpg)
 
 ### Meta Groups
