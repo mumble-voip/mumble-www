@@ -182,8 +182,8 @@ ChanA
     └── ChanC
 ```
 
-| Selector     | On channel | Applies to user in        |
-| ------------ | ---------- | ------------------------- |
+| Selector      | On channel | Applies to user in        |
+| ------------- | ---------- | ------------------------- |
 | `@~sub,0,0`   | `ChanA`    | `ChanA`, `ChanB`, `ChanC` |
 | `@~sub,0,1`   | `ChanA`    |          `ChanB`, `ChanC` |
 | `@~sub,0,2`   | `ChanA`    |                   `ChanC` |
