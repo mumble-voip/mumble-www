@@ -151,6 +151,15 @@ The rule is inherited into `ChanA11` and `ChanA12`. But it applies as a rule wit
 
 If we define the second rule [on `ChanA1`] as `@~in` instead of `@in` then the inherited rule in `ChanA11` and `ChanA12` is interpreted in the context of `ChanA1`. That means that a user in `ChanA1` will be able to send text messages to `ChanA1`, `ChanA11`, and `ChanA12`. But a user not in `ChanA1` can not. Users in `ChanA11` and `ChanA12` will also not be able to send text messages to `ChanA1`, `ChanA11`, and `ChanA12`.
 
+#### `out` Group
+
+An `@out` meta group is the inverse of the `@in` meta group. This means that you can solve the same tasks alternatively with `in` or `out`, and inverse *allow* and *deny*.
+
+For example:
+
+* `@in` approach: *deny `@all`*, *allow `@in`*
+* `@out` approach: *allow `@all`*, *deny `@out`*
+
 #### `sub` Group
 
 The `sub` group applies to subchannels and has three optional parameters `a,b,c`. It is written as `@sub` or `@sub,a` or `@sub,a,b` or `@sub,a,b,c` where `a`, `b`, and `c` are integer numbers.
