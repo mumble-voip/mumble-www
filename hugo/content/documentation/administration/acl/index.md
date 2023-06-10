@@ -122,7 +122,7 @@ Meta groups can be used in ACL rules. Meta groups have implicitly defined member
 | `@all`   | Applies to everyone                  | Useful for default permissions or for clearing complex rules to a well defined state. |
 | `@in`    | In this channel                      |  |
 | `@out`   | Outside of this channel              |  |
-| `@sub`   | Sub-channel - `@sub,a,b,c`           |  |
+| `@~sub`  | Sub-channel - `@~sub,a,b,c`          |  |
 
 #### `in` Group
 
@@ -162,7 +162,10 @@ For example:
 
 #### `sub` Group
 
-The `sub` group applies to subchannels and has three optional parameters `a,b,c`. It is written as `@sub` or `@sub,a` or `@sub,a,b` or `@sub,a,b,c` where `a`, `b`, and `c` are integer numbers.
+The `sub` group applies to subchannels and has three optional parameters `a,b,c`. It is written as `@~sub` or `@~sub,a` or `@~sub,a,b` or `@~sub,a,b,c` where `a`, `b`, and `c` are integer numbers.
+
+Because the `sub` group applies to a channel tree the rule only makes sense with a `~` tilde modifier (`@~sub`).
+Without the `~` tilde the context in which the ACL is evaluated in is always the current channel, which would mean no children or parents would ever be considered.
 
 | Parameter | Description                      | Default |
 | --------- | -------------------------------- | ------- |
@@ -181,14 +184,14 @@ ChanA
 
 | Selector     | On channel | Applies to user in        |
 | ------------ | ---------- | ------------------------- |
-| `@sub,0,0`   | `ChanA`    | `ChanA`, `ChanB`, `ChanC` |
-| `@sub,0,1`   | `ChanA`    |          `ChanB`, `ChanC` |
-| `@sub,0,2`   | `ChanA`    |                   `ChanC` |
-| `@sub,0,0,0` | `ChanA`    | `ChanA`                   |
-| `@sub,0,0,1` | `ChanA`    | `ChanA`, `ChanB`          |
-| `@sub,0,0,2` | `ChanA`    | `ChanA`, `ChanB`, `ChanC` |
-| `@sub,0,1,1` | `ChanA`    |          `ChanB`          |
-| `@sub,0,2,2` | `ChanA`    |                   `ChanC` |
+| `@~sub,0,0`   | `ChanA`    | `ChanA`, `ChanB`, `ChanC` |
+| `@~sub,0,1`   | `ChanA`    |          `ChanB`, `ChanC` |
+| `@~sub,0,2`   | `ChanA`    |                   `ChanC` |
+| `@~sub,0,0,0` | `ChanA`    | `ChanA`                   |
+| `@~sub,0,0,1` | `ChanA`    | `ChanA`, `ChanB`          |
+| `@~sub,0,0,2` | `ChanA`    | `ChanA`, `ChanB`, `ChanC` |
+| `@~sub,0,1,1` | `ChanA`    |          `ChanB`          |
+| `@~sub,0,2,2` | `ChanA`    |                   `ChanC` |
 
 In other words, `b` and `c` define the child depth span (children of `b`-th to `c`-th depth).
 
@@ -202,14 +205,14 @@ ChanA
     └── ChanC
 ```
 
-A `@sub` rule (equivalent to `@sub,0,1`) on `ChanA` applies to users in `ChanB` and `ChanC` but gives permission on `ChanA`.
+A `@~sub` rule (equivalent to `@~sub,0,1`) on `ChanA` applies to users in `ChanB` and `ChanC` but gives permission on `ChanA`.
 
-For example, if *Text message* is *denied* on `ChanA`, but a `@sub` rule on `ChanA` allows *Text message*, a user in `ChanB` or `ChanC` can send text messages to `ChanA`. A user in `ChanA` can not send a text message to `ChanA`.
+For example, if *Text message* is *denied* on `ChanA`, but a `@~sub` rule on `ChanA` allows *Text message*, a user in `ChanB` or `ChanC` can send text messages to `ChanA`. A user in `ChanA` can not send a text message to `ChanA`.
 
 For example, with two rules on `ChanA`
 
 * `ChanA`: `@all` *Deny* *Text message*
-* `ChanA`: `@sub` *Allow* *Text message*
+* `ChanA`: `@~sub` *Allow* *Text message*
 
 =>
 
