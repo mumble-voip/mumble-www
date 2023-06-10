@@ -82,7 +82,7 @@ Permission are evaluated from top to bottom. (*Allow* and *deny* may be overwrit
 
 A rule consists of a selector and permission actions.
 
-The **selector defines who the rule applies to** - a user, user group, or password group. It may use a prefix to indicate its type or modify its select-behavior.
+The **selector defines who the rule applies to** - a user, user group. It may use a prefix to indicate its type or modify its select-behavior.
 
 | Prefix | Prefix-Type   | Description                                      | Example                        |
 | ------ | ------------- | ------------------------------------------------ | ------------------------------ |
