@@ -1,6 +1,6 @@
 ---
 title: Mumble Permission Configuration - ACL
-date: 2023-03-12
+date: 2023-06-10
 ---
 For the configuration of permissions, Mumble uses ACLs (Access Control Lists). A rule may apply to a user or group of users and may give or revoke permissions.
 
