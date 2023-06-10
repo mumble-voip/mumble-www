@@ -117,9 +117,11 @@ Root
 
 ![Screenshot of giving admin group Write ACL permission](acl-admin-allow-writeacl.jpg)
 
-### Special Groups
+### Meta Groups
 
-Some special groups can be used in ACL rules. The members of these groups are not defined explicitly. They are implicit - a consequence of the user state.
+Meta groups can be used in ACL rules.
+
+The members of meta groups are not defined explicitly. They are determined implicitly through user state. For example, which channel they are in in relation to the rule.
 
 | Group    | Description         | Notes          |
 | -------- | ------------------- | -------------- |
