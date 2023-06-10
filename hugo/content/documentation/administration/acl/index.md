@@ -7,6 +7,10 @@ For the configuration of permissions, Mumble uses ACLs (Access Control Lists). A
 While the Group and ACL dialogs might seem complex at first, for simple configuration much of their complexity can be ignored.
 The high configurability can be used for advanced and complex use cases.
 
+## Table of Contents
+
+{{< toc >}}
+
 ## Edit Dialog
 
 Groups, group members, and ACL rules are configured in the channel edit dialog.
