@@ -23,7 +23,7 @@ Groups and permissions are configured on channels. Channels inherit groups and r
 
 ### User Groups
 
-In the *Groups* tab, you can see and edit the user groups of this channel.
+In the *Groups* tab, you can see and edit the user groups of the channel.
 
 ![Screenshot of channel groups dialog](screenshot-channel-groups.jpg)
 
