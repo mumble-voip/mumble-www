@@ -120,7 +120,6 @@ Meta groups can be used in ACL rules. Meta groups have implicitly defined member
 | Group    | Description         | Notes          |
 | -------- | ------------------- | -------------- |
 | `@all`   | Applies to everyone                  | Useful for default permissions or for clearing complex rules to a well defined state. |
-| `@admin` | People with administrative authority |  |
 | `@in`    | In this channel                      |  |
 | `@out`   | Outside of this channel              |  |
 | `@sub`   | Sub-channel - `@sub,a,b,c`           |  |
