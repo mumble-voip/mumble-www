@@ -8,6 +8,7 @@ After navigating into the `hugo` folder: The `hugo` command will place the gener
 
 ## Source and Content License
 
-This repository contains the sources and content for the [Mumble website](https://www.mumble.info). They are licensed under [a BSD 3-clause license; see the LICENSE file](LICENSE).
+This repository contains the sources and content for the [Mumble website](https://www.mumble.info). They are licensed under a BSD 3-clause license; [see the LICENSE file](LICENSE).
+
 
 For licenses of other works of the Mumble project, please see the respective license information.
