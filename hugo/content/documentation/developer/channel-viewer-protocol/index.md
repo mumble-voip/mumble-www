@@ -7,6 +7,19 @@ The Channel Viewer Protocol (“CVP”) is a simpler JSON or XML protocol offere
 
 Multiple provider and consumer / viewer implementations exist.
 
+```mermaid
+graph BT
+    subgraph ServerSystem
+        mumbleserver[Mumble Server]
+        cvpprovider[Channel Viewer Protocol Provider]
+        cvpprovider --Ice--> mumbleserver
+    end
+    subgraph Webserver
+        cvpconsumer[Channel Viewer]
+        cvpconsumer --Channel Viewer Protocol--> cvpprovider
+    end
+```
+
 The document is encoded in UTF-8.
 
 ## CVP Provider Guidelines
