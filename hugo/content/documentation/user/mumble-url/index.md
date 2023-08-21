@@ -8,13 +8,13 @@ On Windows the installer will register `mumble://` links to be opened with Mumbl
 Mumble links can be opened on the command line by passing them to mumble.exe too:
 
 ```
-mumble.exe mumble://example.com/?version=1.2.0
+mumble.exe mumble://example.com/
 ```
 
 or with a channel path:
 
 ```
-mumble.exe mumble://example.com/ChanA/ChanB?version=1.2.0
+mumble.exe mumble://example.com/ChanA/ChanB
 ```
 
 You can get get a URL in the Channel context menu (right click):
@@ -32,14 +32,13 @@ When opening a Mumble link the Mumble client will connect to the server.
 ## URL Format
 
 ```
-mumble://[username[:password]@]<address>[:port]/[channelpath][?version=<serverversion>][&title=<servername>][&url=<serverurl>]
+mumble://[username[:password]@]<address>[:port]/[channelpath][?title=<servername>][&url=<serverurl>]
 ```
 
 * optional `username` and `password`
 * mandatory `address`; a hostname, IPv4, or IPv6 address
 * optional `port`; defaults to 64738
 * optional `channelpath`; specifies a channel subtree to join; special characters must be [URL-encoded](https://en.wikipedia.org/wiki/URL_encoding); if the Mumble client can join the server but not the channel it will stay in the default channel
-* optional `serverversion` - protocol version of the server; Should no longer be necessary; Relevant for backwards compatibility to pre-1.2.0 versions
 * optional `servername` and `serverurl`; only used if the user drags the link and drops it in the server browser in Mumble for filling the server name and URL
 
 "Special" non-ASCII characters must be %-encoded. Most utilities should do this for you. For more information see [Wikipedia - URL encoding](https://en.wikipedia.org/wiki/URL_encoding).
@@ -47,16 +46,16 @@ mumble://[username[:password]@]<address>[:port]/[channelpath][?version=<serverve
 Simple form:
 
 ```
-mumble://<address>:<port>/?version=1.2.0
+mumble://<address>:<port>/
 ```
 
 Examples:
 
 ```
-mumble://mumble.example.com/?version=1.2.0
-mumble://172.16.31.199/?version=1.2.0
-mumble://example.com:23840/?version=1.2.0
-mumble://172.16.31.199:2000/?version=1.2.0
+mumble://mumble.example.com/
+mumble://172.16.31.199/
+mumble://example.com:23840/
+mumble://172.16.31.199:2000/
 ```
 
 ## Server Password
@@ -64,7 +63,7 @@ mumble://172.16.31.199:2000/?version=1.2.0
 A server password can be specified without a username:
 
 ```
-mumble://:mypassword@example.com/?version=1.2.0
+mumble://:mypassword@example.com/
 ```
 
 ## URL Handler Installation
@@ -79,3 +78,18 @@ gconftool-2 -s -t bool /desktop/gnome/url-handlers/mumble/enabled true
 ```
 
 If the `mumble` command is not globally accessible through the `PATH` environment variable you must specify the full path to the mumble executable.
+
+## version parameter
+
+```
+mumble://mumble.example.com/?version=1.2.0
+```
+
+The `version` parameter is only necessary for client installations prior to the long-past Mumble version 1.2.4.
+Note that 1.2.0 stands for the protocol and will work for any client and server with higher versions too.
+
+Mumble 1.2.0 introduced a protocol incompatibility which made it necessary for links to differentiate between a pre-1.2.0 server and a 1.2.0 (and above) server. The linked server would then be opened in the pre-1.2.0 compatibility client or the new client.
+
+Since version 1.2.4 - released in 2014 - URLs without the `version` attribute are considered to be for the new protocol.
+
+We do not expect such very old clients or servers to still be in use. We suggest you not include the `version` parameter for simpler URLs.
