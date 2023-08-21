@@ -36,7 +36,7 @@ mumble://[username[:password]@]<address>[:port]/[channelpath][?version=<serverve
 ```
 
 * optional `username` and `password`
-* mandatory `address` is mandatory; a hostname, IPv4, or IPv6 address
+* mandatory `address`; a hostname, IPv4, or IPv6 address
 * optional `port`; defaults to 64738
 * optional `channelpath`; specifies a channel subtree to join; if the Mumble client can join the server but not the channel it will stay in the default channel
 * optional `serverversion` - protocol version of the server; Should no longer be necessary; Relevant for backwards compatibility to pre-1.2.0 versions
