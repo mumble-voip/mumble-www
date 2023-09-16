@@ -27,8 +27,6 @@ Users registering and account and making changes to the wiki content will do so 
 
 When a user decides to support us by submitting anonymous usage statistics some general usage and environment information will be sent to us. This includes operating system, ip address (for country information), Mumble version, and some other information. For the current specifics the client source code can be inspected.
 
-This anonymous data is publicly accessible in an aggregated form at [stats.mumble.info](http://stats.mumble.info/).
-
 ### Optional Update Checks
 
 If enabled the client will automatically check for available application updates. It will only send the required information to be able to do so: the application version and the operating system/type of application.
