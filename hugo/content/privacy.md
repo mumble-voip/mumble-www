@@ -51,7 +51,7 @@ When connecting to a server the technically required data is sent to and receive
 
 The user can prevent sending OS information to servers they connect to in the Settings ➡ Network ➡ Privacy section; Do not send OS information to Mumble and web servers.
 
-## Mumble Server (“Murmur”)
+## Mumble Server (previously called “Murmur”)
 
 When the server is configured to register with our public server list ([`register*` settings][1]) the configured or automatically determined information (as described in the configuration documentation) is sent to us and consequently being listed publicly on our public server list.
 
