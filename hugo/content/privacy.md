@@ -3,15 +3,15 @@ title: Privacy
 ---
 This privacy policy describes our various services and products and how we handle data within their context.
 
-## This Website at mumble.info
+## This Website at `www.mumble.info`
 
 The webserver may log non-person specific information.
 
-As the website itself has no form of user input, we do not handle any user and personal information beyond that.
+As the website itself has no form of user input, we do not handle any user and personal information beyond simple and non-associated access logging.
 
-On the website source contributors will be shown as such under the names they identify themselves as and contribute as. They may be shown on individual pages for attribution.
+Contributors to the website source code (content and technical) contributors will committed to the source code history in the form the contributor submits.  be shown as such under the names they identify themselves as and contribute as. Contributors may be shown on individual webpages for attribution.
 
-## The Documentation Wiki at wiki.mumble.info
+## The Documentation Wiki at `wiki.mumble.info`
 
 The Mumble documentation wiki makes use of Google Analytics for website usage statistics. A cookie with name `_ga` specific to our domain is used for tracking. Please refer to [this Google page for more information](https://support.google.com/analytics/answer/6004245).
 
