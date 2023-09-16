@@ -5,8 +5,6 @@ This privacy policy describes our various services and products and how we handl
 
 ## This Website at mumble.info
 
-The Mumble website makes use of Google Analytics for website usage statistics. A cookie with name `_ga` specific to our domain is used for tracking. Please refer to [this Google page for more information](https://support.google.com/analytics/answer/6004245).
-
 The webserver may log non-person specific information.
 
 As the website itself has no form of user input, we do not handle any user and personal information beyond that.
