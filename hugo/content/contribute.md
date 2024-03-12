@@ -29,7 +29,7 @@ Take a look at our tracked [Feature Requests]({{< relref "/feature-requests" >}}
 
 We receive support requests. We are often able to resolve them in a timely manner. But you may be able to help resolve them by communicating with the help-seeker.
 
-The [tickets are labeled with `support`](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Asupport). Our [Web-Forums](https://forums.mumble.info/) and the [r/mumble/ subreddit](https://www.reddit.com/r/mumble/new/) also regularly receive support requests.
+The [tickets are labeled with `support`](https://github.com/mumble-voip/mumble/issues?q=is%3Aopen+is%3Aissue+label%3Asupport). The [r/mumble/ subreddit](https://www.reddit.com/r/mumble/new/) also regularly receive support requests.
 
 ## Development
 
