@@ -15,7 +15,7 @@ This guide is supposed to be a step-by-step tutorial for the general case. For a
 
 ### Programs needed
 
-[Analysis Tools]({{< relref "../memory-analysis-tools" >}})
+[Analysis Tools]({{< relref "memory-analysis-tools" >}})
 
 #### Tools
 

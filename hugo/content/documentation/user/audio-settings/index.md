@@ -81,7 +81,7 @@ This is intended to reduce noise being picked up while you talk, and you being a
 
 ### Positional Audio
 
-When enabled and when in-game with others, [Positional Audio]({{< relref "../positional-audio" >}}) allows you to hear them from the direction and distance they are in in-game.
+When enabled and when in-game with others, [Positional Audio]({{< relref "/documentation/user/positional-audio" >}}) allows you to hear them from the direction and distance they are in in-game.
 
 When people stand right next to you will hear them at full volume. The bloom setting defines how much directional audio blooms into other directions. If they stand to your right, the bloom will make it so you also hear a bit of them to your left. (Which makes sense when they are very close.)
 
