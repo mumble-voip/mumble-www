@@ -19,6 +19,14 @@ This service provides us quite a few important advantages, such as:
 
 Also, we haven’t experienced a single downtime in many years.
 
+## OSUOSL
+
+{{< sponsors/logo "logos/osuosl.png" "OSU Open Source Lab logo" >}}
+
+Oregon State University has an [Open Source Lab](https://osuosl.org) which supports projects like ours.
+
+They're providing us access to a performant ARM64/AArch64 instance that we can use to build and test for that architecture.
+
 ## MacStadium
 
 {{< sponsors/logosvg "logos/macstadium.svg" "MacStadium’s logo" >}}
