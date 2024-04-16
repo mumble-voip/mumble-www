@@ -31,7 +31,7 @@ They're providing us access to a performant ARM64/AArch64 instance that we can u
 
 {{< sponsors/logosvg "logos/macstadium.svg" "MacStadium’s logo" >}}
 
-Thanks to [MacStadium](https://www.macstadium.com) we can maintain support for macOS, as they provide us access to a 2012 Mac Mini.
+Thanks to [MacStadium](https://www.macstadium.com) we can maintain support for macOS. They provide us access to a Mac Mini.
 
 Before that, the only member of our team who owns a Mac used to do all the macOS-related work, until he unfortunately had no time to dedicate to the project anymore.
 
