@@ -50,7 +50,7 @@ function getButton(href, icon, caption) {
     return '<a class="suggested-download-button" href="' + href + '"><img class="suggested-download-button-icon" src="/css/icons/' + icon + '"><div class="suggested-download-button-caption">' + caption + '</div></a>'
 }
 function getWinRedistNotice() {
-    return '<div style="grid-row: 2; font-style: italic;">Requires installed Microsoft Visual C++ 2015-2022 Redistributable <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64</a> and <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86</a> to run</div>'
+    return '<div style="grid-row: 2; font-style: italic;">Requires installed Microsoft Visual C++ 2015-2022 Redistributable <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64</a> to run</div>'
 }
 function getPlatformContent(platform) {
     switch (platform) {
@@ -58,8 +58,7 @@ function getPlatformContent(platform) {
             return getButton('https://dl.mumble.info/latest/stable/client-windows-x64', 'windows.svg', 'Mumble for Windows (x64)')
                 + getWinRedistNotice()
         case 'win32':
-            return getButton('https://dl.mumble.info/latest/stable/client-windows-x86', 'windows.svg', 'Mumble for Windows (x86)')
-                + getWinRedistNotice()
+            return '32 bit Windows is no longer supported. For other versions, please refer to the dedicated section below.'
         case 'linux':
 			return 'For Linux, please refer to the dedicated section below.';
             // return getButton('https://launchpad.net/~mumble/+archive/release', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
@@ -79,12 +78,10 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows client (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
-{{< content-layout/download name="Windows client (x86)" href="https://dl.mumble.info/latest/stable/client-windows-x86" osclass="windows">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows server (x64)" href="https://dl.mumble.info/latest/stable/server-windows-x64" osclass="windows">}}
-{{< content-layout/download name="Windows server (x86)" href="https://dl.mumble.info/latest/stable/server-windows-x86" osclass="windows">}}
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
