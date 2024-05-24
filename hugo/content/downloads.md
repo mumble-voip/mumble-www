@@ -74,7 +74,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 ## Manual Download
 
-*Note: On Windows Microsoft Visual C++ 2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a>.*
+*Note: On Windows Microsoft Visual C++ 2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a> is required to be installed.*
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows client (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
