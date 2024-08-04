@@ -7,13 +7,13 @@ categories:
   - Release Candidate
 ---
 
-Quite some time has passed since our [last snapshot]({{< relref ""2021-05-16-mumble-1-4-0-snapshot6.md >}}) back in May of this year. Since then we
-have worked hard to polish things up further and are therefore now able to present to you the first _release candidate_ (RC) of Mumble 1.4.0.
+Quite some time has passed since our [last snapshot]({{< relref ""2021-05-16-mumble-1-4-0-snapshot6.md >}}) back in May of
+this year. Since then we have worked hard to polish things up further and are therefore now able to present to you the first
+_release candidate_ (RC) of Mumble 1.4.0.
 
 You can download the new version from our [**Downloads page**]({{< relref "/downloads#development-snapshots" >}}).
 
 <!--more-->
-
 
 ## Changelog
 
@@ -38,7 +38,6 @@ The changes listed here are relative to the last snapshot version.
 - Fixed: onAudioOutputAboutToPlay plugin API function used wrong parameter order ({{< issue 5115 >}})
 - Fixed: requestLocalUserTransmissionMode plugin API function now properly integrates with UI ({{< issue 5116 >}})
 
-
 ### Server
 
 - Fixed: Always bind to both IPv6 and IPv4 by default ({{< issue 5212 >}})
@@ -48,13 +47,11 @@ The changes listed here are relative to the last snapshot version.
 - Fixed: Tray icon not shown on Windows ({{< issue 5173 >}})
 - Fixed: Wrong "Unable to find matching CELT codec" warning upon connecting ({{< issue 5112 >}})
 
-
 ### Positional audio plugins
 
 - Added: Update & port GTA5 to new Plugin API ({{< issue 5162 >}})
 - Fixed: Update Among Us plugin to work with v2021.6.30s ({{< issue 5189 >}})
 - Fixed: Update Source Engine plugin to work with L4D2 2.2.2.0 ({{< issue 5190 >}})
-
 
 ## Known issues
 

@@ -1,39 +1,40 @@
-@import 'layout';
+@import "layout";
 
-@import 'content/blog/release-notes';
-@import 'content/documentation';
-@import 'content/downloads';
-@import 'content/home';
-@import 'content/sponsors';
+@import "content/blog/release-notes";
+@import "content/documentation";
+@import "content/downloads";
+@import "content/home";
+@import "content/sponsors";
 
 @media only screen and (max-width: 768px) {
-	#header-content {
-		display: block !important;
-		text-align: center !important;
+  #header-content {
+    display: block !important;
+    text-align: center !important;
 
-		.logo {
-			margin: 0 auto !important;
-		}
-		nav {
-			text-align: center !important;
-		}
-	}
-	
-	.download-box-container {
-		grid-template-columns: 1fr 1fr !important;
-	}
-	.home-screenshots {
-		display: none;
-	}
+    .logo {
+      margin: 0 auto !important;
+    }
+    nav {
+      text-align: center !important;
+    }
+  }
+
+  .download-box-container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .home-screenshots {
+    display: none;
+  }
 }
 
-main a[href^="https://wiki.mumble.info"]::after {
-	content: 'W';
-	vertical-align: super;
-	font-size: 8px;
-	margin-left: 2px;
+main a[href^="https://wiki.mumble.info"]::after
+{
+  content: "W";
+  vertical-align: super;
+  font-size: 8px;
+  margin-left: 2px;
 }
 
 .markdown-body table tr.outdated {
-	background-color:#FFFFC0;
+  background-color: #ffffc0;
 }

@@ -1,6 +1,7 @@
 ---
 title: "Mumble Settings Storage Location"
 ---
+
 The Mumble client uses two different locations for storing data:
 
 1. A database that contains the server list, server certificates, favorites, friends, access tokens, comments, etc.

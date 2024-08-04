@@ -6,12 +6,12 @@ categories:
   - Release
   - Security
 ---
-The Mumble team has released [**version 1.3.4**](https://github.com/mumble-voip/mumble/releases/tag/1.3.4) of the Mumble VoIP application. This is a
-**bugfix and security release** of the current and stable 1.3 series.
 
-You can download the new version from our [**Downloads page**]({{< relref "/downloads" >}}) or the
-[**GitHub release page**](https://github.com/mumble-voip/mumble/releases/tag/1.3.4) or from within your Windows client or software package management
-system.
+The Mumble team has released [**version 1.3.4**](https://github.com/mumble-voip/mumble/releases/tag/1.3.4) of the Mumble
+VoIP application. This is a **bugfix and security release** of the current and stable 1.3 series.
+
+You can download the new version from our [**Downloads page**]({{< relref "/downloads" >}}) or the [**GitHub release page**](https://github.com/mumble-voip/mumble/releases/tag/1.3.4)
+or from within your Windows client or software package management system.
 
 <!--more-->
 
@@ -28,7 +28,7 @@ system.
 
 ### General
 
-- Fixed: Packet loss & audio artifacts caused by OCB2 XEX* mitigation ({{< issue 4720 >}})
+- Fixed: Packet loss & audio artifacts caused by OCB2 XEX\* mitigation ({{< issue 4720 >}})
 
 ## Known issues
 
@@ -37,7 +37,6 @@ system.
 
 ## Warning
 
-- The static server binary for Linux is using an outdated version of OpenSSL - see https://github.com/mumble-voip/mumble/issues/4001 for details. This
-  warning only applies to the package released by us named  `murmur-static_x86`. It does not apply to our Ubuntu PPA releases or other maintained
-  packages.
-
+- The static server binary for Linux is using an outdated version of OpenSSL - see
+  https://github.com/mumble-voip/mumble/issues/4001 for details. This warning only applies to the package released by us
+  named `murmur-static_x86`. It does not apply to our Ubuntu PPA releases or other maintained packages.

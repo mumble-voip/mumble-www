@@ -1,35 +1,35 @@
 body > footer {
-	padding: 20px;
-	background-color: #F2F2F2;
-	border-top: 1px solid #D2D2D2;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #d2d2d2;
 
-	font-size: 14px;
-	line-height: 16px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .footer-content {
-	max-width: 1140px;
-	margin: auto;
+  max-width: 1140px;
+  margin: auto;
 
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		display: inline-flex;
-		line-height: 2.0em;
-		li {
-			display: inline-block;
-		}
-		a {
-			display: block;
-			color: black;
-			text-align: center;
-			padding-right: 0.4em;
-			margin-right: 1.6em;
-			text-decoration: none;
-		}
-	}
-	.copyleft {
-		color: #a6a6a6;
-	}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    line-height: 2em;
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding-right: 0.4em;
+      margin-right: 1.6em;
+      text-decoration: none;
+    }
+  }
+  .copyleft {
+    color: #a6a6a6;
+  }
 }
