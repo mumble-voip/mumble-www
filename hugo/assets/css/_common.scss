@@ -1,118 +1,123 @@
 a {
-	color: black;
+  color: black;
 }
 
-aside, em, i {
-	font-style: italic;
+aside,
+em,
+i {
+  font-style: italic;
 }
 
 sup {
-	vertical-align: super;
+  vertical-align: super;
 }
 
 sub {
-	vertical-align: sub;
+  vertical-align: sub;
 }
 
 h1 {
-	grid-template: "header";
-	font-size: 200%;
-	align-self: center;
+  grid-template: "header";
+  font-size: 200%;
+  align-self: center;
 }
 
 ul.menu {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 
-	li {
-		display: inline-block;
+  li {
+    display: inline-block;
 
-		a {
-			display: inline-block;
-			color: black;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
+    a {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
 
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .markdown-body {
-	line-height: 1.7em;
+  line-height: 1.7em;
 
-	ul {
-		list-style-type: disc;
-		padding-left: 0em;
-	}
-	b, strong {
-		font-weight: bold;
-	}
+  ul {
+    list-style-type: disc;
+    padding-left: 0em;
+  }
+  b,
+  strong {
+    font-weight: bold;
+  }
 }
 
 figure {
-	border: 0px solid #c0c0c0;
-	display: inline-block;
-	img {
-		display: block;
-	}
+  border: 0px solid #c0c0c0;
+  display: inline-block;
+  img {
+    display: block;
+  }
 }
 figcaption {
-	display: block;
-    background-color: #eeeeee;
-	/* font: italic smaller sans-serif; */
-	font-style: italic;
-	padding: 3px 6px;
+  display: block;
+  background-color: #eeeeee;
+  /* font: italic smaller sans-serif; */
+  font-style: italic;
+  padding: 3px 6px;
 }
 .figp {
-	display: block;
-	margin-bottom: 16px;
+  display: block;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1899px) {
-	aside.article-toc { display: none; }
+  aside.article-toc {
+    display: none;
+  }
 }
 .article-toc {
-	position: fixed;
-	right: 2em;
-	border: 1px solid #ccc;
-	border-radius: 0.4em;
-	padding: 4px 8px;
-	max-width: 280px;
+  position: fixed;
+  right: 2em;
+  border: 1px solid #ccc;
+  border-radius: 0.4em;
+  padding: 4px 8px;
+  max-width: 280px;
 }
 .article-toc-title {
-	font-weight: bold;
+  font-weight: bold;
 }
 .article-toc p {
-	margin-bottom: 0.4em;
+  margin-bottom: 0.4em;
 }
 .article-toc ul {
-	list-style-type: none;
-	padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .label {
-	border: 1px solid #ccc;
-	background-color: #fcc;
-	/* color: red; */
-	border-radius: 4px;
-	padding: 0px 2px;
+  border: 1px solid #ccc;
+  background-color: #fcc;
+  /* color: red; */
+  border-radius: 4px;
+  padding: 0px 2px;
 }
 
 .feed-icons {
-	text-align: right;
-	margin-top: 1em;
-	line-height: 32px;
+  text-align: right;
+  margin-top: 1em;
+  line-height: 32px;
 
-	a {
-		display: inline-block;
-	}
-	img {
-		width: 32px;
-		height: 32px;
-	}
+  a {
+    display: inline-block;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
 }

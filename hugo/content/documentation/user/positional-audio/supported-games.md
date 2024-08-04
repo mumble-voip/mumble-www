@@ -1,19 +1,22 @@
 ---
 title: "Games, Engines, and Game Mods supporting Mumble Positional Audio"
 ---
+
 **NOTE:** Plugins for 64-bit games only work with Mumble x64!
 
-*Note for Linux users:* Windows plugins work on Wine!
+_Note for Linux users:_ Windows plugins work on Wine!
 
-The following tables display which games positional audio is available for, from which game version on (/for which version), for what platform and if extended support is available.
+The following tables display which games positional audio is available for, from which game version on (/for which
+version), for what platform and if extended support is available.
 
-Mumble version 1.2 introduced additional, extended positional audio features. Tooltips on this column’s content may indicate more information on what data is provided.
+Mumble version 1.2 introduced additional, extended positional audio features. Tooltips on this column’s content may
+indicate more information on what data is provided.
 
 ## Native Support
 
 Games and game engines that provide native support remain functional across game updates.
 
-*Developer reference: [See developer integration documentation]({{< relref "/documentation/developer/positional-audio/link-plugin" >}})*
+_Developer reference: [See developer integration documentation]({{< relref "/documentation/developer/positional-audio/link-plugin" >}})_
 
 ### 3D/Game Engines With Native Support
 

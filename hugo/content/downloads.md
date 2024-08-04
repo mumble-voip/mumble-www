@@ -1,17 +1,17 @@
 ---
 title: Downloads
 ---
-We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
-which we will describe below. We also link to some third party projects.
+
+We provide downloads for the official client and server programs. A Linux distribution may provide their own packages
+and have their own maintainer, which we will describe below. We also link to some third party projects.
 
 Version **1.5.634** is the latest stable version of Mumble and was released on May 19th, 2024.
 
-Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
-versions anymore.
+Note that we are no longer able to support macOS < 10.13 since
+[Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these versions anymore.
 
-Note also when you upgrade from Mumble <= 1.3.x, you have to **uninstall Mumble manually** before installing 1.5, since the **upgrade path is unfixably broken**. See
-[here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
-
+Note also when you upgrade from Mumble <= 1.3.x, you have to **uninstall Mumble manually** before installing 1.5, since
+the **upgrade path is unfixably broken**. See [here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
 
 ## Suggested Mumble Version
 
@@ -74,7 +74,8 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 ## Manual Download
 
-*Note: On Windows Microsoft Visual C++ 2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a> is required to be installed.*
+_Note: On Windows Microsoft Visual C++ 2022 Redistributable
+(<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a> is required to be installed._
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows client (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
@@ -96,22 +97,26 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Static macOS server (x64)" href="https://dl.mumble.info/latest/stable/server-macos-x64" osclass="mac">}}
+
 <!--
 {{< content-layout/download name="Static Linux server (x64)" href="https://dl.mumble.info/latest/stable/server-linux-x64" osclass="linux">}}
 -->
+
 {{< /content-layout/downloads >}}
 
-Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
+Server note: _Depending on the context and packager our server program is called “mumble-server” or “Murmur”_
 
-For the individual files and for a zipped sources file see the [1.5.634 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.5.634).
+For the individual files and for a zipped sources file see the
+[1.5.634 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.5.634).
 
-Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found
-in the linked document.
+Instructions on
+[verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt)
+can be found in the linked document.
 
 ## Linux
 
-Your distribution probably provides official packages for Mumble. Please refer to your OS packages. Distributions with official packages include
-Debian, Ubuntu, Fedora, openSUSE, Arch Linux, Mandriva/ROSA/Unity.
+Your distribution probably provides official packages for Mumble. Please refer to your OS packages. Distributions with
+official packages include Debian, Ubuntu, Fedora, openSUSE, Arch Linux, Mandriva/ROSA/Unity.
 
 ### Snap/Snapcraft
 
@@ -119,7 +124,8 @@ A Snap package is published and maintained by the third party Snapcraft communit
 
 ### Flatpak
 
-A Flatpak Package is published and maintained by the third party Flatpak community at <https://www.flathub.org/apps/details/info.mumble.Mumble>
+A Flatpak Package is published and maintained by the third party Flatpak community at
+<https://www.flathub.org/apps/details/info.mumble.Mumble>
 
 ## Mobile Clients
 
@@ -131,22 +137,23 @@ A Flatpak Package is published and maintained by the third party Flatpak communi
 
 ### Android (third party)
 
-We do not currently provide an official Android client. However, you can use one of the third party clients (that we do not develop or support
-ourselves).
+We do not currently provide an official Android client. However, you can use one of the third party clients (that we do
+not develop or support ourselves).
 
-{{< content-layout/downloads >}}
-{{% content-layout/download-ext osclass="android" %}}Mumla ([Play](https://play.google.com/store/apps/details?id=se.lublin.mumla),<br>[Play-Donate](https://play.google.com/store/apps/details?id=se.lublin.mumla.donation), [F-Droid](https://f-droid.org/packages/se.lublin.mumla)){{%/ content-layout/download-ext %}}
+{{< content-layout/downloads >}} {{% content-layout/download-ext osclass="android" %}}Mumla
+([Play](https://play.google.com/store/apps/details?id=se.lublin.mumla),<br>[Play-Donate](https://play.google.com/store/apps/details?id=se.lublin.mumla.donation),
+[F-Droid](https://f-droid.org/packages/se.lublin.mumla)){{%/ content-layout/download-ext %}}
 {{< /content-layout/downloads >}}
 
 ## Development snapshots
 
-Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems
-you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
+Development snapshots contain unreleased features and changes that will eventually be available in the next stable
+release. Please report any problems you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-The most recent snapshot version is the third release candidate for Mumble 1.5.x
-([Release Announcement]({{< relref "/blog/2024-04-14-mumble-1-5-629" >}})).
+The most recent snapshot version is the third release candidate for Mumble 1.5.x ([Release Announcement]({{< relref "/blog/2024-04-14-mumble-1-5-629" >}})).
 
-Note that we are currently not able to provide static server binaries for Linux nor are we able to provide a snapshot PPA for Linux just yet.
+Note that we are currently not able to provide static server binaries for Linux nor are we able to provide a snapshot
+PPA for Linux just yet.
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Client for Windows (x64)" href="https://dl.mumble.info/latest/snapshot/client-windows-x64" osclass="windows">}}
@@ -158,8 +165,8 @@ Note that we are currently not able to provide static server binaries for Linux 
 {{< content-layout/download name="Server for macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/snapshot/server-macos-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
-Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
-versions anymore.
+Note that we are no longer able to support macOS < 10.13 since
+[Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these versions anymore.
 
 ## Source Code
 
@@ -167,4 +174,3 @@ As a free software project the source code is publicly readable and under a perm
 
 Our Mumble project source code is hosted on GitHub as [`mumble`](https://github.com/mumble-voip/mumble). The iOS app as
 [`mumble-iphoneos`](https://github.com/mumble-voip/mumble-iphoneos).
-

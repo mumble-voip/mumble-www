@@ -1,15 +1,20 @@
 ---
 title: "Mumble in-game Overlay Documentation"
 ---
+
 <img src="Mumble-Overlay-Screenshot.png" alt="Mumble overlay screenshot" style="float: right; max-height: 240px; margin: 0 0 1em 1em;">
 
-Mumble can show information within rendered applications; most notably videogames which are typically used with full screen rendering.
+Mumble can show information within rendered applications; most notably videogames which are typically used with full
+screen rendering.
 
 Mumble can show connected and/or talking voice participants as well as current FPS and/or the clock time.
 
-The overlay can give users feedback about who is connected or who is talking when the application would otherwise obscure this information. Even if the user has Mumble open on a second monitor, the overlay may be a useful addition as it can be placed freely on the primarily focused on monitor.
+The overlay can give users feedback about who is connected or who is talking when the application would otherwise
+obscure this information. Even if the user has Mumble open on a second monitor, the overlay may be a useful addition as
+it can be placed freely on the primarily focused on monitor.
 
-Mumble hooks into 3D rendering technology. On **Windows** it currently **supports Direct3D 9/10/11 and OpenGL**. On **Linux and macOS** it supports **OpenGL**. Both 32- and 64-bit applications are supported.
+Mumble hooks into 3D rendering technology. On **Windows** it currently **supports Direct3D 9/10/11 and OpenGL**. On
+**Linux and macOS** it supports **OpenGL**. Both 32- and 64-bit applications are supported.
 
 ## Support Tables
 

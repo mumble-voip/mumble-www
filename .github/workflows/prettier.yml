@@ -1,0 +1,23 @@
+name: Continuous Integration
+
+# This action works with pull requests and pushes
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check code style
+        uses: creyD/prettier_action@v4.3
+        with:
+          dry: true
+          working_directory: hugo/
+          prettier_options: --check

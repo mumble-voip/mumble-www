@@ -6,12 +6,12 @@ categories:
   - Release
   - Security
 ---
-The Mumble team has released [**version 1.3.3**](https://github.com/mumble-voip/mumble/releases/tag/1.3.3) of the Mumble VoIP application. This is a
-**bugfix and security release** of the current and stable 1.3 series.
 
-You can download the new version from our [**Downloads page**]({{< relref "/downloads" >}}) or the
-[**GitHub release page**](https://github.com/mumble-voip/mumble/releases/tag/1.3.3) or from within your Windows client or software package management
-system.
+The Mumble team has released [**version 1.3.3**](https://github.com/mumble-voip/mumble/releases/tag/1.3.3) of the Mumble
+VoIP application. This is a **bugfix and security release** of the current and stable 1.3 series.
+
+You can download the new version from our [**Downloads page**]({{< relref "/downloads" >}}) or the [**GitHub release page**](https://github.com/mumble-voip/mumble/releases/tag/1.3.3)
+or from within your Windows client or software package management system.
 
 <!--more-->
 
@@ -29,7 +29,7 @@ system.
 ### Server
 
 - Fixed: Crash due to problems when using PostgreSQL (#4370)
-- Fixed: Handling of invalid package sizes (#4392) 
+- Fixed: Handling of invalid package sizes (#4392)
 
 ## Known issues
 
@@ -38,4 +38,6 @@ system.
 
 ## Warning
 
-- The static server binary for Linux is using an outdated version of OpenSSL - see https://github.com/mumble-voip/mumble/issues/4001 for details. This warning only applies to the package released by us named  `murmur-static_x86`. It does not apply to our Ubuntu PPA releases or other maintained packages.
+- The static server binary for Linux is using an outdated version of OpenSSL - see
+  https://github.com/mumble-voip/mumble/issues/4001 for details. This warning only applies to the package released by us
+  named `murmur-static_x86`. It does not apply to our Ubuntu PPA releases or other maintained packages.
