@@ -6,7 +6,7 @@ The Mumble Server supports remote scripting using the [ZeroC Ice](https://zeroc.
 
 There are bindings (libraries) for C++, Java, .NET, Python, PHP and Ruby, and this is supported on all our platforms (Win32, Linux and OSX). Ice works locally and also over a network. This means you can create a web application that interfaces with a Murmur process running on the same or other machines.
 
-Note that after you have ICE set up on your machine, you can install a {{< wiki "3rd_Party_Applications#Web-Interfaces" "web interface" />}}.
+Note that after you have ICE set up on your machine, you can install a 3rd party web interface.
 
 ## Developing for the Murmur Ice interface
 
@@ -17,5 +17,5 @@ The ice interface is fully documented, and you can browse the [generated documen
 Further detailed, feature and language specific documentation is available in subpages.
 
 {{< aside >}}
-This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted. This content is based on {{< wiki Ice />}}.
+This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.}.
 {{< /aside >}}

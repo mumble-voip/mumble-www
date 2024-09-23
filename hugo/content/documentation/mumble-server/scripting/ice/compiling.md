@@ -85,5 +85,5 @@ cp Murmur.rb #{MANAGER_ROOT}/vendor/ice
 Congratulations! Ice should be set up and fully functional.
 
 {{< aside >}}
-This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted. This content is based on {{< wiki Ice />}}.
+This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.
 {{< /aside >}}

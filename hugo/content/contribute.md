@@ -108,31 +108,23 @@ Also take a look at open [issues](https://github.com/mumble-voip/mumble/issues) 
 
 #### 3rd party Interfaces
 
-Web interfaces, web-viewers, administration programs, CMS website modules – all neat things we would love to see! These could be written in any language supported by our Ice- or gRPC-based RPC Interfaces. You could start your own project or link up with an {{< wiki "3rd Party Applications" "already existing one" />}}. To get an idea about how interaction with the Mumble server might look like, you can take a look at the example scripts in our [GitHub repository for mumble-scripts](https://github.com/mumble-voip/mumble-scripts).
+Web interfaces, web-viewers, administration programs, CMS website modules – all neat things we would love to see! These could be written in any language supported by our Ice- or gRPC-based RPC Interfaces. You could start your own project or link up with an already existing one. To get an idea about how interaction with the Mumble server might look like, you can take a look at the example scripts in our [GitHub repository for mumble-scripts](https://github.com/mumble-voip/mumble-scripts).
 
 #### Ice authenticators
 
-See {{< wiki Authenticators />}}. We’re happy for every authenticator and authenticator improvement.
+See [Mumble Server Scripting]({{< relref "/documentation/mumble-server/scripting/" >}}). We’re happy for every authenticator and authenticator improvement.
 
 #### Positional Audio plugins
 
-Most of our [positional audio plugins](https://wiki.mumble.info/wiki/Games#Positional_audio) regularly break on game updates. To read on how you can help us update the plugins see the {{< wiki Pluginguide />}} page. 
+Most of our [positional audio plugins](https://github.com/mumble-voip/mumble/tree/master/plugins) regularly break on game updates. To read on how you can help us update the plugins see the [Plugin Guide]({{< relref "/documentation/developer/positional-audio/create-plugin/" >}}) page. 
 
-You can also add positional audio support to Games via our standard `Link` plugin. This way it will not get outdated, but you need permission to change (and access to) the Source Code of a game (e.g. via an open license or developer permission). See {{< wiki "Link" "Linking a game to Mumble" />}}.
+You can also add positional audio support to Games via our standard `Link` plugin. This way it will not get outdated, but you need permission to change (and access to) the Source Code of a game (e.g. via an open license or developer permission). See [Integrate Mumble Positional Audio Through the Link Plugin]({{< relref "/documentation/developer/positional-audio/link-plugin/" >}}).
 
 #### Other 3rd party projects
 
-If you are interested in more projects (Clients, Servers, cli tools etc.), you can also take a look at {{< wiki "3rd Party Applications" />}}.
+If you are interested in more projects (Clients, Servers, cli tools etc.), you can also take a look at [public GitHub repositories](https://github.com/search?q=Mumble&type=repositories).
 
 Many of these projects will either gladly accept help or can (often) be forked easily, because of the open licenses.
-
-### Mumble Themes
-
-You find the official Mumble theme in its own [repository on GitHub](https://github.com/mumble-voip/mumble-theme).
-
-Additional Mumble themes bring variety into Mumble's visual design and choices for different tastes.
-
-You can find more information about themes in general and how to create themes on our {{< wiki Themes "Themes wiki page" />}}.
 
 ## Documentation & Website
 
@@ -140,28 +132,15 @@ Improve our Documentation and Website.
 
 ### Documentation
 
-Right now you find most of the **(User) Documentation** in our [wiki](https://wiki.mumble.info).
+Right now you find most of the **(User) Documentation** on our [website]({{ < relref "/documentation/user/" }}).
 
-Any contributions are welcome: improving existing pages or creating new ones with useful content. Also see the {{< wiki "Category:Please_Improve" "Please Improve Category" />}}.
-
-You can create a wiki account {{< wiki "Special:RequestAccount" "here" />}}.
+Any contributions are welcome: improving existing pages or creating new ones with useful content. Also see the [documentation files in the website repository](https://github.com/mumble-voip/mumble-www/tree/master/hugo/content/documentation).
 
 The **Development Documentation** is now in [Mumble's GitHub repo](https://github.com/mumble-voip/mumble/tree/master/docs/dev).
 
 It is written in Markdown.
 
 You can create Pull Requests on GitHub to edit it or to add new files.
-
-<!--
-Future content:
-
-The new documentation can be found in the following repos:
-
-- **User Documentation** in the [Website's GitHub repo](https://github.com/mumble-voip/mumble-www/tree/master/hugo/content/documentation)
-- **Development Documentation** in [Mumble's GitHub repo](https://github.com/mumble-voip/mumble/tree/master/docs)
-
-It is written in Markdown.
--->
 
 #### Documentation Issues & Pull requests
 
@@ -175,7 +154,7 @@ Also take a look at open Issues and Pull Requests:
 
 ##### Ice methods
 
-We have a [generated documentation](https://www.mumble.info/documentation/slice/1.3.0/html/Murmur.html) for exposed Ice methods. Although probably only developers will be able to understand it, please give us a note on any inconsistencies, errors or needed clarifications if you find them.sk
+We have a [generated documentation](https://www.mumble.info/documentation/slice/1.3.0/html/Murmur.html) for exposed Ice methods. Although probably only developers will be able to understand it, please give us a note on any inconsistencies, errors or needed clarifications if you find them.
 
 #### External Documentation
 
@@ -194,7 +173,7 @@ You find the [Community Channels on the Contact page](https://www.mumble.info/co
 ## Hosting
 
 Host your own Mumble Server and register it on our Public Server List (optional).
-See our {{< wiki "Running_Murmur" "Server guide" />}} and [Server Registration details](https://wiki.mumble.info/wiki/Murmur.ini#Server_Registration).
+See our [Server guide]({{< relref "/documentation/administration/" >}}) and [config file]({{< relref "/documentation/administration/config-file" >}}).
 
 ## Promotion
 

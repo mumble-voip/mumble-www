@@ -84,5 +84,5 @@ server = meta.getServer(server_id).ice_router(router)
 For each object you get a proxy to (including the return from `Murmur::MetaPrx::getServer`), you need to add `#ice_router(router)`.
 
 {{< aside >}}
-This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted. This content is based on {{< wiki Ice />}}.
+This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.
 {{< /aside >}}
