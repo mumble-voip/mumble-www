@@ -132,7 +132,7 @@ Improve our Documentation and Website.
 
 ### Documentation
 
-Right now you find most of the **(User) Documentation** on our [website]({{ < relref "/documentation/user/" }}).
+Right now you find most of the **(User) Documentation** on our [website]({{ < relref "/documentation/user/" > }}).
 
 Any contributions are welcome: improving existing pages or creating new ones with useful content. Also see the [documentation files in the website repository](https://github.com/mumble-voip/mumble-www/tree/master/hugo/content/documentation).
 
