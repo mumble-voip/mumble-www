@@ -37,5 +37,5 @@ $meta = Murmur_MetaPrxHelper::checkedCast($ICE->stringToProxy('Meta:tcp -h 127.0
 Where `Murmur.php` is the generated file.
 
 {{< aside >}}
-This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted. This content is based on {{< wiki Ice />}}.
+This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.
 {{< /aside >}}

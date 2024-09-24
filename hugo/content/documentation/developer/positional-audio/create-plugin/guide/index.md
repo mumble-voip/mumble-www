@@ -572,7 +572,7 @@ Start Visual Studio and go to File -> New -> Project. Enter a name, then double 
 
 ### In tree build
 
-If you do not have a working build environment yet follow the [BuildingWindows](https://wiki.mumble.info/wiki/BuildingWindows) or [BuildingLinux](https://wiki.mumble.info/wiki/BuildingLinux) guide to create one. Once you successfully built Mumble (client suffices) perform the following steps:
+If you do not have a working build environment yet follow the [Build Instructions](https://github.com/mumble-voip/mumble/blob/master/docs/dev/build-instructions/README.md) guide to create one. Once you successfully built Mumble (client suffices) perform the following steps:
 
 * Create a new sub-directory for your plugin in `plugins/` named after your plugin (e.g. bf2 for Battlefield 2).
 * Name your your primary source file the same as the newly created directory and put it in there.

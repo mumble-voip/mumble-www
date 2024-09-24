@@ -3,7 +3,6 @@ title: Mumble Server Ice Scripting with PHP - Setup
 date: 2019-10-27
 weight: -10
 license: cc-by-sa 2.5
-basedon: https://wiki.mumble.info/wiki/Ice
 ---
 Note: This documentation is quite old and may need some verification or updating.
 

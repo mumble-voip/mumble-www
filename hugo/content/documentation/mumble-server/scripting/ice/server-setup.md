@@ -38,5 +38,5 @@ MurmurIce: Endpoint "tcp -h 127.0.0.1 -p 6502" running
 ```
 
 {{< aside >}}
-This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted. This content is based on {{< wiki Ice />}}.
+This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.
 {{< /aside >}}
