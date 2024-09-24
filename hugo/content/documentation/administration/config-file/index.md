@@ -14,7 +14,7 @@ The ``mumble-server`` configuration file consists of single line configuration s
 ``key=value``. Empty lines and anything after ``#`` to the end of a line is ignored.
 
 Some settings are process-wide (``database``, etc.) while others are used as defaults on a per-server basis.
-``registername`` for exmaple will be used as the default "title" for all virtual servers, unless it is overridden
+``registername`` for example will be used as the default "title" for all virtual servers, unless it is overridden
 via RPC.
 
 A unique example is ``port`` - the first server will attempt to bind to this port, with
@@ -89,7 +89,7 @@ Leaving this setting blank will disable registration with the public server list
 If you somehow lose the secret, you will obviously not be able to register your server until the
 public server list "forgets" about your server. This usually takes a few days.
 
-Exmaple:
+Example:
 
 ```text
 registerPassword=CorrectHorseBatteryStaple

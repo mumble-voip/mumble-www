@@ -17,5 +17,5 @@ The ice interface is fully documented, and you can browse the [generated documen
 Further detailed, feature and language specific documentation is available in subpages.
 
 {{< aside >}}
-This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.}.
+This content released under [Creative Commons Attribution Share Alike](http://creativecommons.org/licenses/by-sa/2.5/) unless otherwise noted.
 {{< /aside >}}
