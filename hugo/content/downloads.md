@@ -119,7 +119,7 @@ A Snap package is published and maintained by the third party Snapcraft communit
 
 ### Flatpak
 
-A Flatpak Package is published and maintained by the third party Flatpak community at <https://www.flathub.org/apps/details/info.mumble.Mumble>
+A Flatpak Package is published and maintained by the third party Flatpak community at <https://flathub.org/apps/details/info.mumble.Mumble>
 
 ## Mobile Clients
 
