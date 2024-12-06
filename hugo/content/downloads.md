@@ -4,7 +4,7 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version **1.5.634** is the latest stable version of Mumble and was released on May 19th, 2024.
+Version **1.5.735** is the latest stable version of Mumble and was released on December 6th, 2024.
 
 Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
 versions anymore.
@@ -74,7 +74,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 ## Manual Download
 
-*Note: On Windows Microsoft Visual C++ 2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a> is required to be installed.*
+*Note: On Windows Microsoft Visual C++ 2022 Redistributable (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64 download</a> is required to be installed.)*
 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Windows client (x64)" href="https://dl.mumble.info/latest/stable/client-windows-x64" osclass="windows">}}
@@ -103,7 +103,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
-For the individual files and for a zipped sources file see the [1.5.634 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.5.634).
+For the individual files and for a zipped sources file see the [1.5.735 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.5.735).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found
 in the linked document.
