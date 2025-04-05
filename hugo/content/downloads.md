@@ -6,9 +6,6 @@ which we will describe below. We also link to some third party projects.
 
 Version **1.5.735** is the latest stable version of Mumble and was released on December 6th, 2024.
 
-Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
-versions anymore.
-
 Note also when you upgrade from Mumble <= 1.3.x, you have to **uninstall Mumble manually** before installing 1.5, since the **upgrade path is unfixably broken**. See
 [here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
 
@@ -63,7 +60,7 @@ function getPlatformContent(platform) {
 			return 'For Linux, please refer to the dedicated section below.';
             // return getButton('https://launchpad.net/~mumble/+archive/release', 'ubuntu.svg', 'Mumble PPA for Ubuntu')
         case 'macos':
-            return getButton('https://dl.mumble.info/latest/stable/client-macos-x64', 'apple.svg', 'Mumble for macOS >= 10.13 (x64)')
+            return getButton('https://dl.mumble.info/latest/stable/client-macos-x64', 'apple.svg', 'Mumble for macOS (x64)')
         default:
             return 'We could not determine the OS you are browsing this website on. Please choose the appropriate download yourself.'
             break;
@@ -85,7 +82,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/stable/client-macos-x64" osclass="mac">}}
+{{< content-layout/download name="macOS" href="https://dl.mumble.info/latest/stable/client-macos-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
 <!-- The PPA is completely outdated
@@ -154,12 +151,9 @@ Note that we are currently not able to provide static server binaries for Linux 
 {{< /content-layout/downloads >}}
 
 {{< content-layout/downloads >}}
-{{< content-layout/download name="Client for macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-x64" osclass="mac">}}
-{{< content-layout/download name="Server for macOS >= 10.13 (x64)" href="https://dl.mumble.info/latest/snapshot/server-macos-x64" osclass="mac">}}
+{{< content-layout/download name="Client for macOS (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-x64" osclass="mac">}}
+{{< content-layout/download name="Server for macOS (x64)" href="https://dl.mumble.info/latest/snapshot/server-macos-x64" osclass="mac">}}
 {{< /content-layout/downloads >}}
-
-Note that we are no longer able to support macOS < 10.13 since [Qt does not support](https://doc.qt.io/qt-5/macos.html#supported-versions) these
-versions anymore.
 
 ## Source Code
 
