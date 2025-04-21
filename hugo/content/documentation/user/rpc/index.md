@@ -7,7 +7,7 @@ Various [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call) subcommands a
 | Command  | Description         |
 | -------- | ------------------- |
 | `mute`   | Mute self |
-| `unmote`    | Unmute self |
+| `unmute`    | Unmute self |
 | `togglemute`   | Toggle between mute and unmute |
 | `deaf`  | Deafen self |
 | `undeaf`  | Undeafen self |
