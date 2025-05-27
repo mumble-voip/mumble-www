@@ -20,6 +20,8 @@ via RPC.
 A unique example is ``port`` - the first server will attempt to bind to this port, with
 each subsequent server incrementing the port by one for its own port.
 
+For Windows user, you should create the ``mumble-server.ini`` file on C:\Users\YourUsername\AppData\Local\Mumble\Murmur
+
 ### ICE
 
 #### ``ice``
