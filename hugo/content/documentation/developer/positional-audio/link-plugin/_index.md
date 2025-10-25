@@ -60,11 +60,15 @@ All code listed below is put into the **public domain** and can be used, shared 
 Within your game initialization, add the following initialization code:
 
 ```c
+#include <wchar.h>
+#include <stdint.h>
+#include <string.h>
 #ifdef _WIN32
 	#include <windows.h>
 #else
 	#include <sys/mman.h>
 	#include <fcntl.h> /* For O_* constants */
+	#include <unistd.h>
 #endif // _WIN32
 
 struct LinkedMem {
@@ -92,7 +96,7 @@ struct LinkedMem {
 	wchar_t description[2048];
 };
 
-LinkedMem *lm = NULL;
+struct LinkedMem *lm = NULL;
 
 void initMumble() {
 
@@ -101,7 +105,7 @@ void initMumble() {
 	if (hMapObject == NULL)
 		return;
 
-	lm = (LinkedMem *) MapViewOfFile(hMapObject, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(LinkedMem));
+	lm = (struct LinkedMem *) MapViewOfFile(hMapObject, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(struct LinkedMem));
 	if (lm == NULL) {
 		CloseHandle(hMapObject);
 		hMapObject = NULL;
@@ -117,7 +121,7 @@ void initMumble() {
 		return;
 	}
 
-	lm = (LinkedMem *)(mmap(NULL, sizeof(struct LinkedMem), PROT_READ | PROT_WRITE, MAP_SHARED, shmfd,0));
+	lm = (struct LinkedMem *)(mmap(NULL, sizeof(struct LinkedMem), PROT_READ | PROT_WRITE, MAP_SHARED, shmfd,0));
 
 	if (lm == (void *)(-1)) {
 		lm = NULL;
