@@ -19,12 +19,7 @@ I work in application security and while I'm not super confident in my coding sk
 
 This idea and knack is how I ended up digging through the Mumble source code and discovering an interesting bug.
 
-I picked Mumble as my first software to analyze for the open source community because of two important factors. 
-
-- I have used Mumble on and off and I think it’s a great tool.
-- It isn’t one of those big fancy open source projects that is high visibility, so I felt the developers might appreciate having some extra application security analysis for free.
-
-## Research
+## Picking a Project 
 
 When I decided to start doing some bug hunting, my first goal was to select a target “software under test”. I wanted something that fit into the following categories:
 
