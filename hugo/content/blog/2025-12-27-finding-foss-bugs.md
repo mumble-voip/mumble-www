@@ -1,17 +1,16 @@
 ---
-title: Bug Hunting in FOSS, with Mumble!
-author: abstractappsec(sam)
+title: Bug Hunt - Image Size Boundaries
+author: abstractappsec (Sam)
 date: 2025-12-27
 categories:
   - News
-
 ---
 
 In Mumble 1.5.857, there was a patch for an interesting bug:
 
 https://github.com/mumble-voip/mumble/pull/6875
 
-This patch was due to an experimental bug hunt that I began a few months ago, and for which I coordinated findings with @krzmbl. 
+This patch was due to an experimental bug hunt that I began a few months ago, and for which I coordinated findings with @Krzmbrzl. 
 In this blog post the developers invited me to present, I'll be taking a little detour from your standard Mumble blogs and talking about a way to contribute to open source even if you're not a particularly strong coder. 
 
 
@@ -23,10 +22,11 @@ This idea and knack is how I ended up digging through the Mumble source code and
 I picked Mumble as my first software to analyze for the open source community because of two important factors. 
 
 - I have used Mumble on and off and I think it’s a great tool.
-- It isn’t one of those big fancy open source projects that is high vis, so I felt the developers might appreciate having some extra application security analysis for free.
+- It isn’t one of those big fancy open source projects that is high visibility, so I felt the developers might appreciate having some extra application security analysis for free.
 
 ## Research
-When I decided to start doing some bug hunting, my first goal was to select a target “software under test.” I wanted something that fit into the following categories:
+
+When I decided to start doing some bug hunting, my first goal was to select a target “software under test”. I wanted something that fit into the following categories:
 
 - Open Source software primarily developed with minimal funding/nonprofit/volunteers.
 - Software that other bug hunters are probably not very interested in.
@@ -60,6 +60,7 @@ As a general rule, when you are auditing code, the scary stuff, like complex nes
 
 
 ## Discovery
+
 Mumble chat messages are handled primarily by functions in a file named Log.cpp. I haven’t dug into the history, but I’d guess originally this functionality was for logging primarily, but worked well enough that it was repurposed for user messages as well.
 
 Among other things, this code handles functions like displaying inline images to the user, which can be displayed in html like this(as an example):
@@ -120,9 +121,6 @@ The second number, only using 4 bytes, is something you could store in an int. I
 >>> print(ctypes.c_int(doubleval).value)
 1
 ```
-
-
-
 That means in this scenario, the double value is cast to an int, then the int is checked against the 2048 * 2048 value. A little bit of math later proves that multiplying width and height to a number that wraps to a bit past INT32MAX is going to allow the message to pass this check, by making the large part of the number all be stored in the leftmost 4 bytes.
 
 ```
@@ -146,8 +144,6 @@ But what if we cast it to an int?
 >>> print(ctypes.c_int(int(double_val.value)).value)
 -2147483392
 ```
-
-
 Woa! That’s a way different number!. This is because when we truncate the number down to a 4 byte type, we lose all sorts of things. There are good and bad reasons why C and CPP behave this way- sometimes you actually do want to truncate numbers- but in general, this is a vulnerability pattern known as an “integer overflow” or a “type confusion.” (Though type confusions are often much more complex than issues like this one.)
 
 What was that check again?
@@ -163,8 +159,6 @@ As a result we can do something like this:
 <img src=data:,Hello%2C%@0World%21 height=16777218 width = 128>
 </br>
 ```
-
-
 (src doesn’t really matter here, it just gives the parser something to try to use as an image).
 
 QT will now happily attempt to display this entire image in its huge dimensions to the entire server! 
@@ -208,7 +202,8 @@ Finally it was a question- the only real point of making a more complex PoC is t
 It is easy for those of us who work in application security or bug hunt as a hobby to feel like we need to chain every bug into its worst case scenario situation. That’s what gets the headlines and what often makes people very interested in your work. If you’re chasing notoriety or a big payout for a bounty, developing more crazy exploits can make sense, but if you just want to help projects be a bit more secure, it doesn’t necessarily matter. At the end of the day, the basic goal of a PoC for responsible disclosure is to convince the developers to patch something. If they’re convinced, you’ve succeeded. 
 
 
-## Interfacing 
+## Interfacing
+
 One of the other reasons I picked Mumble as a good software for a bug hunt was the clear way you can submit bug reports. https://www.mumble.info/security/#reporting-a-vulnerability. 
 This is a heavily underrated feature in software, though I’ve been pleasantly surprised to see many projects adopting various forms of clear security disclosures. These make it easier to incentivize independent security researchers and developers to help fix things.
 
