@@ -6,13 +6,11 @@ categories:
   - News
 ---
 
-In Mumble 1.5.857, there was a patch for an interesting bug:
-
-https://github.com/mumble-voip/mumble/pull/6875
+*This is a guest post by [abstractappsec](https://github.com/abstractappsec) who found a bug that was fixed in the Mumble 1.5.857 release ([PR #6875](https://github.com/mumble-voip/mumble/pull/6875)).*
 
 This patch was due to an experimental bug hunt that I began a few months ago, and for which I coordinated findings with @Krzmbrzl. 
 In this blog post the developers invited me to present, I'll be taking a little detour from your standard Mumble blogs and talking about a way to contribute to open source even if you're not a particularly strong coder. 
-
+This is not an "information disclosure" or remote code execution type of bug, but I'll make the case for its potential security implications as well.
 
 One of the fun things about cybersecurity is that a large part of it is thinking outside of the box.
 I work in application security and while I'm not super confident in my coding skills, I have noticed I do have a knack for finding bugs. Not necessarily those crazy bugs you hear about in the news, but I can find some strange ways to make software do things it's not normally expected to do.
