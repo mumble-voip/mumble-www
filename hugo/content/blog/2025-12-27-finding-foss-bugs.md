@@ -34,13 +34,13 @@ And to my third point, while somebody might find a bug in a local offline calcul
 Mumble seemed to fit all of these categories well. It’s a great program I remember using fondly for playing Minecraft with my brother back in the day, but has a relatively small community and footprint, so it's unlikely there will be much in the way of professional application security people combing through the code. 
 
 What makes it actually “important” to find and patch bugs still? 
-When I initially started looking at Mumble, I was aware of a few online gaming communities that still use Mumble pretty heavily. Someone wanting to nefariously cheat in a game without exploiting the game itself could theoretically attack a chat application and cause chaos on an opposing team in a competitive context, gaining an unfair advantage. Additionally, if there are firms that use Mumble for communications, it could be an avenue of attack against them if someone found a remote code execution or Denial of Service vulnerability.  
+When I initially started looking at Mumble, I was aware of a few online gaming communities that still use Mumble pretty heavily. Someone wanting to nefariously cheat in a game without exploiting the game itself could theoretically attack a chat application and cause chaos on an opposing team in a competitive context, gaining an unfair advantage. Additionally, for all companies using Mumble for communications, it could be an avenue of attack against them if someone found a remote code execution or Denial of Service vulnerability.  
 
 So now that we’ve identified our target, what comes next?
 
 ## Triage
 
-Initial Triage is the first step once you have decided on a Software under Test. This is where you identify user input that could potentially cause issues.
+Initial Triage is the first step once you have decided on a Software under test. This is where you identify user input that could potentially cause issues.
 There are vulnerabilities outside of “user input” but as a general rule these are the most straightforward and impactful. More generally, any input from a foreign device can be a cause for a remote code execution or DOS vulnerability. With that in mind, it was easy to start by poking at the Mumble Chat messages. These can be sent by any user on the server to other users on the server. There are high profile vulnerabilities in chat applications all the time, because parsing is very difficult when you want to support rich features such as images, formatted text, and link previews.
 
 One of the things I found that I quite liked is that while Mumble supports HTML embedded in messages, it can be turned off server wide. This is a great feature in my opinion, because of a principle that has been expounded upon by the langsec community (https://langsec.org), which is that as you increase the complexity of “accepted inputs”, you decrease your ability to identify if there are any particular inputs that create error conditions. Being able to send HTML messages rather than simple plaintext greatly increases this complexity. 
@@ -86,9 +86,9 @@ s.isValid()
     if (messageSize > allowedSize) { // error }
 ```
 
-Notice this last check- we’re validating that the size is not greater than our allowedSize of 2048 * 2048 = 4,194,304. 
+Notice this last check - we’re validating that the size is not greater than our allowedSize of 2048 * 2048 = 4,194,304. 
 
-However, the problem is that s is a QSizeF object, which means that width and height are doubles in Mumble's code. Doubles are twice the bitness of an int. If you’re not super comfortable with integer overflow, what this means is that in CPP, “normally” an int is a datatype that can store 4 bytes of data. 1 bit is used to signify whether the number is positive or negative, so that leaves us with 2^31 as our maximum value that can be stored in an int: 2,147,483,647. 
+However, the problem is that `s` is a `QSizeF` object, which means that width and height are doubles in Mumble's code. Doubles are twice the bitness of an int. If you’re not super comfortable with integer overflow, what this means is that in CPP, “normally” an int is a datatype that can store 4 bytes of data. 1 bit is used to signify whether the number is positive or negative, so that leaves us with 2^31 as our maximum value that can be stored in an int: 2,147,483,647. 
 
 A double is, well, a double integer. That means you have twice as many bits to use, which allows you to store a way bigger number!
 When you cast from a double to an int, in CPP, it just truncates (chops off) the leftmost 4 bytes. That means you can multiply two numbers together and get one that uses a few of the bytes in the right 4, and a few in the left 4, and suddenly when you cast it to an int, it will leave you only with the bytes in the right four.
@@ -137,7 +137,7 @@ But what if we cast it to an int?
 >>> print(ctypes.c_int(int(double_val.value)).value)
 -2147483392
 ```
-Woa! That’s a way different number!. This is because when we truncate the number down to a 4 byte type, we lose all sorts of things. There are good and bad reasons why C and CPP behave this way- sometimes you actually do want to truncate numbers- but in general, this is a vulnerability pattern known as an “integer overflow” or a “type confusion.” (Though type confusions are often much more complex than issues like this one.)
+Woa! That’s a way different number!. This is because when we truncate the number down to a 4 byte type, we lose all sorts of things. There are good and bad reasons why C and CPP behave this way - sometimes you actually do want to truncate numbers - but in general, this is a vulnerability pattern known as an “integer overflow” or a “type confusion.” (Though type confusions are often much more complex than issues like this one.)
 
 What was that check again?
 
@@ -155,16 +155,17 @@ As a result we can do something like this:
 (src doesn’t really matter here, it just gives the parser something to try to use as an image).
 
 QT will now happily attempt to display this entire image in its huge dimensions to the entire server! 
-##Impact
+
+## Impact
 As a security researcher, impact is one of the most important things to identify. The recent React vulnerability is a great example of a bug that is low sophistication, high impact. There are tools that allow you to measure various elements of what makes an attack possible, and how difficult it is to exploit, and gives you a general idea of how big of a deal it is on a scale of 1-10 usually.
 https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
-This is the NIST tool, and I like it a good bit- but I will warn that it’s a bit more complex than the number that gets spit out. Not every 10 is as big of a deal as people make it out to be, and not every 3 is a nothingburger. It’s very important to understand the environments that the code is likely to run in, and how big of a problem it would be for it to break. For instance, if a hospital is using an application, something that might just be a nuisance somewhere else, like a very large image in the messaging platform, could be the difference between life and death in an emergency.
+This is the NIST tool, and I like it a good bit, but I will warn that it’s a bit more complex than the number that gets spit out. Not every 10 is as big of a deal as people make it out to be, and not every 3 is a nothingburger. It’s very important to understand the environments that the code is likely to run in, and how big of a problem it would be for it to break. For instance, if a hospital is using an application, something that might just be a nuisance somewhere else, like a very large image in the messaging platform, could be the difference between life and death in an emergency.
 
 I was fairly confident that mumble wasn’t being used in the medical field, at least not extensively, so I figured no matter how big of a deal the bug was, it wasn’t going to be the top of importance for most organizations. I stand by that with the information that I have now, though I have since learned that mumble is used or has been used in some surprisingly large organizations, so the impact of a bug like this could be somewhat higher than I originally expected. 
 
 Ok but what actually happens when you send a malformed message?
 
-Well, the entire chat gets “nuked”. Sending a message like my proof of concept completely removes the ability for anyone to see any older messages by my testing. Additionally, it makes it so new messages can’t be seen either. Disconnecting and reconnecting does not fix the issue- the only way to get new messages to show up is to completely close your mumble client and reconnect to the server- and you won’t be able to see any of the old messages that way. As a result, your entire message history is just lost. 
+Well, the entire chat gets “nuked”. Sending a message like my proof of concept completely removes the ability for anyone to see any older messages by my testing. Additionally, it makes it so new messages can’t be seen either. Disconnecting and reconnecting does not fix the issue. The only way to get new messages to show up is to completely close your mumble client and reconnect to the server. However, you won’t be able to see any of the old messages that way. As a result, your entire message history is just lost. 
 
 This can actually get worse on Windows. Users can have a “comment” which makes a little yellow chat message appear next to their name.
 
@@ -178,19 +179,19 @@ Crashing is often what makes bugs especially problematic. While not always the c
 Here is the calculation I performed, when identifying the bug based on the impact that I estimated.
 This attack can be performed over a network, and is easy to execute. Privileges required are just to be a user on the server, and for the normal message sending, there is no user interaction required. (Though the crashing bug does require user interaction.).
 
-It doesn’t do any information leaking, so it’s not really affecting confidentiality. But integrity is compromised because the server chat history is wiped- It’s not the worst integrity violation, which would be something like a bug that allows you to manipulate other user’s chat messages and things like that. 
+It doesn’t do any information leaking, so it’s not really affecting confidentiality. But integrity is compromised because the server chat history is wiped. It’s not the worst integrity violation, which would be something like a bug that allows you to manipulate other user’s chat messages and things like that. 
 
-The main impact is on availability- as long as a malicious user can keep reconnecting to the server, they can keep spamming this message and rendering chat completely useless. Worse, because the entire chat history gets messed up like this, it can be very difficult for an administrator to figure out who the actual problematic user is.
+The main impact is on availability: as long as a malicious user can keep reconnecting to the server, they can keep spamming this message and rendering chat completely useless. Worse, because the entire chat history gets messed up like this, it can be very difficult for an administrator to figure out who the actual problematic user is.
 
-Plugging this into the NIST tool gives us a 7.1 CVSS by my estimation. Fairly high in the abstract- but the actual impact always depends on how people actually use the software. For instance, I have a friend who plays EVE online, and heavily uses Mumble, but only the voice chat- in his usage, this bug would be very unlikely to affect him. Someone would need to trick him over voice chat into clicking on a user comment to get his client to crash- not something likely to be doable at scale or more than once!
+Plugging this into the NIST tool gives us a 7.1 CVSS by my estimation. Fairly high in the abstract, but the actual impact always depends on how people actually use the software. For instance, I have a friend who plays EVE online, and heavily uses Mumble, but only the voice chat. In his usage, this bug would be very unlikely to affect him. Someone would need to trick him over voice chat into clicking on a user comment to get his client to crash - not something likely to be doable at scale or more than once!
 
 ## Proof of Concept
 
-The last step was to ask the question- “is this enough?”. Proofs of Concept are very important in security research because they demonstrate “just how bad” a bug can be. If I had been able to generate a PoC that executed remote code, that would have certainly been a big deal, so why didn’t I search further along the crash to see if I could do that?
+The last step was to ask the question “is this enough?”. Proofs of Concept are very important in security research because they demonstrate “just how bad” a bug can be. If I had been able to generate a PoC that executed remote code, that would have certainly been a big deal, so why didn’t I search further along the crash to see if I could do that?
 
 Well, there’s a few good reasons. One is that I did do some brief inspection of the crash. I’m not very good at debugging, so it wasn’t immediately obvious if the crash was caused by something that could be exploited. I also noticed that Mumble uses a lot of good modern binary protections, such as stack canaries, which make exploiting memory corruption a lot harder.
 
-Finally it was a question- the only real point of making a more complex PoC is to convince the developers that a problem is significant enough that it warrants a patch, and associate a relevant timeliness to the patch. Pretty much as soon as I reported what I had, the devs began working with me to get a patch pushed out. Additionally, since I am not tracking that Mumble is used in any of those contexts where it would be a huge deal for someone to break it like this (like life or death) I figured what I had was enough to deliver. 
+Finally, it was a question. The only real point of making a more complex PoC is to convince the developers that a problem is significant enough that it warrants a patch, and associate a relevant timeliness to the patch. Pretty much as soon as I reported what I had, the devs began working with me to get a patch pushed out. Additionally, since I am not tracking that Mumble is used in any of those contexts where it would be a huge deal for someone to break it like this (like life or death) I figured what I had was enough to deliver. 
 
 It is easy for those of us who work in application security or bug hunt as a hobby to feel like we need to chain every bug into its worst case scenario situation. That’s what gets the headlines and what often makes people very interested in your work. If you’re chasing notoriety or a big payout for a bounty, developing more crazy exploits can make sense, but if you just want to help projects be a bit more secure, it doesn’t necessarily matter. At the end of the day, the basic goal of a PoC for responsible disclosure is to convince the developers to patch something. If they’re convinced, you’ve succeeded. 
 
@@ -202,7 +203,7 @@ This is a heavily underrated feature in software, though I’ve been pleasantly 
 
 I had the pleasure of working with @Krzmbrzl who responded to my initial email only 4 days after I sent, which is a great turnaround time for a volunteer run project. (And from what I’ve heard from some friends who do similar things, it’s a great turnaround for enterprise organizations as well!).
 
-Throughout the disclosure process, we worked together (ok, mostly krzmbrzl did the work from here on out ;D ) on ensuring that the bug was real (not just on my machine), and validating that his patch did indeed fix the bug. Even though he wasn’t able to fully replicate all of my findings, with what I sent him he confirmed it was significant enough to fix. Additionally, while we had some differences on the semantics of whether it was a “security” issue per se, ultimately the bug was patched and any potential concerns, real or imagined, are mitigated. I think sometimes it’s easy when you live in the security world to see everything as a dumpster fire, but ultimately the goal is to improve user experience. If you can do that by increasing the validity of confidentiality, integrity, or availability, I think the goal is accomplished- and I like to think that we did that in a small way with this patch.  
+Throughout the disclosure process, we worked together (ok, mostly krzmbrzl did the work from here on out ;D ) on ensuring that the bug was real (not just on my machine), and validating that his patch did indeed fix the bug. Even though he wasn’t able to fully replicate all of my findings, with what I sent him he confirmed it was significant enough to fix. Additionally, while we had some differences on the semantics of whether it was a “security” issue per se, ultimately the bug was patched and any potential concerns, real or imaginary, are mitigated. I think sometimes it’s easy when you live in the security world to see everything as a dumpster fire, but ultimately the goal is to improve user experience. If you can do that by increasing the validity of confidentiality, integrity, or availability, I think the goal is accomplished and I like to think that we did that in a small way with this patch.  
 
 ## Conclusion
 
