@@ -90,21 +90,10 @@ Notice this last check - we’re validating that the size is not greater than ou
 
 However, the problem is that `s` is a `QSizeF` object, which means that width and height are doubles in Mumble's code. Doubles are twice the bitness of an int. If you’re not super comfortable with integer overflow, what this means is that in CPP, “normally” an int is a datatype that can store 4 bytes of data. 1 bit is used to signify whether the number is positive or negative, so that leaves us with 2^31 as our maximum value that can be stored in an int: 2,147,483,647. 
 
-A double is, well, a double integer. That means you have twice as many bits to use, which allows you to store a way bigger number!
-When you cast from a double to an int, in CPP, it just truncates (chops off) the leftmost 4 bytes. That means you can multiply two numbers together and get one that uses a few of the bytes in the right 4, and a few in the left 4, and suddenly when you cast it to an int, it will leave you only with the bytes in the right four.
+A double is, well, double the size of an integer. That means you have twice as many bits to use, which allows you to store a way bigger number!
+When you cast from a double to an int, in CPP, it truncates (chops off) the leftmost 4 bytes. That means you can multiply two numbers together and get one that uses a few of the bytes in the right 4, and a few in the left 4, and suddenly when you cast it to an int, it will leave you only with the bytes in the right four. Note this is a bit weirder because a double is a floating point type, so the actual number that gets stored can sometimes be different than you'd expect if you aren't super comfortable with how those numbers are represented "under the hood." For our purposes, this general concept is enough to create a problem here. 
 
-Here’s an example using python:
-
-```python
->>> int('0xff_ff_ff_ff_00_00_00_01', 16)
-18446744069414584321
->>> int('00_00_00_01', 16)
-1
-
-```
-This number on the top is using 8 bytes, which in cpp normally could be stored in a double (technically this is a generalization if you aren’t using fixed width integers, but it is how it normally compiles in most scenarios).
-The second number, only using 4 bytes, is something you could store in an int. If you took the first number and casted it to an int in cpp, it would just make the left 4 bytes magically disappear. 
-(We can emulate this behavior in python for quick testing using ctypes.)
+Here’s an example using python and its ctypes module, which allows us to emulate c and c++ behavior:
 
 ```python
 >>> import ctypes    
@@ -114,6 +103,10 @@ The second number, only using 4 bytes, is something you could store in an int. I
 >>> print(ctypes.c_int(doubleval).value)
 1
 ```
+This number on the top is using 8 bytes, which in cpp normally could be stored in a double (technically this is a generalization if you aren’t using fixed width integers, but it is how it normally compiles in most scenarios).
+The second number, only using 4 bytes, is something you could store in an int. If you took the first number and casted it to an int in cpp, it would just make the left 4 bytes magically disappear. 
+
+
 That means in this scenario, the double value is cast to an int, then the int is checked against the 2048 * 2048 value. A little bit of math later proves that multiplying width and height to a number that wraps to a bit past INT32MAX is going to allow the message to pass this check, by making the large part of the number all be stored in the leftmost 4 bytes.
 
 ```
@@ -157,7 +150,7 @@ As a result we can do something like this:
 QT will now happily attempt to display this entire image in its huge dimensions to the entire server! 
 
 ## Impact
-As a security researcher, impact is one of the most important things to identify. The recent React vulnerability is a great example of a bug that is low sophistication, high impact. There are tools that allow you to measure various elements of what makes an attack possible, and how difficult it is to exploit, and gives you a general idea of how big of a deal it is on a scale of 1-10 usually.
+As a security researcher, impact is one of the most important things to identify. The recent [React vulnerability](https://react2shell.com/) is a great example of a bug that is low sophistication, high impact. There are tools that allow you to measure various elements of what makes an attack possible, and how difficult it is to exploit, and gives you a general idea of how big of a deal it is on a scale of 1-10 usually.
 https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
 This is the NIST tool, and I like it a good bit, but I will warn that it’s a bit more complex than the number that gets spit out. Not every 10 is as big of a deal as people make it out to be, and not every 3 is a nothingburger. It’s very important to understand the environments that the code is likely to run in, and how big of a problem it would be for it to break. For instance, if a hospital is using an application, something that might just be a nuisance somewhere else, like a very large image in the messaging platform, could be the difference between life and death in an emergency.
 
