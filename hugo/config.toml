@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Mumble"
 publishDir = "../public"
 
-disableKinds = ["taxonomy","taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 [params]
   description = "Mumble is a free, open source, low latency, high quality voice chat application."
