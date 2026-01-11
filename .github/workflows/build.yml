@@ -10,6 +10,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact-url: ${{ steps.artifact.artifact-url }}
+
 
     steps:
       - uses: actions/checkout@v6
@@ -28,6 +31,7 @@ jobs:
           hugo --minify
 
       - uses: actions/upload-artifact@v6
+        id: artifact
         with:
           name: 'mumble-www-files'
           path: 'public'
