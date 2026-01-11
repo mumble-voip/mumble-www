@@ -24,7 +24,7 @@ jobs:
           # Set up ssh-agent
           eval $( ssh-agent -s )
 
-          echo "Artifact URL: ${{ github.event.workflow_run.workflow.artifact-url }}"
+          echo "Artifact URL: ${{ github.event.workflow_run.workflow.build.outputs.artifact-url }}"
 
           # Add required SSH key
           echo "${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}" | ssh-add -
