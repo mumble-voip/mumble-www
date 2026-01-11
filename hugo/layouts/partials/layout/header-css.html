@@ -2,5 +2,5 @@
 <link rel="stylesheet" type="text/css" href="{{ "css/github-markdown.css" | relURL }}">
 
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "/css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{ $style := resources.Get "/css/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
