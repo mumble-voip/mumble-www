@@ -16,7 +16,7 @@ jobs:
     displayName: 'Prepare Hugo Environment'
   - script: |
       hugo version
-      hugo
+      hugo --minify
     displayName: 'Build Hugo Website'
     workingDirectory: 'hugo'
   - task: PublishPipelineArtifact@0
