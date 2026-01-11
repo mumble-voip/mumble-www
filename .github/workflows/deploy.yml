@@ -15,7 +15,7 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.repository_owner == 'mumble-voip' && github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Deploy files
@@ -24,7 +24,9 @@ jobs:
           # Set up ssh-agent
           eval $( ssh-agent -s )
 
-          echo "Artifact URL: ${{ github.event.workflow_run.workflow.artifact-url }}"
+          echo "Event object: ${{ toJson(github.event.workflow_run) }}"
+          echo "Workflow object: ${{ toJson(github.event.workflow_run.workflow) }}"
+          echo "Artifact URL: ${{ github.event.workflow_run.workflow.build.outputs.artifact-url }}"
 
           # Add required SSH key
           echo "${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}" | ssh-add -
