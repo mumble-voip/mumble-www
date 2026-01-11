@@ -7,28 +7,31 @@ on:
     types:
       - completed
 
-env:
-  DEPLOY_ADDRESS: 'www.mumble.info'
-  DEPLOY_USER: 'azure'
-
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     if: ${{ github.repository_owner == 'mumble-voip' && github.event.workflow_run.conclusion == 'success' }}
 
     steps:
+      - run: mkdir www-files
+
+      - uses: actions/download-artifact@v7
+        with:
+          name: 'mumble-www-files.zip'
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: www-files
+
       - name: Deploy files
         shell: bash
         run: |
+          # Recompress the files (there is no way to download the archive - https://github.com/actions/download-artifact/issues/374)
+          zip -9 -r mumble-www-files.zip www-files/
+
           # Set up ssh-agent
           eval $( ssh-agent -s )
-
-          echo "Event object: ${{ toJson(github.event.workflow_run) }}"
-          echo "Workflow object: ${{ toJson(github.event.workflow_run.workflow) }}"
-          echo "Artifact URL: ${{ github.event.workflow_run.workflow.build.outputs.artifact-url }}"
 
           # Add required SSH key
           echo "${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}" | ssh-add -
 
-          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOSTNAME }} "echo test"
+          scp -o "StrictHostKeyChecking=no" mumble-www-files.zip ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOSTNAME }}:/mumble/deploy/mumble-www.zip
