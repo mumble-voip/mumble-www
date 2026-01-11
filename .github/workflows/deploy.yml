@@ -1,0 +1,32 @@
+name: Deploy generated site
+
+
+on:
+  workflow_run:
+    workflows: [ 'Build Hugo files' ]
+    types:
+      - completed
+
+env:
+  DEPLOY_ADDRESS: 'www.mumble.info'
+  DEPLOY_USER: 'azure'
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Deploy files
+        shell: bash
+        run: |
+          # Set up ssh-agent
+          eval $( ssh-agent -s )
+
+          echo "Artifact URL: ${{ github.event.workflow_run.workflow.artifact-url }}"
+
+          # Add required SSH key
+          echo "${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}" | ssh-add -
+
+          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOSTNAME }} "echo test"
