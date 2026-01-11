@@ -27,7 +27,7 @@ jobs:
           hugo version
           hugo --minify
 
-      - uses: actions/upload-artifact
+      - uses: actions/upload-artifact@v6
         with:
           name: 'mumble-www-files'
           path: 'public'
