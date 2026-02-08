@@ -4,7 +4,7 @@ date: 2024-09-23
 ---
 
 Mumble uses [certificates](https://en.wikipedia.org/wiki/Public_key_infrastructure) to identify users.
-A certificate can be self-generated or issued by a thrid party organization. The
+A certificate can be self-generated or issued by a third party organization. The
 certificate types Mumble supports are:
 
 * Self generated
