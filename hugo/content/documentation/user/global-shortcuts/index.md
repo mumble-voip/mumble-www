@@ -54,6 +54,26 @@ Please note that this is only meant to be a temporary solution, because:
 - It allows any applications to read the input data,
   regardless of the user they're running under!
 
+### Wayland
+
+On Wayland, global shortcuts must be forwarded to applications by a central
+component called [compositor](https://wayland.freedesktop.org/). Each desktop
+environment has its own compositor, so support for global shortcut depends on
+the destkop environment you are using.
+
+#### KDE Plasma
+
+KDE has settings to define how keyboard shortcuts are forwarded to other
+programs. By default, most shortcuts will work. Only individual keys that
+produce text are not forwarded to Mumble. Check _System Settings > Application
+Permissions > Legacy X11 App Support_:
+
+![KDE Wayland](KDE_Wayland.png)
+
+If you want to use a mouse button as a global shortcut, you must enable
+_Listening for mouse buttons_ which is off by default (available since KDE
+version 6.1).
+
 ## macOS
 
 Mumble needs to be granted accessibility permissions.
