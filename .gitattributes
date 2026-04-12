@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+
+*.ico binary
+*.gif binary
+*.jpg binary
+*.png binary
+*.webp binary
+*.avif binary
+*.jxl binary
+
+*.woff binary
+*.woff2 binary
+
+*.webm binary
+*.mp4 binary
