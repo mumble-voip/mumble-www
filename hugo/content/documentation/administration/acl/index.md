@@ -19,7 +19,8 @@ If you have the **"Write ACL" permission** you can open the channel edit dialog 
 
 ![Screenshot of channel context menu with edit action](screenshot-channel-edit.jpg)
 
-*For initial setup, before you have given anyone permission, you will need to authenticate as the administrative SuperUser account. On first server startup the password is logged in `mumble-server.log` as `<W>2023-03-19 08:37:04.319 1 => Password for 'SuperUser' set to 'xxxxxx'`.*
+*For initial setup, before you have given anyone permission, you will need to authenticate as the administrative SuperUser account. On first server startup the password is logged in `mumble-server.log` as `<W>2023-03-19 08:37:04.319 1 => Password for 'SuperUser' set to 'xxxxxx'`.
+If you forget or want to change the password, run the server executable with launch parameter `-supw <new_password>`*
 
 ## Channels, Groups and ACL
 
