@@ -22,6 +22,7 @@ Games and game engines that provide native support remain functional across game
 <tr><th>Engine</th><th>Version</th><th>Action required</th><th>Platform</th><th>Extended support (Context, identity)</th></tr>
 </thead>
 <tbody>
+<tr><td><a href="https://cfx.re/">Citizen Framework (Cfx.re)</a></td><td>&gt;= <a href=https://github.com/citizenfx/fivem/commit/7222e52387baa106a99b31bc58370b89374922fd>commit 7222e52 (2018)</a></td><td>No</td><td>Any</td><td>No</td></tr>
 <tr><td><a href="https://ioquake3.org">ioquake3</a></td><td>&gt;= <a href="https://github.com/ioquake/ioq3/commit/0ee3960225">commit 0ee3960225 (2008)</a></td><td>Set <i>cl_useMumble</i> to <i>1</i></td><td>Any</td><td>No</td></tr>
 <tr id="Source_Engine"><td><a href="http://source.valvesoftware.com">Source Engine</a></td><td>&gt;= <a href="http://store.steampowered.com/news/9221">?</a></td><td>No</td><td>Any</td><td style="background-color:#abf8a1"><span title="Context based on Server ID. Identity: Universe, Account type, Account steam3ID, Instance, Team">Yes*</span></td></tr>
 <tr><td><a href="https://github.com/yEngine/YEng">YEngine Next Generation</a><br>(if using Y.mumble)</td><td>&gt;= <a href="https://github.com/yEngine/YEng/commit/b4011706e7">commit b4011706e7</a></td><td>No</td><td>Linux</td><td style="background-color:#abf8a1">Yes</td></tr>
@@ -42,6 +43,7 @@ Games and game engines that provide native support remain functional across game
 <tr><td><a href="http://store.steampowered.com/app/240">Counter-Strike: Source</a></td><td>&gt;= <a href="http://store.steampowered.com/news/9893">Feb 5 2013</a></td><td>No</td><td>Any</td><td style="background-color:#abf8a1"><a href="#Source_Engine"><span title="See &quot;Source Engine&quot;">Yes</span></a></td></tr>
 <tr><td><a href="http://www.dayofdefeat.com">Day of Defeat: Source</a></td><td>&gt;= <a href="http://store.steampowered.com/news/9221">1.0.0.46 (01:24:57 Oct 26 2012 (5101))</a></td><td>No</td><td>Any</td><td style="background-color:#abf8a1"><a href="#Source_Engine"><span title="See &quot;Source Engine&quot;">Yes</span></a></td></tr>
 <tr><td><a href="http://ezquake.sf.net">ezQuake</a></td><td>&gt;= 2.0 alpha</td><td>No</td><td>Any</td><td>No</td></tr>
+<tr><td><a href="https://fivem.net/">FiveM</a></td><td>&gt;= <a href=https://github.com/citizenfx/fivem/commit/7222e52387baa106a99b31bc58370b89374922fd>commit 7222e52</a></td><td>No</td><td>Any</td><td>No</td></tr>
 <tr><td><a href="https://www.guildwars2.com/">Guild Wars 2</a></td><td>&gt;= <a href="https://forum-en.guildwars2.com/forum/info/news/Game-Update-Notes-February-26-2013">Build 2/26/13</a> <sub><a href="http://wiki.guildwars2.com/wiki/Mumble">Official Wiki page</a></sub></td><td>No</td><td>Any</td><td style="background-color:#abf8a1">Yes</td></tr>
 <tr><td><a href="http://store.steampowered.com/app/320/">Half-Life 2: Deathmatch</a></td><td>&gt;= <a href="http://store.steampowered.com/news/9221">1.0.0.37 (01:24:57 Oct 26 2012 (5101))</a></td><td>No</td><td>Any</td><td style="background-color:#abf8a1"><a href="#Source_Engine"><span title="See &quot;Source Engine&quot;">Yes</span></a></td></tr>
 <tr><td><a href="http://store.steampowered.com/app/222880/">Insurgency</a></td><td>?</td><td>No</td><td>Any</td><td style="background-color:#abf8a1">Yes</td></tr>
@@ -53,6 +55,7 @@ Games and game engines that provide native support remain functional across game
 <tr><td><a href="http://redeclipse.net/">Red Eclipse</a></td><td>Any</td><td>No</td><td>Any</td><td style="background-color:#abf8a1">Yes</td></tr>
 <tr><td><a href="https://www.championsofregnum.com">Regnum-Online</a></td><td>?</td><td>No</td><td>Any</td><td>No</td></tr>
 <tr><td><a href="http://rq3.com/">Reaction</a></td><td>Any</td><td>Set <i>cl_useMumble</i> to <i>1</i></td><td>Any</td><td style="background-color:#abf8a1">Yes</td></tr>
+<tr><td><a href="https://redm.net/">RedM</a></td><td>Any</td><td>No</td><td>Any</td><td>No</td></tr>
 <tr><td><a href="http://ethernet.wasted.ch">Revenge of the Cats: Ethernet</a></td><td>&gt;= prototype 1.6</td><td>No</td><td>Any</td><td>No</td></tr>
 <tr><td><a href="http://www.rigsofrods.com">Rigs of Rods</a></td><td>&gt;= 0.38.20</td><td>No</td><td>Any</td><td style="background-color:#abf8a1">Yes</td></tr>
 <tr><td><a href="http://sauerbraten.org/">Sauerbraten</a></td><td>&gt;= <a href="http://sauerbraten.org/docs/history.html#_2008_06_17_ctf_edition">2008_06_17_ctf_edition</a></td><td>No</td><td>Any</td><td>No</td></tr>
