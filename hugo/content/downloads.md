@@ -4,7 +4,7 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version **1.5.857** is the latest stable version of Mumble and was released on October 10th, 2025.
+Version **1.5.857** is the latest stable version of Mumble and was released on <time datetime="2025-10-10">October 10th, 2025</time>.
 
 Note also when you upgrade from Mumble <= 1.3.x, you have to **uninstall Mumble manually** before installing 1.5, since the **upgrade path is unfixably broken**. See
 [here](https://github.com/mumble-voip/mumble/issues/5076) for more info.
