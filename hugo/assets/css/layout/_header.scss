@@ -35,7 +35,6 @@ body > #page-head {
 
 	nav {
 		grid-template: "nav";
-		text-align: right;
 		align-self: center;
 	}
 }
@@ -45,6 +44,10 @@ body > #page-head {
 	padding: 10px;
 	margin: auto;
 	display: grid;
-	grid-template-columns: auto auto 1fr;
-	grid-template-areas: "logo header nav";
+	grid-template-columns: auto auto minmax(1em,1fr) auto;
+	grid-template-areas: "logo header . nav";
+
+	> nav {
+		grid-area: nav;
+	}
 }

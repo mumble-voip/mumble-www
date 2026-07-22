@@ -24,6 +24,10 @@ ul.menu {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	gap: 0.5em;
+	flex-wrap: wrap;
+	justify-content: end;
 
 	li {
 		display: inline-block;
@@ -32,7 +36,7 @@ ul.menu {
 			display: inline-block;
 			color: black;
 			text-align: center;
-			padding: 14px 16px;
+			padding: 0.5em 0.3em;
 			text-decoration: none;
 
 			&:hover {
