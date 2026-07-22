@@ -6,6 +6,8 @@ on:
     workflows: [ 'Build Hugo files' ]
     types:
       - completed
+    branches:
+      - master
 
 jobs:
   deploy:
