@@ -4,7 +4,7 @@ title: Downloads
 We provide downloads for the official client and server programs. A Linux distribution may provide their own packages and have their own maintainer,
 which we will describe below. We also link to some third party projects.
 
-Version **1.5.915** is the latest stable version of Mumble and was released on July 18th, 2026.
+Version **1.5.939** is the latest stable version of Mumble and was released on October 9th, 2026.
 
 Please note that the last version of the Mumble 1.5 series on macOS is 1.5.901 as explained in [this blog post]({{< relref "/blog/2026-07-18-mumble-1-5-915" >}}).
 
@@ -100,7 +100,7 @@ document.getElementById('suggested-download').innerHTML = getPlatformContent(get
 
 Server note: *Depending on the context and packager our server program is called “mumble-server” or “Murmur”*
 
-For the individual files and for a zipped sources file see the [1.5.915 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.5.915).
+For the individual files and for a zipped sources file see the [1.5.939 GitHub release page](https://github.com/mumble-voip/mumble/releases/tag/v1.5.939).
 
 Instructions on [verifying GPG signatures of Mumble downloads](https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt) can be found
 in the linked document.
