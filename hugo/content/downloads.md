@@ -114,10 +114,6 @@ Debian, Ubuntu, Fedora, openSUSE, Arch Linux, Mandriva/ROSA/Unity.
 
 A Flatpak Package is published and maintained by the third party Flatpak community at <https://flathub.org/apps/details/info.mumble.Mumble>
 
-### Snap/Snapcraft
-
-A Snap package is published and maintained by the third party Snapcraft community at <https://snapcraft.io/mumble>
-
 ## Mobile Clients
 
 ### Third-Party
