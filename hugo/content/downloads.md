@@ -142,8 +142,8 @@ regards to features, bugs or security of them.
 Development snapshots contain unreleased features and changes that will eventually be available in the next stable release. Please report any problems
 you encounter on [our issue tracker](https://github.com/mumble-voip/mumble/issues).
 
-The most recent snapshot version is the first release candidate for Mumble 1.6.x
-([Release Announcement]({{< relref "/blog/2026-03-01-mumble-1-6-870" >}})).
+The most recent snapshot version is the second release candidate for Mumble 1.6.x
+([Release Announcement]({{< relref "/blog/2026-10-23-mumble-1-6-1001" >}})).
 
 Note that we are currently not able to provide static server binaries for Linux nor are we able to provide a snapshot PPA for Linux just yet.
 
@@ -155,6 +155,8 @@ Note that we are currently not able to provide static server binaries for Linux 
 {{< content-layout/downloads >}}
 {{< content-layout/download name="Client for macOS (x64)" href="https://dl.mumble.info/latest/snapshot/client-macos-x64" osclass="mac">}}
 {{< content-layout/download name="Server for macOS (x64)" href="https://dl.mumble.info/latest/snapshot/server-macos-x64" osclass="mac">}}
+{{< content-layout/download name="Client for macOS (arm64)" href="https://dl.mumble.info/latest/snapshot/client-macos-arm64" osclass="mac">}}
+{{< content-layout/download name="Server for macOS (arm64)" href="https://dl.mumble.info/latest/snapshot/server-macos-arm64" osclass="mac">}}
 {{< /content-layout/downloads >}}
 
 ## Source Code
